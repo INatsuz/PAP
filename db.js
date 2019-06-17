@@ -1,5 +1,7 @@
 const mysql = require("mysql");
 
+let dbConn;
+
 let dbConfig = {
     host: "localhost",
     user: "user",
@@ -7,10 +9,14 @@ let dbConfig = {
     database: "erasmus"
 };
 
-let dbConn;
-
 function handleConnection() {
     dbConn = mysql.createConnection(dbConfig);
+
+    dbConn.on('error', function (err) {
+        console.log('DB Error - ', err);
+
+        handleConnection();
+    });
 
     dbConn.connect(function (err) {
         if (err) {
@@ -20,18 +26,12 @@ function handleConnection() {
             console.log("Successfully connected to database");
         }
     });
-
-    dbConn.on('error', function (err) {
-        console.log('DB Error - ', err);
-
-        handleConnection();
-    });
 }
-
-handleConnection();
 
 function getConn(){
     return dbConn;
 }
+
+handleConnection();
 
 module.exports = getConn;
