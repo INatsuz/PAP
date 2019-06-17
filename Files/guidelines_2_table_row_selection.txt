@@ -1,0 +1,18 @@
+1 - The add modal window must have the ID → #modal-add
+2 - The inputs in the add modal window must have IDs the same as their respective field in the database preceded by "add-" → #add-<field_name>
+3 - Select inputs, if they are supposed to be IDs but the displayed value is different then the "value" attribute must be defined with the ID
+1 - The edit modal window must have the ID → #modal-edit
+2 - The inputs in the edit modal window must have IDs the same as their respective field in the database preceded by "edit-" → #edit-<field_name>
+3 - Select inputs, if they are supposed to be IDs but the displayed value is different then the "value" attribute must be defined with the ID
+4 - The add modal window's submit button must have the ID → #modal-add-btn
+4 - The edit modal window's submit button must have the ID → #modal-edit-btn
+5 - The "Edit" and "Delete" buttons must have the IDs (respectively) → #edit-btn & #delete-btn
+6 - The table tag must have the attribute "data-table" attribute set to the table name in the database
+7 - The table tag must have the ID → #table
+8 - The tr tag where the table headers are must have the class → .table-headers
+9 - The table headers (th tags) must have the "data-field" attribute set to their respective name in the database
+10 - The table headers (th tags) must have the "data-is-age" attribute set to "true" in case that field is an age so it can be calculated from the date
+11 - The rows of data (tr tags except table headers) must have the class → .table-row
+12 - The ID field in the data table rows must always be the first
+13 - The ID field in the data table rows must have the class → .id-field
+14 - If a field is a date the table row must have the attribute "data-date" set to the original date → data-date=<date>

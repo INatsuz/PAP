@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33f7829e-9858-4712-b056-1c02afd20aa6" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PAP" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Pug File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>session</find>
+      <find>dbConn</find>
+      <find>sessionID</find>
+      <find>console.log</find>
+      <find>, fields</find>
+      <find>btn-warning</find>
+      <find>#</find>
+      <find>not</find>
+      <find>console</find>
+      <find>date</find>
+      <find>no</find>
+      <find>submit</find>
+      <find>overflow</find>
+      <find>overf</find>
+      <find>font</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>dbConn()</replace>
+      <replace>btn-info</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/views/projects.pug" />
+        <option value="$PROJECT_DIR$/views/countries.pug" />
+        <option value="$PROJECT_DIR$/views/studentgroups.pug" />
+        <option value="$PROJECT_DIR$/views/partners_projects.pug" />
+        <option value="$PROJECT_DIR$/routes.js" />
+        <option value="$PROJECT_DIR$/views/includes/header.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/includes/loginErrorMessage.pug" />
+        <option value="$PROJECT_DIR$/public/db.js" />
+        <option value="$PROJECT_DIR$/views/backoffice/includes/addModal.pug" />
+        <option value="$PROJECT_DIR$/public/javascripts/ajaxTest.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/ajax_backoffice_teachers.js" />
+        <option value="$PROJECT_DIR$/views/backoffice/includes/scripts.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/includes/add_edit_delete_btns.pug" />
+        <option value="$PROJECT_DIR$/Files/guidelines_2_table_row_selection.txt" />
+        <option value="$PROJECT_DIR$/views/err404.pug" />
+        <option value="$PROJECT_DIR$/db.js" />
+        <option value="$PROJECT_DIR$/views/backoffice/includes/head.pug" />
+        <option value="$PROJECT_DIR$/public/javascripts/google_maps_initializer.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/img_error_handler.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/project_logo_upload.js" />
+        <option value="$PROJECT_DIR$/api_routes.js" />
+        <option value="$PROJECT_DIR$/views/backoffice/includes/header.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/countries.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/courses.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/projects.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/mobilities.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/mobilities_students.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/mobilities_teachers.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/partners.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/partners_projects.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/projects_teachers.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/subjects.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/subjects_teachers.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/studentgroups.pug" />
+        <option value="$PROJECT_DIR$/public/javascripts/table_row_selection.js" />
+        <option value="$PROJECT_DIR$/views/backoffice/projects_logos.pug" />
+        <option value="$PROJECT_DIR$/../ReactJS/first-reaction/src/components/board.js" />
+        <option value="$PROJECT_DIR$/../ReactJS/first-reaction/src/App.js" />
+        <option value="$PROJECT_DIR$/../ReactJS/first-reaction/src/components/Board.js" />
+        <option value="$PROJECT_DIR$/../ReactJS/first-reaction/package.json" />
+        <option value="$PROJECT_DIR$/../ReactJS/first-reaction/.env" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/views/backoffice/students.pug" />
+        <option value="$PROJECT_DIR$/views/backoffice/teachers.pug" />
+        <option value="bc5030a0-205d-4bb1-83ad-69c122eb128f/consoles/Eramus DB" />
+        <option value="$PROJECT_DIR$/frontoffice_routes.js" />
+        <option value="$PROJECT_DIR$/backoffice_routes.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/google_maps_handler.js" />
+        <option value="$PROJECT_DIR$/views/home.pug" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/general_info_window.js" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-70" />
+    <option name="y" value="-8" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="imgs" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backoffice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PAP" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backoffice" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.1" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/backoffice" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP\views\backoffice" />
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP\views\includes" />
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP\public\imgs" />
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP" />
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP\views\backoffice" />
+      <recent name="C:\Users\INatsuz\Desktop\Programming\PAP\views\includes" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.erasmus w/ nodemon.js">
+    <configuration name="erasmus.js" type="NodeJSConfigurationType" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.erasmus w/ nodemon.js" />
+      <item itemvalue="Node.js.erasmus.js" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f7829e-9858-4712-b056-1c02afd20aa6" name="Default Changelist" comment="" />
+      <created>1544719338554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544719338554</updated>
+      <workItem from="1544719354818" duration="1926000" />
+      <workItem from="1544726467808" duration="8853000" />
+      <workItem from="1544740594667" duration="6954000" />
+      <workItem from="1545231029483" duration="952000" />
+      <workItem from="1545231996422" duration="10507000" />
+      <workItem from="1546961706117" duration="3061000" />
+      <workItem from="1546972541580" duration="109606000" />
+      <workItem from="1547681664246" duration="215000" />
+      <workItem from="1547681898905" duration="68679000" />
+      <workItem from="1548116338272" duration="98000" />
+      <workItem from="1548116459151" duration="52981000" />
+      <workItem from="1548698604963" duration="7227000" />
+      <workItem from="1549167654845" duration="2116000" />
+      <workItem from="1549354139266" duration="627000" />
+      <workItem from="1549680963416" duration="920000" />
+      <workItem from="1550403091157" duration="2084000" />
+      <workItem from="1550413422730" duration="1064000" />
+      <workItem from="1550866846591" duration="338000" />
+      <workItem from="1551206423020" duration="25000" />
+      <workItem from="1551387402461" duration="1574000" />
+      <workItem from="1551390802718" duration="1518000" />
+      <workItem from="1551463168712" duration="30413000" />
+      <workItem from="1551884841383" duration="5806000" />
+      <workItem from="1552138207611" duration="599000" />
+      <workItem from="1552263941569" duration="1940000" />
+      <workItem from="1552560591953" duration="1982000" />
+      <workItem from="1552618711101" duration="3941000" />
+      <workItem from="1552861655081" duration="75499000" />
+      <workItem from="1553607864678" duration="824000" />
+      <workItem from="1553624930576" duration="57127000" />
+      <workItem from="1554190121159" duration="15059000" />
+      <workItem from="1554895529056" duration="3899000" />
+      <workItem from="1554923445621" duration="37000" />
+      <workItem from="1554940428031" duration="1726000" />
+      <workItem from="1556611519379" duration="145000" />
+      <workItem from="1556611683318" duration="4607000" />
+      <workItem from="1556726764034" duration="23000" />
+      <workItem from="1556726929623" duration="3319000" />
+      <workItem from="1556846234740" duration="6488000" />
+      <workItem from="1557269584019" duration="33608000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="528367000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4977778" visible="true" weight="0.1913646" />
+      <window_info id="npm" order="1" sideWeight="0.50222224" side_tool="true" weight="0.17324094" />
+      <window_info id="Structure" order="2" sideWeight="0.5005417" weight="0.16069546" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.27735645" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.2708559" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49947312" weight="0.25460455" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Favorites" order="10" show_stripe_button="false" side_tool="true" weight="0.22860238" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.27735645" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="DB Browser" order="3" sideWeight="0.49925485" weight="0.15458423" />
+      <window_info anchor="right" id="DB Execution Console" order="4" weight="0.2185501" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4977778" visible="true" weight="0.1913646" />
+      <window_info id="npm" order="1" sideWeight="0.50222224" side_tool="true" weight="0.17324094" />
+      <window_info id="Structure" order="2" sideWeight="0.5005417" weight="0.16069546" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" weight="0.27735645" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.2708559" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49947312" weight="0.25460455" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Favorites" order="10" show_stripe_button="false" side_tool="true" weight="0.22860238" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5021322" side_tool="true" weight="0.27735645" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="DB Browser" order="3" sideWeight="0.49925485" visible="true" weight="0.15458423" />
+      <window_info anchor="right" id="DB Execution Console" order="4" weight="0.24520256" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/includes/head.pug">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="db://bc5030a0-205d-4bb1-83ad-69c122eb128f/objects/schemas/erasmus/tables/countries">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="1" readonly="false">
+          <columns>
+            <column name="ID" position="0" visible="true" />
+            <column name="country" position="1" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/img_error_handler.js" />
+    <entry file="db://bc5030a0-205d-4bb1-83ad-69c122eb128f/objects/schemas/erasmus/tables/mobilities">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="7" readonly="false">
+          <columns>
+            <column name="ID" position="0" visible="true" />
+            <column name="origin" position="1" visible="true" />
+            <column name="originLat" position="2" visible="true" />
+            <column name="originLng" position="3" visible="true" />
+            <column name="target" position="4" visible="true" />
+            <column name="targetLat" position="5" visible="true" />
+            <column name="targetLng" position="6" visible="true" />
+            <column name="departureDate" position="7" visible="true" />
+            <column name="arrivalDate" position="8" visible="true" />
+            <column name="IDProject" position="9" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://bc5030a0-205d-4bb1-83ad-69c122eb128f/objects/schemas/erasmus/tables/partners">
+      <provider selected="true" editor-type-id="1.DATA">
+        <state row-count="2" readonly="false">
+          <columns>
+            <column name="ID" position="0" visible="true" />
+            <column name="name" position="1" visible="true" />
+            <column name="IDCountry" position="2" visible="true" />
+          </columns>
+          <sorting />
+          <content-types />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://bc5030a0-205d-4bb1-83ad-69c122eb128f/session_browsers/Eramus DB Sessions">
+      <provider selected="true" editor-type-id="0.SESSION_BROWSER">
+        <state>
+          <refresh-interval value="0" />
+          <sorting />
+          <filter>
+            <user value="" />
+            <host value="" />
+            <status value="" />
+          </filter>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Files/guidelines_2_table_row_selection.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/project_logo_upload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/includes/add_edit_delete_btns.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/includes/head.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="140" selection-start-line="7" selection-start-column="140" selection-end-line="7" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/includes/header.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="109" column="32" lean-forward="true" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/includes/loginErrorMessage.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/includes/scripts.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/countries.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/courses.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/mobilities.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="140" column="37" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/mobilities_students.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/mobilities_teachers.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/partners.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="68" column="64" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/projects_teachers.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/projects.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/subjects_teachers.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/subjects.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/err404.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/err404_2.0.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/src/App.test.js" />
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/src/components/Board.js" />
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/src/index.js" />
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/src/App.js" />
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/src/serviceWorker.js" />
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/.env" />
+    <entry file="file://$PROJECT_DIR$/../ReactJS/first-reaction/package.json" />
+    <entry file="file://$PROJECT_DIR$/views/backoffice/projects_logos.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/projects_new.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/partners_projects.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1628">
+          <caret line="74" column="37" lean-forward="true" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/studentgroups.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="68" column="64" lean-forward="true" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/students.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="117" column="55" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/backoffice/teachers.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="102" column="72" selection-start-line="102" selection-start-column="72" selection-end-line="102" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://bc5030a0-205d-4bb1-83ad-69c122eb128f/consoles/Eramus DB">
+      <provider selected="true" editor-type-id="0.CONSOLE">
+        <state line="6" column="87" selection-start="864" selection-end="864" vertical-scroll-proportion="-4.714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/table_row_selection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="103" column="24" lean-forward="true" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backoffice_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="271" column="111" selection-start-line="271" selection-start-column="111" selection-end-line="271" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/general_info_window.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/google_maps_handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="150" column="31" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontoffice_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="41" column="20" lean-forward="true" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

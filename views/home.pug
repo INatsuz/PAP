@@ -1,0 +1,48 @@
+doctype html
+
+html.h-100(lang="en")
+    include includes/head
+    body.h-100.font-roboto
+        div.fluid-container.d-flex.row.no-gutters.h-100
+            aside.col-auto.h-100.bg-dark.max-width-220px.overflow-y-auto.dark-scroll.accordion#sidebarAccordion
+                div.list-group.collapse.show#sidebarCollapse
+                    each project in projects
+                        a.list-group-item.list-group-item-action.bg-dark.text-light.project-btn.max-width-200px(data-project=project.name href=`#desc-${project.name}` data-toggle="collapse" role="button")
+                            div.row.no-gutters.text-center
+                                div.col-auto.d-flex.align-items-center
+                                    img(src=`imgs/projects/${project.ID}.png` alt="Logo" height="30").rounded
+                                div.col.px-2.d-flex.align-items-center
+                                    span.w-100.text-center= project.name
+                        div.bg-dark.list-group.collapse.text-center(data-id-project=`${project.ID}` data-project-code=`${project.projectCode}` data-project=`${project.name}` id=`desc-${project.name}` data-parent="#sidebarAccordion")
+                            a.list-group-item.list-group-item-action.bg-dark.text-white.descriptions(href="#") Description
+                            a.list-group-item.list-group-item-action.bg-dark.text-white.partners(href="#") Partners
+                            a.list-group-item.list-group-item-action.bg-dark.text-white.participants(href="#") Participants
+            div.col.d-flex.flex-column.position-relative
+                a#sidebar-toggle.position-absolute.btn.btn-dark.z-index-2.bottom-20px.left-20px.p-2.max-width-100(href="#sidebarCollapse" data-toggle="collapse") Sidebar
+                div.row.no-gutters.h-100.position-relative
+                    div#general-info.p-2.bg-light.position-absolute.top-0px.left-0px.z-index-1.rounded.w-100.max-width-450px.d-none.h-max-100.overflow-y-auto
+                        div.text-right.font-weight-bold
+                            a#general-info-cross.badge.badge-light(href="#") x
+                        header.row.no-gutters.justify-content-center
+                            div.col-auto.d-flex
+                                img#general-info-logo.rounded.mx-auto.align-self-center(src='imgs/projects/2.png' height='75' alt='Logo')
+                            div.col-auto.max-width-100.d-flex
+                                h4#general-info-title.p-2.align-self-center.w-100.text-center.m-0.text-left Trails2Education
+                        hr
+                        div#general-info-container
+                    div#map.h-100.col
+        //footer.position-absolute.right-0px.bottom-0px.p-1.bg-light
+            span Made by: Vasco Raminhos©
+        script.
+            var projects_json = !{JSON.stringify(projects)};
+            var mobilities_json = !{JSON.stringify(mobilities)};
+            var mobilities_students_json = !{JSON.stringify(mobilities_students)};
+            var mobilities_teachers_json = !{JSON.stringify(mobilities_teachers)};
+            var participants_json = !{JSON.stringify(participants)};
+            var partners_projects_json = !{JSON.stringify(partners_projects)};
+        script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+        script(src="../javascripts/google_maps_handler.js")
+        script(src="../javascripts/general_info_window.js")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUnqjJiIN-nXdXiPVrnIyDqQ7fLUTtolk&callback=initMap" async defer)

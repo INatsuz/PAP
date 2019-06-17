@@ -1,0 +1,61 @@
+doctype html
+
+html.h-100(lang="en")
+    include includes/head
+    body.h-100.font-roboto.m-0.p-0
+        div.modal.fade#modal-add(tabindex="-1" role="dialog")
+            div.modal-dialog(role="document")
+                div.modal-content
+                    div.modal-header
+                        h5.modal-title Add Country
+                        button.close(type="button" data-dismiss="modal")
+                            span x
+                    div.modal-body
+                        div.form-group.mb-0
+                            div.input-group
+                                div.input-group-prepend.w-25
+                                    div.input-group-text.w-100 Country
+                                input.form-control#add-country(type="text" placeholder="Country")
+                    div.modal-footer
+                        button.btn.btn-success.mr-auto.w-25#modal-add-btn Add
+        div.modal.fade#modal-edit(tabindex="-1" role="dialog")
+            div.modal-dialog(role="document")
+                div.modal-content
+                    div.modal-header
+                        h5.modal-title Edit Country
+                        button.close(type="button" data-dismiss="modal")
+                            span x
+                    div.modal-body
+                        div.form-group.mb-0
+                            div.input-group
+                                div.input-group-prepend.w-25
+                                    div.input-group-text.w-100 Country
+                                input.form-control#edit-country(type="text" placeholder="Country")
+                    div.modal-footer
+                        button.btn.btn-info.mr-auto.w-25#modal-edit-btn Edit
+
+        div.container-fluid.m-0.p-0.h-100
+            include includes/header
+            if session.ID != null
+                div.p-5.position-absolute.bottom-0px.top-76px.left-0px.right-0px
+                    div.container.rounded.p-4.bg-light.shadow.h-max-100.d-flex.flex-flow-column
+                        h2.mb-3.text-dark
+                            span.border-bottom-3px.border-top-3px.border-dark.px-2 Countries
+                        include includes/add_edit_delete_btns
+                        div.table-responsive.rounded.dark-scroll
+                            table(data-table="countries").table.table-bordered.table-hover.table-dark.nowrap.m-0#table
+                                thead
+                                    tr.table-headers
+                                        th(scope="col" data-field="ID").position-sticky.top-0px.bg-darkest.shadow-top-solid-1px.shadow-bottom-dark-1px.shadow-top-dark-1px.shadow-right-dark-1px.shadow-left-dark-1px #
+                                        th(scope="col" data-field="country").position-sticky.top-0px.bg-darkest.shadow-top-solid-1px.shadow-bottom-dark-1px.shadow-top-dark-1px.shadow-right-dark-1px Country
+                                tbody
+                                    each country in countries
+                                        tr.table-row
+                                            th(scope="row").id-field= country.ID
+                                            td= country.country
+            else
+                include includes/loginErrorMessage
+            footer.fixed-bottom
+                span.bg-light.p-2 Made by: Vasco Raminhos©
+
+        include includes/scripts

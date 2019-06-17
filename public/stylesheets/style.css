@@ -1,0 +1,161 @@
+.h-50px {
+    height: 50px;
+}
+
+.h-max-100 {
+    max-height: 100%;
+}
+
+.min-width-120px{
+    min-width: 120px;
+}
+
+.max-width-220px{
+    max-width: 220px !important;
+}
+
+.max-width-450px{
+    max-width: 450px !important;
+}
+
+.max-width-100{
+    max-width: 100% !important;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-darker {
+    background-color: #212529 !important;
+}
+
+.bg-darkest {
+    background-color: #111111;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-size-12px{
+    font-size: 12px;
+}
+
+.font-size-16px{
+    font-size: 16px;
+}
+
+.font-size-18px{
+    font-size: 18px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.nowrap * {
+    white-space: nowrap;
+}
+
+.wrap{
+    white-space: normal !important;
+}
+
+.top-0px {
+    top: 0px;
+}
+
+.top-76px {
+    top: 76px;
+}
+
+.bottom-0px {
+    bottom: 0px;
+}
+
+.bottom-20px{
+    bottom: 20px;
+}
+
+.left-0px {
+    left: 0px;
+}
+
+.left-20px {
+    left: 20px;
+}
+
+.right-0px {
+    right: 0px;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.dark-scroll::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #343a40;
+}
+
+.dark-scroll::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #343a40;
+}
+
+.dark-scroll::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.flex-flow-column {
+    flex-flow: column;
+}
+
+.shadow-bottom-dark-1px {
+    box-shadow: 0px 1px #32383e;
+}
+
+.shadow-top-dark-1px {
+    box-shadow: 0px -1px #32383e;
+}
+
+.shadow-left-dark-1px {
+    box-shadow: -1px 0px #32383e;
+}
+
+.shadow-right-dark-1px {
+    box-shadow: 1px 0px #32383e;
+}
+
+.border-bottom-3px {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+}
+
+.border-top-3px {
+    border-top-width: 3px;
+    border-top-style: solid;
+}
+
+.table-align-middle td, th{
+    vertical-align: middle !important;
+}
+
+.z-index-1{
+    z-index: 1;
+}
+
+.z-index-2{
+    z-index: 2;
+}

@@ -1,0 +1,113 @@
+if session.ID == null
+    div.modal.fade#login-modal(tabindex="-1" role="dialog")
+        form(action="./login" method="post")
+            div.modal-dialog(role="document")
+                div.modal-content
+                    div.modal-header
+                        h5.modal-title Login
+                        button.close(type="button" data-dismiss="modal")
+                            span x
+                    div.modal-body
+                        div.form-group
+                            div.input-group
+                                div.input-group-prepend
+                                    div.input-group-text Username
+                                input.form-control(type="text" placeholder="Username" name="username")
+                        div.form-group.mb-0
+                            div.input-group
+                                div.input-group-prepend
+                                    div.input-group-text Password
+                                input.form-control(type="password" placeholder="Password" name="password")
+                    div.modal-footer
+                        button.btn.btn-primary.mr-auto.w-25(type="submit") Login
+else
+    div.modal.fade#register-modal(tabindex="-1" role="dialog")
+        form(action="./register" method="post")
+            div.modal-dialog(role="document")
+                div.modal-content
+                    div.modal-header
+                        h5.modal-title Register
+                        button.close(type="button" data-dismiss="modal")
+                            span x
+                    div.modal-body
+                        div.form-group
+                            div.input-group
+                                div.input-group-prepend
+                                    div.input-group-text Username
+                                input.form-control(type="text" placeholder="Username" name="username" required)
+                        div.form-group
+                            div.input-group
+                                div.input-group-prepend
+                                    div.input-group-text Password
+                                input.form-control(type="password" placeholder="Password" name="password" required)
+                        div.form-group.mb-0
+                            div.input-group
+                                div.input-group-prepend
+                                    div.input-group-text Email
+                                input.form-control(type="email" placeholder="Email" name="email" required)
+                    div.modal-footer
+                        button.btn.btn-primary.mr-auto.w-25(type="submit") Login
+header.sticky-top
+    nav.navbar.navbar-expand-xl.navbar-dark.bg-darker
+        a.navbar-brand(href="#")
+            img.h-50px.d-none.d-sm-block(src="../imgs/esl.png" alt="Logo ESL")
+        button.navbar-toggler.mr-auto(type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle Navigation")
+            span.navbar-toggler-icon
+        div.collapse.navbar-collapse#navbarCollapse
+            ul.navbar-nav
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle.text-nowrap(href="#" role="button" data-toggle="dropdown") Teachers
+                    div.dropdown-menu.bg-darker
+                        a.dropdown-item.text-secondary(href="./teachers") Teachers
+                        a.dropdown-item.text-secondary(href="./subjects_teachers") Subjects/Teachers
+                        a.dropdown-item.text-secondary(href="./projects_teachers") Projects/Teachers
+                        a.dropdown-item.text-secondary(href="./mobilities_teachers") Mobilities/Teachers
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle.text-nowrap(href="#" role="button" data-toggle="dropdown") Students
+                    div.dropdown-menu.bg-darker
+                        a.dropdown-item.text-secondary(href="./students") Students
+                        a.dropdown-item.text-secondary(href="./mobilities_students") Mobilities/Students
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle.text-nowrap(href="#" role="button" data-toggle="dropdown") Subjects
+                    div.dropdown-menu.bg-darker
+                        a.dropdown-item.text-secondary(href="./subjects") Subjects
+                        a.dropdown-item.text-secondary(href="./subjects_teachers") Subjects/Teachers
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle.text-nowrap(href="#" role="button" data-toggle="dropdown") Partners
+                    div.dropdown-menu.bg-darker
+                        a.dropdown-item.text-secondary(href="./partners") Partners
+                        a.dropdown-item.text-secondary(href="./partners_projects") Partners/Projects
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle.text-nowrap(href="#" role="button" data-toggle="dropdown") Mobilities
+                    div.dropdown-menu.bg-darker
+                        a.dropdown-item.text-secondary(href="./mobilities") Mobilities
+                        a.dropdown-item.text-secondary(href="./mobilities_students") Mobilities/Students
+                        a.dropdown-item.text-secondary(href="./mobilities_teachers") Mobilities/Teachers
+                li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle.text-nowrap(href="#" role="button" data-toggle="dropdown") Projects
+                    div.dropdown-menu.bg-darker
+                        a.dropdown-item.text-secondary(href="./projects") Projects
+                        a.dropdown-item.text-secondary(href="./projects_logos") Projects/Logos
+                        a.dropdown-item.text-secondary(href="./projects_teachers") Projects/Teachers
+                        a.dropdown-item.text-secondary(href="./partners_projects") Partners/Projects
+                li.nav-item
+                    a.nav-link(href="./courses") Courses
+                li.nav-item
+                    a.nav-link(href="./countries") Countries
+                li.nav-item
+                    a.nav-link.text-nowrap(href="./studentgroups") Student Groups
+        ul.navbar-nav.mr-2.flex-row
+            if session.ID == null
+                li.nav-item
+                    a.nav-link.text-nowrap(href="" data-toggle="modal" data-target="#login-modal")
+                        i.fas.fa-user
+                        | &nbspLogin
+            else
+                li.nav-item
+                    a.nav-link.text-nowrap(href="" data-toggle="modal" data-target="#register-modal")
+                        i.fas.fa-user-plus
+                        | &nbspRegister
+                li.nav-item.ml-2
+                    a.nav-link.text-nowrap(href="./logout")
+                        i.fas.fa-user
+                        | &nbspLogout
