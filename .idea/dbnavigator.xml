@@ -25,19 +25,19 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="bc5030a0-205d-4bb1-83ad-69c122eb128f">
-        <schema name="erasmus" object-types="index, function, dataset trigger, table, constraint, procedure, view, column" />
+        <schema name="erasmus" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="bc5030a0-205d-4bb1-83ad-69c122eb128f">
-      <console name="Eramus DB" type="STANDARD" schema="erasmus" session="Main"><![CDATA[SELECT pp.ID, pr.ID, pr.name project, p.name partner FROM partners_projects pp INNER JOIN partners p ON p.ID = pp.IDPartner INNER JOIN projects pr ON pr.ID = pp.IDProject
+      <console name="Eramus DB" type="STANDARD" schema="erasmus" session="Main">SELECT pp.ID, pr.ID, pr.name project, p.name partner FROM partners_projects pp INNER JOIN partners p ON p.ID = pp.IDPartner INNER JOIN projects pr ON pr.ID = pp.IDProject
 
 SELECT ms.ID, ms.IDMobility, s.name student FROM mobilities_students ms INNER JOIN students s ON ms.IDStudent = s.ID
 
 SELECT ms.ID, ms.IDMobility, m.IDProject, p.name project, m.target, s.name FROM mobilities_students ms INNER JOIN students s ON ms.IDStudent = s.ID INNER JOIN mobilities m ON m.ID = ms.IDMobility INNER JOIN projects p ON p.ID = m.IDProject UNION SELECT mt.ID, mt.IDMobility, m.IDProject, p.name project, m.target, t.name FROM mobilities_teachers mt INNER JOIN teachers t ON mt.IDTeacher = t.ID INNER JOIN mobilities m ON m.ID = mt.IDMobility INNER JOIN projects p ON p.ID = m.IDProject
 
-SELECT ms.ID, ms.IDMobility, m.IDProject, p.name project, m.target, s.name FROM mobilities_students ms INNER JOIN students s ON ms.IDStudent = s.ID INNER JOIN mobilities m ON m.ID = ms.IDMobility INNER JOIN projects p ON p.ID = m.IDProject UNION SELECT mt.ID, mt.IDMobility, m.IDProject, p.name project, m.target, t.name FROM mobilities_teachers mt INNER JOIN teachers t ON mt.IDTeacher = t.ID INNER JOIN mobilities m ON m.ID = mt.IDMobility INNER JOIN projects p ON p.ID = m.IDProject ORDER BY IDProject]]></console>
+SELECT ms.ID, ms.IDMobility, m.IDProject, p.name project, m.target, s.name FROM mobilities_students ms INNER JOIN students s ON ms.IDStudent = s.ID INNER JOIN mobilities m ON m.ID = ms.IDMobility INNER JOIN projects p ON p.ID = m.IDProject UNION SELECT mt.ID, mt.IDMobility, m.IDProject, p.name project, m.target, t.name FROM mobilities_teachers mt INNER JOIN teachers t ON mt.IDTeacher = t.ID INNER JOIN mobilities m ON m.ID = mt.IDMobility INNER JOIN projects p ON p.ID = m.IDProject ORDER BY IDProject</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -92,8 +92,7 @@ SELECT ms.ID, ms.IDMobility, m.IDProject, p.name project, m.target, s.name FROM 
           <host value="localhost" />
           <port value="3306" />
           <database value="erasmus" />
-          <os-authentication value="false" />
-          <empty-authentication value="false" />
+          <type value="USER_PASSWORD" />
           <user value="user" />
           <deprecated-pwd value="cGFzc3dvcmQ=" />
         </database>
@@ -131,7 +130,7 @@ SELECT ms.ID, ms.IDMobility, m.IDProject, p.name project, m.target, s.name FROM 
           <max-connection-pool-size value="7" />
           <alternative-statement-delimiter value="" />
         </details>
-        <object-filters hide-empty-schemas="false">
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
           <object-type-filter use-master-settings="true">
             <object-type name="SCHEMA" enabled="true" />
             <object-type name="USER" enabled="true" />
