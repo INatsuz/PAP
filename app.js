@@ -55,11 +55,11 @@ app.use(function (req, res, next) {
     next("route");
 });
 
-app.use(express.static(path.join(__dirname, "public")));
-app.use("/svelte", function (req, res) {
-    res.sendFile(path.join(__dirname, "public/backoffice/index.html"))
-});
 app.use("/backoffice", backoffice_router.router);
+app.use("/svelte/", function (req, res, next) {
+    console.log("Hey");
+    res.sendFile(path.join(__dirname, "public/svelte-backoffice/index.html"));
+});
 app.use("/api", api_router.router);
 app.use("/", frontoffice_router.router);
 
