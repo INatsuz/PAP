@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f7829e-9858-4712-b056-1c02afd20aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/svelte-backoffice/bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svelte-backoffice/src/components/Header.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svelte-backoffice/src/components/Table.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svelte-backoffice/src/components/Teachers.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backoffice/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/svelte-backoffice/bundle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backoffice/bundle.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/svelte-backoffice/bundle.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backoffice/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/svelte-backoffice/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backoffice/bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/backoffice/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/svelte-backoffice/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte-backoffice/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte-backoffice/rollup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte-backoffice/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte-backoffice/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svelte-backoffice/src/routes/About.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte-backoffice/src/components/About.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <state relative-caret-position="220">
+              <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -102,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svelte-backoffice/src/components/Table.svelte">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
@@ -209,12 +196,12 @@
         <option value="$PROJECT_DIR$/svelte-backoffice/src/components/Header.svelte" />
         <option value="$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte.html" />
         <option value="$PROJECT_DIR$/svelte-backoffice/src/components/parser.html" />
-        <option value="$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte" />
         <option value="$PROJECT_DIR$/public/svelte-backoffice/index.html" />
         <option value="$PROJECT_DIR$/svelte-backoffice/src/components/About.svelte" />
         <option value="$PROJECT_DIR$/svelte-backoffice/src/App.svelte" />
         <option value="$PROJECT_DIR$/svelte-backoffice/src/components/Teachers.svelte" />
         <option value="$PROJECT_DIR$/svelte-backoffice/src/components/Table.svelte" />
+        <option value="$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte" />
       </list>
     </option>
   </component>
@@ -225,7 +212,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-70" />
     <option name="y" value="-8" />
     <option name="width" value="1400" />
@@ -390,12 +377,12 @@
       <workItem from="1556726929623" duration="3319000" />
       <workItem from="1556846234740" duration="6488000" />
       <workItem from="1557269584019" duration="33608000" />
-      <workItem from="1561058991492" duration="4590000" />
+      <workItem from="1561058991492" duration="5265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="532957000" />
+    <option name="totallyTimeSpent" value="533632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,13 +706,6 @@
     <entry file="file://$PROJECT_DIR$/svelte-backoffice/src/components/parser.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -771,6 +751,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svelte-backoffice/src/components/LoginModal.svelte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="61" lean-forward="true" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog">
-	<form action="./login" method="post">
+	<form action="/backoffice/login" method="post">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header"><h5 class="modal-title">Login</h5>
