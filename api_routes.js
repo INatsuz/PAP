@@ -110,11 +110,16 @@ router.post("/edit/:table", function (req, res) {
 
 
 function isAuthenticated(req) {
-    for (let i = 0; i < backoffice_logins.length; i++) {
-        if (backoffice_logins[i].id === req.session.id) {
-            return true;
-        }
+    if(req.session.ID != null){
+        console.log("I knew it!");
+        return true;
     }
+    // console.log(req.session.ID);
+    // for (let i = 0; i < backoffice_logins.length; i++) {
+    //     if (backoffice_logins[i].id === req.session.id) {
+    //         return true;
+    //     }
+    // }
     return false;
 }
 

@@ -27,9 +27,9 @@ router.get('/*', function (req, res, next) {
 router.post('/login', function (req, res) {
     dbConn().query("SELECT * FROM users WHERE username = ?", req.body.username, function (err, result) {
         if (err) console.log(err);
-        bcrypt.hash(req.body.password, 10, function (err, hash) {
+        // bcrypt.hash(req.body.password, 10, function (err, hash) {
             // console.log(hash);
-        });
+        // });
 
         if (result.length === 1) {
             bcrypt.compare(req.body.password, result[0].pass, function (err, is_equal) {
@@ -39,17 +39,17 @@ router.post('/login', function (req, res) {
                     req.session.username = result[0].username;
                     req.session.email = result[0].email;
 
-                    backoffice_logins.push({
-                        id: req.session.id, timeout: setTimeout(function () {
-                            for (let i = 0; i < backoffice_logins.length; i++) {
-                                if (backoffice_logins[i].id === req.session.id) {
-                                    backoffice_logins.splice(i, 1);
-                                    console.log("Removed " + req.session.id);
-                                    break;
-                                }
-                            }
-                        }, SESSION_TIMEOUT)
-                    });
+                    // backoffice_logins.push({
+                    //     id: req.session.id, timeout: setTimeout(function () {
+                    //         for (let i = 0; i < backoffice_logins.length; i++) {
+                    //             if (backoffice_logins[i].id === req.session.id) {
+                    //                 backoffice_logins.splice(i, 1);
+                    //                 console.log("Removed " + req.session.id);
+                    //                 break;
+                    //             }
+                    //         }
+                    //     }, SESSION_TIMEOUT)
+                    // });
 
                     console.log("Login - Adding backoffice login");
                     console.log(backoffice_logins);
