@@ -1,4 +1,6 @@
 <script>
+    import {Link} from 'svelte-routing';
+
     export let is_logged_in;
 </script>
 
@@ -11,12 +13,16 @@
 			<ul class="navbar-nav">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Teachers</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="./teachers">Teachers</a><a class="dropdown-item text-secondary" href="./subjects_teachers">Subjects/Teachers</a><a class="dropdown-item text-secondary" href="./projects_teachers">Projects/Teachers</a><a class="dropdown-item text-secondary" href="./mobilities_teachers">Mobilities/Teachers</a>
+					<div class="dropdown-menu bg-darker">
+					    <Link to="/svelte/teachers"><div class="dropdown-item text-secondary text-decoration-none">Teachers</div></Link>
+					    <Link to="/svelte/subjects_teachers"><div class="dropdown-item text-secondary">Subjects/Teachers</div></Link>
+					    <Link to="/svelte/projects_teachers"><div class="dropdown-item text-secondary">Projects/Teachers</div></Link>
+					    <Link to="/svelte/mobilities_teachers"><div class="dropdown-item text-secondary">Mobilities/Teachers</div></Link>
 					</div>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Students</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="./students">Students</a><a class="dropdown-item text-secondary" href="./mobilities_students">Mobilities/Students</a>
+					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="/students">Students</a><a class="dropdown-item text-secondary" href="./mobilities_students">Mobilities/Students</a>
 					</div>
 				</li>
 				<li class="nav-item dropdown">

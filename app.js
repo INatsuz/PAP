@@ -35,29 +35,29 @@ app.use(express.static(path.join(__dirname, '/public')));
 // });
 
 app.use(function (req, res, next) {
-    let ip = req.headers['x-forwarded-for'] ||
-        req.connection.remoteAddress ||
-        req.socket.remoteAddress ||
-        (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    if (ip !== null) {
-        ip = ip.substring(7);
-        console.log(ip);
-    }
-    fetch(`http://ip-to-geolocation.com/api/json/${ip}?key=${IP_LOCATION_API_KEY}`).then(function (res) {
-        res.json().then(function (json) {
-            // console.log(json);
-            console.log("Country: " + json.country);
-            console.log("Region: " + json.regionName);
-            console.log("-----------------------");
-        });
-    });
+    console.log(req.url);
+    // let ip = req.headers['x-forwarded-for'] ||
+    //     req.connection.remoteAddress ||
+    //     req.socket.remoteAddress ||
+    //     (req.connection.socket ? req.connection.socket.remoteAddress : null);
+    // if (ip !== null) {
+    //     ip = ip.substring(7);
+    //     console.log(ip);
+    // }
+    // fetch(`http://ip-to-geolocation.com/api/json/${ip}?key=${IP_LOCATION_API_KEY}`).then(function (res) {
+    //     res.json().then(function (json) {
+    //         // console.log(json);
+    //         console.log("Country: " + json.country);
+    //         console.log("Region: " + json.regionName);
+    //         console.log("-----------------------");
+    //     });
+    // });
 
     next("route");
 });
 
 app.use("/backoffice", backoffice_router.router);
 app.use("/svelte/", function (req, res, next) {
-    console.log("Hey");
     res.sendFile(path.join(__dirname, "public/svelte-backoffice/index.html"));
 });
 app.use("/api", api_router.router);

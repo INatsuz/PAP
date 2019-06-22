@@ -74,6 +74,12 @@ var app = (function () {
     function detach(node) {
         node.parentNode.removeChild(node);
     }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
     function element(name) {
         return document.createElement(name);
     }
@@ -3103,8 +3109,140 @@ var app = (function () {
 
     const file$1 = "src\\components\\Header.svelte";
 
+    // (17:9) <Link to="/svelte/teachers">
+    function create_default_slot_3(ctx) {
+    	var div;
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Teachers";
+    			div.className = "dropdown-item text-secondary text-decoration-none";
+    			add_location(div, file$1, 16, 37, 873);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+    		}
+    	};
+    }
+
+    // (18:9) <Link to="/svelte/subjects_teachers">
+    function create_default_slot_2(ctx) {
+    	var div;
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Subjects/Teachers";
+    			div.className = "dropdown-item text-secondary";
+    			add_location(div, file$1, 17, 46, 1005);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+    		}
+    	};
+    }
+
+    // (19:9) <Link to="/svelte/projects_teachers">
+    function create_default_slot_1(ctx) {
+    	var div;
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Projects/Teachers";
+    			div.className = "dropdown-item text-secondary";
+    			add_location(div, file$1, 18, 46, 1125);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+    		}
+    	};
+    }
+
+    // (20:9) <Link to="/svelte/mobilities_teachers">
+    function create_default_slot(ctx) {
+    	var div;
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Mobilities/Teachers";
+    			div.className = "dropdown-item text-secondary";
+    			add_location(div, file$1, 19, 48, 1247);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+    		}
+    	};
+    }
+
     function create_fragment$3(ctx) {
-    	var header, nav, a0, img, t0, button, span, t1, div6, ul0, li0, a1, t3, div0, a2, a3, a4, a5, t8, li1, a6, t10, div1, a7, a8, t13, li2, a9, t15, div2, a10, a11, t18, li3, a12, t20, div3, a13, a14, t23, li4, a15, t25, div4, a16, a17, a18, t29, li5, a19, t31, div5, a20, a21, a22, a23, t36, li6, a24, t38, li7, a25, t40, li8, a26, t42, ul1, li9, a27, i, t43, t44_value = !ctx.is_logged_in ? "Login" : "Logout", t44;
+    	var header, nav, a0, img, t0, button, span, t1, div6, ul0, li0, a1, t3, div0, t4, t5, t6, t7, li1, a2, t9, div1, a3, a4, t12, li2, a5, t14, div2, a6, a7, t17, li3, a8, t19, div3, a9, a10, t22, li4, a11, t24, div4, a12, a13, a14, t28, li5, a15, t30, div5, a16, a17, a18, a19, t35, li6, a20, t37, li7, a21, t39, li8, a22, t41, ul1, li9, a23, i, t42, t43_value = !ctx.is_logged_in ? "Login" : "Logout", t43, current;
+
+    	var link0 = new Link({
+    		props: {
+    		to: "/svelte/teachers",
+    		$$slots: { default: [create_default_slot_3] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link1 = new Link({
+    		props: {
+    		to: "/svelte/subjects_teachers",
+    		$$slots: { default: [create_default_slot_2] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link2 = new Link({
+    		props: {
+    		to: "/svelte/projects_teachers",
+    		$$slots: { default: [create_default_slot_1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link3 = new Link({
+    		props: {
+    		to: "/svelte/mobilities_teachers",
+    		$$slots: { default: [create_default_slot] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
 
     	return {
     		c: function create() {
@@ -3123,98 +3261,97 @@ var app = (function () {
     			a1.textContent = "Teachers";
     			t3 = space();
     			div0 = element("div");
-    			a2 = element("a");
-    			a2.textContent = "Teachers";
-    			a3 = element("a");
-    			a3.textContent = "Subjects/Teachers";
-    			a4 = element("a");
-    			a4.textContent = "Projects/Teachers";
-    			a5 = element("a");
-    			a5.textContent = "Mobilities/Teachers";
-    			t8 = space();
+    			link0.$$.fragment.c();
+    			t4 = space();
+    			link1.$$.fragment.c();
+    			t5 = space();
+    			link2.$$.fragment.c();
+    			t6 = space();
+    			link3.$$.fragment.c();
+    			t7 = space();
     			li1 = element("li");
-    			a6 = element("a");
-    			a6.textContent = "Students";
-    			t10 = space();
+    			a2 = element("a");
+    			a2.textContent = "Students";
+    			t9 = space();
     			div1 = element("div");
-    			a7 = element("a");
-    			a7.textContent = "Students";
-    			a8 = element("a");
-    			a8.textContent = "Mobilities/Students";
-    			t13 = space();
+    			a3 = element("a");
+    			a3.textContent = "Students";
+    			a4 = element("a");
+    			a4.textContent = "Mobilities/Students";
+    			t12 = space();
     			li2 = element("li");
-    			a9 = element("a");
-    			a9.textContent = "Subjects";
-    			t15 = space();
+    			a5 = element("a");
+    			a5.textContent = "Subjects";
+    			t14 = space();
     			div2 = element("div");
-    			a10 = element("a");
-    			a10.textContent = "Subjects";
-    			a11 = element("a");
-    			a11.textContent = "Subjects/Teachers";
-    			t18 = space();
+    			a6 = element("a");
+    			a6.textContent = "Subjects";
+    			a7 = element("a");
+    			a7.textContent = "Subjects/Teachers";
+    			t17 = space();
     			li3 = element("li");
-    			a12 = element("a");
-    			a12.textContent = "Partners";
-    			t20 = space();
+    			a8 = element("a");
+    			a8.textContent = "Partners";
+    			t19 = space();
     			div3 = element("div");
-    			a13 = element("a");
-    			a13.textContent = "Partners";
-    			a14 = element("a");
-    			a14.textContent = "Partners/Projects";
-    			t23 = space();
+    			a9 = element("a");
+    			a9.textContent = "Partners";
+    			a10 = element("a");
+    			a10.textContent = "Partners/Projects";
+    			t22 = space();
     			li4 = element("li");
-    			a15 = element("a");
-    			a15.textContent = "Mobilities";
-    			t25 = space();
+    			a11 = element("a");
+    			a11.textContent = "Mobilities";
+    			t24 = space();
     			div4 = element("div");
-    			a16 = element("a");
-    			a16.textContent = "Mobilities";
-    			a17 = element("a");
-    			a17.textContent = "Mobilities/Students";
-    			a18 = element("a");
-    			a18.textContent = "Mobilities/Teachers";
-    			t29 = space();
+    			a12 = element("a");
+    			a12.textContent = "Mobilities";
+    			a13 = element("a");
+    			a13.textContent = "Mobilities/Students";
+    			a14 = element("a");
+    			a14.textContent = "Mobilities/Teachers";
+    			t28 = space();
     			li5 = element("li");
-    			a19 = element("a");
-    			a19.textContent = "Projects";
-    			t31 = space();
+    			a15 = element("a");
+    			a15.textContent = "Projects";
+    			t30 = space();
     			div5 = element("div");
-    			a20 = element("a");
-    			a20.textContent = "Projects";
-    			a21 = element("a");
-    			a21.textContent = "Projects/Logos";
-    			a22 = element("a");
-    			a22.textContent = "Projects/Teachers";
-    			a23 = element("a");
-    			a23.textContent = "Partners/Projects";
-    			t36 = space();
+    			a16 = element("a");
+    			a16.textContent = "Projects";
+    			a17 = element("a");
+    			a17.textContent = "Projects/Logos";
+    			a18 = element("a");
+    			a18.textContent = "Projects/Teachers";
+    			a19 = element("a");
+    			a19.textContent = "Partners/Projects";
+    			t35 = space();
     			li6 = element("li");
-    			a24 = element("a");
-    			a24.textContent = "Courses";
-    			t38 = space();
+    			a20 = element("a");
+    			a20.textContent = "Courses";
+    			t37 = space();
     			li7 = element("li");
-    			a25 = element("a");
-    			a25.textContent = "Countries";
-    			t40 = space();
+    			a21 = element("a");
+    			a21.textContent = "Countries";
+    			t39 = space();
     			li8 = element("li");
-    			a26 = element("a");
-    			a26.textContent = "Student Groups";
-    			t42 = space();
+    			a22 = element("a");
+    			a22.textContent = "Student Groups";
+    			t41 = space();
     			ul1 = element("ul");
     			li9 = element("li");
-    			a27 = element("a");
+    			a23 = element("a");
     			i = element("i");
-    			t43 = space();
-    			t44 = text(t44_value);
+    			t42 = space();
+    			t43 = text(t43_value);
     			img.className = "h-50px d-none d-sm-block";
     			img.src = "../imgs/esl.png";
     			img.alt = "Logo ESL";
-    			add_location(img, file$1, 6, 35, 179);
+    			add_location(img, file$1, 8, 35, 223);
     			a0.className = "navbar-brand";
     			a0.href = "#";
-    			add_location(a0, file$1, 6, 2, 146);
+    			add_location(a0, file$1, 8, 2, 190);
     			span.className = "navbar-toggler-icon";
-    			add_location(span, file$1, 8, 3, 457);
+    			add_location(span, file$1, 10, 3, 501);
     			button.className = "navbar-toggler mr-auto";
     			button.type = "button";
     			button.dataset.toggle = "collapse";
@@ -3222,147 +3359,135 @@ var app = (function () {
     			attr(button, "aria-controls", "navbarCollapse");
     			attr(button, "aria-expanded", "false");
     			attr(button, "aria-label", "Toggle Navigation");
-    			add_location(button, file$1, 7, 2, 262);
+    			add_location(button, file$1, 9, 2, 306);
     			a1.className = "nav-link dropdown-toggle text-nowrap";
     			a1.href = "#";
     			attr(a1, "role", "button");
     			a1.dataset.toggle = "dropdown";
-    			add_location(a1, file$1, 12, 5, 640);
-    			a2.className = "dropdown-item text-secondary";
-    			a2.href = "./teachers";
-    			add_location(a2, file$1, 13, 42, 790);
-    			a3.className = "dropdown-item text-secondary";
-    			a3.href = "./subjects_teachers";
-    			add_location(a3, file$1, 13, 112, 860);
-    			a4.className = "dropdown-item text-secondary";
-    			a4.href = "./projects_teachers";
-    			add_location(a4, file$1, 13, 200, 948);
-    			a5.className = "dropdown-item text-secondary";
-    			a5.href = "./mobilities_teachers";
-    			add_location(a5, file$1, 13, 288, 1036);
+    			add_location(a1, file$1, 14, 5, 684);
     			div0.className = "dropdown-menu bg-darker";
-    			add_location(div0, file$1, 13, 5, 753);
+    			add_location(div0, file$1, 15, 5, 797);
     			li0.className = "nav-item dropdown";
-    			add_location(li0, file$1, 11, 4, 603);
-    			a6.className = "nav-link dropdown-toggle text-nowrap";
-    			a6.href = "#";
-    			attr(a6, "role", "button");
-    			a6.dataset.toggle = "dropdown";
-    			add_location(a6, file$1, 17, 5, 1195);
-    			a7.className = "dropdown-item text-secondary";
-    			a7.href = "./students";
-    			add_location(a7, file$1, 18, 42, 1345);
-    			a8.className = "dropdown-item text-secondary";
-    			a8.href = "./mobilities_students";
-    			add_location(a8, file$1, 18, 112, 1415);
+    			add_location(li0, file$1, 13, 4, 647);
+    			a2.className = "nav-link dropdown-toggle text-nowrap";
+    			a2.href = "#";
+    			attr(a2, "role", "button");
+    			a2.dataset.toggle = "dropdown";
+    			add_location(a2, file$1, 23, 5, 1388);
+    			a3.className = "dropdown-item text-secondary";
+    			a3.href = "/students";
+    			add_location(a3, file$1, 24, 42, 1538);
+    			a4.className = "dropdown-item text-secondary";
+    			a4.href = "./mobilities_students";
+    			add_location(a4, file$1, 24, 111, 1607);
     			div1.className = "dropdown-menu bg-darker";
-    			add_location(div1, file$1, 18, 5, 1308);
+    			add_location(div1, file$1, 24, 5, 1501);
     			li1.className = "nav-item dropdown";
-    			add_location(li1, file$1, 16, 4, 1158);
-    			a9.className = "nav-link dropdown-toggle text-nowrap";
-    			a9.href = "#";
-    			attr(a9, "role", "button");
-    			a9.dataset.toggle = "dropdown";
-    			add_location(a9, file$1, 22, 5, 1574);
-    			a10.className = "dropdown-item text-secondary";
-    			a10.href = "./subjects";
-    			add_location(a10, file$1, 23, 42, 1724);
-    			a11.className = "dropdown-item text-secondary";
-    			a11.href = "./subjects_teachers";
-    			add_location(a11, file$1, 23, 112, 1794);
+    			add_location(li1, file$1, 22, 4, 1351);
+    			a5.className = "nav-link dropdown-toggle text-nowrap";
+    			a5.href = "#";
+    			attr(a5, "role", "button");
+    			a5.dataset.toggle = "dropdown";
+    			add_location(a5, file$1, 28, 5, 1766);
+    			a6.className = "dropdown-item text-secondary";
+    			a6.href = "./subjects";
+    			add_location(a6, file$1, 29, 42, 1916);
+    			a7.className = "dropdown-item text-secondary";
+    			a7.href = "./subjects_teachers";
+    			add_location(a7, file$1, 29, 112, 1986);
     			div2.className = "dropdown-menu bg-darker";
-    			add_location(div2, file$1, 23, 5, 1687);
+    			add_location(div2, file$1, 29, 5, 1879);
     			li2.className = "nav-item dropdown";
-    			add_location(li2, file$1, 21, 4, 1537);
-    			a12.className = "nav-link dropdown-toggle text-nowrap";
-    			a12.href = "#";
-    			attr(a12, "role", "button");
-    			a12.dataset.toggle = "dropdown";
-    			add_location(a12, file$1, 27, 5, 1949);
-    			a13.className = "dropdown-item text-secondary";
-    			a13.href = "./partners";
-    			add_location(a13, file$1, 28, 42, 2099);
-    			a14.className = "dropdown-item text-secondary";
-    			a14.href = "./partners_projects";
-    			add_location(a14, file$1, 28, 112, 2169);
+    			add_location(li2, file$1, 27, 4, 1729);
+    			a8.className = "nav-link dropdown-toggle text-nowrap";
+    			a8.href = "#";
+    			attr(a8, "role", "button");
+    			a8.dataset.toggle = "dropdown";
+    			add_location(a8, file$1, 33, 5, 2141);
+    			a9.className = "dropdown-item text-secondary";
+    			a9.href = "./partners";
+    			add_location(a9, file$1, 34, 42, 2291);
+    			a10.className = "dropdown-item text-secondary";
+    			a10.href = "./partners_projects";
+    			add_location(a10, file$1, 34, 112, 2361);
     			div3.className = "dropdown-menu bg-darker";
-    			add_location(div3, file$1, 28, 5, 2062);
+    			add_location(div3, file$1, 34, 5, 2254);
     			li3.className = "nav-item dropdown";
-    			add_location(li3, file$1, 26, 4, 1912);
+    			add_location(li3, file$1, 32, 4, 2104);
+    			a11.className = "nav-link dropdown-toggle text-nowrap";
+    			a11.href = "#";
+    			attr(a11, "role", "button");
+    			a11.dataset.toggle = "dropdown";
+    			add_location(a11, file$1, 38, 5, 2516);
+    			a12.className = "dropdown-item text-secondary";
+    			a12.href = "./mobilities";
+    			add_location(a12, file$1, 39, 42, 2668);
+    			a13.className = "dropdown-item text-secondary";
+    			a13.href = "./mobilities_students";
+    			add_location(a13, file$1, 39, 116, 2742);
+    			a14.className = "dropdown-item text-secondary";
+    			a14.href = "./mobilities_teachers";
+    			add_location(a14, file$1, 39, 208, 2834);
+    			div4.className = "dropdown-menu bg-darker";
+    			add_location(div4, file$1, 39, 5, 2631);
+    			li4.className = "nav-item dropdown";
+    			add_location(li4, file$1, 37, 4, 2479);
     			a15.className = "nav-link dropdown-toggle text-nowrap";
     			a15.href = "#";
     			attr(a15, "role", "button");
     			a15.dataset.toggle = "dropdown";
-    			add_location(a15, file$1, 32, 5, 2324);
+    			add_location(a15, file$1, 43, 5, 2993);
     			a16.className = "dropdown-item text-secondary";
-    			a16.href = "./mobilities";
-    			add_location(a16, file$1, 33, 42, 2476);
+    			a16.href = "./projects";
+    			add_location(a16, file$1, 44, 42, 3143);
     			a17.className = "dropdown-item text-secondary";
-    			a17.href = "./mobilities_students";
-    			add_location(a17, file$1, 33, 116, 2550);
+    			a17.href = "./projects_logos";
+    			add_location(a17, file$1, 44, 112, 3213);
     			a18.className = "dropdown-item text-secondary";
-    			a18.href = "./mobilities_teachers";
-    			add_location(a18, file$1, 33, 208, 2642);
-    			div4.className = "dropdown-menu bg-darker";
-    			add_location(div4, file$1, 33, 5, 2439);
-    			li4.className = "nav-item dropdown";
-    			add_location(li4, file$1, 31, 4, 2287);
-    			a19.className = "nav-link dropdown-toggle text-nowrap";
-    			a19.href = "#";
-    			attr(a19, "role", "button");
-    			a19.dataset.toggle = "dropdown";
-    			add_location(a19, file$1, 37, 5, 2801);
-    			a20.className = "dropdown-item text-secondary";
-    			a20.href = "./projects";
-    			add_location(a20, file$1, 38, 42, 2951);
-    			a21.className = "dropdown-item text-secondary";
-    			a21.href = "./projects_logos";
-    			add_location(a21, file$1, 38, 112, 3021);
-    			a22.className = "dropdown-item text-secondary";
-    			a22.href = "./projects_teachers";
-    			add_location(a22, file$1, 38, 194, 3103);
-    			a23.className = "dropdown-item text-secondary";
-    			a23.href = "./partners_projects";
-    			add_location(a23, file$1, 38, 282, 3191);
+    			a18.href = "./projects_teachers";
+    			add_location(a18, file$1, 44, 194, 3295);
+    			a19.className = "dropdown-item text-secondary";
+    			a19.href = "./partners_projects";
+    			add_location(a19, file$1, 44, 282, 3383);
     			div5.className = "dropdown-menu bg-darker";
-    			add_location(div5, file$1, 38, 5, 2914);
+    			add_location(div5, file$1, 44, 5, 3106);
     			li5.className = "nav-item dropdown";
-    			add_location(li5, file$1, 36, 4, 2764);
-    			a24.className = "nav-link";
-    			a24.href = "./courses";
-    			add_location(a24, file$1, 41, 25, 3330);
+    			add_location(li5, file$1, 42, 4, 2956);
+    			a20.className = "nav-link";
+    			a20.href = "./courses";
+    			add_location(a20, file$1, 47, 25, 3522);
     			li6.className = "nav-item";
-    			add_location(li6, file$1, 41, 4, 3309);
-    			a25.className = "nav-link";
-    			a25.href = "./countries";
-    			add_location(a25, file$1, 42, 25, 3410);
+    			add_location(li6, file$1, 47, 4, 3501);
+    			a21.className = "nav-link";
+    			a21.href = "./countries";
+    			add_location(a21, file$1, 48, 25, 3602);
     			li7.className = "nav-item";
-    			add_location(li7, file$1, 42, 4, 3389);
-    			a26.className = "nav-link text-nowrap";
-    			a26.href = "./studentgroups";
-    			add_location(a26, file$1, 43, 25, 3494);
+    			add_location(li7, file$1, 48, 4, 3581);
+    			a22.className = "nav-link text-nowrap";
+    			a22.href = "./studentgroups";
+    			add_location(a22, file$1, 49, 25, 3686);
     			li8.className = "nav-item";
-    			add_location(li8, file$1, 43, 4, 3473);
+    			add_location(li8, file$1, 49, 4, 3665);
     			ul0.className = "navbar-nav";
-    			add_location(ul0, file$1, 10, 3, 574);
+    			add_location(ul0, file$1, 12, 3, 618);
     			div6.className = "collapse navbar-collapse";
     			div6.id = "navbarCollapse";
-    			add_location(div6, file$1, 9, 2, 511);
+    			add_location(div6, file$1, 11, 2, 555);
     			i.className = "fas fa-user";
-    			add_location(i, file$1, 47, 111, 3746);
-    			a27.className = "nav-link text-nowrap";
-    			a27.href = "";
-    			a27.dataset.toggle = "modal";
-    			a27.dataset.target = "#login-modal";
-    			add_location(a27, file$1, 47, 24, 3659);
+    			add_location(i, file$1, 53, 111, 3938);
+    			a23.className = "nav-link text-nowrap";
+    			a23.href = "";
+    			a23.dataset.toggle = "modal";
+    			a23.dataset.target = "#login-modal";
+    			add_location(a23, file$1, 53, 24, 3851);
     			li9.className = "nav-item";
-    			add_location(li9, file$1, 47, 3, 3638);
+    			add_location(li9, file$1, 53, 3, 3830);
     			ul1.className = "navbar-nav mr-2 flex-row";
-    			add_location(ul1, file$1, 46, 2, 3596);
+    			add_location(ul1, file$1, 52, 2, 3788);
     			nav.className = "navbar navbar-expand-xl navbar-dark bg-darker";
-    			add_location(nav, file$1, 5, 1, 83);
+    			add_location(nav, file$1, 7, 1, 127);
     			header.className = "sticky-top";
-    			add_location(header, file$1, 4, 0, 53);
+    			add_location(header, file$1, 6, 0, 97);
     		},
 
     		l: function claim(nodes) {
@@ -3384,79 +3509,125 @@ var app = (function () {
     			append(li0, a1);
     			append(li0, t3);
     			append(li0, div0);
-    			append(div0, a2);
-    			append(div0, a3);
-    			append(div0, a4);
-    			append(div0, a5);
-    			append(ul0, t8);
+    			mount_component(link0, div0, null);
+    			append(div0, t4);
+    			mount_component(link1, div0, null);
+    			append(div0, t5);
+    			mount_component(link2, div0, null);
+    			append(div0, t6);
+    			mount_component(link3, div0, null);
+    			append(ul0, t7);
     			append(ul0, li1);
-    			append(li1, a6);
-    			append(li1, t10);
+    			append(li1, a2);
+    			append(li1, t9);
     			append(li1, div1);
-    			append(div1, a7);
-    			append(div1, a8);
-    			append(ul0, t13);
+    			append(div1, a3);
+    			append(div1, a4);
+    			append(ul0, t12);
     			append(ul0, li2);
-    			append(li2, a9);
-    			append(li2, t15);
+    			append(li2, a5);
+    			append(li2, t14);
     			append(li2, div2);
-    			append(div2, a10);
-    			append(div2, a11);
-    			append(ul0, t18);
+    			append(div2, a6);
+    			append(div2, a7);
+    			append(ul0, t17);
     			append(ul0, li3);
-    			append(li3, a12);
-    			append(li3, t20);
+    			append(li3, a8);
+    			append(li3, t19);
     			append(li3, div3);
-    			append(div3, a13);
-    			append(div3, a14);
-    			append(ul0, t23);
+    			append(div3, a9);
+    			append(div3, a10);
+    			append(ul0, t22);
     			append(ul0, li4);
-    			append(li4, a15);
-    			append(li4, t25);
+    			append(li4, a11);
+    			append(li4, t24);
     			append(li4, div4);
-    			append(div4, a16);
-    			append(div4, a17);
-    			append(div4, a18);
-    			append(ul0, t29);
+    			append(div4, a12);
+    			append(div4, a13);
+    			append(div4, a14);
+    			append(ul0, t28);
     			append(ul0, li5);
-    			append(li5, a19);
-    			append(li5, t31);
+    			append(li5, a15);
+    			append(li5, t30);
     			append(li5, div5);
-    			append(div5, a20);
-    			append(div5, a21);
-    			append(div5, a22);
-    			append(div5, a23);
-    			append(ul0, t36);
+    			append(div5, a16);
+    			append(div5, a17);
+    			append(div5, a18);
+    			append(div5, a19);
+    			append(ul0, t35);
     			append(ul0, li6);
-    			append(li6, a24);
-    			append(ul0, t38);
+    			append(li6, a20);
+    			append(ul0, t37);
     			append(ul0, li7);
-    			append(li7, a25);
-    			append(ul0, t40);
+    			append(li7, a21);
+    			append(ul0, t39);
     			append(ul0, li8);
-    			append(li8, a26);
-    			append(nav, t42);
+    			append(li8, a22);
+    			append(nav, t41);
     			append(nav, ul1);
     			append(ul1, li9);
-    			append(li9, a27);
-    			append(a27, i);
-    			append(a27, t43);
-    			append(a27, t44);
+    			append(li9, a23);
+    			append(a23, i);
+    			append(a23, t42);
+    			append(a23, t43);
+    			current = true;
     		},
 
     		p: function update(changed, ctx) {
-    			if ((changed.is_logged_in) && t44_value !== (t44_value = !ctx.is_logged_in ? "Login" : "Logout")) {
-    				set_data(t44, t44_value);
+    			var link0_changes = {};
+    			if (changed.$$scope) link0_changes.$$scope = { changed, ctx };
+    			link0.$set(link0_changes);
+
+    			var link1_changes = {};
+    			if (changed.$$scope) link1_changes.$$scope = { changed, ctx };
+    			link1.$set(link1_changes);
+
+    			var link2_changes = {};
+    			if (changed.$$scope) link2_changes.$$scope = { changed, ctx };
+    			link2.$set(link2_changes);
+
+    			var link3_changes = {};
+    			if (changed.$$scope) link3_changes.$$scope = { changed, ctx };
+    			link3.$set(link3_changes);
+
+    			if ((!current || changed.is_logged_in) && t43_value !== (t43_value = !ctx.is_logged_in ? "Login" : "Logout")) {
+    				set_data(t43, t43_value);
     			}
     		},
 
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			link0.$$.fragment.i(local);
+
+    			link1.$$.fragment.i(local);
+
+    			link2.$$.fragment.i(local);
+
+    			link3.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link0.$$.fragment.o(local);
+    			link1.$$.fragment.o(local);
+    			link2.$$.fragment.o(local);
+    			link3.$$.fragment.o(local);
+    			current = false;
+    		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
     				detach(header);
     			}
+
+    			link0.$destroy();
+
+    			link1.$destroy();
+
+    			link2.$destroy();
+
+    			link3.$destroy();
     		}
     	};
     }
@@ -3648,12 +3819,357 @@ var app = (function () {
     	}
     }
 
-    /* src\components\Teachers.svelte generated by Svelte v3.5.1 */
+    /* src\components\BasicTable.svelte generated by Svelte v3.5.1 */
 
-    const file$3 = "src\\components\\Teachers.svelte";
+    const file$3 = "src\\components\\BasicTable.svelte";
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.key = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.row = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.header = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (20:16) {#each table_headers as header, i}
+    function create_each_block_2(ctx) {
+    	var th, t_value = ctx.header, t;
+
+    	return {
+    		c: function create() {
+    			th = element("th");
+    			t = text(t_value);
+    			th.scope = "col";
+    			th.className = "position-sticky top-0px bg-darkest shadow-top-solid-1px shadow-bottom-dark-1px shadow-top-dark-1px shadow-right-dark-1px shadow-left-dark-1px svelte-zsfu02";
+    			add_location(th, file$3, 20, 16, 518);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, th, anchor);
+    			append(th, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.table_headers) && t_value !== (t_value = ctx.header)) {
+    				set_data(t, t_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(th);
+    			}
+    		}
+    	};
+    }
+
+    // (28:20) {#each keys as key, i}
+    function create_each_block_1(ctx) {
+    	var td, t_value = ctx.row[ctx.key], t;
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			add_location(td, file$3, 28, 24, 922);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+    			append(td, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.data || changed.keys) && t_value !== (t_value = ctx.row[ctx.key])) {
+    				set_data(t, t_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+    		}
+    	};
+    }
+
+    // (26:12) {#each data as row, i}
+    function create_each_block(ctx) {
+    	var tr, t;
+
+    	var each_value_1 = ctx.keys;
+
+    	var each_blocks = [];
+
+    	for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
+    		each_blocks[i_1] = create_each_block_1(get_each_context_1(ctx, each_value_1, i_1));
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].c();
+    			}
+
+    			t = space();
+    			tr.className = "table-row";
+    			add_location(tr, file$3, 26, 16, 830);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].m(tr, null);
+    			}
+
+    			append(tr, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.data || changed.keys) {
+    				each_value_1 = ctx.keys;
+
+    				for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i_1);
+
+    					if (each_blocks[i_1]) {
+    						each_blocks[i_1].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i_1] = create_each_block_1(child_ctx);
+    						each_blocks[i_1].c();
+    						each_blocks[i_1].m(tr, t);
+    					}
+    				}
+
+    				for (; i_1 < each_blocks.length; i_1 += 1) {
+    					each_blocks[i_1].d(1);
+    				}
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
 
     function create_fragment$5(ctx) {
-    	var div2, div1, div0, h2, span;
+    	var div, table, thead, tr, t, tbody;
+
+    	var each_value_2 = ctx.table_headers;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	var each_value = ctx.data;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t = space();
+    			tbody = element("tbody");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			tr.className = "table-headers";
+    			add_location(tr, file$3, 18, 12, 422);
+    			add_location(thead, file$3, 17, 8, 401);
+    			add_location(tbody, file$3, 24, 8, 769);
+    			table.className = "table table-dark table-bordered table-hover nowrap m-0 svelte-zsfu02";
+    			add_location(table, file$3, 16, 4, 321);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$3, 15, 0, 265);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table);
+    			append(table, thead);
+    			append(thead, tr);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(tr, null);
+    			}
+
+    			append(table, t);
+    			append(table, tbody);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.table_headers) {
+    				each_value_2 = ctx.table_headers;
+
+    				for (var i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_2(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(tr, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_2.length;
+    			}
+
+    			if (changed.keys || changed.data) {
+    				each_value = ctx.data;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let { table_headers, data } = $$props;
+
+        let keys = [];
+
+    	const writable_props = ['table_headers', 'data'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicTable> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('table_headers' in $$props) $$invalidate('table_headers', table_headers = $$props.table_headers);
+    		if ('data' in $$props) $$invalidate('data', data = $$props.data);
+    	};
+
+    	$$self.$$.update = ($$dirty = { data: 1 }) => {
+    		if ($$dirty.data) { console.log(data); }
+    		if ($$dirty.data) { $$invalidate('keys', keys = data.length > 0 ? Object.keys(data[0]) : []); }
+    	};
+
+    	return { table_headers, data, keys };
+    }
+
+    class BasicTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$5, safe_not_equal, ["table_headers", "data"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.table_headers === undefined && !('table_headers' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'table_headers'");
+    		}
+    		if (ctx.data === undefined && !('data' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'data'");
+    		}
+    	}
+
+    	get table_headers() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table_headers(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get data() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set data(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\Teachers.svelte generated by Svelte v3.5.1 */
+
+    const file$4 = "src\\components\\Teachers.svelte";
+
+    function create_fragment$6(ctx) {
+    	var div2, div1, div0, h2, span0, t1, span1, button0, t3, button1, t5, button2, t7, current;
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.teachers
+    	},
+    		$$inline: true
+    	});
 
     	return {
     		c: function create() {
@@ -3661,17 +4177,40 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			h2 = element("h2");
-    			span = element("span");
-    			span.textContent = "Teachers";
-    			span.className = "border-bottom-3px border-top-3px border-dark px-2";
-    			add_location(span, file$3, 16, 35, 483);
+    			span0 = element("span");
+    			span0.textContent = "Teachers";
+    			t1 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t3 = space();
+    			button1 = element("button");
+    			button1.textContent = "Edit";
+    			t5 = space();
+    			button2 = element("button");
+    			button2.textContent = "Delete";
+    			t7 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2";
+    			add_location(span0, file$4, 34, 35, 1145);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$3, 16, 8, 456);
+    			add_location(h2, file$4, 34, 8, 1118);
+    			button0.className = "btn btn-success mb-2";
+    			button0.dataset.toggle = "modal";
+    			button0.dataset.target = "#modal-add";
+    			add_location(button0, file$4, 36, 16, 1267);
+    			button1.className = "btn btn-info mb-2 mx-2 disabled";
+    			button1.id = "edit-btn";
+    			add_location(button1, file$4, 37, 16, 1381);
+    			button2.className = "btn btn-danger mb-2 disabled";
+    			button2.id = "delete-btn";
+    			add_location(button2, file$4, 38, 16, 1474);
+    			add_location(span1, file$4, 35, 12, 1243);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$3, 15, 8, 361);
+    			add_location(div0, file$4, 33, 8, 1023);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$3, 14, 4, 277);
-    			add_location(div2, file$3, 13, 0, 266);
+    			add_location(div1, file$4, 32, 4, 939);
+    			add_location(div2, file$4, 31, 0, 928);
     		},
 
     		l: function claim(nodes) {
@@ -3683,221 +4222,195 @@ var app = (function () {
     			append(div2, div1);
     			append(div1, div0);
     			append(div0, h2);
-    			append(h2, span);
-    		},
-
-    		p: noop,
-    		i: noop,
-    		o: noop,
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(div2);
-    			}
-    		}
-    	};
-    }
-
-    function instance$4($$self, $$props, $$invalidate) {
-    	let teachers = [];
-
-        (function getTeachers() {
-            axios$1.get("/api/get/teachers").then(function(res) {
-            	teachers = res.data;
-                console.log(res.data);
-            });
-        })();
-
-    	return {};
-    }
-
-    class Teachers extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$4, create_fragment$5, safe_not_equal, []);
-    	}
-    }
-
-    /* src\App.svelte generated by Svelte v3.5.1 */
-
-    const file$4 = "src\\App.svelte";
-
-    // (18:12) <Link to="/svelte/">
-    function create_default_slot_2(ctx) {
-    	var t;
-
-    	return {
-    		c: function create() {
-    			t = text("Home");
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, t, anchor);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(t);
-    			}
-    		}
-    	};
-    }
-
-    // (19:12) <Link to="/svelte/about/">
-    function create_default_slot_1(ctx) {
-    	var t;
-
-    	return {
-    		c: function create() {
-    			t = text("About");
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, t, anchor);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(t);
-    			}
-    		}
-    	};
-    }
-
-    // (16:4) <Router url="{url}">
-    function create_default_slot(ctx) {
-    	var nav, t0, t1, div, t2, current;
-
-    	var link0 = new Link({
-    		props: {
-    		to: "/svelte/",
-    		$$slots: { default: [create_default_slot_2] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link1 = new Link({
-    		props: {
-    		to: "/svelte/about/",
-    		$$slots: { default: [create_default_slot_1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route0 = new Route({
-    		props: { path: "/svelte/", component: Teachers },
-    		$$inline: true
-    	});
-
-    	var route1 = new Route({
-    		props: { path: "/svelte/", component: Teachers },
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			nav = element("nav");
-    			link0.$$.fragment.c();
-    			t0 = space();
-    			link1.$$.fragment.c();
-    			t1 = space();
-    			div = element("div");
-    			route0.$$.fragment.c();
-    			t2 = space();
-    			route1.$$.fragment.c();
-    			add_location(nav, file$4, 16, 8, 441);
-    			add_location(div, file$4, 20, 8, 565);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, nav, anchor);
-    			mount_component(link0, nav, null);
-    			append(nav, t0);
-    			mount_component(link1, nav, null);
-    			insert(target, t1, anchor);
-    			insert(target, div, anchor);
-    			mount_component(route0, div, null);
-    			append(div, t2);
-    			mount_component(route1, div, null);
+    			append(h2, span0);
+    			append(div0, t1);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t3);
+    			append(span1, button1);
+    			append(span1, t5);
+    			append(span1, button2);
+    			append(div0, t7);
+    			mount_component(basictable, div0, null);
     			current = true;
     		},
 
     		p: function update(changed, ctx) {
-    			var link0_changes = {};
-    			if (changed.$$scope) link0_changes.$$scope = { changed, ctx };
-    			link0.$set(link0_changes);
-
-    			var link1_changes = {};
-    			if (changed.$$scope) link1_changes.$$scope = { changed, ctx };
-    			link1.$set(link1_changes);
-
-    			var route0_changes = {};
-    			if (changed.Home) route0_changes.component = Teachers;
-    			route0.$set(route0_changes);
-
-    			var route1_changes = {};
-    			if (changed.Home) route1_changes.component = Teachers;
-    			route1.$set(route1_changes);
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.teachers) basictable_changes.data = ctx.teachers;
+    			basictable.$set(basictable_changes);
     		},
 
     		i: function intro(local) {
     			if (current) return;
-    			link0.$$.fragment.i(local);
-
-    			link1.$$.fragment.i(local);
-
-    			route0.$$.fragment.i(local);
-
-    			route1.$$.fragment.i(local);
+    			basictable.$$.fragment.i(local);
 
     			current = true;
     		},
 
     		o: function outro(local) {
-    			link0.$$.fragment.o(local);
-    			link1.$$.fragment.o(local);
-    			route0.$$.fragment.o(local);
-    			route1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
     			current = false;
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(nav);
+    				detach(div2);
     			}
 
-    			link0.$destroy();
-
-    			link1.$destroy();
-
-    			if (detaching) {
-    				detach(t1);
-    				detach(div);
-    			}
-
-    			route0.$destroy();
-
-    			route1.$destroy();
+    			basictable.$destroy();
     		}
     	};
     }
 
-    function create_fragment$6(ctx) {
-    	var div, t0, t1, current;
+    function instance$5($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let teachers = [];
+        let table_headers = ['#', "Teacher #", 'Name', 'Age', 'Gender', 'Email'];
+
+        // axios.defaults.withCredentials = true;
+
+        function getTeachers() {
+            axios$1.get("/api/get/teachers", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('teachers', teachers = res.data);
+                console.log(res.data);
+                for(let i = 0; i < teachers.length; i++) {
+                    let age = new Date(new Date() - new Date(teachers[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    teachers[i].birthday = age; $$invalidate('teachers', teachers);
+                    console.log(age);
+                }
+            });
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Teachers> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getTeachers();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		teachers,
+    		table_headers
+    	};
+    }
+
+    class Teachers extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$6, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Teachers> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Teachers> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\App.svelte generated by Svelte v3.5.1 */
+
+    const file$5 = "src\\App.svelte";
+
+    // (51:12) <Route path="/svelte/teachers">
+    function create_default_slot_1$1(ctx) {
+    	var current;
+
+    	var teachers = new Teachers({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			teachers.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(teachers, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var teachers_changes = {};
+    			if (changed.is_logged_in) teachers_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) teachers_changes.getToken = getToken;
+    			teachers.$set(teachers_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			teachers.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			teachers.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			teachers.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (47:4) <Router url="{url}">
+    function create_default_slot$1(ctx) {
+    	var t0, t1, div, current;
 
     	var loginmodal = new LoginModal({ $$inline: true });
 
     	var header = new Header({
-    		props: { is_logged_in: false },
+    		props: { is_logged_in: ctx.is_logged_in },
     		$$inline: true
     	});
 
-    	var router = new Router({
+    	var route = new Route({
     		props: {
-    		url: ctx.url,
-    		$$slots: { default: [create_default_slot] },
+    		path: "/svelte/teachers",
+    		$$slots: { default: [create_default_slot_1$1] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3905,34 +4418,33 @@ var app = (function () {
 
     	return {
     		c: function create() {
-    			div = element("div");
     			loginmodal.$$.fragment.c();
     			t0 = space();
     			header.$$.fragment.c();
     			t1 = space();
-    			router.$$.fragment.c();
-    			add_location(div, file$4, 12, 0, 349);
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    			div = element("div");
+    			route.$$.fragment.c();
+    			add_location(div, file$5, 49, 8, 1333);
     		},
 
     		m: function mount(target, anchor) {
+    			mount_component(loginmodal, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(header, target, anchor);
+    			insert(target, t1, anchor);
     			insert(target, div, anchor);
-    			mount_component(loginmodal, div, null);
-    			append(div, t0);
-    			mount_component(header, div, null);
-    			append(div, t1);
-    			mount_component(router, div, null);
+    			mount_component(route, div, null);
     			current = true;
     		},
 
     		p: function update(changed, ctx) {
-    			var router_changes = {};
-    			if (changed.url) router_changes.url = ctx.url;
-    			if (changed.$$scope) router_changes.$$scope = { changed, ctx };
-    			router.$set(router_changes);
+    			var header_changes = {};
+    			if (changed.is_logged_in) header_changes.is_logged_in = ctx.is_logged_in;
+    			header.$set(header_changes);
+
+    			var route_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route_changes.$$scope = { changed, ctx };
+    			route.$set(route_changes);
     		},
 
     		i: function intro(local) {
@@ -3941,7 +4453,7 @@ var app = (function () {
 
     			header.$$.fragment.i(local);
 
-    			router.$$.fragment.i(local);
+    			route.$$.fragment.i(local);
 
     			current = true;
     		},
@@ -3949,6 +4461,73 @@ var app = (function () {
     		o: function outro(local) {
     			loginmodal.$$.fragment.o(local);
     			header.$$.fragment.o(local);
+    			route.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			loginmodal.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			header.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div);
+    			}
+
+    			route.$destroy();
+    		}
+    	};
+    }
+
+    function create_fragment$7(ctx) {
+    	var div, current;
+
+    	var router = new Router({
+    		props: {
+    		url: ctx.url,
+    		$$slots: { default: [create_default_slot$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			router.$$.fragment.c();
+    			add_location(div, file$5, 45, 0, 1225);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			mount_component(router, div, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var router_changes = {};
+    			if (changed.url) router_changes.url = ctx.url;
+    			if (changed.$$scope || changed.is_logged_in) router_changes.$$scope = { changed, ctx };
+    			router.$set(router_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			router.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
     			router.$$.fragment.o(local);
     			current = false;
     		},
@@ -3958,18 +4537,48 @@ var app = (function () {
     				detach(div);
     			}
 
-    			loginmodal.$destroy();
-
-    			header.$destroy();
-
     			router.$destroy();
     		}
     	};
     }
 
-    function instance$5($$self, $$props, $$invalidate) {
+    function getToken() {
+    	    return localStorage.getItem("api-auth-token");
+    	}
+
+    function instance$6($$self, $$props, $$invalidate) {
     	
     	let { url = "" } = $$props;
+
+    	let is_logged_in = false;
+
+    	checkLogin();
+    	// login("INatsuz", "2509");
+
+    	function login(username, password) {
+    		console.log("Trying to log in");
+            axios$1.post("/api/login", {username: username, password: password}).then(res => {
+            	localStorage.setItem("api-auth-token", res.data.token);
+            	$$invalidate('is_logged_in', is_logged_in = true);
+            	console.log(res.data);
+            }).catch(err => {
+            	console.log(err.response.data);
+            });
+    	}
+
+    	function checkLogin() {
+    		console.log("Checking login");
+
+    	    axios$1.get("/api/logincheck", {headers: {Authorization: getToken()}}).then(res => {
+                $$invalidate('is_logged_in', is_logged_in = true);
+
+                console.log(res.data.userID);
+            }).catch(err => {
+                login("INatsuz", "2509");
+
+                console.log(err.response.data);
+            });
+    	}
 
     	const writable_props = ['url'];
     	Object.keys($$props).forEach(key => {
@@ -3980,13 +4589,13 @@ var app = (function () {
     		if ('url' in $$props) $$invalidate('url', url = $$props.url);
     	};
 
-    	return { url };
+    	return { url, is_logged_in };
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$6, safe_not_equal, ["url"]);
+    		init(this, options, instance$6, create_fragment$7, safe_not_equal, ["url"]);
     	}
 
     	get url() {
