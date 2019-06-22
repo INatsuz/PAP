@@ -1,9 +1,17 @@
+*{
+    font-family: 'Roboto', 'Times New Roman';
+}
+
 a {
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }
 
 .h-50px {

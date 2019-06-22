@@ -2,11 +2,16 @@
     import {Link} from 'svelte-routing';
 
     export let is_logged_in;
+    export let logout;
+
+    function handleLogoutClick() {
+        logout();
+    }
 </script>
 
 <header class="sticky-top">
 	<nav class="navbar navbar-expand-xl navbar-dark bg-darker">
-		<a class="navbar-brand" href="#"><img class="h-50px d-none d-sm-block" src="../imgs/esl.png" alt="Logo ESL"></a>
+		<Link class="navbar-brand" to="/svelte"><img class="h-50px d-none d-sm-block" src="../imgs/esl.png" alt="Logo ESL"></Link>
 		<button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle Navigation">
 			<span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
@@ -51,7 +56,11 @@
 			</ul>
 		</div>
 		<ul class="navbar-nav mr-2 flex-row">
-			<li class="nav-item"><a class="nav-link text-nowrap" href="" data-toggle="modal" data-target="#login-modal"><i class="fas fa-user"></i>&nbsp;{!is_logged_in ? "Login" : "Logout"}</a></li>
+		    {#if is_logged_in}
+			    <li class="nav-item"><span class="nav-link text-nowrap cursor-pointer" on:click={handleLogoutClick}><i class="fas fa-user"></i> Logout</span></li>
+			{:else}
+			    <li class="nav-item"><span class="nav-link text-nowrap cursor-pointer" data-toggle="modal" data-target="#login-modal"><i class="fas fa-user"></i> Login</span></li>
+			{/if}
 		</ul>
 	</nav>
 </header>

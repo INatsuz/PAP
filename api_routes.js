@@ -34,6 +34,7 @@ router.get("/logincheck", function (req, res) {
 		res.status(200).json({userID: decoded.id});
 	}).catch(err => {
 		console.log("Token is invalid");
+		console.log(err);
 		res.status(401).send("Invalid token");
 	});
 });

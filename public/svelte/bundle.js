@@ -3109,7 +3109,32 @@ var app = (function () {
 
     const file$1 = "src\\components\\Header.svelte";
 
-    // (17:9) <Link to="/svelte/teachers">
+    // (14:2) <Link class="navbar-brand" to="/svelte">
+    function create_default_slot_4(ctx) {
+    	var img;
+
+    	return {
+    		c: function create() {
+    			img = element("img");
+    			img.className = "h-50px d-none d-sm-block";
+    			img.src = "../imgs/esl.png";
+    			img.alt = "Logo ESL";
+    			add_location(img, file$1, 13, 42, 318);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, img, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(img);
+    			}
+    		}
+    	};
+    }
+
+    // (22:9) <Link to="/svelte/teachers">
     function create_default_slot_3(ctx) {
     	var div;
 
@@ -3118,7 +3143,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Teachers";
     			div.className = "dropdown-item text-secondary text-decoration-none";
-    			add_location(div, file$1, 16, 37, 873);
+    			add_location(div, file$1, 21, 37, 971);
     		},
 
     		m: function mount(target, anchor) {
@@ -3133,7 +3158,7 @@ var app = (function () {
     	};
     }
 
-    // (18:9) <Link to="/svelte/subjects_teachers">
+    // (23:9) <Link to="/svelte/subjects_teachers">
     function create_default_slot_2(ctx) {
     	var div;
 
@@ -3142,7 +3167,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Subjects/Teachers";
     			div.className = "dropdown-item text-secondary";
-    			add_location(div, file$1, 17, 46, 1005);
+    			add_location(div, file$1, 22, 46, 1103);
     		},
 
     		m: function mount(target, anchor) {
@@ -3157,7 +3182,7 @@ var app = (function () {
     	};
     }
 
-    // (19:9) <Link to="/svelte/projects_teachers">
+    // (24:9) <Link to="/svelte/projects_teachers">
     function create_default_slot_1(ctx) {
     	var div;
 
@@ -3166,7 +3191,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Projects/Teachers";
     			div.className = "dropdown-item text-secondary";
-    			add_location(div, file$1, 18, 46, 1125);
+    			add_location(div, file$1, 23, 46, 1223);
     		},
 
     		m: function mount(target, anchor) {
@@ -3181,7 +3206,7 @@ var app = (function () {
     	};
     }
 
-    // (20:9) <Link to="/svelte/mobilities_teachers">
+    // (25:9) <Link to="/svelte/mobilities_teachers">
     function create_default_slot(ctx) {
     	var div;
 
@@ -3190,7 +3215,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Mobilities/Teachers";
     			div.className = "dropdown-item text-secondary";
-    			add_location(div, file$1, 19, 48, 1247);
+    			add_location(div, file$1, 24, 48, 1345);
     		},
 
     		m: function mount(target, anchor) {
@@ -3205,10 +3230,95 @@ var app = (function () {
     	};
     }
 
+    // (61:3) {:else}
+    function create_else_block$1(ctx) {
+    	var li, span, i, t;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			i = element("i");
+    			t = text(" Login");
+    			i.className = "fas fa-user";
+    			add_location(i, file$1, 61, 125, 4243);
+    			span.className = "nav-link text-nowrap cursor-pointer";
+    			span.dataset.toggle = "modal";
+    			span.dataset.target = "#login-modal";
+    			add_location(span, file$1, 61, 28, 4146);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 61, 7, 4125);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    			append(span, i);
+    			append(span, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (59:6) {#if is_logged_in}
+    function create_if_block$1(ctx) {
+    	var li, span, i, t, dispose;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			i = element("i");
+    			t = text(" Logout");
+    			i.className = "fas fa-user";
+    			add_location(i, file$1, 59, 107, 4058);
+    			span.className = "nav-link text-nowrap cursor-pointer";
+    			add_location(span, file$1, 59, 28, 3979);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 59, 7, 3958);
+    			dispose = listen(span, "click", ctx.handleLogoutClick);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    			append(span, i);
+    			append(span, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
     function create_fragment$3(ctx) {
-    	var header, nav, a0, img, t0, button, span, t1, div6, ul0, li0, a1, t3, div0, t4, t5, t6, t7, li1, a2, t9, div1, a3, a4, t12, li2, a5, t14, div2, a6, a7, t17, li3, a8, t19, div3, a9, a10, t22, li4, a11, t24, div4, a12, a13, a14, t28, li5, a15, t30, div5, a16, a17, a18, a19, t35, li6, a20, t37, li7, a21, t39, li8, a22, t41, ul1, li9, a23, i, t42, t43_value = !ctx.is_logged_in ? "Login" : "Logout", t43, current;
+    	var header, nav, t0, button, span, t1, div6, ul0, li0, a0, t3, div0, t4, t5, t6, t7, li1, a1, t9, div1, a2, a3, t12, li2, a4, t14, div2, a5, a6, t17, li3, a7, t19, div3, a8, a9, t22, li4, a10, t24, div4, a11, a12, a13, t28, li5, a14, t30, div5, a15, a16, a17, a18, t35, li6, a19, t37, li7, a20, t39, li8, a21, t41, ul1, current;
 
     	var link0 = new Link({
+    		props: {
+    		class: "navbar-brand",
+    		to: "/svelte",
+    		$$slots: { default: [create_default_slot_4] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link1 = new Link({
     		props: {
     		to: "/svelte/teachers",
     		$$slots: { default: [create_default_slot_3] },
@@ -3217,7 +3327,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var link1 = new Link({
+    	var link2 = new Link({
     		props: {
     		to: "/svelte/subjects_teachers",
     		$$slots: { default: [create_default_slot_2] },
@@ -3226,7 +3336,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var link2 = new Link({
+    	var link3 = new Link({
     		props: {
     		to: "/svelte/projects_teachers",
     		$$slots: { default: [create_default_slot_1] },
@@ -3235,7 +3345,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var link3 = new Link({
+    	var link4 = new Link({
     		props: {
     		to: "/svelte/mobilities_teachers",
     		$$slots: { default: [create_default_slot] },
@@ -3244,12 +3354,19 @@ var app = (function () {
     		$$inline: true
     	});
 
+    	function select_block_type(ctx) {
+    		if (ctx.is_logged_in) return create_if_block$1;
+    		return create_else_block$1;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
     	return {
     		c: function create() {
     			header = element("header");
     			nav = element("nav");
-    			a0 = element("a");
-    			img = element("img");
+    			link0.$$.fragment.c();
     			t0 = space();
     			button = element("button");
     			span = element("span");
@@ -3257,101 +3374,90 @@ var app = (function () {
     			div6 = element("div");
     			ul0 = element("ul");
     			li0 = element("li");
-    			a1 = element("a");
-    			a1.textContent = "Teachers";
+    			a0 = element("a");
+    			a0.textContent = "Teachers";
     			t3 = space();
     			div0 = element("div");
-    			link0.$$.fragment.c();
-    			t4 = space();
     			link1.$$.fragment.c();
-    			t5 = space();
+    			t4 = space();
     			link2.$$.fragment.c();
-    			t6 = space();
+    			t5 = space();
     			link3.$$.fragment.c();
+    			t6 = space();
+    			link4.$$.fragment.c();
     			t7 = space();
     			li1 = element("li");
-    			a2 = element("a");
-    			a2.textContent = "Students";
+    			a1 = element("a");
+    			a1.textContent = "Students";
     			t9 = space();
     			div1 = element("div");
+    			a2 = element("a");
+    			a2.textContent = "Students";
     			a3 = element("a");
-    			a3.textContent = "Students";
-    			a4 = element("a");
-    			a4.textContent = "Mobilities/Students";
+    			a3.textContent = "Mobilities/Students";
     			t12 = space();
     			li2 = element("li");
-    			a5 = element("a");
-    			a5.textContent = "Subjects";
+    			a4 = element("a");
+    			a4.textContent = "Subjects";
     			t14 = space();
     			div2 = element("div");
+    			a5 = element("a");
+    			a5.textContent = "Subjects";
     			a6 = element("a");
-    			a6.textContent = "Subjects";
-    			a7 = element("a");
-    			a7.textContent = "Subjects/Teachers";
+    			a6.textContent = "Subjects/Teachers";
     			t17 = space();
     			li3 = element("li");
-    			a8 = element("a");
-    			a8.textContent = "Partners";
+    			a7 = element("a");
+    			a7.textContent = "Partners";
     			t19 = space();
     			div3 = element("div");
+    			a8 = element("a");
+    			a8.textContent = "Partners";
     			a9 = element("a");
-    			a9.textContent = "Partners";
-    			a10 = element("a");
-    			a10.textContent = "Partners/Projects";
+    			a9.textContent = "Partners/Projects";
     			t22 = space();
     			li4 = element("li");
-    			a11 = element("a");
-    			a11.textContent = "Mobilities";
+    			a10 = element("a");
+    			a10.textContent = "Mobilities";
     			t24 = space();
     			div4 = element("div");
+    			a11 = element("a");
+    			a11.textContent = "Mobilities";
     			a12 = element("a");
-    			a12.textContent = "Mobilities";
+    			a12.textContent = "Mobilities/Students";
     			a13 = element("a");
-    			a13.textContent = "Mobilities/Students";
-    			a14 = element("a");
-    			a14.textContent = "Mobilities/Teachers";
+    			a13.textContent = "Mobilities/Teachers";
     			t28 = space();
     			li5 = element("li");
-    			a15 = element("a");
-    			a15.textContent = "Projects";
+    			a14 = element("a");
+    			a14.textContent = "Projects";
     			t30 = space();
     			div5 = element("div");
+    			a15 = element("a");
+    			a15.textContent = "Projects";
     			a16 = element("a");
-    			a16.textContent = "Projects";
+    			a16.textContent = "Projects/Logos";
     			a17 = element("a");
-    			a17.textContent = "Projects/Logos";
+    			a17.textContent = "Projects/Teachers";
     			a18 = element("a");
-    			a18.textContent = "Projects/Teachers";
-    			a19 = element("a");
-    			a19.textContent = "Partners/Projects";
+    			a18.textContent = "Partners/Projects";
     			t35 = space();
     			li6 = element("li");
-    			a20 = element("a");
-    			a20.textContent = "Courses";
+    			a19 = element("a");
+    			a19.textContent = "Courses";
     			t37 = space();
     			li7 = element("li");
-    			a21 = element("a");
-    			a21.textContent = "Countries";
+    			a20 = element("a");
+    			a20.textContent = "Countries";
     			t39 = space();
     			li8 = element("li");
-    			a22 = element("a");
-    			a22.textContent = "Student Groups";
+    			a21 = element("a");
+    			a21.textContent = "Student Groups";
     			t41 = space();
     			ul1 = element("ul");
-    			li9 = element("li");
-    			a23 = element("a");
-    			i = element("i");
-    			t42 = space();
-    			t43 = text(t43_value);
-    			img.className = "h-50px d-none d-sm-block";
-    			img.src = "../imgs/esl.png";
-    			img.alt = "Logo ESL";
-    			add_location(img, file$1, 8, 35, 223);
-    			a0.className = "navbar-brand";
-    			a0.href = "#";
-    			add_location(a0, file$1, 8, 2, 190);
+    			if_block.c();
     			span.className = "navbar-toggler-icon";
-    			add_location(span, file$1, 10, 3, 501);
+    			add_location(span, file$1, 15, 3, 599);
     			button.className = "navbar-toggler mr-auto";
     			button.type = "button";
     			button.dataset.toggle = "collapse";
@@ -3359,135 +3465,126 @@ var app = (function () {
     			attr(button, "aria-controls", "navbarCollapse");
     			attr(button, "aria-expanded", "false");
     			attr(button, "aria-label", "Toggle Navigation");
-    			add_location(button, file$1, 9, 2, 306);
+    			add_location(button, file$1, 14, 2, 404);
+    			a0.className = "nav-link dropdown-toggle text-nowrap";
+    			a0.href = "#";
+    			attr(a0, "role", "button");
+    			a0.dataset.toggle = "dropdown";
+    			add_location(a0, file$1, 19, 5, 782);
+    			div0.className = "dropdown-menu bg-darker";
+    			add_location(div0, file$1, 20, 5, 895);
+    			li0.className = "nav-item dropdown";
+    			add_location(li0, file$1, 18, 4, 745);
     			a1.className = "nav-link dropdown-toggle text-nowrap";
     			a1.href = "#";
     			attr(a1, "role", "button");
     			a1.dataset.toggle = "dropdown";
-    			add_location(a1, file$1, 14, 5, 684);
-    			div0.className = "dropdown-menu bg-darker";
-    			add_location(div0, file$1, 15, 5, 797);
-    			li0.className = "nav-item dropdown";
-    			add_location(li0, file$1, 13, 4, 647);
-    			a2.className = "nav-link dropdown-toggle text-nowrap";
-    			a2.href = "#";
-    			attr(a2, "role", "button");
-    			a2.dataset.toggle = "dropdown";
-    			add_location(a2, file$1, 23, 5, 1388);
+    			add_location(a1, file$1, 28, 5, 1486);
+    			a2.className = "dropdown-item text-secondary";
+    			a2.href = "/students";
+    			add_location(a2, file$1, 29, 42, 1636);
     			a3.className = "dropdown-item text-secondary";
-    			a3.href = "/students";
-    			add_location(a3, file$1, 24, 42, 1538);
-    			a4.className = "dropdown-item text-secondary";
-    			a4.href = "./mobilities_students";
-    			add_location(a4, file$1, 24, 111, 1607);
+    			a3.href = "./mobilities_students";
+    			add_location(a3, file$1, 29, 111, 1705);
     			div1.className = "dropdown-menu bg-darker";
-    			add_location(div1, file$1, 24, 5, 1501);
+    			add_location(div1, file$1, 29, 5, 1599);
     			li1.className = "nav-item dropdown";
-    			add_location(li1, file$1, 22, 4, 1351);
-    			a5.className = "nav-link dropdown-toggle text-nowrap";
-    			a5.href = "#";
-    			attr(a5, "role", "button");
-    			a5.dataset.toggle = "dropdown";
-    			add_location(a5, file$1, 28, 5, 1766);
+    			add_location(li1, file$1, 27, 4, 1449);
+    			a4.className = "nav-link dropdown-toggle text-nowrap";
+    			a4.href = "#";
+    			attr(a4, "role", "button");
+    			a4.dataset.toggle = "dropdown";
+    			add_location(a4, file$1, 33, 5, 1864);
+    			a5.className = "dropdown-item text-secondary";
+    			a5.href = "./subjects";
+    			add_location(a5, file$1, 34, 42, 2014);
     			a6.className = "dropdown-item text-secondary";
-    			a6.href = "./subjects";
-    			add_location(a6, file$1, 29, 42, 1916);
-    			a7.className = "dropdown-item text-secondary";
-    			a7.href = "./subjects_teachers";
-    			add_location(a7, file$1, 29, 112, 1986);
+    			a6.href = "./subjects_teachers";
+    			add_location(a6, file$1, 34, 112, 2084);
     			div2.className = "dropdown-menu bg-darker";
-    			add_location(div2, file$1, 29, 5, 1879);
+    			add_location(div2, file$1, 34, 5, 1977);
     			li2.className = "nav-item dropdown";
-    			add_location(li2, file$1, 27, 4, 1729);
-    			a8.className = "nav-link dropdown-toggle text-nowrap";
-    			a8.href = "#";
-    			attr(a8, "role", "button");
-    			a8.dataset.toggle = "dropdown";
-    			add_location(a8, file$1, 33, 5, 2141);
+    			add_location(li2, file$1, 32, 4, 1827);
+    			a7.className = "nav-link dropdown-toggle text-nowrap";
+    			a7.href = "#";
+    			attr(a7, "role", "button");
+    			a7.dataset.toggle = "dropdown";
+    			add_location(a7, file$1, 38, 5, 2239);
+    			a8.className = "dropdown-item text-secondary";
+    			a8.href = "./partners";
+    			add_location(a8, file$1, 39, 42, 2389);
     			a9.className = "dropdown-item text-secondary";
-    			a9.href = "./partners";
-    			add_location(a9, file$1, 34, 42, 2291);
-    			a10.className = "dropdown-item text-secondary";
-    			a10.href = "./partners_projects";
-    			add_location(a10, file$1, 34, 112, 2361);
+    			a9.href = "./partners_projects";
+    			add_location(a9, file$1, 39, 112, 2459);
     			div3.className = "dropdown-menu bg-darker";
-    			add_location(div3, file$1, 34, 5, 2254);
+    			add_location(div3, file$1, 39, 5, 2352);
     			li3.className = "nav-item dropdown";
-    			add_location(li3, file$1, 32, 4, 2104);
-    			a11.className = "nav-link dropdown-toggle text-nowrap";
-    			a11.href = "#";
-    			attr(a11, "role", "button");
-    			a11.dataset.toggle = "dropdown";
-    			add_location(a11, file$1, 38, 5, 2516);
+    			add_location(li3, file$1, 37, 4, 2202);
+    			a10.className = "nav-link dropdown-toggle text-nowrap";
+    			a10.href = "#";
+    			attr(a10, "role", "button");
+    			a10.dataset.toggle = "dropdown";
+    			add_location(a10, file$1, 43, 5, 2614);
+    			a11.className = "dropdown-item text-secondary";
+    			a11.href = "./mobilities";
+    			add_location(a11, file$1, 44, 42, 2766);
     			a12.className = "dropdown-item text-secondary";
-    			a12.href = "./mobilities";
-    			add_location(a12, file$1, 39, 42, 2668);
+    			a12.href = "./mobilities_students";
+    			add_location(a12, file$1, 44, 116, 2840);
     			a13.className = "dropdown-item text-secondary";
-    			a13.href = "./mobilities_students";
-    			add_location(a13, file$1, 39, 116, 2742);
-    			a14.className = "dropdown-item text-secondary";
-    			a14.href = "./mobilities_teachers";
-    			add_location(a14, file$1, 39, 208, 2834);
+    			a13.href = "./mobilities_teachers";
+    			add_location(a13, file$1, 44, 208, 2932);
     			div4.className = "dropdown-menu bg-darker";
-    			add_location(div4, file$1, 39, 5, 2631);
+    			add_location(div4, file$1, 44, 5, 2729);
     			li4.className = "nav-item dropdown";
-    			add_location(li4, file$1, 37, 4, 2479);
-    			a15.className = "nav-link dropdown-toggle text-nowrap";
-    			a15.href = "#";
-    			attr(a15, "role", "button");
-    			a15.dataset.toggle = "dropdown";
-    			add_location(a15, file$1, 43, 5, 2993);
+    			add_location(li4, file$1, 42, 4, 2577);
+    			a14.className = "nav-link dropdown-toggle text-nowrap";
+    			a14.href = "#";
+    			attr(a14, "role", "button");
+    			a14.dataset.toggle = "dropdown";
+    			add_location(a14, file$1, 48, 5, 3091);
+    			a15.className = "dropdown-item text-secondary";
+    			a15.href = "./projects";
+    			add_location(a15, file$1, 49, 42, 3241);
     			a16.className = "dropdown-item text-secondary";
-    			a16.href = "./projects";
-    			add_location(a16, file$1, 44, 42, 3143);
+    			a16.href = "./projects_logos";
+    			add_location(a16, file$1, 49, 112, 3311);
     			a17.className = "dropdown-item text-secondary";
-    			a17.href = "./projects_logos";
-    			add_location(a17, file$1, 44, 112, 3213);
+    			a17.href = "./projects_teachers";
+    			add_location(a17, file$1, 49, 194, 3393);
     			a18.className = "dropdown-item text-secondary";
-    			a18.href = "./projects_teachers";
-    			add_location(a18, file$1, 44, 194, 3295);
-    			a19.className = "dropdown-item text-secondary";
-    			a19.href = "./partners_projects";
-    			add_location(a19, file$1, 44, 282, 3383);
+    			a18.href = "./partners_projects";
+    			add_location(a18, file$1, 49, 282, 3481);
     			div5.className = "dropdown-menu bg-darker";
-    			add_location(div5, file$1, 44, 5, 3106);
+    			add_location(div5, file$1, 49, 5, 3204);
     			li5.className = "nav-item dropdown";
-    			add_location(li5, file$1, 42, 4, 2956);
-    			a20.className = "nav-link";
-    			a20.href = "./courses";
-    			add_location(a20, file$1, 47, 25, 3522);
+    			add_location(li5, file$1, 47, 4, 3054);
+    			a19.className = "nav-link";
+    			a19.href = "./courses";
+    			add_location(a19, file$1, 52, 25, 3620);
     			li6.className = "nav-item";
-    			add_location(li6, file$1, 47, 4, 3501);
-    			a21.className = "nav-link";
-    			a21.href = "./countries";
-    			add_location(a21, file$1, 48, 25, 3602);
+    			add_location(li6, file$1, 52, 4, 3599);
+    			a20.className = "nav-link";
+    			a20.href = "./countries";
+    			add_location(a20, file$1, 53, 25, 3700);
     			li7.className = "nav-item";
-    			add_location(li7, file$1, 48, 4, 3581);
-    			a22.className = "nav-link text-nowrap";
-    			a22.href = "./studentgroups";
-    			add_location(a22, file$1, 49, 25, 3686);
+    			add_location(li7, file$1, 53, 4, 3679);
+    			a21.className = "nav-link text-nowrap";
+    			a21.href = "./studentgroups";
+    			add_location(a21, file$1, 54, 25, 3784);
     			li8.className = "nav-item";
-    			add_location(li8, file$1, 49, 4, 3665);
+    			add_location(li8, file$1, 54, 4, 3763);
     			ul0.className = "navbar-nav";
-    			add_location(ul0, file$1, 12, 3, 618);
+    			add_location(ul0, file$1, 17, 3, 716);
     			div6.className = "collapse navbar-collapse";
     			div6.id = "navbarCollapse";
-    			add_location(div6, file$1, 11, 2, 555);
-    			i.className = "fas fa-user";
-    			add_location(i, file$1, 53, 111, 3938);
-    			a23.className = "nav-link text-nowrap";
-    			a23.href = "";
-    			a23.dataset.toggle = "modal";
-    			a23.dataset.target = "#login-modal";
-    			add_location(a23, file$1, 53, 24, 3851);
-    			li9.className = "nav-item";
-    			add_location(li9, file$1, 53, 3, 3830);
+    			add_location(div6, file$1, 16, 2, 653);
     			ul1.className = "navbar-nav mr-2 flex-row";
-    			add_location(ul1, file$1, 52, 2, 3788);
+    			add_location(ul1, file$1, 57, 2, 3886);
     			nav.className = "navbar navbar-expand-xl navbar-dark bg-darker";
-    			add_location(nav, file$1, 7, 1, 127);
+    			add_location(nav, file$1, 12, 1, 215);
     			header.className = "sticky-top";
-    			add_location(header, file$1, 6, 0, 97);
+    			add_location(header, file$1, 11, 0, 185);
     		},
 
     		l: function claim(nodes) {
@@ -3497,8 +3594,7 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert(target, header, anchor);
     			append(header, nav);
-    			append(nav, a0);
-    			append(a0, img);
+    			mount_component(link0, nav, null);
     			append(nav, t0);
     			append(nav, button);
     			append(button, span);
@@ -3506,70 +3602,66 @@ var app = (function () {
     			append(nav, div6);
     			append(div6, ul0);
     			append(ul0, li0);
-    			append(li0, a1);
+    			append(li0, a0);
     			append(li0, t3);
     			append(li0, div0);
-    			mount_component(link0, div0, null);
-    			append(div0, t4);
     			mount_component(link1, div0, null);
-    			append(div0, t5);
+    			append(div0, t4);
     			mount_component(link2, div0, null);
-    			append(div0, t6);
+    			append(div0, t5);
     			mount_component(link3, div0, null);
+    			append(div0, t6);
+    			mount_component(link4, div0, null);
     			append(ul0, t7);
     			append(ul0, li1);
-    			append(li1, a2);
+    			append(li1, a1);
     			append(li1, t9);
     			append(li1, div1);
+    			append(div1, a2);
     			append(div1, a3);
-    			append(div1, a4);
     			append(ul0, t12);
     			append(ul0, li2);
-    			append(li2, a5);
+    			append(li2, a4);
     			append(li2, t14);
     			append(li2, div2);
+    			append(div2, a5);
     			append(div2, a6);
-    			append(div2, a7);
     			append(ul0, t17);
     			append(ul0, li3);
-    			append(li3, a8);
+    			append(li3, a7);
     			append(li3, t19);
     			append(li3, div3);
+    			append(div3, a8);
     			append(div3, a9);
-    			append(div3, a10);
     			append(ul0, t22);
     			append(ul0, li4);
-    			append(li4, a11);
+    			append(li4, a10);
     			append(li4, t24);
     			append(li4, div4);
+    			append(div4, a11);
     			append(div4, a12);
     			append(div4, a13);
-    			append(div4, a14);
     			append(ul0, t28);
     			append(ul0, li5);
-    			append(li5, a15);
+    			append(li5, a14);
     			append(li5, t30);
     			append(li5, div5);
+    			append(div5, a15);
     			append(div5, a16);
     			append(div5, a17);
     			append(div5, a18);
-    			append(div5, a19);
     			append(ul0, t35);
     			append(ul0, li6);
-    			append(li6, a20);
+    			append(li6, a19);
     			append(ul0, t37);
     			append(ul0, li7);
-    			append(li7, a21);
+    			append(li7, a20);
     			append(ul0, t39);
     			append(ul0, li8);
-    			append(li8, a22);
+    			append(li8, a21);
     			append(nav, t41);
     			append(nav, ul1);
-    			append(ul1, li9);
-    			append(li9, a23);
-    			append(a23, i);
-    			append(a23, t42);
-    			append(a23, t43);
+    			if_block.m(ul1, null);
     			current = true;
     		},
 
@@ -3590,8 +3682,19 @@ var app = (function () {
     			if (changed.$$scope) link3_changes.$$scope = { changed, ctx };
     			link3.$set(link3_changes);
 
-    			if ((!current || changed.is_logged_in) && t43_value !== (t43_value = !ctx.is_logged_in ? "Login" : "Logout")) {
-    				set_data(t43, t43_value);
+    			var link4_changes = {};
+    			if (changed.$$scope) link4_changes.$$scope = { changed, ctx };
+    			link4.$set(link4_changes);
+
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(ul1, null);
+    				}
     			}
     		},
 
@@ -3605,6 +3708,8 @@ var app = (function () {
 
     			link3.$$.fragment.i(local);
 
+    			link4.$$.fragment.i(local);
+
     			current = true;
     		},
 
@@ -3613,6 +3718,7 @@ var app = (function () {
     			link1.$$.fragment.o(local);
     			link2.$$.fragment.o(local);
     			link3.$$.fragment.o(local);
+    			link4.$$.fragment.o(local);
     			current = false;
     		},
 
@@ -3628,34 +3734,46 @@ var app = (function () {
     			link2.$destroy();
 
     			link3.$destroy();
+
+    			link4.$destroy();
+
+    			if_block.d();
     		}
     	};
     }
 
     function instance$3($$self, $$props, $$invalidate) {
-    	let { is_logged_in } = $$props;
+    	let { is_logged_in, logout } = $$props;
 
-    	const writable_props = ['is_logged_in'];
+        function handleLogoutClick() {
+            logout();
+        }
+
+    	const writable_props = ['is_logged_in', 'logout'];
     	Object.keys($$props).forEach(key => {
     		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Header> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$set = $$props => {
     		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('logout' in $$props) $$invalidate('logout', logout = $$props.logout);
     	};
 
-    	return { is_logged_in };
+    	return { is_logged_in, logout, handleLogoutClick };
     }
 
     class Header extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, ["is_logged_in"]);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, ["is_logged_in", "logout"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
     		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
     			console.warn("<Header> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.logout === undefined && !('logout' in props)) {
+    			console.warn("<Header> was created without expected prop 'logout'");
     		}
     	}
 
@@ -3666,6 +3784,14 @@ var app = (function () {
     	set is_logged_in(value) {
     		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get logout() {
+    		throw new Error("<Header>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set logout(value) {
+    		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src\components\LoginModal.svelte generated by Svelte v3.5.1 */
@@ -3673,12 +3799,11 @@ var app = (function () {
     const file$2 = "src\\components\\LoginModal.svelte";
 
     function create_fragment$4(ctx) {
-    	var div13, form, div12, div11, div0, h5, t1, button0, span, t3, div9, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, input1, t9, div10, button1;
+    	var div13, div12, div11, div0, h5, t1, button0, span, t3, div9, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, input1, t9, div10, button1, dispose;
 
     	return {
     		c: function create() {
     			div13 = element("div");
-    			form = element("form");
     			div12 = element("div");
     			div11 = element("div");
     			div0 = element("div");
@@ -3710,60 +3835,62 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Login";
     			h5.className = "modal-title";
-    			add_location(h5, file$2, 4, 30, 229);
-    			add_location(span, file$2, 5, 62, 327);
+    			add_location(h5, file$2, 16, 38, 425);
+    			add_location(span, file$2, 17, 73, 534);
     			button0.className = "close";
     			button0.type = "button";
     			button0.dataset.dismiss = "modal";
-    			add_location(button0, file$2, 5, 5, 270);
+    			add_location(button0, file$2, 17, 16, 477);
     			div0.className = "modal-header";
-    			add_location(div0, file$2, 4, 4, 203);
+    			add_location(div0, file$2, 16, 12, 399);
     			div1.className = "input-group-text";
-    			add_location(div1, file$2, 11, 8, 508);
+    			add_location(div1, file$2, 23, 28, 793);
     			div2.className = "input-group-prepend";
-    			add_location(div2, file$2, 10, 7, 465);
+    			add_location(div2, file$2, 22, 24, 730);
     			input0.className = "form-control";
     			attr(input0, "type", "text");
     			input0.placeholder = "Username";
     			input0.name = "username";
-    			add_location(input0, file$2, 13, 7, 576);
+    			add_location(input0, file$2, 25, 24, 895);
     			div3.className = "input-group";
-    			add_location(div3, file$2, 9, 6, 431);
+    			add_location(div3, file$2, 21, 20, 679);
     			div4.className = "form-group";
-    			add_location(div4, file$2, 8, 5, 399);
+    			add_location(div4, file$2, 20, 16, 633);
     			div5.className = "input-group-text";
-    			add_location(div5, file$2, 18, 8, 795);
+    			add_location(div5, file$2, 30, 28, 1240);
     			div6.className = "input-group-prepend";
-    			add_location(div6, file$2, 17, 7, 752);
+    			add_location(div6, file$2, 29, 24, 1177);
     			input1.className = "form-control";
     			attr(input1, "type", "password");
     			input1.placeholder = "Password";
     			input1.name = "password";
-    			add_location(input1, file$2, 20, 7, 863);
+    			add_location(input1, file$2, 32, 24, 1342);
     			div7.className = "input-group";
-    			add_location(div7, file$2, 16, 6, 718);
+    			add_location(div7, file$2, 28, 20, 1126);
     			div8.className = "form-group mb-0";
-    			add_location(div8, file$2, 15, 5, 681);
+    			add_location(div8, file$2, 27, 16, 1075);
     			div9.className = "modal-body";
-    			add_location(div9, file$2, 7, 4, 368);
+    			add_location(div9, file$2, 19, 12, 591);
     			button1.className = "btn btn-primary mr-auto w-25";
-    			button1.type = "submit";
-    			add_location(button1, file$2, 24, 5, 1016);
+    			add_location(button1, file$2, 36, 16, 1586);
     			div10.className = "modal-footer";
-    			add_location(div10, file$2, 23, 4, 983);
+    			add_location(div10, file$2, 35, 12, 1542);
     			div11.className = "modal-content";
-    			add_location(div11, file$2, 3, 3, 170);
+    			add_location(div11, file$2, 15, 8, 358);
     			div12.className = "modal-dialog";
     			attr(div12, "role", "document");
-    			add_location(div12, file$2, 2, 2, 123);
-    			form.action = "/backoffice/login";
-    			form.method = "post";
-    			add_location(form, file$2, 1, 1, 72);
+    			add_location(div12, file$2, 14, 4, 306);
     			div13.className = "modal fade";
     			div13.id = "login-modal";
     			div13.tabIndex = "-1";
     			attr(div13, "role", "dialog");
-    			add_location(div13, file$2, 0, 0, 0);
+    			add_location(div13, file$2, 13, 0, 231);
+
+    			dispose = [
+    				listen(input0, "change", ctx.change_handler),
+    				listen(input1, "change", ctx.change_handler_1),
+    				listen(button1, "click", ctx.handleLoginClick)
+    			];
     		},
 
     		l: function claim(nodes) {
@@ -3772,8 +3899,7 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert(target, div13, anchor);
-    			append(div13, form);
-    			append(form, div12);
+    			append(div13, div12);
     			append(div12, div11);
     			append(div11, div0);
     			append(div0, h5);
@@ -3808,14 +3934,73 @@ var app = (function () {
     			if (detaching) {
     				detach(div13);
     			}
+
+    			run_all(dispose);
     		}
+    	};
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let { login } = $$props;
+
+        let username = "";
+        let password= "";
+
+        function handleLoginClick(event) {
+            login(username, password);
+
+            window.$("#login-modal").modal("hide");
+        }
+
+    	const writable_props = ['login'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<LoginModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler(event) {
+    		const $$result = username = event.target.value;
+    		$$invalidate('username', username);
+    		return $$result;
+    	}
+
+    	function change_handler_1(event) {
+    		const $$result = password = event.target.value;
+    		$$invalidate('password', password);
+    		return $$result;
+    	}
+
+    	$$self.$set = $$props => {
+    		if ('login' in $$props) $$invalidate('login', login = $$props.login);
+    	};
+
+    	return {
+    		login,
+    		username,
+    		password,
+    		handleLoginClick,
+    		change_handler,
+    		change_handler_1
     	};
     }
 
     class LoginModal extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, null, create_fragment$4, safe_not_equal, []);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, ["login"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.login === undefined && !('login' in props)) {
+    			console.warn("<LoginModal> was created without expected prop 'login'");
+    		}
+    	}
+
+    	get login() {
+    		throw new Error("<LoginModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set login(value) {
+    		throw new Error("<LoginModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -4101,7 +4286,7 @@ var app = (function () {
     	};
     }
 
-    function instance$4($$self, $$props, $$invalidate) {
+    function instance$5($$self, $$props, $$invalidate) {
     	let { table_headers, data } = $$props;
 
         let keys = [];
@@ -4124,10 +4309,10 @@ var app = (function () {
     	return { table_headers, data, keys };
     }
 
-    class BasicTable extends SvelteComponentDev {
+    class BasicTable$1 extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$4, create_fragment$5, safe_not_equal, ["table_headers", "data"]);
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, ["table_headers", "data"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -4156,14 +4341,15 @@ var app = (function () {
     	}
     }
 
-    /* src\components\Teachers.svelte generated by Svelte v3.5.1 */
+    /* src\components\teachers\Teachers.svelte generated by Svelte v3.5.1 */
 
-    const file$4 = "src\\components\\Teachers.svelte";
+    const file$4 = "src\\components\\teachers\\Teachers.svelte";
 
-    function create_fragment$6(ctx) {
-    	var div2, div1, div0, h2, span0, t1, span1, button0, t3, button1, t5, button2, t7, current;
+    // (34:0) {#if is_logged_in}
+    function create_if_block$2(ctx) {
+    	var div1, div0, h2, span0, t1, span1, button0, t3, button1, t5, button2, t7, current;
 
-    	var basictable = new BasicTable({
+    	var basictable = new BasicTable$1({
     		props: {
     		table_headers: ctx.table_headers,
     		data: ctx.teachers
@@ -4173,7 +4359,6 @@ var app = (function () {
 
     	return {
     		c: function create() {
-    			div2 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			h2 = element("h2");
@@ -4192,34 +4377,28 @@ var app = (function () {
     			t7 = space();
     			basictable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2";
-    			add_location(span0, file$4, 34, 35, 1145);
+    			add_location(span0, file$4, 36, 35, 1210);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$4, 34, 8, 1118);
+    			add_location(h2, file$4, 36, 8, 1183);
     			button0.className = "btn btn-success mb-2";
     			button0.dataset.toggle = "modal";
     			button0.dataset.target = "#modal-add";
-    			add_location(button0, file$4, 36, 16, 1267);
+    			add_location(button0, file$4, 38, 16, 1332);
     			button1.className = "btn btn-info mb-2 mx-2 disabled";
     			button1.id = "edit-btn";
-    			add_location(button1, file$4, 37, 16, 1381);
+    			add_location(button1, file$4, 39, 16, 1446);
     			button2.className = "btn btn-danger mb-2 disabled";
     			button2.id = "delete-btn";
-    			add_location(button2, file$4, 38, 16, 1474);
-    			add_location(span1, file$4, 35, 12, 1243);
+    			add_location(button2, file$4, 40, 16, 1539);
+    			add_location(span1, file$4, 37, 12, 1308);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$4, 33, 8, 1023);
+    			add_location(div0, file$4, 35, 8, 1088);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$4, 32, 4, 939);
-    			add_location(div2, file$4, 31, 0, 928);
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    			add_location(div1, file$4, 34, 4, 1004);
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, div2, anchor);
-    			append(div2, div1);
+    			insert(target, div1, anchor);
     			append(div1, div0);
     			append(div0, h2);
     			append(h2, span0);
@@ -4256,7 +4435,7 @@ var app = (function () {
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(div2);
+    				detach(div1);
     			}
 
     			basictable.$destroy();
@@ -4264,7 +4443,72 @@ var app = (function () {
     	};
     }
 
-    function instance$5($$self, $$props, $$invalidate) {
+    function create_fragment$6(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$2(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$2(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$6($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken } = $$props;
@@ -4275,6 +4519,7 @@ var app = (function () {
         // axios.defaults.withCredentials = true;
 
         function getTeachers() {
+        	console.log("Trying to fetch teachers");
             axios$1.get("/api/get/teachers", {headers: {Authorization: getToken()}}).then(function(res) {
             	$$invalidate('teachers', teachers = res.data);
                 console.log(res.data);
@@ -4316,7 +4561,7 @@ var app = (function () {
     class Teachers extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$6, safe_not_equal, ["is_logged_in", "getToken"]);
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, ["is_logged_in", "getToken"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -4345,12 +4590,288 @@ var app = (function () {
     	}
     }
 
+    /* src\components\projects\Projects.svelte generated by Svelte v3.5.1 */
+
+    const file$5 = "src\\components\\projects\\Projects.svelte";
+
+    // (24:0) {#if is_logged_in}
+    function create_if_block$3(ctx) {
+    	var div1, div0, h2, span0, t1, span1, button0, t3, button1, t5, button2, t7, current;
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: teachers
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Teachers";
+    			t1 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t3 = space();
+    			button1 = element("button");
+    			button1.textContent = "Edit";
+    			t5 = space();
+    			button2 = element("button");
+    			button2.textContent = "Delete";
+    			t7 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2";
+    			add_location(span0, file$5, 26, 35, 784);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$5, 26, 8, 757);
+    			button0.className = "btn btn-success mb-2";
+    			button0.dataset.toggle = "modal";
+    			button0.dataset.target = "#modal-add";
+    			add_location(button0, file$5, 28, 16, 906);
+    			button1.className = "btn btn-info mb-2 mx-2 disabled";
+    			button1.id = "edit-btn";
+    			add_location(button1, file$5, 29, 16, 1020);
+    			button2.className = "btn btn-danger mb-2 disabled";
+    			button2.id = "delete-btn";
+    			add_location(button2, file$5, 30, 16, 1113);
+    			add_location(span1, file$5, 27, 12, 882);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$5, 25, 8, 662);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$5, 24, 4, 578);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t1);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t3);
+    			append(span1, button1);
+    			append(span1, t5);
+    			append(span1, button2);
+    			append(div0, t7);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.teachers) basictable_changes.data = teachers;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+    		}
+    	};
+    }
+
+    function create_fragment$7(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$3(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$3(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
+    	let { is_logged_in, getToken } = $$props;
+
+        let projects = [];
+        let table_headers = ['#', "Project Code", 'Name', '', 'Gender', 'Email'];
+
+        // axios.defaults.withCredentials = true;
+
+        function getProjects() {
+        	console.log("Trying to fetch projects");
+            axios$1.get("/api/get/projects", {headers: {Authorization: getToken()}}).then(function(res) {
+            	projects = res.data;
+            });
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Projects> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getProjects();
+                } }
+    	};
+
+    	return { is_logged_in, getToken, table_headers };
+    }
+
+    class Projects extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Projects> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Projects> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Projects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Projects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Projects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Projects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
     /* src\App.svelte generated by Svelte v3.5.1 */
 
-    const file$5 = "src\\App.svelte";
+    const file$6 = "src\\App.svelte";
 
-    // (51:12) <Route path="/svelte/teachers">
-    function create_default_slot_1$1(ctx) {
+    // (56:8) {#if !is_logged_in}
+    function create_if_block_1$1(ctx) {
+    	var current;
+
+    	var loginmodal = new LoginModal({
+    		props: { login: ctx.login },
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			loginmodal.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(loginmodal, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var loginmodal_changes = {};
+    			if (changed.login) loginmodal_changes.login = ctx.login;
+    			loginmodal.$set(loginmodal_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			loginmodal.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			loginmodal.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			loginmodal.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (61:12) <Route path="/svelte/teachers">
+    function create_default_slot_2$1(ctx) {
     	var current;
 
     	var teachers = new Teachers({
@@ -4396,77 +4917,214 @@ var app = (function () {
     	};
     }
 
-    // (47:4) <Router url="{url}">
-    function create_default_slot$1(ctx) {
-    	var t0, t1, div, current;
+    // (64:12) <Route path="/svelte/">
+    function create_default_slot_1$1(ctx) {
+    	var current;
 
-    	var loginmodal = new LoginModal({ $$inline: true });
-
-    	var header = new Header({
-    		props: { is_logged_in: ctx.is_logged_in },
-    		$$inline: true
-    	});
-
-    	var route = new Route({
+    	var projects = new Projects({
     		props: {
-    		path: "/svelte/teachers",
-    		$$slots: { default: [create_default_slot_1$1] },
-    		$$scope: { ctx }
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
     	},
     		$$inline: true
     	});
 
     	return {
     		c: function create() {
-    			loginmodal.$$.fragment.c();
-    			t0 = space();
-    			header.$$.fragment.c();
-    			t1 = space();
-    			div = element("div");
-    			route.$$.fragment.c();
-    			add_location(div, file$5, 49, 8, 1333);
+    			projects.$$.fragment.c();
     		},
 
     		m: function mount(target, anchor) {
-    			mount_component(loginmodal, target, anchor);
-    			insert(target, t0, anchor);
-    			mount_component(header, target, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, div, anchor);
-    			mount_component(route, div, null);
+    			mount_component(projects, target, anchor);
     			current = true;
     		},
 
     		p: function update(changed, ctx) {
-    			var header_changes = {};
-    			if (changed.is_logged_in) header_changes.is_logged_in = ctx.is_logged_in;
-    			header.$set(header_changes);
-
-    			var route_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route_changes.$$scope = { changed, ctx };
-    			route.$set(route_changes);
+    			var projects_changes = {};
+    			if (changed.is_logged_in) projects_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) projects_changes.getToken = getToken;
+    			projects.$set(projects_changes);
     		},
 
     		i: function intro(local) {
     			if (current) return;
-    			loginmodal.$$.fragment.i(local);
-
-    			header.$$.fragment.i(local);
-
-    			route.$$.fragment.i(local);
+    			projects.$$.fragment.i(local);
 
     			current = true;
     		},
 
     		o: function outro(local) {
-    			loginmodal.$$.fragment.o(local);
-    			header.$$.fragment.o(local);
-    			route.$$.fragment.o(local);
+    			projects.$$.fragment.o(local);
     			current = false;
     		},
 
     		d: function destroy(detaching) {
-    			loginmodal.$destroy(detaching);
+    			projects.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (67:12) {#if !is_logged_in}
+    function create_if_block$4(ctx) {
+    	var div, h3;
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			h3 = element("h3");
+    			h3.textContent = "You must login with your account to do anything in the backoffice";
+    			h3.className = "m-5 p-3 text-center bg-danger rounded shadow-lg d-inline-block";
+    			add_location(h3, file$6, 68, 20, 1984);
+    			div.className = "container p-5 d-flex justify-content-center";
+    			add_location(div, file$6, 67, 16, 1906);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, h3);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+    		}
+    	};
+    }
+
+    // (55:4) <Router url="{url}">
+    function create_default_slot$1(ctx) {
+    	var t0, t1, div, t2, t3, current;
+
+    	var if_block0 = (!ctx.is_logged_in) && create_if_block_1$1(ctx);
+
+    	var header = new Header({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		logout: ctx.logout
+    	},
+    		$$inline: true
+    	});
+
+    	var route0 = new Route({
+    		props: {
+    		path: "/svelte/teachers",
+    		$$slots: { default: [create_default_slot_2$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var route1 = new Route({
+    		props: {
+    		path: "/svelte/",
+    		$$slots: { default: [create_default_slot_1$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var if_block1 = (!ctx.is_logged_in) && create_if_block$4();
+
+    	return {
+    		c: function create() {
+    			if (if_block0) if_block0.c();
+    			t0 = space();
+    			header.$$.fragment.c();
+    			t1 = space();
+    			div = element("div");
+    			route0.$$.fragment.c();
+    			t2 = space();
+    			route1.$$.fragment.c();
+    			t3 = space();
+    			if (if_block1) if_block1.c();
+    			add_location(div, file$6, 59, 8, 1577);
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(header, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div, anchor);
+    			mount_component(route0, div, null);
+    			append(div, t2);
+    			mount_component(route1, div, null);
+    			append(div, t3);
+    			if (if_block1) if_block1.m(div, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (!ctx.is_logged_in) {
+    				if (if_block0) {
+    					if_block0.p(changed, ctx);
+    					if_block0.i(1);
+    				} else {
+    					if_block0 = create_if_block_1$1(ctx);
+    					if_block0.c();
+    					if_block0.i(1);
+    					if_block0.m(t0.parentNode, t0);
+    				}
+    			} else if (if_block0) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block0.d(1);
+    					if_block0 = null;
+    				});
+
+    				if_block0.o(1);
+    				check_outros();
+    			}
+
+    			var header_changes = {};
+    			if (changed.is_logged_in) header_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.logout) header_changes.logout = ctx.logout;
+    			header.$set(header_changes);
+
+    			var route0_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route0_changes.$$scope = { changed, ctx };
+    			route0.$set(route0_changes);
+
+    			var route1_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route1_changes.$$scope = { changed, ctx };
+    			route1.$set(route1_changes);
+
+    			if (!ctx.is_logged_in) {
+    				if (!if_block1) {
+    					if_block1 = create_if_block$4();
+    					if_block1.c();
+    					if_block1.m(div, null);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block0) if_block0.i();
+
+    			header.$$.fragment.i(local);
+
+    			route0.$$.fragment.i(local);
+
+    			route1.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block0) if_block0.o();
+    			header.$$.fragment.o(local);
+    			route0.$$.fragment.o(local);
+    			route1.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block0) if_block0.d(detaching);
 
     			if (detaching) {
     				detach(t0);
@@ -4479,12 +5137,16 @@ var app = (function () {
     				detach(div);
     			}
 
-    			route.$destroy();
+    			route0.$destroy();
+
+    			route1.$destroy();
+
+    			if (if_block1) if_block1.d();
     		}
     	};
     }
 
-    function create_fragment$7(ctx) {
+    function create_fragment$8(ctx) {
     	var div, current;
 
     	var router = new Router({
@@ -4500,7 +5162,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			router.$$.fragment.c();
-    			add_location(div, file$5, 45, 0, 1225);
+    			add_location(div, file$6, 53, 0, 1392);
     		},
 
     		l: function claim(nodes) {
@@ -4546,14 +5208,16 @@ var app = (function () {
     	    return localStorage.getItem("api-auth-token");
     	}
 
-    function instance$6($$self, $$props, $$invalidate) {
+    function removeToken() {
+    	    localStorage.removeItem("api-auth-token");
+    	}
+
+    function instance$8($$self, $$props, $$invalidate) {
     	
+
     	let { url = "" } = $$props;
 
     	let is_logged_in = false;
-
-    	checkLogin();
-    	// login("INatsuz", "2509");
 
     	function login(username, password) {
     		console.log("Trying to log in");
@@ -4566,19 +5230,19 @@ var app = (function () {
             });
     	}
 
-    	function checkLogin() {
-    		console.log("Checking login");
+    	function logout() {
+            removeToken();
+            $$invalidate('is_logged_in', is_logged_in = false);
+    	}
 
+    	function checkLogin() {
     	    axios$1.get("/api/logincheck", {headers: {Authorization: getToken()}}).then(res => {
                 $$invalidate('is_logged_in', is_logged_in = true);
-
-                console.log(res.data.userID);
             }).catch(err => {
-                login("INatsuz", "2509");
-
                 console.log(err.response.data);
             });
     	}
+    	checkLogin();
 
     	const writable_props = ['url'];
     	Object.keys($$props).forEach(key => {
@@ -4589,13 +5253,13 @@ var app = (function () {
     		if ('url' in $$props) $$invalidate('url', url = $$props.url);
     	};
 
-    	return { url, is_logged_in };
+    	return { url, is_logged_in, login, logout };
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$7, safe_not_equal, ["url"]);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, ["url"]);
     	}
 
     	get url() {

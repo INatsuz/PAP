@@ -58,7 +58,7 @@ app.use(function (req, res, next) {
 
 app.use("/backoffice", backoffice_router.router);
 app.use("/svelte/", function (req, res, next) {
-    res.sendFile(path.join(__dirname, "public/svelte-backoffice/index.html"));
+    res.sendFile(path.join(__dirname, "public/svelte/index.html"));
 });
 app.use("/api", api_router.router);
 app.use("/", frontoffice_router.router);

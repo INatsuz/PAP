@@ -1,6 +1,6 @@
 <script>
     import axios from 'axios';
-    import BasicTable from './BasicTable.svelte';
+    import BasicTable from './../BasicTable.svelte';
 
     export let is_logged_in;
     export let getToken;
@@ -11,6 +11,7 @@
     // axios.defaults.withCredentials = true;
 
     function getTeachers() {
+    	console.log("Trying to fetch teachers");
         axios.get("/api/get/teachers", {headers: {Authorization: getToken()}}).then(function(res) {
         	teachers = res.data;
             console.log(res.data);
@@ -24,12 +25,13 @@
             }
         });
     }
+
     $: if(is_logged_in){
     	getTeachers();
     }
 </script>
 
-<div>
+{#if is_logged_in}
     <div class="p-5 position-absolute bottom-0px top-76px left-0px right-0px">
         <div class="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column">
         <h2 class="mb-3 text-dark"><span class="border-bottom-3px border-top-3px border-dark px-2">Teachers</span></h2>
@@ -41,4 +43,4 @@
             <BasicTable table_headers={table_headers} data={teachers} />
         </div>
     </div>
-</div>
+{/if}
