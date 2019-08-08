@@ -3109,17 +3109,17 @@ var app = (function () {
 
     const file$1 = "src\\components\\Header.svelte";
 
-    // (14:2) <Link class="navbar-brand" to="/svelte">
-    function create_default_slot_4(ctx) {
+    // (14:2) <Link class="navbar-brand" to="/svelte/projects">
+    function create_default_slot_9(ctx) {
     	var img;
 
     	return {
     		c: function create() {
     			img = element("img");
     			img.className = "h-50px d-none d-sm-block";
-    			img.src = "../imgs/esl.png";
+    			img.src = "/../imgs/esl.png";
     			img.alt = "Logo ESL";
-    			add_location(img, file$1, 13, 42, 318);
+    			add_location(img, file$1, 13, 51, 327);
     		},
 
     		m: function mount(target, anchor) {
@@ -3134,103 +3134,259 @@ var app = (function () {
     	};
     }
 
-    // (22:9) <Link to="/svelte/teachers">
+    // (19:4) <Link to="/svelte/projects">
+    function create_default_slot_8(ctx) {
+    	var li, span;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Projects";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 18, 53, 804);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 18, 32, 783);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (20:4) <Link to="/svelte/teachers">
+    function create_default_slot_7(ctx) {
+    	var li, span;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Teachers";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 19, 53, 909);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 19, 32, 888);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (21:4) <Link to="/svelte/students">
+    function create_default_slot_6(ctx) {
+    	var li, span;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Students";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 20, 53, 1014);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 20, 32, 993);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (22:4) <Link to="/svelte/partners">
+    function create_default_slot_5(ctx) {
+    	var li, span;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Partners";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 21, 53, 1119);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 21, 32, 1098);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (23:4) <Link to="/svelte/mobilities">
+    function create_default_slot_4(ctx) {
+    	var li, span;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Mobilities";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 22, 55, 1226);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 22, 34, 1205);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (24:4) <Link to="/svelte/subjects">
     function create_default_slot_3(ctx) {
-    	var div;
+    	var li, span;
 
     	return {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Teachers";
-    			div.className = "dropdown-item text-secondary text-decoration-none";
-    			add_location(div, file$1, 21, 37, 971);
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Subjects";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 23, 53, 1333);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 23, 32, 1312);
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, div, anchor);
+    			insert(target, li, anchor);
+    			append(li, span);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(div);
+    				detach(li);
     			}
     		}
     	};
     }
 
-    // (23:9) <Link to="/svelte/subjects_teachers">
+    // (25:4) <Link to="/svelte/courses">
     function create_default_slot_2(ctx) {
-    	var div;
+    	var li, span;
 
     	return {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Subjects/Teachers";
-    			div.className = "dropdown-item text-secondary";
-    			add_location(div, file$1, 22, 46, 1103);
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Courses";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 24, 52, 1437);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 24, 31, 1416);
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, div, anchor);
+    			insert(target, li, anchor);
+    			append(li, span);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(div);
+    				detach(li);
     			}
     		}
     	};
     }
 
-    // (24:9) <Link to="/svelte/projects_teachers">
+    // (26:4) <Link to="/svelte/countries">
     function create_default_slot_1(ctx) {
-    	var div;
+    	var li, span;
 
     	return {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Projects/Teachers";
-    			div.className = "dropdown-item text-secondary";
-    			add_location(div, file$1, 23, 46, 1223);
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Countries";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 25, 54, 1542);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 25, 33, 1521);
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, div, anchor);
+    			insert(target, li, anchor);
+    			append(li, span);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(div);
+    				detach(li);
     			}
     		}
     	};
     }
 
-    // (25:9) <Link to="/svelte/mobilities_teachers">
+    // (27:4) <Link to="/svelte/studentgroups">
     function create_default_slot(ctx) {
-    	var div;
+    	var li, span;
 
     	return {
     		c: function create() {
-    			div = element("div");
-    			div.textContent = "Mobilities/Teachers";
-    			div.className = "dropdown-item text-secondary";
-    			add_location(div, file$1, 24, 48, 1345);
+    			li = element("li");
+    			span = element("span");
+    			span.textContent = "Student Groups";
+    			span.className = "nav-link";
+    			add_location(span, file$1, 26, 58, 1653);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 26, 37, 1632);
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, div, anchor);
+    			insert(target, li, anchor);
+    			append(li, span);
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(div);
+    				detach(li);
     			}
     		}
     	};
     }
 
-    // (61:3) {:else}
+    // (33:3) {:else}
     function create_else_block$1(ctx) {
     	var li, span, i, t;
 
@@ -3241,13 +3397,13 @@ var app = (function () {
     			i = element("i");
     			t = text(" Login");
     			i.className = "fas fa-user";
-    			add_location(i, file$1, 61, 125, 4243);
+    			add_location(i, file$1, 33, 125, 2090);
     			span.className = "nav-link text-nowrap cursor-pointer";
     			span.dataset.toggle = "modal";
     			span.dataset.target = "#login-modal";
-    			add_location(span, file$1, 61, 28, 4146);
+    			add_location(span, file$1, 33, 28, 1993);
     			li.className = "nav-item";
-    			add_location(li, file$1, 61, 7, 4125);
+    			add_location(li, file$1, 33, 7, 1972);
     		},
 
     		m: function mount(target, anchor) {
@@ -3267,7 +3423,7 @@ var app = (function () {
     	};
     }
 
-    // (59:6) {#if is_logged_in}
+    // (31:6) {#if is_logged_in}
     function create_if_block$1(ctx) {
     	var li, span, i, t, dispose;
 
@@ -3278,11 +3434,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Logout");
     			i.className = "fas fa-user";
-    			add_location(i, file$1, 59, 107, 4058);
+    			add_location(i, file$1, 31, 107, 1905);
     			span.className = "nav-link text-nowrap cursor-pointer";
-    			add_location(span, file$1, 59, 28, 3979);
+    			add_location(span, file$1, 31, 28, 1826);
     			li.className = "nav-item";
-    			add_location(li, file$1, 59, 7, 3958);
+    			add_location(li, file$1, 31, 7, 1805);
     			dispose = listen(span, "click", ctx.handleLogoutClick);
     		},
 
@@ -3306,13 +3462,13 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	var header, nav, t0, button, span, t1, div6, ul0, li0, a0, t3, div0, t4, t5, t6, t7, li1, a1, t9, div1, a2, a3, t12, li2, a4, t14, div2, a5, a6, t17, li3, a7, t19, div3, a8, a9, t22, li4, a10, t24, div4, a11, a12, a13, t28, li5, a14, t30, div5, a15, a16, a17, a18, t35, li6, a19, t37, li7, a20, t39, li8, a21, t41, ul1, current;
+    	var header, nav, t0, button, span, t1, div, ul0, t2, t3, t4, t5, t6, t7, t8, t9, t10, ul1, current;
 
     	var link0 = new Link({
     		props: {
     		class: "navbar-brand",
-    		to: "/svelte",
-    		$$slots: { default: [create_default_slot_4] },
+    		to: "/svelte/projects",
+    		$$slots: { default: [create_default_slot_9] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3320,8 +3476,8 @@ var app = (function () {
 
     	var link1 = new Link({
     		props: {
-    		to: "/svelte/teachers",
-    		$$slots: { default: [create_default_slot_3] },
+    		to: "/svelte/projects",
+    		$$slots: { default: [create_default_slot_8] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3329,8 +3485,8 @@ var app = (function () {
 
     	var link2 = new Link({
     		props: {
-    		to: "/svelte/subjects_teachers",
-    		$$slots: { default: [create_default_slot_2] },
+    		to: "/svelte/teachers",
+    		$$slots: { default: [create_default_slot_7] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3338,8 +3494,8 @@ var app = (function () {
 
     	var link3 = new Link({
     		props: {
-    		to: "/svelte/projects_teachers",
-    		$$slots: { default: [create_default_slot_1] },
+    		to: "/svelte/students",
+    		$$slots: { default: [create_default_slot_6] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3347,7 +3503,52 @@ var app = (function () {
 
     	var link4 = new Link({
     		props: {
-    		to: "/svelte/mobilities_teachers",
+    		to: "/svelte/partners",
+    		$$slots: { default: [create_default_slot_5] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link5 = new Link({
+    		props: {
+    		to: "/svelte/mobilities",
+    		$$slots: { default: [create_default_slot_4] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link6 = new Link({
+    		props: {
+    		to: "/svelte/subjects",
+    		$$slots: { default: [create_default_slot_3] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link7 = new Link({
+    		props: {
+    		to: "/svelte/courses",
+    		$$slots: { default: [create_default_slot_2] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link8 = new Link({
+    		props: {
+    		to: "/svelte/countries",
+    		$$slots: { default: [create_default_slot_1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link9 = new Link({
+    		props: {
+    		to: "/svelte/studentgroups",
     		$$slots: { default: [create_default_slot] },
     		$$scope: { ctx }
     	},
@@ -3371,93 +3572,30 @@ var app = (function () {
     			button = element("button");
     			span = element("span");
     			t1 = space();
-    			div6 = element("div");
+    			div = element("div");
     			ul0 = element("ul");
-    			li0 = element("li");
-    			a0 = element("a");
-    			a0.textContent = "Teachers";
-    			t3 = space();
-    			div0 = element("div");
     			link1.$$.fragment.c();
-    			t4 = space();
+    			t2 = space();
     			link2.$$.fragment.c();
-    			t5 = space();
+    			t3 = space();
     			link3.$$.fragment.c();
-    			t6 = space();
+    			t4 = space();
     			link4.$$.fragment.c();
+    			t5 = space();
+    			link5.$$.fragment.c();
+    			t6 = space();
+    			link6.$$.fragment.c();
     			t7 = space();
-    			li1 = element("li");
-    			a1 = element("a");
-    			a1.textContent = "Students";
+    			link7.$$.fragment.c();
+    			t8 = space();
+    			link8.$$.fragment.c();
     			t9 = space();
-    			div1 = element("div");
-    			a2 = element("a");
-    			a2.textContent = "Students";
-    			a3 = element("a");
-    			a3.textContent = "Mobilities/Students";
-    			t12 = space();
-    			li2 = element("li");
-    			a4 = element("a");
-    			a4.textContent = "Subjects";
-    			t14 = space();
-    			div2 = element("div");
-    			a5 = element("a");
-    			a5.textContent = "Subjects";
-    			a6 = element("a");
-    			a6.textContent = "Subjects/Teachers";
-    			t17 = space();
-    			li3 = element("li");
-    			a7 = element("a");
-    			a7.textContent = "Partners";
-    			t19 = space();
-    			div3 = element("div");
-    			a8 = element("a");
-    			a8.textContent = "Partners";
-    			a9 = element("a");
-    			a9.textContent = "Partners/Projects";
-    			t22 = space();
-    			li4 = element("li");
-    			a10 = element("a");
-    			a10.textContent = "Mobilities";
-    			t24 = space();
-    			div4 = element("div");
-    			a11 = element("a");
-    			a11.textContent = "Mobilities";
-    			a12 = element("a");
-    			a12.textContent = "Mobilities/Students";
-    			a13 = element("a");
-    			a13.textContent = "Mobilities/Teachers";
-    			t28 = space();
-    			li5 = element("li");
-    			a14 = element("a");
-    			a14.textContent = "Projects";
-    			t30 = space();
-    			div5 = element("div");
-    			a15 = element("a");
-    			a15.textContent = "Projects";
-    			a16 = element("a");
-    			a16.textContent = "Projects/Logos";
-    			a17 = element("a");
-    			a17.textContent = "Projects/Teachers";
-    			a18 = element("a");
-    			a18.textContent = "Partners/Projects";
-    			t35 = space();
-    			li6 = element("li");
-    			a19 = element("a");
-    			a19.textContent = "Courses";
-    			t37 = space();
-    			li7 = element("li");
-    			a20 = element("a");
-    			a20.textContent = "Countries";
-    			t39 = space();
-    			li8 = element("li");
-    			a21 = element("a");
-    			a21.textContent = "Student Groups";
-    			t41 = space();
+    			link9.$$.fragment.c();
+    			t10 = space();
     			ul1 = element("ul");
     			if_block.c();
     			span.className = "navbar-toggler-icon";
-    			add_location(span, file$1, 15, 3, 599);
+    			add_location(span, file$1, 15, 3, 609);
     			button.className = "navbar-toggler mr-auto";
     			button.type = "button";
     			button.dataset.toggle = "collapse";
@@ -3465,122 +3603,14 @@ var app = (function () {
     			attr(button, "aria-controls", "navbarCollapse");
     			attr(button, "aria-expanded", "false");
     			attr(button, "aria-label", "Toggle Navigation");
-    			add_location(button, file$1, 14, 2, 404);
-    			a0.className = "nav-link dropdown-toggle text-nowrap";
-    			a0.href = "#";
-    			attr(a0, "role", "button");
-    			a0.dataset.toggle = "dropdown";
-    			add_location(a0, file$1, 19, 5, 782);
-    			div0.className = "dropdown-menu bg-darker";
-    			add_location(div0, file$1, 20, 5, 895);
-    			li0.className = "nav-item dropdown";
-    			add_location(li0, file$1, 18, 4, 745);
-    			a1.className = "nav-link dropdown-toggle text-nowrap";
-    			a1.href = "#";
-    			attr(a1, "role", "button");
-    			a1.dataset.toggle = "dropdown";
-    			add_location(a1, file$1, 28, 5, 1486);
-    			a2.className = "dropdown-item text-secondary";
-    			a2.href = "/students";
-    			add_location(a2, file$1, 29, 42, 1636);
-    			a3.className = "dropdown-item text-secondary";
-    			a3.href = "./mobilities_students";
-    			add_location(a3, file$1, 29, 111, 1705);
-    			div1.className = "dropdown-menu bg-darker";
-    			add_location(div1, file$1, 29, 5, 1599);
-    			li1.className = "nav-item dropdown";
-    			add_location(li1, file$1, 27, 4, 1449);
-    			a4.className = "nav-link dropdown-toggle text-nowrap";
-    			a4.href = "#";
-    			attr(a4, "role", "button");
-    			a4.dataset.toggle = "dropdown";
-    			add_location(a4, file$1, 33, 5, 1864);
-    			a5.className = "dropdown-item text-secondary";
-    			a5.href = "./subjects";
-    			add_location(a5, file$1, 34, 42, 2014);
-    			a6.className = "dropdown-item text-secondary";
-    			a6.href = "./subjects_teachers";
-    			add_location(a6, file$1, 34, 112, 2084);
-    			div2.className = "dropdown-menu bg-darker";
-    			add_location(div2, file$1, 34, 5, 1977);
-    			li2.className = "nav-item dropdown";
-    			add_location(li2, file$1, 32, 4, 1827);
-    			a7.className = "nav-link dropdown-toggle text-nowrap";
-    			a7.href = "#";
-    			attr(a7, "role", "button");
-    			a7.dataset.toggle = "dropdown";
-    			add_location(a7, file$1, 38, 5, 2239);
-    			a8.className = "dropdown-item text-secondary";
-    			a8.href = "./partners";
-    			add_location(a8, file$1, 39, 42, 2389);
-    			a9.className = "dropdown-item text-secondary";
-    			a9.href = "./partners_projects";
-    			add_location(a9, file$1, 39, 112, 2459);
-    			div3.className = "dropdown-menu bg-darker";
-    			add_location(div3, file$1, 39, 5, 2352);
-    			li3.className = "nav-item dropdown";
-    			add_location(li3, file$1, 37, 4, 2202);
-    			a10.className = "nav-link dropdown-toggle text-nowrap";
-    			a10.href = "#";
-    			attr(a10, "role", "button");
-    			a10.dataset.toggle = "dropdown";
-    			add_location(a10, file$1, 43, 5, 2614);
-    			a11.className = "dropdown-item text-secondary";
-    			a11.href = "./mobilities";
-    			add_location(a11, file$1, 44, 42, 2766);
-    			a12.className = "dropdown-item text-secondary";
-    			a12.href = "./mobilities_students";
-    			add_location(a12, file$1, 44, 116, 2840);
-    			a13.className = "dropdown-item text-secondary";
-    			a13.href = "./mobilities_teachers";
-    			add_location(a13, file$1, 44, 208, 2932);
-    			div4.className = "dropdown-menu bg-darker";
-    			add_location(div4, file$1, 44, 5, 2729);
-    			li4.className = "nav-item dropdown";
-    			add_location(li4, file$1, 42, 4, 2577);
-    			a14.className = "nav-link dropdown-toggle text-nowrap";
-    			a14.href = "#";
-    			attr(a14, "role", "button");
-    			a14.dataset.toggle = "dropdown";
-    			add_location(a14, file$1, 48, 5, 3091);
-    			a15.className = "dropdown-item text-secondary";
-    			a15.href = "./projects";
-    			add_location(a15, file$1, 49, 42, 3241);
-    			a16.className = "dropdown-item text-secondary";
-    			a16.href = "./projects_logos";
-    			add_location(a16, file$1, 49, 112, 3311);
-    			a17.className = "dropdown-item text-secondary";
-    			a17.href = "./projects_teachers";
-    			add_location(a17, file$1, 49, 194, 3393);
-    			a18.className = "dropdown-item text-secondary";
-    			a18.href = "./partners_projects";
-    			add_location(a18, file$1, 49, 282, 3481);
-    			div5.className = "dropdown-menu bg-darker";
-    			add_location(div5, file$1, 49, 5, 3204);
-    			li5.className = "nav-item dropdown";
-    			add_location(li5, file$1, 47, 4, 3054);
-    			a19.className = "nav-link";
-    			a19.href = "./courses";
-    			add_location(a19, file$1, 52, 25, 3620);
-    			li6.className = "nav-item";
-    			add_location(li6, file$1, 52, 4, 3599);
-    			a20.className = "nav-link";
-    			a20.href = "./countries";
-    			add_location(a20, file$1, 53, 25, 3700);
-    			li7.className = "nav-item";
-    			add_location(li7, file$1, 53, 4, 3679);
-    			a21.className = "nav-link text-nowrap";
-    			a21.href = "./studentgroups";
-    			add_location(a21, file$1, 54, 25, 3784);
-    			li8.className = "nav-item";
-    			add_location(li8, file$1, 54, 4, 3763);
+    			add_location(button, file$1, 14, 2, 414);
     			ul0.className = "navbar-nav";
-    			add_location(ul0, file$1, 17, 3, 716);
-    			div6.className = "collapse navbar-collapse";
-    			div6.id = "navbarCollapse";
-    			add_location(div6, file$1, 16, 2, 653);
+    			add_location(ul0, file$1, 17, 3, 726);
+    			div.className = "collapse navbar-collapse";
+    			div.id = "navbarCollapse";
+    			add_location(div, file$1, 16, 2, 663);
     			ul1.className = "navbar-nav mr-2 flex-row";
-    			add_location(ul1, file$1, 57, 2, 3886);
+    			add_location(ul1, file$1, 29, 2, 1733);
     			nav.className = "navbar navbar-expand-xl navbar-dark bg-darker";
     			add_location(nav, file$1, 12, 1, 215);
     			header.className = "sticky-top";
@@ -3599,67 +3629,26 @@ var app = (function () {
     			append(nav, button);
     			append(button, span);
     			append(nav, t1);
-    			append(nav, div6);
-    			append(div6, ul0);
-    			append(ul0, li0);
-    			append(li0, a0);
-    			append(li0, t3);
-    			append(li0, div0);
-    			mount_component(link1, div0, null);
-    			append(div0, t4);
-    			mount_component(link2, div0, null);
-    			append(div0, t5);
-    			mount_component(link3, div0, null);
-    			append(div0, t6);
-    			mount_component(link4, div0, null);
+    			append(nav, div);
+    			append(div, ul0);
+    			mount_component(link1, ul0, null);
+    			append(ul0, t2);
+    			mount_component(link2, ul0, null);
+    			append(ul0, t3);
+    			mount_component(link3, ul0, null);
+    			append(ul0, t4);
+    			mount_component(link4, ul0, null);
+    			append(ul0, t5);
+    			mount_component(link5, ul0, null);
+    			append(ul0, t6);
+    			mount_component(link6, ul0, null);
     			append(ul0, t7);
-    			append(ul0, li1);
-    			append(li1, a1);
-    			append(li1, t9);
-    			append(li1, div1);
-    			append(div1, a2);
-    			append(div1, a3);
-    			append(ul0, t12);
-    			append(ul0, li2);
-    			append(li2, a4);
-    			append(li2, t14);
-    			append(li2, div2);
-    			append(div2, a5);
-    			append(div2, a6);
-    			append(ul0, t17);
-    			append(ul0, li3);
-    			append(li3, a7);
-    			append(li3, t19);
-    			append(li3, div3);
-    			append(div3, a8);
-    			append(div3, a9);
-    			append(ul0, t22);
-    			append(ul0, li4);
-    			append(li4, a10);
-    			append(li4, t24);
-    			append(li4, div4);
-    			append(div4, a11);
-    			append(div4, a12);
-    			append(div4, a13);
-    			append(ul0, t28);
-    			append(ul0, li5);
-    			append(li5, a14);
-    			append(li5, t30);
-    			append(li5, div5);
-    			append(div5, a15);
-    			append(div5, a16);
-    			append(div5, a17);
-    			append(div5, a18);
-    			append(ul0, t35);
-    			append(ul0, li6);
-    			append(li6, a19);
-    			append(ul0, t37);
-    			append(ul0, li7);
-    			append(li7, a20);
-    			append(ul0, t39);
-    			append(ul0, li8);
-    			append(li8, a21);
-    			append(nav, t41);
+    			mount_component(link7, ul0, null);
+    			append(ul0, t8);
+    			mount_component(link8, ul0, null);
+    			append(ul0, t9);
+    			mount_component(link9, ul0, null);
+    			append(nav, t10);
     			append(nav, ul1);
     			if_block.m(ul1, null);
     			current = true;
@@ -3686,6 +3675,26 @@ var app = (function () {
     			if (changed.$$scope) link4_changes.$$scope = { changed, ctx };
     			link4.$set(link4_changes);
 
+    			var link5_changes = {};
+    			if (changed.$$scope) link5_changes.$$scope = { changed, ctx };
+    			link5.$set(link5_changes);
+
+    			var link6_changes = {};
+    			if (changed.$$scope) link6_changes.$$scope = { changed, ctx };
+    			link6.$set(link6_changes);
+
+    			var link7_changes = {};
+    			if (changed.$$scope) link7_changes.$$scope = { changed, ctx };
+    			link7.$set(link7_changes);
+
+    			var link8_changes = {};
+    			if (changed.$$scope) link8_changes.$$scope = { changed, ctx };
+    			link8.$set(link8_changes);
+
+    			var link9_changes = {};
+    			if (changed.$$scope) link9_changes.$$scope = { changed, ctx };
+    			link9.$set(link9_changes);
+
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
     				if_block.p(changed, ctx);
     			} else {
@@ -3710,6 +3719,16 @@ var app = (function () {
 
     			link4.$$.fragment.i(local);
 
+    			link5.$$.fragment.i(local);
+
+    			link6.$$.fragment.i(local);
+
+    			link7.$$.fragment.i(local);
+
+    			link8.$$.fragment.i(local);
+
+    			link9.$$.fragment.i(local);
+
     			current = true;
     		},
 
@@ -3719,6 +3738,11 @@ var app = (function () {
     			link2.$$.fragment.o(local);
     			link3.$$.fragment.o(local);
     			link4.$$.fragment.o(local);
+    			link5.$$.fragment.o(local);
+    			link6.$$.fragment.o(local);
+    			link7.$$.fragment.o(local);
+    			link8.$$.fragment.o(local);
+    			link9.$$.fragment.o(local);
     			current = false;
     		},
 
@@ -3736,6 +3760,16 @@ var app = (function () {
     			link3.$destroy();
 
     			link4.$destroy();
+
+    			link5.$destroy();
+
+    			link6.$destroy();
+
+    			link7.$destroy();
+
+    			link8.$destroy();
+
+    			link9.$destroy();
 
     			if_block.d();
     		}
@@ -4008,9 +4042,15 @@ var app = (function () {
 
     const file$3 = "src\\components\\BasicTable.svelte";
 
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.action = list[i];
+    	return child_ctx;
+    }
+
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
-    	child_ctx.key = list[i];
+    	child_ctx.header = list[i];
     	child_ctx.i = i;
     	return child_ctx;
     }
@@ -4022,24 +4062,24 @@ var app = (function () {
     	return child_ctx;
     }
 
-    function get_each_context_2(ctx, list, i) {
+    function get_each_context_3(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.header = list[i];
     	child_ctx.i = i;
     	return child_ctx;
     }
 
-    // (20:16) {#each table_headers as header, i}
-    function create_each_block_2(ctx) {
-    	var th, t_value = ctx.header, t;
+    // (65:16) {#each table_headers as header, i}
+    function create_each_block_3(ctx) {
+    	var th, t_value = ctx.header.columnName, t, th_class_value;
 
     	return {
     		c: function create() {
     			th = element("th");
     			t = text(t_value);
     			th.scope = "col";
-    			th.className = "position-sticky top-0px bg-darkest shadow-top-solid-1px shadow-bottom-dark-1px shadow-top-dark-1px shadow-right-dark-1px shadow-left-dark-1px svelte-zsfu02";
-    			add_location(th, file$3, 20, 16, 518);
+    			th.className = th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : '');
+    			add_location(th, file$3, 65, 20, 2002);
     		},
 
     		m: function mount(target, anchor) {
@@ -4048,8 +4088,12 @@ var app = (function () {
     		},
 
     		p: function update(changed, ctx) {
-    			if ((changed.table_headers) && t_value !== (t_value = ctx.header)) {
+    			if ((changed.table_headers) && t_value !== (t_value = ctx.header.columnName)) {
     				set_data(t, t_value);
+    			}
+
+    			if ((changed.table_headers) && th_class_value !== (th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : ''))) {
+    				th.className = th_class_value;
     			}
     		},
 
@@ -4061,15 +4105,16 @@ var app = (function () {
     	};
     }
 
-    // (28:20) {#each keys as key, i}
-    function create_each_block_1(ctx) {
-    	var td, t_value = ctx.row[ctx.key], t;
+    // (84:28) {:else}
+    function create_else_block$2(ctx) {
+    	var td, t_value = ctx.row[ctx.header.key], t, td_class_value;
 
     	return {
     		c: function create() {
     			td = element("td");
     			t = text(t_value);
-    			add_location(td, file$3, 28, 24, 922);
+    			td.className = td_class_value = ctx.header.wrap ? 'wrap' : '';
+    			add_location(td, file$3, 84, 32, 3315);
     		},
 
     		m: function mount(target, anchor) {
@@ -4078,10 +4123,17 @@ var app = (function () {
     		},
 
     		p: function update(changed, ctx) {
-    			if ((changed.data || changed.keys) && t_value !== (t_value = ctx.row[ctx.key])) {
+    			if ((changed.data || changed.table_headers) && t_value !== (t_value = ctx.row[ctx.header.key])) {
     				set_data(t, t_value);
     			}
+
+    			if ((changed.table_headers) && td_class_value !== (td_class_value = ctx.header.wrap ? 'wrap' : '')) {
+    				td.className = td_class_value;
+    			}
     		},
+
+    		i: noop,
+    		o: noop,
 
     		d: function destroy(detaching) {
     			if (detaching) {
@@ -4091,16 +4143,324 @@ var app = (function () {
     	};
     }
 
-    // (26:12) {#each data as row, i}
-    function create_each_block(ctx) {
-    	var tr, t;
+    // (82:28) {#if header.toggler}
+    function create_if_block_1$1(ctx) {
+    	var td, t, td_class_value, dispose;
 
-    	var each_value_1 = ctx.keys;
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+    			t = space();
+    			td.className = td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer toggler";
+    			add_location(td, file$3, 82, 32, 3093);
+    			dispose = listen(td, "click", click_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+    			append(td, t);
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.data || changed.table_headers) && td_class_value !== (td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer toggler")) {
+    				td.className = td_class_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (75:24) {#if header.actions}
+    function create_if_block$2(ctx) {
+    	var td, current;
+
+    	var each_value_2 = ctx.header.actions;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			td.className = "text-center vertical-align-middle";
+    			add_location(td, file$3, 75, 28, 2626);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(td, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.table_headers || changed.data) {
+    				each_value_2 = ctx.header.actions;
+
+    				for (var i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						each_blocks[i].i(1);
+    					} else {
+    						each_blocks[i] = create_each_block_2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].i(1);
+    						each_blocks[i].m(td, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i = 0; i < each_value_2.length; i += 1) each_blocks[i].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    // (78:32) <Link to={`${action.link}${row[action.query_field]}`}>
+    function create_default_slot$1(ctx) {
+    	var i, i_class_value;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = i_class_value = `fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`;
+    			add_location(i, file$3, 77, 86, 2822);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.table_headers) && i_class_value !== (i_class_value = `fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`)) {
+    				i.className = i_class_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (77:28) {#each header.actions as action}
+    function create_each_block_2(ctx) {
+    	var current;
+
+    	var link = new Link({
+    		props: {
+    		to: `${ctx.action.link}${ctx.row[ctx.action.query_field]}`,
+    		$$slots: { default: [create_default_slot$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			link.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(link, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var link_changes = {};
+    			if (changed.table_headers || changed.data) link_changes.to = `${ctx.action.link}${ctx.row[ctx.action.query_field]}`;
+    			if (changed.$$scope || changed.table_headers) link_changes.$$scope = { changed, ctx };
+    			link.$set(link_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			link.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (74:20) {#each table_headers as header, i}
+    function create_each_block_1(ctx) {
+    	var current_block_type_index, if_block, if_block_anchor, current;
+
+    	var if_block_creators = [
+    		create_if_block$2,
+    		create_if_block_1$1,
+    		create_else_block$2
+    	];
+
+    	var if_blocks = [];
+
+    	function select_block_type(ctx) {
+    		if (ctx.header.actions) return 0;
+    		if (ctx.header.toggler) return 1;
+    		return 2;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(changed, ctx);
+    			} else {
+    				group_outros();
+    				on_outro(() => {
+    					if_blocks[previous_block_index].d(1);
+    					if_blocks[previous_block_index] = null;
+    				});
+    				if_block.o(1);
+    				check_outros();
+
+    				if_block = if_blocks[current_block_type_index];
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				}
+    				if_block.i(1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (71:12) {#each data as row, i}
+    function create_each_block(ctx) {
+    	var tr, t, tr_class_value, current, dispose;
+
+    	var each_value_1 = ctx.table_headers;
 
     	var each_blocks = [];
 
     	for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
     		each_blocks[i_1] = create_each_block_1(get_each_context_1(ctx, each_value_1, i_1));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	function click_handler_1(...args) {
+    		return ctx.click_handler_1(ctx, ...args);
     	}
 
     	return {
@@ -4112,8 +4472,9 @@ var app = (function () {
     			}
 
     			t = space();
-    			tr.className = "table-row";
-    			add_location(tr, file$3, 26, 16, 830);
+    			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.row[ctx.selection_field]) === -1 ? 'table-row' : 'table-row bg-secondary';
+    			add_location(tr, file$3, 71, 16, 2304);
+    			dispose = listen(tr, "click", click_handler_1);
     		},
 
     		m: function mount(target, anchor) {
@@ -4124,29 +4485,50 @@ var app = (function () {
     			}
 
     			append(tr, t);
+    			current = true;
     		},
 
-    		p: function update(changed, ctx) {
-    			if (changed.data || changed.keys) {
-    				each_value_1 = ctx.keys;
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if (changed.table_headers || changed.data) {
+    				each_value_1 = ctx.table_headers;
 
     				for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
     					const child_ctx = get_each_context_1(ctx, each_value_1, i_1);
 
     					if (each_blocks[i_1]) {
     						each_blocks[i_1].p(changed, child_ctx);
+    						each_blocks[i_1].i(1);
     					} else {
     						each_blocks[i_1] = create_each_block_1(child_ctx);
     						each_blocks[i_1].c();
+    						each_blocks[i_1].i(1);
     						each_blocks[i_1].m(tr, t);
     					}
     				}
 
-    				for (; i_1 < each_blocks.length; i_1 += 1) {
-    					each_blocks[i_1].d(1);
-    				}
-    				each_blocks.length = each_value_1.length;
+    				group_outros();
+    				for (; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 1, 1);
+    				check_outros();
     			}
+
+    			if ((!current || changed.selectedRows || changed.data || changed.selection_field) && tr_class_value !== (tr_class_value = ctx.selectedRows.indexOf(ctx.row[ctx.selection_field]) === -1 ? 'table-row' : 'table-row bg-secondary')) {
+    				tr.className = tr_class_value;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) each_blocks[i_1].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i_1 = 0; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 0, 0);
+
+    			current = false;
     		},
 
     		d: function destroy(detaching) {
@@ -4155,19 +4537,21 @@ var app = (function () {
     			}
 
     			destroy_each(each_blocks, detaching);
+
+    			dispose();
     		}
     	};
     }
 
     function create_fragment$5(ctx) {
-    	var div, table, thead, tr, t, tbody;
+    	var div, table_1, thead, tr, t, tbody, current;
 
-    	var each_value_2 = ctx.table_headers;
+    	var each_value_3 = ctx.table_headers;
 
     	var each_blocks_1 = [];
 
-    	for (var i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	for (var i = 0; i < each_value_3.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
     	}
 
     	var each_value = ctx.data;
@@ -4178,10 +4562,23 @@ var app = (function () {
     		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
     	}
 
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
     	return {
     		c: function create() {
     			div = element("div");
-    			table = element("table");
+    			table_1 = element("table");
     			thead = element("thead");
     			tr = element("tr");
 
@@ -4196,13 +4593,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			tr.className = "table-headers";
-    			add_location(tr, file$3, 18, 12, 422);
-    			add_location(thead, file$3, 17, 8, 401);
-    			add_location(tbody, file$3, 24, 8, 769);
-    			table.className = "table table-dark table-bordered table-hover nowrap m-0 svelte-zsfu02";
-    			add_location(table, file$3, 16, 4, 321);
+    			add_location(tr, file$3, 63, 12, 1902);
+    			add_location(thead, file$3, 62, 8, 1881);
+    			add_location(tbody, file$3, 69, 8, 2243);
+    			table_1.className = "table table-dark table-bordered table-scrollable table-hover nowrap m-0";
+    			add_location(table_1, file$3, 61, 4, 1784);
     			div.className = "table-responsive rounded dark-scroll";
-    			add_location(div, file$3, 15, 0, 265);
+    			add_location(div, file$3, 60, 0, 1728);
     		},
 
     		l: function claim(nodes) {
@@ -4211,33 +4608,35 @@ var app = (function () {
 
     		m: function mount(target, anchor) {
     			insert(target, div, anchor);
-    			append(div, table);
-    			append(table, thead);
+    			append(div, table_1);
+    			append(table_1, thead);
     			append(thead, tr);
 
     			for (var i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(tr, null);
     			}
 
-    			append(table, t);
-    			append(table, tbody);
+    			append(table_1, t);
+    			append(table_1, tbody);
 
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
+
+    			current = true;
     		},
 
     		p: function update(changed, ctx) {
     			if (changed.table_headers) {
-    				each_value_2 = ctx.table_headers;
+    				each_value_3 = ctx.table_headers;
 
-    				for (var i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+    				for (var i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(changed, child_ctx);
     					} else {
-    						each_blocks_1[i] = create_each_block_2(child_ctx);
+    						each_blocks_1[i] = create_each_block_3(child_ctx);
     						each_blocks_1[i].c();
     						each_blocks_1[i].m(tr, null);
     					}
@@ -4246,10 +4645,10 @@ var app = (function () {
     				for (; i < each_blocks_1.length; i += 1) {
     					each_blocks_1[i].d(1);
     				}
-    				each_blocks_1.length = each_value_2.length;
+    				each_blocks_1.length = each_value_3.length;
     			}
 
-    			if (changed.keys || changed.data) {
+    			if (changed.selectedRows || changed.data || changed.selection_field || changed.table_headers) {
     				each_value = ctx.data;
 
     				for (var i = 0; i < each_value.length; i += 1) {
@@ -4257,22 +4656,34 @@ var app = (function () {
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(changed, child_ctx);
+    						each_blocks[i].i(1);
     					} else {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
+    						each_blocks[i].i(1);
     						each_blocks[i].m(tbody, null);
     					}
     				}
 
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-    				each_blocks.length = each_value.length;
+    				group_outros();
+    				for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
+    				check_outros();
     			}
     		},
 
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i = 0; i < each_value.length; i += 1) each_blocks[i].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0, 0);
+
+    			current = false;
+    		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
@@ -4287,41 +4698,140 @@ var app = (function () {
     }
 
     function instance$5($$self, $$props, $$invalidate) {
-    	let { table_headers, data } = $$props;
+    	
 
-        let keys = [];
+        let { getToken, table, table_headers, data, toggleRowSelect, selectedRows, selection_field, toggle_fields, onToggle } = $$props;
 
-    	const writable_props = ['table_headers', 'data'];
+        function handleToggleClick(row){
+            if (row.ID !== null){
+            	console.log("Hey");
+                axios$1.delete(`/api/delete/${table}`, {
+                    data: {
+                        rows: [row.ID]
+                    },
+                    headers: {
+                        Authorization: getToken()
+                    }
+                }).then(res => {
+                    onToggle();
+                }).catch(err =>{
+                    console.log(err.response);
+                });
+            } else {
+            	console.log("Bye");
+            	let data = {ID: null};
+            	console.log(toggle_fields);
+            	for(let i = 0; i < toggle_fields.length; i++) {
+            		console.log(toggle_fields[i].field);
+            	    data[toggle_fields[i].field] = row[toggle_fields[i].field];
+            	}
+            	console.log(data);
+
+                axios$1.post(`/api/insert/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+                    console.log(`Successfully added relation`);
+                    onToggle();
+                }).catch(err => {
+                    console.log(err.response);
+                });
+            }
+            console.log(row);
+        }
+
+        function handleRowClick(event, id) {
+        	if (!event.target.classList.contains("toggler")) {
+                toggleRowSelect(id);
+        	}
+        	// event.currentTarget.classList.toggle("bg-secondary");
+        }
+
+    	const writable_props = ['getToken', 'table', 'table_headers', 'data', 'toggleRowSelect', 'selectedRows', 'selection_field', 'toggle_fields', 'onToggle'];
     	Object.keys($$props).forEach(key => {
     		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicTable> was created with unknown prop '${key}'`);
     	});
 
+    	function click_handler({ row }, event) {handleToggleClick(row);}
+
+    	function click_handler_1({ row }, event) {handleRowClick(event, row[selection_field]);}
+
     	$$self.$set = $$props => {
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('table' in $$props) $$invalidate('table', table = $$props.table);
     		if ('table_headers' in $$props) $$invalidate('table_headers', table_headers = $$props.table_headers);
     		if ('data' in $$props) $$invalidate('data', data = $$props.data);
+    		if ('toggleRowSelect' in $$props) $$invalidate('toggleRowSelect', toggleRowSelect = $$props.toggleRowSelect);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    		if ('selection_field' in $$props) $$invalidate('selection_field', selection_field = $$props.selection_field);
+    		if ('toggle_fields' in $$props) $$invalidate('toggle_fields', toggle_fields = $$props.toggle_fields);
+    		if ('onToggle' in $$props) $$invalidate('onToggle', onToggle = $$props.onToggle);
     	};
 
-    	$$self.$$.update = ($$dirty = { data: 1 }) => {
-    		if ($$dirty.data) { console.log(data); }
-    		if ($$dirty.data) { $$invalidate('keys', keys = data.length > 0 ? Object.keys(data[0]) : []); }
+    	return {
+    		getToken,
+    		table,
+    		table_headers,
+    		data,
+    		toggleRowSelect,
+    		selectedRows,
+    		selection_field,
+    		toggle_fields,
+    		onToggle,
+    		handleToggleClick,
+    		handleRowClick,
+    		click_handler,
+    		click_handler_1
     	};
-
-    	return { table_headers, data, keys };
     }
 
-    class BasicTable$1 extends SvelteComponentDev {
+    class BasicTable extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, ["table_headers", "data"]);
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, ["getToken", "table", "table_headers", "data", "toggleRowSelect", "selectedRows", "selection_field", "toggle_fields", "onToggle"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.table === undefined && !('table' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'table'");
+    		}
     		if (ctx.table_headers === undefined && !('table_headers' in props)) {
     			console.warn("<BasicTable> was created without expected prop 'table_headers'");
     		}
     		if (ctx.data === undefined && !('data' in props)) {
     			console.warn("<BasicTable> was created without expected prop 'data'");
     		}
+    		if (ctx.toggleRowSelect === undefined && !('toggleRowSelect' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'toggleRowSelect'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'selectedRows'");
+    		}
+    		if (ctx.selection_field === undefined && !('selection_field' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'selection_field'");
+    		}
+    		if (ctx.toggle_fields === undefined && !('toggle_fields' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'toggle_fields'");
+    		}
+    		if (ctx.onToggle === undefined && !('onToggle' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'onToggle'");
+    		}
+    	}
+
+    	get getToken() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get table_headers() {
@@ -4339,167 +4849,438 @@ var app = (function () {
     	set data(value) {
     		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get toggleRowSelect() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggleRowSelect(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selection_field() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selection_field(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggle_fields() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggle_fields(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onToggle() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onToggle(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
-    /* src\components\teachers\Teachers.svelte generated by Svelte v3.5.1 */
+    /* src\components\BasicModal.svelte generated by Svelte v3.5.1 */
 
-    const file$4 = "src\\components\\teachers\\Teachers.svelte";
+    const file$4 = "src\\components\\BasicModal.svelte";
 
-    // (34:0) {#if is_logged_in}
-    function create_if_block$2(ctx) {
-    	var div1, div0, h2, span0, t1, span1, button0, t3, button1, t5, button2, t7, current;
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.option = list[i];
+    	return child_ctx;
+    }
 
-    	var basictable = new BasicTable$1({
-    		props: {
-    		table_headers: ctx.table_headers,
-    		data: ctx.teachers
-    	},
-    		$$inline: true
-    	});
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.field = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (111:36) {:else}
+    function create_else_block_1(ctx) {
+    	var input, input_type_value, input_value_value, input_placeholder_value, dispose;
+
+    	function change_handler_3(...args) {
+    		return ctx.change_handler_3(ctx, ...args);
+    	}
 
     	return {
     		c: function create() {
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Teachers";
-    			t1 = space();
-    			span1 = element("span");
-    			button0 = element("button");
-    			button0.textContent = "Add +";
-    			t3 = space();
-    			button1 = element("button");
-    			button1.textContent = "Edit";
-    			t5 = space();
-    			button2 = element("button");
-    			button2.textContent = "Delete";
-    			t7 = space();
-    			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2";
-    			add_location(span0, file$4, 36, 35, 1210);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$4, 36, 8, 1183);
-    			button0.className = "btn btn-success mb-2";
-    			button0.dataset.toggle = "modal";
-    			button0.dataset.target = "#modal-add";
-    			add_location(button0, file$4, 38, 16, 1332);
-    			button1.className = "btn btn-info mb-2 mx-2 disabled";
-    			button1.id = "edit-btn";
-    			add_location(button1, file$4, 39, 16, 1446);
-    			button2.className = "btn btn-danger mb-2 disabled";
-    			button2.id = "delete-btn";
-    			add_location(button2, file$4, 40, 16, 1539);
-    			add_location(span1, file$4, 37, 12, 1308);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$4, 35, 8, 1088);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$4, 34, 4, 1004);
+    			input = element("input");
+    			input.className = "form-control";
+    			attr(input, "type", input_type_value = ctx.field.type);
+    			input.value = input_value_value = ctx.field.value;
+    			input.placeholder = input_placeholder_value = ctx.field.placeholder;
+    			add_location(input, file$4, 111, 40, 4255);
+    			dispose = listen(input, "change", change_handler_3);
     		},
 
     		m: function mount(target, anchor) {
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t1);
-    			append(div0, span1);
-    			append(span1, button0);
-    			append(span1, t3);
-    			append(span1, button1);
-    			append(span1, t5);
-    			append(span1, button2);
-    			append(div0, t7);
-    			mount_component(basictable, div0, null);
-    			current = true;
+    			insert(target, input, anchor);
     		},
 
-    		p: function update(changed, ctx) {
-    			var basictable_changes = {};
-    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.teachers) basictable_changes.data = ctx.teachers;
-    			basictable.$set(basictable_changes);
-    		},
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.fields) && input_type_value !== (input_type_value = ctx.field.type)) {
+    				attr(input, "type", input_type_value);
+    			}
 
-    		i: function intro(local) {
-    			if (current) return;
-    			basictable.$$.fragment.i(local);
+    			if ((changed.fields) && input_value_value !== (input_value_value = ctx.field.value)) {
+    				input.value = input_value_value;
+    			}
 
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basictable.$$.fragment.o(local);
-    			current = false;
+    			if ((changed.fields) && input_placeholder_value !== (input_placeholder_value = ctx.field.placeholder)) {
+    				input.placeholder = input_placeholder_value;
+    			}
     		},
 
     		d: function destroy(detaching) {
     			if (detaching) {
-    				detach(div1);
+    				detach(input);
     			}
 
-    			basictable.$destroy();
+    			dispose();
     		}
     	};
     }
 
-    function create_fragment$6(ctx) {
-    	var if_block_anchor, current;
+    // (109:36) {#if field.value !== ""}
+    function create_if_block_4(ctx) {
+    	var input, input_type_value, input_value_value, input_placeholder_value, dispose;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$2(ctx);
+    	function change_handler_2(...args) {
+    		return ctx.change_handler_2(ctx, ...args);
+    	}
 
     	return {
     		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    			input = element("input");
+    			input.className = "form-control";
+    			attr(input, "type", input_type_value = ctx.field.type);
+    			input.value = input_value_value = ctx.field.value;
+    			input.placeholder = input_placeholder_value = ctx.field.placeholder;
+    			add_location(input, file$4, 109, 40, 4010);
+    			dispose = listen(input, "change", change_handler_2);
     		},
 
     		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
+    			insert(target, input, anchor);
     		},
 
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$2(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.fields) && input_type_value !== (input_type_value = ctx.field.type)) {
+    				attr(input, "type", input_type_value);
+    			}
 
-    				if_block.o(1);
-    				check_outros();
+    			if ((changed.fields) && input_value_value !== (input_value_value = ctx.field.value)) {
+    				input.value = input_value_value;
+    			}
+
+    			if ((changed.fields) && input_placeholder_value !== (input_placeholder_value = ctx.field.placeholder)) {
+    				input.placeholder = input_placeholder_value;
     			}
     		},
 
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(input);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (106:32) {#if field.type === "textarea"}
+    function create_if_block_3(ctx) {
+    	var textarea, textarea_placeholder_value, textarea_value_value, dispose;
+
+    	function change_handler_1(...args) {
+    		return ctx.change_handler_1(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			textarea = element("textarea");
+    			textarea.className = "form-control";
+    			textarea.placeholder = textarea_placeholder_value = ctx.field.placeholder;
+    			textarea.value = textarea_value_value = ctx.field.value;
+    			add_location(textarea, file$4, 106, 36, 3720);
+    			dispose = listen(textarea, "change", change_handler_1);
     		},
 
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
+    		m: function mount(target, anchor) {
+    			insert(target, textarea, anchor);
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.fields) && textarea_placeholder_value !== (textarea_placeholder_value = ctx.field.placeholder)) {
+    				textarea.placeholder = textarea_placeholder_value;
+    			}
+
+    			if ((changed.fields) && textarea_value_value !== (textarea_value_value = ctx.field.value)) {
+    				textarea.value = textarea_value_value;
+    			}
     		},
 
     		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
+    			if (detaching) {
+    				detach(textarea);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (92:28) {#if field.type === "select"}
+    function create_if_block$3(ctx) {
+    	var select, if_block_anchor, dispose;
+
+    	var if_block = (ctx.field.value === "") && create_if_block_2();
+
+    	var each_value_1 = ctx.field.options;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	function change_handler(...args) {
+    		return ctx.change_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			select = element("select");
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			select.className = "form-control";
+    			add_location(select, file$4, 92, 32, 2733);
+    			dispose = listen(select, "change", change_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, select, anchor);
+    			if (if_block) if_block.m(select, null);
+    			append(select, if_block_anchor);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select, null);
+    			}
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if (ctx.field.value === "") {
+    				if (!if_block) {
+    					if_block = create_if_block_2();
+    					if_block.c();
+    					if_block.m(select, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (changed.fields) {
+    				each_value_1 = ctx.field.options;
+
+    				for (var i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block_1$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(select);
+    			}
+
+    			if (if_block) if_block.d();
+
+    			destroy_each(each_blocks, detaching);
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (94:36) {#if field.value === ""}
+    function create_if_block_2(ctx) {
+    	var option;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			option.textContent = "Choose an option";
+    			option.className = "d-none";
+    			option.__value = "null";
+    			option.value = option.__value;
+    			option.selected = true;
+    			option.disabled = true;
+    			add_location(option, file$4, 94, 36, 2920);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, option, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (100:40) {:else}
+    function create_else_block$3(ctx) {
+    	var option, t_value = ctx.option.display, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.option.value;
+    			option.value = option.__value;
+    			add_location(option, file$4, 100, 44, 3391);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.fields) && t_value !== (t_value = ctx.option.display)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.fields) && option_value_value !== (option_value_value = ctx.option.value)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (98:40) {#if field.value === option.value}
+    function create_if_block_1$2(ctx) {
+    	var option, t_value = ctx.option.display, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.option.value;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$4, 98, 44, 3233);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.fields) && t_value !== (t_value = ctx.option.display)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.fields) && option_value_value !== (option_value_value = ctx.option.value)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (97:36) {#each field.options as option}
+    function create_each_block_1$1(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type_1(ctx) {
+    		if (ctx.field.value === ctx.option.value) return create_if_block_1$2;
+    		return create_else_block$3;
+    	}
+
+    	var current_block_type = select_block_type_1(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
 
     			if (detaching) {
     				detach(if_block_anchor);
@@ -4508,186 +5289,637 @@ var app = (function () {
     	};
     }
 
+    // (86:16) {#each fields.fields as field, i}
+    function create_each_block$1(ctx) {
+    	var div3, div2, div1, div0, t0_value = ctx.field.display, t0, t1;
+
+    	function select_block_type(ctx) {
+    		if (ctx.field.type === "select") return create_if_block$3;
+    		if (ctx.field.type === "textarea") return create_if_block_3;
+    		if (ctx.field.value !== "") return create_if_block_4;
+    		return create_else_block_1;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			if_block.c();
+    			div0.className = "input-group-text w-100";
+    			add_location(div0, file$4, 89, 32, 2547);
+    			div1.className = "input-group-prepend w-25";
+    			add_location(div1, file$4, 88, 28, 2475);
+    			div2.className = "input-group";
+    			add_location(div2, file$4, 87, 24, 2420);
+    			div3.className = "form-group";
+    			add_location(div3, file$4, 86, 20, 2370);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div3, anchor);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div1, div0);
+    			append(div0, t0);
+    			append(div2, t1);
+    			if_block.m(div2, null);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.fields) && t0_value !== (t0_value = ctx.field.display)) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(div2, null);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div3);
+    			}
+
+    			if_block.d();
+    		}
+    	};
+    }
+
+    function create_fragment$6(ctx) {
+    	var div5, div4, div3, div0, h5, t0_value = ctx.mode === "add" ? "Add" : "Edit", t0, t1, t2, t3, button0, span, t5, div1, t6, div2, button1, t7_value = ctx.mode === "add" ? "Add" : "Edit", t7, button1_class_value, button1_id_value, div5_id_value, dispose;
+
+    	var each_value = ctx.fields.fields;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div5 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			t2 = text(ctx.table_title);
+    			t3 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t5 = space();
+    			div1 = element("div");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t6 = space();
+    			div2 = element("div");
+    			button1 = element("button");
+    			t7 = text(t7_value);
+    			h5.className = "modal-title";
+    			add_location(h5, file$4, 81, 16, 2065);
+    			add_location(span, file$4, 82, 73, 2216);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$4, 82, 16, 2159);
+    			div0.className = "modal-header";
+    			add_location(div0, file$4, 80, 12, 2021);
+    			div1.className = "modal-body";
+    			add_location(div1, file$4, 84, 12, 2273);
+    			button1.className = button1_class_value = "btn " + (ctx.mode === 'add' ? 'btn-success' : 'btn-info') + " w-100";
+    			button1.id = button1_id_value = `modal-${ctx.mode}-btn`;
+    			add_location(button1, file$4, 120, 16, 4693);
+    			div2.className = "modal-footer";
+    			add_location(div2, file$4, 119, 12, 4649);
+    			div3.className = "modal-content";
+    			add_location(div3, file$4, 79, 8, 1980);
+    			div4.className = "modal-dialog";
+    			attr(div4, "role", "document");
+    			add_location(div4, file$4, 78, 4, 1928);
+    			div5.className = "modal fade";
+    			div5.id = div5_id_value = `${ctx.mode}-modal`;
+    			div5.tabIndex = "-1";
+    			add_location(div5, file$4, 77, 0, 1863);
+    			dispose = listen(button1, "click", ctx.handleSubmit);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div5, anchor);
+    			append(div5, div4);
+    			append(div4, div3);
+    			append(div3, div0);
+    			append(div0, h5);
+    			append(h5, t0);
+    			append(h5, t1);
+    			append(h5, t2);
+    			append(div0, t3);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div3, t5);
+    			append(div3, div1);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div1, null);
+    			}
+
+    			append(div3, t6);
+    			append(div3, div2);
+    			append(div2, button1);
+    			append(button1, t7);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.mode) && t0_value !== (t0_value = ctx.mode === "add" ? "Add" : "Edit")) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if (changed.table_title) {
+    				set_data(t2, ctx.table_title);
+    			}
+
+    			if (changed.fields) {
+    				each_value = ctx.fields.fields;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if ((changed.mode) && t7_value !== (t7_value = ctx.mode === "add" ? "Add" : "Edit")) {
+    				set_data(t7, t7_value);
+    			}
+
+    			if ((changed.mode) && button1_class_value !== (button1_class_value = "btn " + (ctx.mode === 'add' ? 'btn-success' : 'btn-info') + " w-100")) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((changed.mode) && button1_id_value !== (button1_id_value = `modal-${ctx.mode}-btn`)) {
+    				button1.id = button1_id_value;
+    			}
+
+    			if ((changed.mode) && div5_id_value !== (div5_id_value = `${ctx.mode}-modal`)) {
+    				div5.id = div5_id_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div5);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			dispose();
+    		}
+    	};
+    }
+
     function instance$6($$self, $$props, $$invalidate) {
-    	
+    	let { getToken, table, table_title, fields, isOpen, setIsOpen, onAdd, onEdit, mode } = $$props;
 
-        let { is_logged_in, getToken } = $$props;
+        function add() {
+            console.log(`Attempting to add ${table}`);
 
-        let teachers = [];
-        let table_headers = ['#', "Teacher #", 'Name', 'Age', 'Gender', 'Email'];
+            let data = {ID: null};
+            for(let i = 0; i < fields.fields.length; i++) {
+                data[fields.fields[i].field] = fields.fields[i].value;
+            }
+            console.log(data);
 
-        // axios.defaults.withCredentials = true;
-
-        function getTeachers() {
-        	console.log("Trying to fetch teachers");
-            axios$1.get("/api/get/teachers", {headers: {Authorization: getToken()}}).then(function(res) {
-            	$$invalidate('teachers', teachers = res.data);
-                console.log(res.data);
-                for(let i = 0; i < teachers.length; i++) {
-                    let age = new Date(new Date() - new Date(teachers[i].birthday)).getFullYear() - 1970;
-                    if(isNaN(age)){
-                        age = 0;
-                    }
-                    teachers[i].birthday = age; $$invalidate('teachers', teachers);
-                    console.log(age);
-                }
+            axios$1.post(`/api/insert/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log(`Successfully added ${table_title}`);
+            	onAdd();
+            	close();
+            }).catch(err => {
+            	console.log(err.response);
             });
         }
 
-    	const writable_props = ['is_logged_in', 'getToken'];
+        function edit() {
+            console.log(`Attempting to add ${table}`);
+
+            let data = {ID: fields.ID};
+            for (let i = 0; i < fields.fields.length; i++) {
+                data[fields.fields[i].field] = fields.fields[i].value;
+            }
+            console.log(data);
+
+            axios$1.put(`/api/edit/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log(`Successfully edited ${table_title}`);
+            	onEdit();
+            	close();
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function handleSubmit(event) {
+            if (mode === "add") {
+            	add();
+            } else if(mode === "edit") {
+            	edit();
+            }
+        }
+
+        function close(){
+        	setIsOpen(false);
+            window.$(`#${mode}-modal`).modal('hide');
+        }
+
+        function open(){
+        	setIsOpen(true);
+            window.$(`#${mode}-modal`).modal('show');
+        }
+
+    	const writable_props = ['getToken', 'table', 'table_title', 'fields', 'isOpen', 'setIsOpen', 'onAdd', 'onEdit', 'mode'];
     	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Teachers> was created with unknown prop '${key}'`);
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicModal> was created with unknown prop '${key}'`);
     	});
 
+    	function change_handler({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
+    	function change_handler_1({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
+    	function change_handler_2({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
+    	function change_handler_3({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
     	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
     		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('table' in $$props) $$invalidate('table', table = $$props.table);
+    		if ('table_title' in $$props) $$invalidate('table_title', table_title = $$props.table_title);
+    		if ('fields' in $$props) $$invalidate('fields', fields = $$props.fields);
+    		if ('isOpen' in $$props) $$invalidate('isOpen', isOpen = $$props.isOpen);
+    		if ('setIsOpen' in $$props) $$invalidate('setIsOpen', setIsOpen = $$props.setIsOpen);
+    		if ('onAdd' in $$props) $$invalidate('onAdd', onAdd = $$props.onAdd);
+    		if ('onEdit' in $$props) $$invalidate('onEdit', onEdit = $$props.onEdit);
+    		if ('mode' in $$props) $$invalidate('mode', mode = $$props.mode);
     	};
 
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getTeachers();
+    	$$self.$$.update = ($$dirty = { isOpen: 1, setIsOpen: 1 }) => {
+    		if ($$dirty.isOpen || $$dirty.setIsOpen) { if (isOpen) {
+                    open();
+                    setIsOpen(false);
                 } }
     	};
 
     	return {
-    		is_logged_in,
     		getToken,
-    		teachers,
-    		table_headers
+    		table,
+    		table_title,
+    		fields,
+    		isOpen,
+    		setIsOpen,
+    		onAdd,
+    		onEdit,
+    		mode,
+    		handleSubmit,
+    		change_handler,
+    		change_handler_1,
+    		change_handler_2,
+    		change_handler_3
     	};
     }
 
-    class Teachers extends SvelteComponentDev {
+    class BasicModal extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, ["is_logged_in", "getToken"]);
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, ["getToken", "table", "table_title", "fields", "isOpen", "setIsOpen", "onAdd", "onEdit", "mode"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<Teachers> was created without expected prop 'is_logged_in'");
-    		}
     		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<Teachers> was created without expected prop 'getToken'");
+    			console.warn("<BasicModal> was created without expected prop 'getToken'");
     		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		if (ctx.table === undefined && !('table' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'table'");
+    		}
+    		if (ctx.table_title === undefined && !('table_title' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'table_title'");
+    		}
+    		if (ctx.fields === undefined && !('fields' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'fields'");
+    		}
+    		if (ctx.isOpen === undefined && !('isOpen' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'isOpen'");
+    		}
+    		if (ctx.setIsOpen === undefined && !('setIsOpen' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'setIsOpen'");
+    		}
+    		if (ctx.onAdd === undefined && !('onAdd' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'onAdd'");
+    		}
+    		if (ctx.onEdit === undefined && !('onEdit' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'onEdit'");
+    		}
+    		if (ctx.mode === undefined && !('mode' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'mode'");
+    		}
     	}
 
     	get getToken() {
-    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	set getToken(value) {
-    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table_title() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table_title(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get fields() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set fields(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setIsOpen() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set setIsOpen(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onAdd() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onAdd(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onEdit() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onEdit(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get mode() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mode(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
-    /* src\components\projects\Projects.svelte generated by Svelte v3.5.1 */
+    /* src\components\teachers\Teachers.svelte generated by Svelte v3.5.1 */
 
-    const file$5 = "src\\components\\projects\\Projects.svelte";
+    const file$5 = "src\\components\\teachers\\Teachers.svelte";
 
-    // (24:0) {#if is_logged_in}
-    function create_if_block$3(ctx) {
-    	var div1, div0, h2, span0, t1, span1, button0, t3, button1, t5, button2, t7, current;
+    // (217:0) {#if is_logged_in}
+    function create_if_block$4(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "teachers",
+    		table_title: "Teachers",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getTeachers
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "teachers",
+    		table_title: "Teachers",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getTeachers
+    	},
+    		$$inline: true
+    	});
 
     	var basictable = new BasicTable({
     		props: {
     		table_headers: ctx.table_headers,
-    		data: teachers
+    		data: ctx.teachers,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
     	},
     		$$inline: true
     	});
 
     	return {
     		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
     			div1 = element("div");
     			div0 = element("div");
     			h2 = element("h2");
     			span0 = element("span");
     			span0.textContent = "Teachers";
-    			t1 = space();
+    			t3 = space();
     			span1 = element("span");
     			button0 = element("button");
     			button0.textContent = "Add +";
-    			t3 = space();
-    			button1 = element("button");
-    			button1.textContent = "Edit";
     			t5 = space();
-    			button2 = element("button");
-    			button2.textContent = "Delete";
+    			button1 = element("button");
+    			t6 = text("Edit");
     			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
     			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2";
-    			add_location(span0, file$5, 26, 35, 784);
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$5, 221, 35, 6959);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$5, 26, 8, 757);
+    			add_location(h2, file$5, 221, 8, 6932);
     			button0.className = "btn btn-success mb-2";
-    			button0.dataset.toggle = "modal";
-    			button0.dataset.target = "#modal-add";
-    			add_location(button0, file$5, 28, 16, 906);
-    			button1.className = "btn btn-info mb-2 mx-2 disabled";
+    			add_location(button0, file$5, 223, 16, 7096);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$5, 29, 16, 1020);
-    			button2.className = "btn btn-danger mb-2 disabled";
+    			add_location(button1, file$5, 224, 16, 7197);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$5, 30, 16, 1113);
-    			add_location(span1, file$5, 27, 12, 882);
+    			add_location(button2, file$5, 225, 16, 7384);
+    			add_location(span1, file$5, 222, 12, 7072);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$5, 25, 8, 662);
+    			add_location(div0, file$5, 220, 8, 6837);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$5, 24, 4, 578);
+    			add_location(div1, file$5, 219, 4, 6718);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
     		},
 
     		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
     			insert(target, div1, anchor);
     			append(div1, div0);
     			append(div0, h2);
     			append(h2, span0);
-    			append(div0, t1);
+    			append(div0, t3);
     			append(div0, span1);
     			append(span1, button0);
-    			append(span1, t3);
-    			append(span1, button1);
     			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
     			append(span1, button2);
-    			append(div0, t7);
+    			append(button2, t8);
+    			append(div0, t9);
     			mount_component(basictable, div0, null);
     			current = true;
     		},
 
     		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getTeachers) basicmodal0_changes.onAdd = ctx.getTeachers;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getTeachers) basicmodal1_changes.onEdit = ctx.getTeachers;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
     			var basictable_changes = {};
     			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.teachers) basictable_changes.data = teachers;
+    			if (changed.teachers) basictable_changes.data = ctx.teachers;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
     			basictable.$set(basictable_changes);
     		},
 
     		i: function intro(local) {
     			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
     			basictable.$$.fragment.i(local);
 
     			current = true;
     		},
 
     		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
     			basictable.$$.fragment.o(local);
     			current = false;
     		},
 
     		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
     			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
     				detach(div1);
     			}
 
     			basictable.$destroy();
+
+    			run_all(dispose);
     		}
     	};
     }
@@ -4695,7 +5927,7 @@ var app = (function () {
     function create_fragment$7(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$3(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$4(ctx);
 
     	return {
     		c: function create() {
@@ -4719,7 +5951,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$3(ctx);
+    					if_block = create_if_block$4(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -4758,18 +5990,4404 @@ var app = (function () {
     }
 
     function instance$7($$self, $$props, $$invalidate) {
-    	let { is_logged_in, getToken } = $$props;
+    	
 
-        let projects = [];
-        let table_headers = ['#', "Project Code", 'Name', '', 'Gender', 'Email'];
+        let { is_logged_in, getToken } = $$props;
+
+        let teachers = [];
+        let genders = [
+        	{
+        		display: "Male",
+        		value: "Male",
+        	},
+        	{
+        		display: "Female",
+        		value: "Female",
+        	}
+        ];
+
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: "Teacher #", key: "teacherNumber"},
+            {columnName: 'Name', key: "name"},
+            {columnName: 'Age', key: "age"},
+            {columnName: 'Gender', key: "gender"},
+            {columnName: 'Email', key: "email"},
+            {columnName: 'Actions', actions: [
+            	{icon: "fa-book", link: "/svelte/teacher_subjects/", query_field: "ID"}
+            ]},
+        ];
+
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+                field: "teacherNumber",
+                type: "text",
+                display: "Teacher #",
+                placeholder: "eg. p701617004",
+                value: ""
+            }, {
+                field: "name",
+                type: "text",
+                display: "Name",
+                placeholder: "eg. Duarte Duarte",
+                value: ""
+            }, {
+                field: "birthday",
+                type: "date",
+                display: "Birthday",
+                placeholder: "",
+                value: ""
+            }, {
+                field: "gender",
+                type: "select",
+                display: "Gender",
+                placeholder: "Choose a gender",
+                value: "",
+                options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. teacher.email@gmail.com",
+                value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+                field: "teacherNumber",
+                type: "text",
+                display: "Teacher #",
+                placeholder: "eg. p701617004",
+                value: ""
+            }, {
+                field: "name",
+                type: "text",
+                display: "Name",
+                placeholder: "eg. Duarte Duarte",
+                value: ""
+            }, {
+                field: "birthday",
+                type: "date",
+                display: "Birthday",
+                placeholder: "",
+                value: ""
+            }, {
+                field: "gender",
+                type: "select",
+                display: "Gender",
+                placeholder: "Choose a gender",
+                value: "",
+                options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. teacher.email@gmail.com",
+                value: ""
+            }]
+        };
 
         // axios.defaults.withCredentials = true;
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/teachers", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res =>{
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getTeachers();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function getTeachers() {
+        	console.log("Trying to fetch teachers");
+            axios$1.get("/api/get/teachers", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('teachers', teachers = res.data);
+                console.log(res.data);
+                for(let i = 0; i < teachers.length; i++) {
+                    let age = new Date(new Date() - new Date(teachers[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    teachers[i].age = age; $$invalidate('teachers', teachers);
+                    console.log(age);
+                }
+            });
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < teachers.length; i++) {
+                    if (teachers[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = teachers[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(teachers[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = teachers[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Teachers> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getTeachers();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		teachers,
+    		table_headers,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		getTeachers,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Teachers extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Teachers> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Teachers> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\BasicRelationTable.svelte generated by Svelte v3.5.1 */
+
+    const file$6 = "src\\components\\BasicRelationTable.svelte";
+
+    function get_each_context_1$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.header = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.row = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_2$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.header = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (54:16) {#each table_headers as header, i}
+    function create_each_block_2$1(ctx) {
+    	var th, t_value = ctx.header.columnName, t;
+
+    	return {
+    		c: function create() {
+    			th = element("th");
+    			t = text(t_value);
+    			th.scope = "col";
+    			th.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th, file$6, 54, 20, 1636);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, th, anchor);
+    			append(th, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.table_headers) && t_value !== (t_value = ctx.header.columnName)) {
+    				set_data(t, t_value);
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(th);
+    			}
+    		}
+    	};
+    }
+
+    // (65:24) {:else}
+    function create_else_block$4(ctx) {
+    	var td, t_value = ctx.row[ctx.header.key], t, td_class_value;
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			td.className = td_class_value = ctx.header.wrap ? 'wrap' : '';
+    			add_location(td, file$6, 65, 28, 2241);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+    			append(td, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.data || changed.table_headers) && t_value !== (t_value = ctx.row[ctx.header.key])) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.table_headers) && td_class_value !== (td_class_value = ctx.header.wrap ? 'wrap' : '')) {
+    				td.className = td_class_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+    		}
+    	};
+    }
+
+    // (63:24) {#if header.toggler}
+    function create_if_block$5(ctx) {
+    	var td, t, td_class_value, dispose;
+
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+    			t = space();
+    			td.className = td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer";
+    			add_location(td, file$6, 63, 28, 2035);
+    			dispose = listen(td, "click", click_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+    			append(td, t);
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.data || changed.table_headers) && td_class_value !== (td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer")) {
+    				td.className = td_class_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (62:20) {#each table_headers as header, i}
+    function create_each_block_1$2(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type(ctx) {
+    		if (ctx.header.toggler) return create_if_block$5;
+    		return create_else_block$4;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (60:12) {#each data as row, i}
+    function create_each_block$2(ctx) {
+    	var tr, t;
+
+    	var each_value_1 = ctx.table_headers;
+
+    	var each_blocks = [];
+
+    	for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
+    		each_blocks[i_1] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i_1));
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].c();
+    			}
+
+    			t = space();
+    			add_location(tr, file$6, 60, 16, 1899);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].m(tr, null);
+    			}
+
+    			append(tr, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.table_headers || changed.data) {
+    				each_value_1 = ctx.table_headers;
+
+    				for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
+    					const child_ctx = get_each_context_1$2(ctx, each_value_1, i_1);
+
+    					if (each_blocks[i_1]) {
+    						each_blocks[i_1].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i_1] = create_each_block_1$2(child_ctx);
+    						each_blocks[i_1].c();
+    						each_blocks[i_1].m(tr, t);
+    					}
+    				}
+
+    				for (; i_1 < each_blocks.length; i_1 += 1) {
+    					each_blocks[i_1].d(1);
+    				}
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function create_fragment$8(ctx) {
+    	var div, table_1, thead, tr, t, tbody;
+
+    	var each_value_2 = ctx.table_headers;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_2$1(get_each_context_2$1(ctx, each_value_2, i));
+    	}
+
+    	var each_value = ctx.data;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table_1 = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t = space();
+    			tbody = element("tbody");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			tr.className = "table-headers";
+    			add_location(tr, file$6, 52, 12, 1536);
+    			add_location(thead, file$6, 51, 8, 1515);
+    			add_location(tbody, file$6, 58, 8, 1838);
+    			table_1.className = "table table-dark table-bordered table-scrollable table-hover nowrap m-0";
+    			add_location(table_1, file$6, 50, 4, 1418);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$6, 49, 0, 1362);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table_1);
+    			append(table_1, thead);
+    			append(thead, tr);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(tr, null);
+    			}
+
+    			append(table_1, t);
+    			append(table_1, tbody);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.table_headers) {
+    				each_value_2 = ctx.table_headers;
+
+    				for (var i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2$1(ctx, each_value_2, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_2$1(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(tr, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_2.length;
+    			}
+
+    			if (changed.table_headers || changed.data) {
+    				each_value = ctx.data;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$8($$self, $$props, $$invalidate) {
+    	let { getToken, table, table_headers, data, toggle_fields, onToggle } = $$props;
+
+        function handleToggleClick(row){
+            if (row.ID !== null){
+            	console.log("Hey");
+                axios$1.delete(`/api/delete/${table}`, {
+                    data: {
+                        rows: [row.ID]
+                    },
+                    headers: {
+                        Authorization: getToken()
+                    }
+                }).then(res => {
+                    onToggle();
+                }).catch(err =>{
+                    console.log(err.response);
+                });
+            } else {
+            	console.log("Bye");
+            	let data = {ID: null};
+            	console.log(add_fields);
+            	for(let i = 0; i < add_fields.length; i++) {
+            		console.log(add_fields[i].field);
+            	    data[add_fields[i].field] = row[add_fields[i].field];
+            	}
+            	console.log(data);
+
+                axios$1.post(`/api/insert/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+                    console.log(`Successfully added relation`);
+                    onToggle();
+                }).catch(err => {
+                    console.log(err.response);
+                });
+            }
+            console.log(row);
+        }
+
+    	const writable_props = ['getToken', 'table', 'table_headers', 'data', 'toggle_fields', 'onToggle'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicRelationTable> was created with unknown prop '${key}'`);
+    	});
+
+    	function click_handler({ row }, event) {handleToggleClick(row);}
+
+    	$$self.$set = $$props => {
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('table' in $$props) $$invalidate('table', table = $$props.table);
+    		if ('table_headers' in $$props) $$invalidate('table_headers', table_headers = $$props.table_headers);
+    		if ('data' in $$props) $$invalidate('data', data = $$props.data);
+    		if ('toggle_fields' in $$props) $$invalidate('toggle_fields', toggle_fields = $$props.toggle_fields);
+    		if ('onToggle' in $$props) $$invalidate('onToggle', onToggle = $$props.onToggle);
+    	};
+
+    	return {
+    		getToken,
+    		table,
+    		table_headers,
+    		data,
+    		toggle_fields,
+    		onToggle,
+    		handleToggleClick,
+    		click_handler
+    	};
+    }
+
+    class BasicRelationTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, ["getToken", "table", "table_headers", "data", "toggle_fields", "onToggle"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<BasicRelationTable> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.table === undefined && !('table' in props)) {
+    			console.warn("<BasicRelationTable> was created without expected prop 'table'");
+    		}
+    		if (ctx.table_headers === undefined && !('table_headers' in props)) {
+    			console.warn("<BasicRelationTable> was created without expected prop 'table_headers'");
+    		}
+    		if (ctx.data === undefined && !('data' in props)) {
+    			console.warn("<BasicRelationTable> was created without expected prop 'data'");
+    		}
+    		if (ctx.toggle_fields === undefined && !('toggle_fields' in props)) {
+    			console.warn("<BasicRelationTable> was created without expected prop 'toggle_fields'");
+    		}
+    		if (ctx.onToggle === undefined && !('onToggle' in props)) {
+    			console.warn("<BasicRelationTable> was created without expected prop 'onToggle'");
+    		}
+    	}
+
+    	get getToken() {
+    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table() {
+    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table(value) {
+    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table_headers() {
+    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table_headers(value) {
+    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get data() {
+    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set data(value) {
+    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggle_fields() {
+    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggle_fields(value) {
+    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onToggle() {
+    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onToggle(value) {
+    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\teacher_subjects\TeacherSubjects.svelte generated by Svelte v3.5.1 */
+
+    const file$7 = "src\\components\\teacher_subjects\\TeacherSubjects.svelte";
+
+    // (39:0) {#if is_logged_in}
+    function create_if_block$6(ctx) {
+    	var div1, div0, h2, span0, t1, h3, span1, t2, t3, current;
+
+    	var basicrelationtable = new BasicRelationTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "subjects_teachers",
+    		table_headers: ctx.table_headers,
+    		data: ctx.teacher_subjects,
+    		add_fields: ctx.add_fields,
+    		onToggle: ctx.getTeacherSubjects
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Teacher Subjects";
+    			t1 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t2 = text(ctx.teacher_name);
+    			t3 = space();
+    			basicrelationtable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$7, 41, 39, 1188);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$7, 41, 12, 1161);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$7, 42, 39, 1336);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$7, 42, 12, 1309);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$7, 40, 8, 1062);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$7, 39, 4, 978);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t1);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t2);
+    			append(div0, t3);
+    			mount_component(basicrelationtable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (!current || changed.teacher_name) {
+    				set_data(t2, ctx.teacher_name);
+    			}
+
+    			var basicrelationtable_changes = {};
+    			if (changed.getToken) basicrelationtable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basicrelationtable_changes.table_headers = ctx.table_headers;
+    			if (changed.teacher_subjects) basicrelationtable_changes.data = ctx.teacher_subjects;
+    			if (changed.add_fields) basicrelationtable_changes.add_fields = ctx.add_fields;
+    			if (changed.getTeacherSubjects) basicrelationtable_changes.onToggle = ctx.getTeacherSubjects;
+    			basicrelationtable.$set(basicrelationtable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicrelationtable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicrelationtable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div1);
+    			}
+
+    			basicrelationtable.$destroy();
+    		}
+    	};
+    }
+
+    function create_fragment$9(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$6(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$6(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$9($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let teacher_subjects = [];
+        let teacher_name = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isTeacher", toggler: true},
+            {columnName: "Subject", key: "subject"}
+        ];
+        let add_fields = [
+        	{field: "IDTeacher"},
+        	{field: "IDSubject"}
+        ];
+
+        function getTeacherSubjects(){
+        	axios$1.get(`/api/get/teacher_subjects?IDTeacher=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('teacher_subjects', teacher_subjects = res.data);
+        		$$invalidate('teacher_name', teacher_name = res.data[0].name);
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<TeacherSubjects> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getTeacherSubjects();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		teacher_subjects,
+    		teacher_name,
+    		table_headers,
+    		add_fields,
+    		getTeacherSubjects
+    	};
+    }
+
+    class TeacherSubjects extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<TeacherSubjects> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<TeacherSubjects> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<TeacherSubjects> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<TeacherSubjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<TeacherSubjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<TeacherSubjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<TeacherSubjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<TeacherSubjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<TeacherSubjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\students\Students.svelte generated by Svelte v3.5.1 */
+
+    const file$8 = "src\\components\\students\\Students.svelte";
+
+    // (248:0) {#if is_logged_in}
+    function create_if_block$7(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "students",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Students",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getStudents
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "students",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Students",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getStudents
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.students,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows,
+    		selection_field: selection_field
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Students";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$8, 252, 39, 7884);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$8, 252, 12, 7857);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$8, 254, 16, 8021);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$8, 255, 16, 8122);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$8, 256, 16, 8307);
+    			add_location(span1, file$8, 253, 12, 7997);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$8, 251, 8, 7758);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$8, 250, 4, 7639);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getStudents) basicmodal0_changes.onAdd = ctx.getStudents;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getStudents) basicmodal1_changes.onEdit = ctx.getStudents;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.students) basictable_changes.data = ctx.students;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$a(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$7(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$7(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field = "ID";
+
+    function instance$a($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let selectedRows = [];
+
+        let students = [];
+        let student_groups = [];
+        let genders = [
+        	{
+        		display: "Male",
+        		value: "Male",
+        	},
+        	{
+        		display: "Female",
+        		value: "Female",
+        	}
+        ];
+
+        let table_headers = [
+        	{columnName: '#', key: "ID"},
+        	{columnName: "Student #", key: "studentNumber"},
+        	{columnName: 'Name', key: "name"},
+        	{columnName: 'Age', key: "age"},
+        	{columnName: 'Gender', key: "gender"},
+        	{columnName: 'Email', key: "email"},
+        ];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+        		field: "studentNumber",
+        	    type: "text",
+        	    display: "Student #",
+        	    placeholder: "eg. a701617004",
+        	    value: ""
+            }, {
+        	    field: "name",
+        	    type: "text",
+        	    display: "Name",
+        	    placeholder: "eg. Vasco Raminhos",
+        	    value: ""
+            }, {
+        	    field: "birthday",
+        	    type: "date",
+        	    display: "Birthday",
+        	    placeholder: "",
+        	    value: ""
+            }, {
+        	    field: "gender",
+        	    type: "select",
+        	    display: "Gender",
+        	    placeholder: "Choose a gender",
+        	    value: "",
+        	    options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. student.email@gmail.com",
+                value: ""
+            }, {
+                field: "IDClass",
+                type: "select",
+                display: "Class",
+                placeholder: "Choose the student's class",
+                value: "",
+                options: student_groups
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+        		field: "studentNumber",
+        	    type: "text",
+        	    display: "Student #",
+        	    placeholder: "eg. a701617004",
+        	    value: ""
+            }, {
+        	    field: "name",
+        	    type: "text",
+        	    display: "Name",
+        	    placeholder: "eg. Vasco Raminhos",
+        	    value: ""
+            }, {
+        	    field: "birthday",
+        	    type: "date",
+        	    display: "Birthday",
+        	    placeholder: "",
+        	    value: ""
+            }, {
+        	    field: "gender",
+        	    type: "select",
+        	    display: "Gender",
+        	    placeholder: "Choose a gender",
+        	    value: "",
+        	    options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. student.email@gmail.com",
+                value: ""
+            }, {
+                field: "IDClass",
+                type: "select",
+                display: "Class",
+                placeholder: "Choose the student's class",
+                value: "",
+                options: student_groups
+            }]
+        };
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/students", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getStudents();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function getStudents() {
+        	console.log("Trying to fetch students");
+            axios$1.get("/api/get/students", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('students', students = res.data);
+                console.log(res.data);
+                for(let i = 0; i < students.length; i++) {
+                    let age = new Date(new Date() - new Date(students[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    students[i].age = age; $$invalidate('students', students);
+                    console.log(age);
+                }
+            });
+        }
+
+        function getStudentGroups() {
+        	console.log("Trying to fetch classes");
+            axios$1.get("/api/get/studentgroups", {headers: {Authorization: getToken()}}).then(function(res) {
+                for(let i = 0; i < res.data.length; i++) {
+                    student_groups.push({value: res.data[i].ID, display: res.data[i].grade + res.data[i].designation, original: res.data[i]});
+                }
+                $$invalidate('add_modal_fields', add_modal_fields);
+                $$invalidate('edit_modal_fields', edit_modal_fields);
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	if (student_groups.length === 0) {
+        	    getStudentGroups();
+        	}
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		if (student_groups.length === 0) {
+                    getStudentGroups();
+                }
+                for (let i = 0; i < students.length; i++) {
+                    if (students[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = students[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(students[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = students[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Students> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getStudents();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		selectedRows,
+    		students,
+    		table_headers,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		getStudents,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Students extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Students> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Students> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Students>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Students>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Students>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Students>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\student_groups\StudentGroups.svelte generated by Svelte v3.5.1 */
+
+    const file$9 = "src\\components\\student_groups\\StudentGroups.svelte";
+
+    // (182:0) {#if is_logged_in}
+    function create_if_block$8(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "studentgroups",
+    		table_title: "Student Group",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getStudentGroups
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "studentgroups",
+    		table_title: "Student Group",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getStudentGroups
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.student_groups,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Student Groups";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$9, 186, 35, 5661);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$9, 186, 8, 5634);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$9, 188, 16, 5804);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$9, 189, 16, 5906);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$9, 190, 16, 6091);
+    			add_location(span1, file$9, 187, 12, 5780);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$9, 185, 8, 5539);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$9, 184, 4, 5420);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getStudentGroups) basicmodal0_changes.onAdd = ctx.getStudentGroups;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getStudentGroups) basicmodal1_changes.onEdit = ctx.getStudentGroups;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.student_groups) basictable_changes.data = ctx.student_groups;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$b(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$8(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$8(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$b($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let student_groups = [];
+        let courses = [];
+
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: "Grade", key: "grade"},
+            {columnName: "Designation", key: "designation"},
+            {columnName: "Course", key: "course"}
+        ];
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+            fields: [{
+        		field: "grade",
+        		type: "number",
+        		display: "Grade",
+        		placeholder: "eg. 10",
+        		value: ""
+        	}, {
+        		field: "designation",
+        		type: "text",
+        		display: "Designation",
+        		placeholder: "eg. Zi",
+        		value: ""
+        	}, {
+        		field: "IDCourse",
+        		type: "select",
+        		display: "Course",
+        		placeholder: "Choose a course",
+        		value: "",
+        		options: courses
+        	}]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+        		field: "grade",
+        		type: "number",
+        		display: "Grade",
+        		placeholder: "eg. 10",
+        		value: ""
+        	}, {
+        		field: "designation",
+        		type: "text",
+        		display: "Designation",
+        		placeholder: "eg. Zi",
+        		value: ""
+        	}, {
+        		field: "IDCourse",
+        		type: "select",
+        		display: "Course",
+        		placeholder: "Choose a course",
+        		value: "",
+        		options: courses
+        	}]
+        };
+
+        // axios.defaults.withCredentials = true;
+
+        function getStudentGroups() {
+        	console.log("Trying to fetch countries");
+            axios$1.get("/api/get/studentgroups", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('student_groups', student_groups = res.data);
+                console.log(res.data);
+            });
+        }
+
+        function getCourses() {
+        	console.log("Trying to fetch courses");
+            axios$1.get("/api/get/courses", {headers: {Authorization: getToken()}}).then(function(res) {
+            	for(let i = 0; i < res.data.length; i++) {
+            	    courses.push({value: res.data[i].ID, display: res.data[i].course, original: res.data[i]});
+            	}
+            	$$invalidate('add_modal_fields', add_modal_fields);
+            	$$invalidate('edit_modal_fields', edit_modal_fields);
+            });
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/studentgroups", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res =>{
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getStudentGroups();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	if (courses.length === 0) {
+        	    getCourses();
+        	}
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if (selectedRows.length === 1) {
+        		if (courses.length === 0) {
+                    getCourses();
+                }
+                for (let i = 0; i < student_groups.length; i++) {
+                    if (student_groups[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		            edit_modal_fields.fields[j].value = student_groups[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        			    }
+        			}
+        		}
+        		console.log(edit_modal_fields);
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<StudentGroups> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getStudentGroups();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		student_groups,
+    		table_headers,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getStudentGroups,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class StudentGroups extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<StudentGroups> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<StudentGroups> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<StudentGroups>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<StudentGroups>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<StudentGroups>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<StudentGroups>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\countries\Countries.svelte generated by Svelte v3.5.1 */
+
+    const file$a = "src\\components\\countries\\Countries.svelte";
+
+    // (135:0) {#if is_logged_in}
+    function create_if_block$9(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "countries",
+    		table_title: "Countries",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getCountries
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "countries",
+    		table_title: "Countries",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getCountries
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.countries,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Countries";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$a, 139, 35, 4272);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$a, 139, 8, 4245);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$a, 141, 16, 4410);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$a, 142, 16, 4511);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$a, 143, 16, 4696);
+    			add_location(span1, file$a, 140, 12, 4386);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$a, 138, 8, 4150);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$a, 137, 4, 4031);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getCountries) basicmodal0_changes.onAdd = ctx.getCountries;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getCountries) basicmodal1_changes.onEdit = ctx.getCountries;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.countries) basictable_changes.data = ctx.countries;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$c(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$9(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$9(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$c($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let countries = [];
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: "Country", key: "country"}
+        ];
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+            fields: [{
+        		field: "country",
+        		type: "text",
+        		display: "Country",
+        		placeholder: "eg. Portugal",
+        		value: ""
+            }]
+        };
+
+        let edit_modal_fields = {
+        	ID: null,
+            fields: [{
+        		field: "country",
+        		type: "text",
+        		display: "Country",
+        		placeholder: "eg. Portugal",
+        		value: ""
+            }]
+        };
+
+        // axios.defaults.withCredentials = true;
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/countries", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res =>{
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getCountries();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function getCountries() {
+        	console.log("Trying to fetch countries");
+            axios$1.get("/api/get/countries", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('countries', countries = res.data);
+                console.log(res.data);
+            });
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		for (let i = 0; i < countries.length; i++) {
+                    if (countries[i].ID === selectedRows[0]) {
+                        edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+                            edit_modal_fields.fields[j].value = countries[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                        }
+                    }
+                }
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Countries> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getCountries();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		countries,
+    		table_headers,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		getCountries,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Countries extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$c, create_fragment$c, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Countries> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Countries> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Countries>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Countries>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Countries>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Countries>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\courses\Courses.svelte generated by Svelte v3.5.1 */
+
+    const file$b = "src\\components\\courses\\Courses.svelte";
+
+    // (137:0) {#if is_logged_in}
+    function create_if_block$a(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "courses",
+    		table_title: "Courses",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getCourses
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "courses",
+    		table_title: "Courses",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getCourses
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.courses,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Courses";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$b, 141, 35, 4233);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$b, 141, 8, 4206);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$b, 143, 16, 4369);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$b, 144, 16, 4470);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$b, 145, 16, 4658);
+    			add_location(span1, file$b, 142, 12, 4345);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$b, 140, 8, 4111);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$b, 139, 4, 3992);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getCourses) basicmodal0_changes.onAdd = ctx.getCourses;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getCourses) basicmodal1_changes.onEdit = ctx.getCourses;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.courses) basictable_changes.data = ctx.courses;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$d(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$a(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$a(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$d($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let selectedRows = [];
+
+        let courses = [];
+
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: "Course", key: "course"}
+        ];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+        		field: "course",
+        		type: "text",
+        		display: "Course",
+        		placeholder: "eg. Programming",
+        		value: ""
+        	}]
+        };
+
+        let edit_modal_fields = {
+            ID: null,
+        	fields: [{
+        		field: "course",
+        		type: "text",
+        		display: "Course",
+        		placeholder: "eg. Programming",
+        		value: ""
+        	}]
+        };
+
+        // axios.defaults.withCredentials = true;
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/courses", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res =>{
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getCourses();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function getCourses() {
+        	console.log("Trying to fetch courses");
+            axios$1.get("/api/get/courses", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('courses', courses = res.data);
+                console.log(res.data);
+            });
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		for (let i = 0; i < courses.length; i++) {
+                    if (courses[i].ID === selectedRows[0]) {
+                        edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+                            edit_modal_fields.fields[j].value = courses[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                        }
+                    }
+                }
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Courses> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getCourses();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		selectedRows,
+    		courses,
+    		table_headers,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		getCourses,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Courses extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$d, create_fragment$d, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Courses> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Courses> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Courses>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Courses>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Courses>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Courses>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\subjects\Subjects.svelte generated by Svelte v3.5.1 */
+
+    const file$c = "src\\components\\subjects\\Subjects.svelte";
+
+    // (135:0) {#if is_logged_in}
+    function create_if_block$b(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "subjects",
+    		table_title: "Subjects",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getSubjects
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "subjects",
+    		table_title: "Subjects",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getSubjects
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.subjects,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Subjects";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$c, 139, 35, 4359);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$c, 139, 8, 4332);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$c, 141, 16, 4496);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$c, 142, 16, 4599);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$c, 143, 16, 4784);
+    			add_location(span1, file$c, 140, 12, 4472);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$c, 138, 8, 4237);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$c, 137, 4, 4118);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getSubjects) basicmodal0_changes.onAdd = ctx.getSubjects;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getSubjects) basicmodal1_changes.onEdit = ctx.getSubjects;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.subjects) basictable_changes.data = ctx.subjects;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$e(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$b(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$b(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$e($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let subjects = [];
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: "Subject", key: "subject"}
+        ];
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+                field: "subject",
+                type: "text",
+                display: "Subject",
+                placeholder: "eg. Mathematics",
+                value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+                field: "subject",
+                type: "text",
+                display: "Subject",
+                placeholder: "eg. Mathematics",
+                value: ""
+            }]
+        };
+
+        // axios.defaults.withCredentials = true;
+
+        function getSubjects() {
+        	console.log("Trying to fetch subjects");
+            axios$1.get("/api/get/subjects", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('subjects', subjects = res.data);
+                console.log(res.data);
+            });
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/subjects", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res =>{
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getSubjects();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < subjects.length; i++) {
+                    if (subjects[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+                            edit_modal_fields.fields[j].value = subjects[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                            console.log(edit_modal_fields.fields[j].value);
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Subjects> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getSubjects();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		subjects,
+    		table_headers,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getSubjects,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Subjects extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$e, create_fragment$e, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Subjects> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Subjects> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Subjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Subjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Subjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Subjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\projects\ProjectsTable.svelte generated by Svelte v3.5.1 */
+
+    const file$d = "src\\components\\projects\\ProjectsTable.svelte";
+
+    function get_each_context$3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.project = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (47:24) <Link to={`/svelte/project_partners/${project.ID}`}>
+    function create_default_slot_1$1(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-school fa-fw cursor-pointer mr-1 text-light";
+    			add_location(i, file$d, 46, 76, 2550);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (48:24) <Link to={`/svelte/mobilities/${project.ID}`}>
+    function create_default_slot$2(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-plane fa-fw cursor-pointer ml-1 text-light";
+    			add_location(i, file$d, 47, 70, 2695);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (34:12) {#each projects as project, i}
+    function create_each_block$3(ctx) {
+    	var tr, td0, t0_value = ctx.project.ID, t0, t1, td1, t2_value = ctx.project.projectCode, t2, t3, td2, t4_value = ctx.project.name, t4, t5, td3, input, input_name_value, input_id_value, t6, label, img, img_src_value, img_id_value, label_for_value, t7, td4, t8, t9, tr_class_value, current, dispose;
+
+    	function change_handler(...args) {
+    		return ctx.change_handler(ctx, ...args);
+    	}
+
+    	var link0 = new Link({
+    		props: {
+    		to: `/svelte/project_partners/${ctx.project.ID}`,
+    		$$slots: { default: [create_default_slot_1$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link1 = new Link({
+    		props: {
+    		to: `/svelte/mobilities/${ctx.project.ID}`,
+    		$$slots: { default: [create_default_slot$2] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			input = element("input");
+    			t6 = space();
+    			label = element("label");
+    			img = element("img");
+    			t7 = space();
+    			td4 = element("td");
+    			link0.$$.fragment.c();
+    			t8 = space();
+    			link1.$$.fragment.c();
+    			t9 = space();
+    			add_location(td0, file$d, 36, 20, 1766);
+    			add_location(td1, file$d, 37, 20, 1809);
+    			add_location(td2, file$d, 38, 20, 1861);
+    			attr(input, "type", "file");
+    			input.className = "d-none";
+    			input.name = input_name_value = ctx.project.ID;
+    			input.id = input_id_value = `image-input-${ctx.project.ID}`;
+    			add_location(input, file$d, 40, 24, 1956);
+    			img.src = img_src_value = `/imgs/projects/${ctx.project.ID}.png`;
+    			img.id = img_id_value = `image-${ctx.project.ID}`;
+    			img.height = "50";
+    			img.className = "cursor-pointer";
+    			img.alt = "Project Logo";
+    			add_location(img, file$d, 42, 28, 2214);
+    			label.htmlFor = label_for_value = `image-input-${ctx.project.ID}`;
+    			add_location(label, file$d, 41, 24, 2143);
+    			td3.className = "text-center";
+    			add_location(td3, file$d, 39, 20, 1906);
+    			td4.className = "text-center vertical-align-middle";
+    			add_location(td4, file$d, 45, 20, 2426);
+    			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.project.ID) === -1 ? 'table-row' : 'table-row bg-secondary';
+    			add_location(tr, file$d, 34, 16, 1574);
+
+    			dispose = [
+    				listen(input, "change", change_handler),
+    				listen(tr, "click", click_handler)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+    			append(tr, td0);
+    			append(td0, t0);
+    			append(tr, t1);
+    			append(tr, td1);
+    			append(td1, t2);
+    			append(tr, t3);
+    			append(tr, td2);
+    			append(td2, t4);
+    			append(tr, t5);
+    			append(tr, td3);
+    			append(td3, input);
+    			append(td3, t6);
+    			append(td3, label);
+    			append(label, img);
+    			append(tr, t7);
+    			append(tr, td4);
+    			mount_component(link0, td4, null);
+    			append(td4, t8);
+    			mount_component(link1, td4, null);
+    			append(tr, t9);
+    			current = true;
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((!current || changed.projects) && t0_value !== (t0_value = ctx.project.ID)) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if ((!current || changed.projects) && t2_value !== (t2_value = ctx.project.projectCode)) {
+    				set_data(t2, t2_value);
+    			}
+
+    			if ((!current || changed.projects) && t4_value !== (t4_value = ctx.project.name)) {
+    				set_data(t4, t4_value);
+    			}
+
+    			if ((!current || changed.projects) && input_name_value !== (input_name_value = ctx.project.ID)) {
+    				input.name = input_name_value;
+    			}
+
+    			if ((!current || changed.projects) && input_id_value !== (input_id_value = `image-input-${ctx.project.ID}`)) {
+    				input.id = input_id_value;
+    			}
+
+    			if ((!current || changed.projects) && img_src_value !== (img_src_value = `/imgs/projects/${ctx.project.ID}.png`)) {
+    				img.src = img_src_value;
+    			}
+
+    			if ((!current || changed.projects) && img_id_value !== (img_id_value = `image-${ctx.project.ID}`)) {
+    				img.id = img_id_value;
+    			}
+
+    			if ((!current || changed.projects) && label_for_value !== (label_for_value = `image-input-${ctx.project.ID}`)) {
+    				label.htmlFor = label_for_value;
+    			}
+
+    			var link0_changes = {};
+    			if (changed.projects) link0_changes.to = `/svelte/project_partners/${ctx.project.ID}`;
+    			if (changed.$$scope) link0_changes.$$scope = { changed, ctx };
+    			link0.$set(link0_changes);
+
+    			var link1_changes = {};
+    			if (changed.projects) link1_changes.to = `/svelte/mobilities/${ctx.project.ID}`;
+    			if (changed.$$scope) link1_changes.$$scope = { changed, ctx };
+    			link1.$set(link1_changes);
+
+    			if ((!current || changed.selectedRows || changed.projects) && tr_class_value !== (tr_class_value = ctx.selectedRows.indexOf(ctx.project.ID) === -1 ? 'table-row' : 'table-row bg-secondary')) {
+    				tr.className = tr_class_value;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link0.$$.fragment.i(local);
+
+    			link1.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link0.$$.fragment.o(local);
+    			link1.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			link0.$destroy();
+
+    			link1.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$f(ctx) {
+    	var div, table, thead, tr, th0, t1, th1, t3, th2, t5, th3, i, t6, th4, t8, tbody, current;
+
+    	var each_value = ctx.projects;
+
+    	var each_blocks = [];
+
+    	for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) {
+    		each_blocks[i_1] = create_each_block$3(get_each_context$3(ctx, each_value, i_1));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "#";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Project Code";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Name";
+    			t5 = space();
+    			th3 = element("th");
+    			i = element("i");
+    			t6 = space();
+    			th4 = element("th");
+    			th4.textContent = "Actions";
+    			t8 = space();
+    			tbody = element("tbody");
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].c();
+    			}
+    			th0.scope = "col";
+    			th0.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th0, file$d, 25, 16, 748);
+    			th1.scope = "col";
+    			th1.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th1, file$d, 26, 16, 878);
+    			th2.scope = "col";
+    			th2.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th2, file$d, 27, 16, 1019);
+    			i.className = "fas fa-images fa-fw";
+    			add_location(i, file$d, 28, 134, 1270);
+    			th3.scope = "col";
+    			th3.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center";
+    			add_location(th3, file$d, 28, 16, 1152);
+    			th4.scope = "col";
+    			th4.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center";
+    			add_location(th4, file$d, 29, 16, 1328);
+    			tr.className = "table-headers";
+    			add_location(tr, file$d, 24, 12, 704);
+    			add_location(thead, file$d, 23, 8, 683);
+    			add_location(tbody, file$d, 32, 8, 1505);
+    			table.className = "table table-dark table-bordered table-hover nowrap m-0";
+    			add_location(table, file$d, 22, 4, 603);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$d, 21, 0, 547);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table);
+    			append(table, thead);
+    			append(thead, tr);
+    			append(tr, th0);
+    			append(tr, t1);
+    			append(tr, th1);
+    			append(tr, t3);
+    			append(tr, th2);
+    			append(tr, t5);
+    			append(tr, th3);
+    			append(th3, i);
+    			append(tr, t6);
+    			append(tr, th4);
+    			append(table, t8);
+    			append(table, tbody);
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].m(tbody, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.selectedRows || changed.projects) {
+    				each_value = ctx.projects;
+
+    				for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) {
+    					const child_ctx = get_each_context$3(ctx, each_value, i_1);
+
+    					if (each_blocks[i_1]) {
+    						each_blocks[i_1].p(changed, child_ctx);
+    						each_blocks[i_1].i(1);
+    					} else {
+    						each_blocks[i_1] = create_each_block$3(child_ctx);
+    						each_blocks[i_1].c();
+    						each_blocks[i_1].i(1);
+    						each_blocks[i_1].m(tbody, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) each_blocks[i_1].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i_1 = 0; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$f($$self, $$props, $$invalidate) {
+    	let { projects, toggleRowSelect, selectedRows, updateImage } = $$props;
+
+        function handleRowClick(event, id) {
+            toggleRowSelect(id);
+        }
+
+        function handleImageChange(file, id) {
+            updateImage(file, id).then(res => {
+            	let image_el = document.querySelector(`#image-${id}`);
+            	image_el.setAttribute("src", image_el.getAttribute("src") + "?time="+ new Date().getTime());
+            });
+        }
+
+    	const writable_props = ['projects', 'toggleRowSelect', 'selectedRows', 'updateImage'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<ProjectsTable> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler({ project }, event) {
+    		return handleImageChange(event.target.files[0], project.ID);
+    	}
+
+    	function click_handler({ project }, event) {handleRowClick(event, project.ID);}
+
+    	$$self.$set = $$props => {
+    		if ('projects' in $$props) $$invalidate('projects', projects = $$props.projects);
+    		if ('toggleRowSelect' in $$props) $$invalidate('toggleRowSelect', toggleRowSelect = $$props.toggleRowSelect);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    		if ('updateImage' in $$props) $$invalidate('updateImage', updateImage = $$props.updateImage);
+    	};
+
+    	return {
+    		projects,
+    		toggleRowSelect,
+    		selectedRows,
+    		updateImage,
+    		handleRowClick,
+    		handleImageChange,
+    		change_handler,
+    		click_handler
+    	};
+    }
+
+    class ProjectsTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$f, create_fragment$f, safe_not_equal, ["projects", "toggleRowSelect", "selectedRows", "updateImage"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.projects === undefined && !('projects' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'projects'");
+    		}
+    		if (ctx.toggleRowSelect === undefined && !('toggleRowSelect' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'toggleRowSelect'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'selectedRows'");
+    		}
+    		if (ctx.updateImage === undefined && !('updateImage' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'updateImage'");
+    		}
+    	}
+
+    	get projects() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set projects(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggleRowSelect() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggleRowSelect(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get updateImage() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set updateImage(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\projects\Projects.svelte generated by Svelte v3.5.1 */
+
+    const file$e = "src\\components\\projects\\Projects.svelte";
+
+    // (169:0) {#if is_logged_in}
+    function create_if_block$c(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "projects",
+    		table_title: "Projects",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getProjects
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "projects",
+    		table_title: "Projects",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getProjects
+    	},
+    		$$inline: true
+    	});
+
+    	var projectstable = new ProjectsTable({
+    		props: {
+    		projects: ctx.projects,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows,
+    		updateImage: ctx.updateImage
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Projects";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			projectstable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$e, 173, 35, 5146);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$e, 173, 8, 5119);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$e, 175, 16, 5283);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$e, 176, 16, 5384);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$e, 177, 16, 5571);
+    			add_location(span1, file$e, 174, 12, 5259);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$e, 172, 8, 5024);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$e, 171, 4, 4905);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(projectstable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getProjects) basicmodal0_changes.onAdd = ctx.getProjects;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getProjects) basicmodal1_changes.onEdit = ctx.getProjects;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var projectstable_changes = {};
+    			if (changed.projects) projectstable_changes.projects = ctx.projects;
+    			if (changed.toggleRowSelect) projectstable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) projectstable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.updateImage) projectstable_changes.updateImage = ctx.updateImage;
+    			projectstable.$set(projectstable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			projectstable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			projectstable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			projectstable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$g(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$c(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$c(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$g($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let projects = [];
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+        		field: "projectCode",
+        		type: "text",
+        		display: "Project Code",
+        		placeholder: "eg. KA+ 123456798",
+        		value: ""
+        	}, {
+        		field: "name",
+        		type: "text",
+        		display: "Name",
+        		placeholder: "eg. Trails2Education",
+        		value: ""
+        	}, {
+        		field: "description",
+        		type: "textarea",
+        		display: "Description",
+        		placeholder: "eg. This is a project description",
+        		value: ""
+        	}]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+        		field: "projectCode",
+        		type: "text",
+        		display: "Project Code",
+        		placeholder: "eg. KA+ 123456798",
+        		value: ""
+        	}, {
+        		field: "name",
+        		type: "text",
+        		display: "Name",
+        		placeholder: "eg. Trails2Education",
+        		value: ""
+        	}, {
+        		field: "description",
+        		type: "textarea",
+        		display: "Description",
+        		placeholder: "eg. This is a project description",
+        		value: ""
+        	}]
+        };
 
         function getProjects() {
         	console.log("Trying to fetch projects");
             axios$1.get("/api/get/projects", {headers: {Authorization: getToken()}}).then(function(res) {
-            	projects = res.data;
+            	$$invalidate('projects', projects = res.data);
             });
+        }
+
+        function updateImage(image, id) {
+        	let form_data = new FormData();
+        	form_data.append(`${id}`, image);
+        	form_data.append("ID", id);
+
+        	return axios$1.put("/api/edit/project_logo", form_data, {headers: {Authorization: getToken()}}).then(function(res) {
+                console.log("Hello");
+                return res;
+        	}).catch(err => {
+        		console.log(err.response);
+        		return err;
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/projects", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                        $$invalidate('confirm_del', confirm_del = false);
+                        getProjects();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < projects.length; i++) {
+                    if (projects[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		            edit_modal_fields.fields[j].value = projects[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
         }
 
     	const writable_props = ['is_logged_in', 'getToken'];
@@ -4788,13 +10406,32 @@ var app = (function () {
                 } }
     	};
 
-    	return { is_logged_in, getToken, table_headers };
+    	return {
+    		is_logged_in,
+    		getToken,
+    		projects,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getProjects,
+    		updateImage,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
     }
 
     class Projects extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["is_logged_in", "getToken"]);
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, ["is_logged_in", "getToken"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -4823,12 +10460,4859 @@ var app = (function () {
     	}
     }
 
+    /* src\components\mobilities\MobilitiesTable.svelte generated by Svelte v3.5.1 */
+
+    const file$f = "src\\components\\mobilities\\MobilitiesTable.svelte";
+
+    function get_each_context$4(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.mobility = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (36:24) <Link to={`/svelte/mobility_teachers/${mobility.ID}`}>
+    function create_default_slot_1$2(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-chalkboard-teacher fa-fw cursor-pointer mr-1 text-light";
+    			i.title = "Teachers";
+    			add_location(i, file$f, 35, 78, 1978);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (37:24) <Link to={`/svelte/mobility_students/${mobility.ID}`}>
+    function create_default_slot$3(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-user-graduate fa-fw cursor-pointer ml-1 text-light";
+    			i.title = "Students";
+    			add_location(i, file$f, 36, 78, 2157);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (27:12) {#each mobilities as mobility, i}
+    function create_each_block$4(ctx) {
+    	var tr, td0, t0_value = ctx.mobility.ID, t0, t1, td1, t2_value = ctx.mobility.origin, t2, t3, td2, t4_value = ctx.mobility.target, t4, t5, td3, t6_value = ctx.mobility.departureDate.slice(0, -14), t6, t7, td4, t8_value = ctx.mobility.arrivalDate.slice(0, -14), t8, t9, td5, t10, t11, tr_class_value, current, dispose;
+
+    	var link0 = new Link({
+    		props: {
+    		to: `/svelte/mobility_teachers/${ctx.mobility.ID}`,
+    		$$slots: { default: [create_default_slot_1$2] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link1 = new Link({
+    		props: {
+    		to: `/svelte/mobility_students/${ctx.mobility.ID}`,
+    		$$slots: { default: [create_default_slot$3] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			td4 = element("td");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			td5 = element("td");
+    			link0.$$.fragment.c();
+    			t10 = space();
+    			link1.$$.fragment.c();
+    			t11 = space();
+    			add_location(td0, file$f, 29, 20, 1576);
+    			add_location(td1, file$f, 30, 20, 1620);
+    			add_location(td2, file$f, 31, 20, 1668);
+    			add_location(td3, file$f, 32, 20, 1716);
+    			add_location(td4, file$f, 33, 20, 1785);
+    			td5.className = "text-center vertical-align-middle";
+    			add_location(td5, file$f, 34, 20, 1852);
+    			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.mobility.ID) === -1 ? 'table-row' : 'table-row bg-secondary';
+    			add_location(tr, file$f, 27, 16, 1382);
+    			dispose = listen(tr, "click", click_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+    			append(tr, td0);
+    			append(td0, t0);
+    			append(tr, t1);
+    			append(tr, td1);
+    			append(td1, t2);
+    			append(tr, t3);
+    			append(tr, td2);
+    			append(td2, t4);
+    			append(tr, t5);
+    			append(tr, td3);
+    			append(td3, t6);
+    			append(tr, t7);
+    			append(tr, td4);
+    			append(td4, t8);
+    			append(tr, t9);
+    			append(tr, td5);
+    			mount_component(link0, td5, null);
+    			append(td5, t10);
+    			mount_component(link1, td5, null);
+    			append(tr, t11);
+    			current = true;
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((!current || changed.mobilities) && t0_value !== (t0_value = ctx.mobility.ID)) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t2_value !== (t2_value = ctx.mobility.origin)) {
+    				set_data(t2, t2_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t4_value !== (t4_value = ctx.mobility.target)) {
+    				set_data(t4, t4_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t6_value !== (t6_value = ctx.mobility.departureDate.slice(0, -14))) {
+    				set_data(t6, t6_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t8_value !== (t8_value = ctx.mobility.arrivalDate.slice(0, -14))) {
+    				set_data(t8, t8_value);
+    			}
+
+    			var link0_changes = {};
+    			if (changed.mobilities) link0_changes.to = `/svelte/mobility_teachers/${ctx.mobility.ID}`;
+    			if (changed.$$scope) link0_changes.$$scope = { changed, ctx };
+    			link0.$set(link0_changes);
+
+    			var link1_changes = {};
+    			if (changed.mobilities) link1_changes.to = `/svelte/mobility_students/${ctx.mobility.ID}`;
+    			if (changed.$$scope) link1_changes.$$scope = { changed, ctx };
+    			link1.$set(link1_changes);
+
+    			if ((!current || changed.selectedRows || changed.mobilities) && tr_class_value !== (tr_class_value = ctx.selectedRows.indexOf(ctx.mobility.ID) === -1 ? 'table-row' : 'table-row bg-secondary')) {
+    				tr.className = tr_class_value;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link0.$$.fragment.i(local);
+
+    			link1.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link0.$$.fragment.o(local);
+    			link1.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			link0.$destroy();
+
+    			link1.$destroy();
+
+    			dispose();
+    		}
+    	};
+    }
+
+    function create_fragment$h(ctx) {
+    	var div, table, thead, tr, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, current;
+
+    	var each_value = ctx.mobilities;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "#";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Origin";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Destination";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Departure";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Arrival";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Actions";
+    			t11 = space();
+    			tbody = element("tbody");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			th0.scope = "col";
+    			th0.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
+    			add_location(th0, file$f, 17, 16, 442);
+    			th1.scope = "col";
+    			th1.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
+    			add_location(th1, file$f, 18, 16, 570);
+    			th2.scope = "col";
+    			th2.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
+    			add_location(th2, file$f, 19, 16, 703);
+    			th3.scope = "col";
+    			th3.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
+    			add_location(th3, file$f, 20, 16, 841);
+    			th4.scope = "col";
+    			th4.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
+    			add_location(th4, file$f, 21, 16, 989);
+    			th5.scope = "col";
+    			th5.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
+    			add_location(th5, file$f, 22, 16, 1135);
+    			tr.className = "table-headers";
+    			add_location(tr, file$f, 16, 12, 398);
+    			add_location(thead, file$f, 15, 8, 377);
+    			add_location(tbody, file$f, 25, 8, 1310);
+    			table.className = "table table-dark table-bordered table-hover nowrap m-0";
+    			add_location(table, file$f, 14, 4, 297);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$f, 13, 0, 241);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table);
+    			append(table, thead);
+    			append(thead, tr);
+    			append(tr, th0);
+    			append(tr, t1);
+    			append(tr, th1);
+    			append(tr, t3);
+    			append(tr, th2);
+    			append(tr, t5);
+    			append(tr, th3);
+    			append(tr, t7);
+    			append(tr, th4);
+    			append(tr, t9);
+    			append(tr, th5);
+    			append(table, t11);
+    			append(table, tbody);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.selectedRows || changed.mobilities) {
+    				each_value = ctx.mobilities;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						each_blocks[i].i(1);
+    					} else {
+    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].i(1);
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i = 0; i < each_value.length; i += 1) each_blocks[i].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$h($$self, $$props, $$invalidate) {
+    	let { mobilities, toggleRowSelect, selectedRows } = $$props;
+
+        function handleRowClick(event, id) {
+            toggleRowSelect(id);
+        }
+
+    	const writable_props = ['mobilities', 'toggleRowSelect', 'selectedRows'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobilitiesTable> was created with unknown prop '${key}'`);
+    	});
+
+    	function click_handler({ mobility }, event) {handleRowClick(event, mobility.ID);}
+
+    	$$self.$set = $$props => {
+    		if ('mobilities' in $$props) $$invalidate('mobilities', mobilities = $$props.mobilities);
+    		if ('toggleRowSelect' in $$props) $$invalidate('toggleRowSelect', toggleRowSelect = $$props.toggleRowSelect);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    	};
+
+    	return {
+    		mobilities,
+    		toggleRowSelect,
+    		selectedRows,
+    		handleRowClick,
+    		click_handler
+    	};
+    }
+
+    class MobilitiesTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, ["mobilities", "toggleRowSelect", "selectedRows"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.mobilities === undefined && !('mobilities' in props)) {
+    			console.warn("<MobilitiesTable> was created without expected prop 'mobilities'");
+    		}
+    		if (ctx.toggleRowSelect === undefined && !('toggleRowSelect' in props)) {
+    			console.warn("<MobilitiesTable> was created without expected prop 'toggleRowSelect'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<MobilitiesTable> was created without expected prop 'selectedRows'");
+    		}
+    	}
+
+    	get mobilities() {
+    		throw new Error("<MobilitiesTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mobilities(value) {
+    		throw new Error("<MobilitiesTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggleRowSelect() {
+    		throw new Error("<MobilitiesTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggleRowSelect(value) {
+    		throw new Error("<MobilitiesTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<MobilitiesTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<MobilitiesTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\AddMobilityModal.svelte generated by Svelte v3.5.1 */
+
+    const file$g = "src\\components\\mobilities\\AddMobilityModal.svelte";
+
+    function get_each_context$5(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.project = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_2$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (100:28) {#each partners as partner, i}
+    function create_each_block_2$2(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$g, 100, 32, 3423);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (121:28) {#each partners as partner, i}
+    function create_each_block_1$3(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$g, 121, 32, 4648);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (143:16) {#if projectID == null}
+    function create_if_block$d(ctx) {
+    	var div3, div2, div1, div0, t_1, select, option, div3_class_value, dispose;
+
+    	var each_value = ctx.projects;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "Project";
+    			t_1 = space();
+    			select = element("select");
+    			option = element("option");
+    			option.textContent = "Select Project";
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			div0.className = "input-group-text w-100";
+    			add_location(div0, file$g, 146, 32, 6022);
+    			div1.className = "input-group-prepend w-25";
+    			add_location(div1, file$g, 145, 28, 5950);
+    			option.__value = "0";
+    			option.value = option.__value;
+    			option.disabled = true;
+    			option.selected = true;
+    			option.className = "d-none";
+    			add_location(option, file$g, 149, 32, 6252);
+    			select.className = "form-control";
+    			add_location(select, file$g, 148, 28, 6137);
+    			div2.className = "input-group";
+    			add_location(div2, file$g, 144, 24, 5895);
+    			div3.className = div3_class_value = `form-group ${ctx.projectID != null ? '' : 'mb-0'}`;
+    			add_location(div3, file$g, 143, 20, 5806);
+    			dispose = listen(select, "change", ctx.change_handler_6);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, div3, anchor);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div1, div0);
+    			append(div2, t_1);
+    			append(div2, select);
+    			append(select, option);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select, null);
+    			}
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.projects) {
+    				each_value = ctx.projects;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if ((changed.projectID) && div3_class_value !== (div3_class_value = `form-group ${ctx.projectID != null ? '' : 'mb-0'}`)) {
+    				div3.className = div3_class_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div3);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (151:32) {#each projects as project, i}
+    function create_each_block$5(ctx) {
+    	var option, t_value = ctx.project.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.project.ID;
+    			option.value = option.__value;
+    			add_location(option, file$g, 151, 36, 6428);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.projects) && t_value !== (t_value = ctx.project.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.projects) && option_value_value !== (option_value_value = ctx.project.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    function create_fragment$i(ctx) {
+    	var div29, div28, div27, div0, h5, t1, button0, span, t3, div25, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, select0, option0, t10, div12, div11, div10, div9, t12, input1, t13, div16, div15, div14, div13, t15, select1, option1, t17, div20, div19, div18, div17, t19, input2, t20, div24, div23, div22, div21, t22, input3, div24_class_value, t23, t24, div26, button1, dispose;
+
+    	var each_value_2 = ctx.partners;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
+    	}
+
+    	var each_value_1 = ctx.partners;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
+    	}
+
+    	var if_block = (ctx.projectID == null) && create_if_block$d(ctx);
+
+    	return {
+    		c: function create() {
+    			div29 = element("div");
+    			div28 = element("div");
+    			div27 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Add Mobility";
+    			t1 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t3 = space();
+    			div25 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div1.textContent = "Origin";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div5.textContent = "Origin Partner";
+    			t8 = space();
+    			select0 = element("select");
+    			option0 = element("option");
+    			option0.textContent = "Select Partner";
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t10 = space();
+    			div12 = element("div");
+    			div11 = element("div");
+    			div10 = element("div");
+    			div9 = element("div");
+    			div9.textContent = "Target";
+    			t12 = space();
+    			input1 = element("input");
+    			t13 = space();
+    			div16 = element("div");
+    			div15 = element("div");
+    			div14 = element("div");
+    			div13 = element("div");
+    			div13.textContent = "Target Partner";
+    			t15 = space();
+    			select1 = element("select");
+    			option1 = element("option");
+    			option1.textContent = "Select Partner";
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t17 = space();
+    			div20 = element("div");
+    			div19 = element("div");
+    			div18 = element("div");
+    			div17 = element("div");
+    			div17.textContent = "Departure";
+    			t19 = space();
+    			input2 = element("input");
+    			t20 = space();
+    			div24 = element("div");
+    			div23 = element("div");
+    			div22 = element("div");
+    			div21 = element("div");
+    			div21.textContent = "Arrival";
+    			t22 = space();
+    			input3 = element("input");
+    			t23 = space();
+    			if (if_block) if_block.c();
+    			t24 = space();
+    			div26 = element("div");
+    			button1 = element("button");
+    			button1.textContent = "Add";
+    			h5.className = "modal-title";
+    			add_location(h5, file$g, 80, 16, 2175);
+    			add_location(span, file$g, 81, 73, 2291);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$g, 81, 16, 2234);
+    			div0.className = "modal-header";
+    			add_location(div0, file$g, 79, 12, 2131);
+    			div1.className = "input-group-text w-100";
+    			add_location(div1, file$g, 87, 28, 2555);
+    			div2.className = "input-group-prepend w-25";
+    			add_location(div2, file$g, 86, 24, 2487);
+    			input0.className = "form-control";
+    			attr(input0, "type", "text");
+    			input0.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input0, file$g, 89, 24, 2661);
+    			div3.className = "input-group";
+    			add_location(div3, file$g, 85, 20, 2436);
+    			div4.className = "form-group";
+    			add_location(div4, file$g, 84, 16, 2390);
+    			div5.className = "input-group-text w-100";
+    			add_location(div5, file$g, 95, 28, 3024);
+    			div6.className = "input-group-prepend w-25";
+    			add_location(div6, file$g, 94, 24, 2956);
+    			option0.__value = "0";
+    			option0.value = option0.__value;
+    			option0.disabled = true;
+    			option0.selected = true;
+    			option0.className = "d-none";
+    			add_location(option0, file$g, 98, 28, 3255);
+    			select0.className = "form-control";
+    			add_location(select0, file$g, 97, 24, 3138);
+    			div7.className = "input-group";
+    			add_location(div7, file$g, 93, 20, 2905);
+    			div8.className = "form-group";
+    			add_location(div8, file$g, 92, 16, 2859);
+    			div9.className = "input-group-text w-100";
+    			add_location(div9, file$g, 108, 28, 3780);
+    			div10.className = "input-group-prepend w-25";
+    			add_location(div10, file$g, 107, 24, 3712);
+    			input1.className = "form-control";
+    			attr(input1, "type", "text");
+    			input1.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input1, file$g, 110, 24, 3886);
+    			div11.className = "input-group";
+    			add_location(div11, file$g, 106, 20, 3661);
+    			div12.className = "form-group";
+    			add_location(div12, file$g, 105, 16, 3615);
+    			div13.className = "input-group-text w-100";
+    			add_location(div13, file$g, 116, 28, 4249);
+    			div14.className = "input-group-prepend w-25";
+    			add_location(div14, file$g, 115, 24, 4181);
+    			option1.__value = "0";
+    			option1.value = option1.__value;
+    			option1.disabled = true;
+    			option1.selected = true;
+    			option1.className = "d-none";
+    			add_location(option1, file$g, 119, 28, 4480);
+    			select1.className = "form-control";
+    			add_location(select1, file$g, 118, 24, 4363);
+    			div15.className = "input-group";
+    			add_location(div15, file$g, 114, 20, 4130);
+    			div16.className = "form-group";
+    			add_location(div16, file$g, 113, 16, 4084);
+    			div17.className = "input-group-text w-100";
+    			add_location(div17, file$g, 129, 28, 5005);
+    			div18.className = "input-group-prepend w-25";
+    			add_location(div18, file$g, 128, 24, 4937);
+    			attr(input2, "type", "date");
+    			input2.className = "form-control";
+    			add_location(input2, file$g, 131, 24, 5114);
+    			div19.className = "input-group";
+    			add_location(div19, file$g, 127, 20, 4886);
+    			div20.className = "form-group";
+    			add_location(div20, file$g, 126, 16, 4840);
+    			div21.className = "input-group-text w-100";
+    			add_location(div21, file$g, 137, 28, 5487);
+    			div22.className = "input-group-prepend w-25";
+    			add_location(div22, file$g, 136, 24, 5419);
+    			attr(input3, "type", "date");
+    			input3.className = "form-control";
+    			add_location(input3, file$g, 139, 24, 5594);
+    			div23.className = "input-group";
+    			add_location(div23, file$g, 135, 20, 5368);
+    			div24.className = div24_class_value = `form-group ${ctx.projectID != null ? 'mb-0' : ''}`;
+    			add_location(div24, file$g, 134, 16, 5283);
+    			div25.className = "modal-body";
+    			add_location(div25, file$g, 83, 12, 2348);
+    			button1.className = "btn btn-success w-100";
+    			button1.id = "modal-add-btn";
+    			add_location(button1, file$g, 159, 16, 6719);
+    			div26.className = "modal-footer";
+    			add_location(div26, file$g, 158, 12, 6675);
+    			div27.className = "modal-content";
+    			add_location(div27, file$g, 78, 8, 2090);
+    			div28.className = "modal-dialog";
+    			attr(div28, "role", "document");
+    			add_location(div28, file$g, 77, 4, 2038);
+    			div29.className = "modal fade";
+    			div29.id = "add-modal";
+    			div29.tabIndex = "-1";
+    			add_location(div29, file$g, 76, 0, 1979);
+
+    			dispose = [
+    				listen(input0, "change", ctx.change_handler),
+    				listen(select0, "change", ctx.change_handler_1),
+    				listen(input1, "change", ctx.change_handler_2),
+    				listen(select1, "change", ctx.change_handler_3),
+    				listen(input2, "change", ctx.change_handler_4),
+    				listen(input3, "change", ctx.change_handler_5),
+    				listen(button1, "click", ctx.addMobility)
+    			];
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, div29, anchor);
+    			append(div29, div28);
+    			append(div28, div27);
+    			append(div27, div0);
+    			append(div0, h5);
+    			append(div0, t1);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div27, t3);
+    			append(div27, div25);
+    			append(div25, div4);
+    			append(div4, div3);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div3, t5);
+    			append(div3, input0);
+    			append(div25, t6);
+    			append(div25, div8);
+    			append(div8, div7);
+    			append(div7, div6);
+    			append(div6, div5);
+    			append(div7, t8);
+    			append(div7, select0);
+    			append(select0, option0);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select0, null);
+    			}
+
+    			append(div25, t10);
+    			append(div25, div12);
+    			append(div12, div11);
+    			append(div11, div10);
+    			append(div10, div9);
+    			append(div11, t12);
+    			append(div11, input1);
+    			append(div25, t13);
+    			append(div25, div16);
+    			append(div16, div15);
+    			append(div15, div14);
+    			append(div14, div13);
+    			append(div15, t15);
+    			append(div15, select1);
+    			append(select1, option1);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select1, null);
+    			}
+
+    			append(div25, t17);
+    			append(div25, div20);
+    			append(div20, div19);
+    			append(div19, div18);
+    			append(div18, div17);
+    			append(div19, t19);
+    			append(div19, input2);
+    			append(div25, t20);
+    			append(div25, div24);
+    			append(div24, div23);
+    			append(div23, div22);
+    			append(div22, div21);
+    			append(div23, t22);
+    			append(div23, input3);
+    			append(div25, t23);
+    			if (if_block) if_block.m(div25, null);
+    			append(div27, t24);
+    			append(div27, div26);
+    			append(div26, button1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.partners) {
+    				each_value_2 = ctx.partners;
+
+    				for (var i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_2$2(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_2.length;
+    			}
+
+    			if (changed.partners) {
+    				each_value_1 = ctx.partners;
+
+    				for (var i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$3(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block_1$3(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value_1.length;
+    			}
+
+    			if ((changed.projectID) && div24_class_value !== (div24_class_value = `form-group ${ctx.projectID != null ? 'mb-0' : ''}`)) {
+    				div24.className = div24_class_value;
+    			}
+
+    			if (ctx.projectID == null) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    				} else {
+    					if_block = create_if_block$d(ctx);
+    					if_block.c();
+    					if_block.m(div25, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div29);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+
+    			if (if_block) if_block.d();
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance$i($$self, $$props, $$invalidate) {
+    	let { getMobilities, partners, getToken, projectID, isOpen, setIsOpen } = $$props;
+
+        let projects = [];
+
+        let origin = "";
+        let originPartner = 0;
+        let target = "";
+        let targetPartner = 0;
+        let departureDate = "";
+        let arrivalDate = "";
+        let project = 0;
+
+        function addMobility() {
+            console.log("Attempting to add mobility");
+            let data = {
+                ID: null,
+                origin: origin,
+                IDOriginPartner: originPartner,
+                target: target,
+                IDTargetPartner: targetPartner,
+                departureDate: departureDate,
+                arrivalDate: arrivalDate,
+                IDProject: projectID != null ? projectID : project
+            };
+            console.log(data);
+
+            axios$1.post("/api/insert/mobilities", data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log("Successfully added mobility");
+                getMobilities();
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function getProjects() {
+            console.log("Attempting to fetch projects");
+            axios$1.get("/api/get/projects", {headers: {Authorization: getToken()}}).then(res => {
+                $$invalidate('projects', projects = res.data);
+                console.log("Successfully fetched projects");
+            }).catch(err => {
+                console.log("There was an error fetching the projects");
+                console.log(err.response);
+            });
+        }
+
+        function open(){
+        	setIsOpen(true);
+            window.$("#add-modal").modal('show');
+        }
+
+        console.log(projectID);
+
+    	const writable_props = ['getMobilities', 'partners', 'getToken', 'projectID', 'isOpen', 'setIsOpen'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<AddMobilityModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler(event) {
+    		const $$result = origin = event.target.value;
+    		$$invalidate('origin', origin);
+    		return $$result;
+    	}
+
+    	function change_handler_1(event) {
+    		const $$result = originPartner = event.target.value;
+    		$$invalidate('originPartner', originPartner);
+    		return $$result;
+    	}
+
+    	function change_handler_2(event) {
+    		const $$result = target = event.target.value;
+    		$$invalidate('target', target);
+    		return $$result;
+    	}
+
+    	function change_handler_3(event) {
+    		const $$result = targetPartner = event.target.value;
+    		$$invalidate('targetPartner', targetPartner);
+    		return $$result;
+    	}
+
+    	function change_handler_4(event) {
+    		const $$result = departureDate = event.target.value;
+    		$$invalidate('departureDate', departureDate);
+    		return $$result;
+    	}
+
+    	function change_handler_5(event) {
+    		const $$result = arrivalDate = event.target.value;
+    		$$invalidate('arrivalDate', arrivalDate);
+    		return $$result;
+    	}
+
+    	function change_handler_6(event) {
+    		const $$result = project = event.target.value;
+    		$$invalidate('project', project);
+    		return $$result;
+    	}
+
+    	$$self.$set = $$props => {
+    		if ('getMobilities' in $$props) $$invalidate('getMobilities', getMobilities = $$props.getMobilities);
+    		if ('partners' in $$props) $$invalidate('partners', partners = $$props.partners);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('projectID' in $$props) $$invalidate('projectID', projectID = $$props.projectID);
+    		if ('isOpen' in $$props) $$invalidate('isOpen', isOpen = $$props.isOpen);
+    		if ('setIsOpen' in $$props) $$invalidate('setIsOpen', setIsOpen = $$props.setIsOpen);
+    	};
+
+    	$$self.$$.update = ($$dirty = { isOpen: 1, projectID: 1, setIsOpen: 1 }) => {
+    		if ($$dirty.isOpen || $$dirty.projectID || $$dirty.setIsOpen) { if (isOpen) {
+                    if (projectID == null){
+                        getProjects();
+                    }
+            
+                    open();
+                    setIsOpen(false);
+                } }
+    	};
+
+    	return {
+    		getMobilities,
+    		partners,
+    		getToken,
+    		projectID,
+    		isOpen,
+    		setIsOpen,
+    		projects,
+    		origin,
+    		originPartner,
+    		target,
+    		targetPartner,
+    		departureDate,
+    		arrivalDate,
+    		project,
+    		addMobility,
+    		change_handler,
+    		change_handler_1,
+    		change_handler_2,
+    		change_handler_3,
+    		change_handler_4,
+    		change_handler_5,
+    		change_handler_6
+    	};
+    }
+
+    class AddMobilityModal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, ["getMobilities", "partners", "getToken", "projectID", "isOpen", "setIsOpen"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getMobilities === undefined && !('getMobilities' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'getMobilities'");
+    		}
+    		if (ctx.partners === undefined && !('partners' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'partners'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.projectID === undefined && !('projectID' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'projectID'");
+    		}
+    		if (ctx.isOpen === undefined && !('isOpen' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'isOpen'");
+    		}
+    		if (ctx.setIsOpen === undefined && !('setIsOpen' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'setIsOpen'");
+    		}
+    	}
+
+    	get getMobilities() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getMobilities(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get partners() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set partners(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get projectID() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set projectID(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setIsOpen() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set setIsOpen(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\EditMobilityModal.svelte generated by Svelte v3.5.1 */
+
+    const file$h = "src\\components\\mobilities\\EditMobilityModal.svelte";
+
+    function get_each_context$6(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$4(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (106:36) {:else}
+    function create_else_block_1$1(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$h, 106, 40, 3758);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (104:36) {#if partner.ID === originPartner}
+    function create_if_block_1$3(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$h, 104, 40, 3612);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (103:32) {#each partners as partner, i}
+    function create_each_block_1$4(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type(ctx) {
+    		if (ctx.partner.ID === ctx.originPartner) return create_if_block_1$3;
+    		return create_else_block_1$1;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			if_block.m(target_1, anchor);
+    			insert(target_1, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (130:36) {:else}
+    function create_else_block$5(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$h, 130, 40, 5239);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (128:36) {#if partner.ID === targetPartner}
+    function create_if_block$e(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$h, 128, 40, 5093);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (127:32) {#each partners as partner, i}
+    function create_each_block$6(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type_1(ctx) {
+    		if (ctx.partner.ID === ctx.targetPartner) return create_if_block$e;
+    		return create_else_block$5;
+    	}
+
+    	var current_block_type = select_block_type_1(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			if_block.m(target_1, anchor);
+    			insert(target_1, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function create_fragment$j(ctx) {
+    	var div30, div29, div28, div0, h5, t1, button0, span, t3, div26, div25, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, select0, t9, div12, div11, div10, div9, t11, input1, t12, div16, div15, div14, div13, t14, select1, t15, div20, div19, div18, div17, t17, input2, input2_value_value, t18, div24, div23, div22, div21, t20, input3, input3_value_value, t21, div27, button1, dispose;
+
+    	var each_value_1 = ctx.partners;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$4(get_each_context_1$4(ctx, each_value_1, i));
+    	}
+
+    	var each_value = ctx.partners;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$6(get_each_context$6(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div30 = element("div");
+    			div29 = element("div");
+    			div28 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Edit Project";
+    			t1 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t3 = space();
+    			div26 = element("div");
+    			div25 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div1.textContent = "Origin";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div5.textContent = "Origin Partner";
+    			t8 = space();
+    			select0 = element("select");
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t9 = space();
+    			div12 = element("div");
+    			div11 = element("div");
+    			div10 = element("div");
+    			div9 = element("div");
+    			div9.textContent = "Target";
+    			t11 = space();
+    			input1 = element("input");
+    			t12 = space();
+    			div16 = element("div");
+    			div15 = element("div");
+    			div14 = element("div");
+    			div13 = element("div");
+    			div13.textContent = "Target Partner";
+    			t14 = space();
+    			select1 = element("select");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t15 = space();
+    			div20 = element("div");
+    			div19 = element("div");
+    			div18 = element("div");
+    			div17 = element("div");
+    			div17.textContent = "Departure";
+    			t17 = space();
+    			input2 = element("input");
+    			t18 = space();
+    			div24 = element("div");
+    			div23 = element("div");
+    			div22 = element("div");
+    			div21 = element("div");
+    			div21.textContent = "Arrival";
+    			t20 = space();
+    			input3 = element("input");
+    			t21 = space();
+    			div27 = element("div");
+    			button1 = element("button");
+    			button1.textContent = "Edit";
+    			h5.className = "modal-title";
+    			add_location(h5, file$h, 83, 16, 2271);
+    			add_location(span, file$h, 84, 73, 2387);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$h, 84, 16, 2330);
+    			div0.className = "modal-header";
+    			add_location(div0, file$h, 82, 12, 2227);
+    			div1.className = "input-group-text w-100";
+    			add_location(div1, file$h, 91, 32, 2709);
+    			div2.className = "input-group-prepend w-25";
+    			add_location(div2, file$h, 90, 28, 2637);
+    			input0.className = "form-control";
+    			attr(input0, "type", "text");
+    			input0.value = ctx.origin;
+    			input0.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input0, file$h, 93, 28, 2823);
+    			div3.className = "input-group";
+    			add_location(div3, file$h, 89, 24, 2582);
+    			div4.className = "form-group";
+    			add_location(div4, file$h, 88, 20, 2532);
+    			div5.className = "input-group-text w-100";
+    			add_location(div5, file$h, 99, 32, 3225);
+    			div6.className = "input-group-prepend w-25";
+    			add_location(div6, file$h, 98, 28, 3153);
+    			select0.className = "form-control";
+    			add_location(select0, file$h, 101, 28, 3347);
+    			div7.className = "input-group";
+    			add_location(div7, file$h, 97, 24, 3098);
+    			div8.className = "form-group";
+    			add_location(div8, file$h, 96, 20, 3048);
+    			div9.className = "input-group-text w-100";
+    			add_location(div9, file$h, 115, 32, 4190);
+    			div10.className = "input-group-prepend w-25";
+    			add_location(div10, file$h, 114, 28, 4118);
+    			input1.className = "form-control";
+    			attr(input1, "type", "text");
+    			input1.value = ctx.target;
+    			input1.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input1, file$h, 117, 28, 4304);
+    			div11.className = "input-group";
+    			add_location(div11, file$h, 113, 24, 4063);
+    			div12.className = "form-group";
+    			add_location(div12, file$h, 112, 20, 4013);
+    			div13.className = "input-group-text w-100";
+    			add_location(div13, file$h, 123, 32, 4706);
+    			div14.className = "input-group-prepend w-25";
+    			add_location(div14, file$h, 122, 28, 4634);
+    			select1.className = "form-control";
+    			add_location(select1, file$h, 125, 28, 4828);
+    			div15.className = "input-group";
+    			add_location(div15, file$h, 121, 24, 4579);
+    			div16.className = "form-group";
+    			add_location(div16, file$h, 120, 20, 4529);
+    			div17.className = "input-group-text w-100";
+    			add_location(div17, file$h, 139, 32, 5671);
+    			div18.className = "input-group-prepend w-25";
+    			add_location(div18, file$h, 138, 28, 5599);
+    			attr(input2, "type", "date");
+    			input2.value = input2_value_value = ctx.departureDate.slice(0, -14);
+    			input2.className = "form-control";
+    			add_location(input2, file$h, 141, 28, 5788);
+    			div19.className = "input-group";
+    			add_location(div19, file$h, 137, 24, 5544);
+    			div20.className = "form-group";
+    			add_location(div20, file$h, 136, 20, 5494);
+    			div21.className = "input-group-text w-100";
+    			add_location(div21, file$h, 147, 32, 6189);
+    			div22.className = "input-group-prepend w-25";
+    			add_location(div22, file$h, 146, 28, 6117);
+    			attr(input3, "type", "date");
+    			input3.value = input3_value_value = ctx.arrivalDate.slice(0, -14);
+    			input3.className = "form-control";
+    			add_location(input3, file$h, 149, 28, 6304);
+    			div23.className = "input-group";
+    			add_location(div23, file$h, 145, 24, 6062);
+    			div24.className = "form-group mb-0";
+    			add_location(div24, file$h, 144, 20, 6007);
+    			div25.className = "modal-body";
+    			add_location(div25, file$h, 87, 16, 2486);
+    			div26.className = "modal-body";
+    			add_location(div26, file$h, 86, 12, 2444);
+    			button1.className = "btn btn-info w-100";
+    			add_location(button1, file$h, 155, 16, 6599);
+    			div27.className = "modal-footer";
+    			add_location(div27, file$h, 154, 12, 6555);
+    			div28.className = "modal-content";
+    			add_location(div28, file$h, 81, 8, 2186);
+    			div29.className = "modal-dialog";
+    			attr(div29, "role", "document");
+    			add_location(div29, file$h, 80, 4, 2134);
+    			div30.className = "modal fade";
+    			div30.id = "edit-modal";
+    			div30.tabIndex = "-1";
+    			add_location(div30, file$h, 79, 0, 2074);
+
+    			dispose = [
+    				listen(input0, "change", ctx.change_handler),
+    				listen(select0, "change", ctx.change_handler_1),
+    				listen(input1, "change", ctx.change_handler_2),
+    				listen(select1, "change", ctx.change_handler_3),
+    				listen(input2, "change", ctx.change_handler_4),
+    				listen(input3, "change", ctx.change_handler_5),
+    				listen(button1, "click", ctx.editMobility)
+    			];
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, div30, anchor);
+    			append(div30, div29);
+    			append(div29, div28);
+    			append(div28, div0);
+    			append(div0, h5);
+    			append(div0, t1);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div28, t3);
+    			append(div28, div26);
+    			append(div26, div25);
+    			append(div25, div4);
+    			append(div4, div3);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div3, t5);
+    			append(div3, input0);
+    			append(div25, t6);
+    			append(div25, div8);
+    			append(div8, div7);
+    			append(div7, div6);
+    			append(div6, div5);
+    			append(div7, t8);
+    			append(div7, select0);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select0, null);
+    			}
+
+    			append(div25, t9);
+    			append(div25, div12);
+    			append(div12, div11);
+    			append(div11, div10);
+    			append(div10, div9);
+    			append(div11, t11);
+    			append(div11, input1);
+    			append(div25, t12);
+    			append(div25, div16);
+    			append(div16, div15);
+    			append(div15, div14);
+    			append(div14, div13);
+    			append(div15, t14);
+    			append(div15, select1);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select1, null);
+    			}
+
+    			append(div25, t15);
+    			append(div25, div20);
+    			append(div20, div19);
+    			append(div19, div18);
+    			append(div18, div17);
+    			append(div19, t17);
+    			append(div19, input2);
+    			append(div25, t18);
+    			append(div25, div24);
+    			append(div24, div23);
+    			append(div23, div22);
+    			append(div22, div21);
+    			append(div23, t20);
+    			append(div23, input3);
+    			append(div28, t21);
+    			append(div28, div27);
+    			append(div27, button1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.origin) {
+    				input0.value = ctx.origin;
+    			}
+
+    			if (changed.partners || changed.originPartner) {
+    				each_value_1 = ctx.partners;
+
+    				for (var i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$4(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$4(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (changed.target) {
+    				input1.value = ctx.target;
+    			}
+
+    			if (changed.partners || changed.targetPartner) {
+    				each_value = ctx.partners;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$6(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$6(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if ((changed.departureDate) && input2_value_value !== (input2_value_value = ctx.departureDate.slice(0, -14))) {
+    				input2.value = input2_value_value;
+    			}
+
+    			if ((changed.arrivalDate) && input3_value_value !== (input3_value_value = ctx.arrivalDate.slice(0, -14))) {
+    				input3.value = input3_value_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div30);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance$j($$self, $$props, $$invalidate) {
+    	let { getMobilities, getToken, mobilities, partners, selectedRows, isOpen, setIsOpen } = $$props;
+
+        let id = 0;
+        let origin = "";
+        let originPartner = 0;
+        let target = "";
+        let targetPartner = 0;
+        let departureDate = "";
+        let arrivalDate = "";
+        
+        function editMobility() {
+        	let data = {
+        		ID: id,
+        		origin: origin,
+        		IDOriginPartner: originPartner,
+        		target: target,
+        		IDTargetPartner: targetPartner,
+        		departureDate: departureDate,
+        		arrivalDate: arrivalDate
+        	};
+        	console.log(data);
+
+
+        	console.log("Trying to edit mobilities");
+            axios$1.put("/api/edit/mobilities", data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log("Successfully edited mobility");
+
+            	getMobilities();
+            	close();
+            }).catch(err => {
+            	console.log("There was an error editing the project");
+            });
+        }
+
+        function close(){
+        	setIsOpen(false);
+            window.$("#edit-modal").modal('hide');
+        }
+
+        function open(){
+        	setIsOpen(true);
+            window.$("#edit-modal").modal('show');
+        }
+
+    	const writable_props = ['getMobilities', 'getToken', 'mobilities', 'partners', 'selectedRows', 'isOpen', 'setIsOpen'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<EditMobilityModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler(event) {
+    		const $$result = origin = event.target.value;
+    		$$invalidate('origin', origin), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_1(event) {
+    		const $$result = originPartner = event.target.value;
+    		$$invalidate('originPartner', originPartner), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_2(event) {
+    		const $$result = target = event.target.value;
+    		$$invalidate('target', target), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_3(event) {
+    		const $$result = targetPartner = event.target.value;
+    		$$invalidate('targetPartner', targetPartner), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_4(event) {
+    		const $$result = departureDate = event.target.value;
+    		$$invalidate('departureDate', departureDate), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_5(event) {
+    		const $$result = arrivalDate = event.target.value;
+    		$$invalidate('arrivalDate', arrivalDate), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	$$self.$set = $$props => {
+    		if ('getMobilities' in $$props) $$invalidate('getMobilities', getMobilities = $$props.getMobilities);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('mobilities' in $$props) $$invalidate('mobilities', mobilities = $$props.mobilities);
+    		if ('partners' in $$props) $$invalidate('partners', partners = $$props.partners);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    		if ('isOpen' in $$props) $$invalidate('isOpen', isOpen = $$props.isOpen);
+    		if ('setIsOpen' in $$props) $$invalidate('setIsOpen', setIsOpen = $$props.setIsOpen);
+    	};
+
+    	$$self.$$.update = ($$dirty = { isOpen: 1, mobilities: 1, selectedRows: 1, departureDate: 1, arrivalDate: 1, setIsOpen: 1 }) => {
+    		if ($$dirty.isOpen || $$dirty.mobilities || $$dirty.selectedRows || $$dirty.departureDate || $$dirty.arrivalDate || $$dirty.setIsOpen) { if (isOpen) {
+                	open();
+            
+                	console.log(mobilities);
+                	console.log(selectedRows);
+            
+                	for(let i = 0; i < mobilities.length; i++) {
+                	    if(mobilities[i].ID === selectedRows[0]){
+                            id = selectedRows[0];
+                            $$invalidate('origin', origin = mobilities[i].origin);
+                            $$invalidate('originPartner', originPartner = mobilities[i].IDOriginPartner);
+                            $$invalidate('target', target = mobilities[i].target);
+                            $$invalidate('targetPartner', targetPartner = mobilities[i].IDTargetPartner);
+                            $$invalidate('departureDate', departureDate = mobilities[i].departureDate);
+                            $$invalidate('arrivalDate', arrivalDate = mobilities[i].arrivalDate);
+                            console.log("Hey");
+                            console.log(departureDate);
+                            console.log(arrivalDate);
+                	    }
+                	}
+            
+                	setIsOpen(false);
+                } }
+    	};
+
+    	return {
+    		getMobilities,
+    		getToken,
+    		mobilities,
+    		partners,
+    		selectedRows,
+    		isOpen,
+    		setIsOpen,
+    		origin,
+    		originPartner,
+    		target,
+    		targetPartner,
+    		departureDate,
+    		arrivalDate,
+    		editMobility,
+    		change_handler,
+    		change_handler_1,
+    		change_handler_2,
+    		change_handler_3,
+    		change_handler_4,
+    		change_handler_5
+    	};
+    }
+
+    class EditMobilityModal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$j, create_fragment$j, safe_not_equal, ["getMobilities", "getToken", "mobilities", "partners", "selectedRows", "isOpen", "setIsOpen"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getMobilities === undefined && !('getMobilities' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'getMobilities'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.mobilities === undefined && !('mobilities' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'mobilities'");
+    		}
+    		if (ctx.partners === undefined && !('partners' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'partners'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'selectedRows'");
+    		}
+    		if (ctx.isOpen === undefined && !('isOpen' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'isOpen'");
+    		}
+    		if (ctx.setIsOpen === undefined && !('setIsOpen' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'setIsOpen'");
+    		}
+    	}
+
+    	get getMobilities() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getMobilities(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get mobilities() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mobilities(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get partners() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set partners(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setIsOpen() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set setIsOpen(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\Mobilities.svelte generated by Svelte v3.5.1 */
+
+    const file$i = "src\\components\\mobilities\\Mobilities.svelte";
+
+    // (123:0) {#if is_logged_in}
+    function create_if_block$f(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var addmobilitymodal = new AddMobilityModal({
+    		props: {
+    		getMobilities: ctx.getMobilities,
+    		partners: ctx.partners,
+    		getToken: ctx.getToken,
+    		projectID: ctx.id,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen
+    	},
+    		$$inline: true
+    	});
+
+    	var editmobilitymodal = new EditMobilityModal({
+    		props: {
+    		getMobilities: ctx.getMobilities,
+    		mobilities: ctx.mobilities,
+    		partners: ctx.partners,
+    		getToken: ctx.getToken,
+    		selectedRows: ctx.selectedRows,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen
+    	},
+    		$$inline: true
+    	});
+
+    	var mobilitiestable = new MobilitiesTable({
+    		props: {
+    		mobilities: ctx.mobilities,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			addmobilitymodal.$$.fragment.c();
+    			t0 = space();
+    			editmobilitymodal.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Mobilities";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			mobilitiestable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$i, 127, 35, 4135);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$i, 127, 8, 4108);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$i, 129, 16, 4274);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$i, 130, 16, 4375);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$i, 131, 16, 4560);
+    			add_location(span1, file$i, 128, 12, 4250);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$i, 126, 8, 4013);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$i, 125, 4, 3894);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(addmobilitymodal, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(editmobilitymodal, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(mobilitiestable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var addmobilitymodal_changes = {};
+    			if (changed.getMobilities) addmobilitymodal_changes.getMobilities = ctx.getMobilities;
+    			if (changed.partners) addmobilitymodal_changes.partners = ctx.partners;
+    			if (changed.getToken) addmobilitymodal_changes.getToken = ctx.getToken;
+    			if (changed.id) addmobilitymodal_changes.projectID = ctx.id;
+    			if (changed.isAddModalOpen) addmobilitymodal_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) addmobilitymodal_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			addmobilitymodal.$set(addmobilitymodal_changes);
+
+    			var editmobilitymodal_changes = {};
+    			if (changed.getMobilities) editmobilitymodal_changes.getMobilities = ctx.getMobilities;
+    			if (changed.mobilities) editmobilitymodal_changes.mobilities = ctx.mobilities;
+    			if (changed.partners) editmobilitymodal_changes.partners = ctx.partners;
+    			if (changed.getToken) editmobilitymodal_changes.getToken = ctx.getToken;
+    			if (changed.selectedRows) editmobilitymodal_changes.selectedRows = ctx.selectedRows;
+    			if (changed.isEditModalOpen) editmobilitymodal_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) editmobilitymodal_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			editmobilitymodal.$set(editmobilitymodal_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var mobilitiestable_changes = {};
+    			if (changed.mobilities) mobilitiestable_changes.mobilities = ctx.mobilities;
+    			if (changed.toggleRowSelect) mobilitiestable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) mobilitiestable_changes.selectedRows = ctx.selectedRows;
+    			mobilitiestable.$set(mobilitiestable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			addmobilitymodal.$$.fragment.i(local);
+
+    			editmobilitymodal.$$.fragment.i(local);
+
+    			mobilitiestable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			addmobilitymodal.$$.fragment.o(local);
+    			editmobilitymodal.$$.fragment.o(local);
+    			mobilitiestable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			addmobilitymodal.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			editmobilitymodal.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			mobilitiestable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$k(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$f(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$f(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$k($$self, $$props, $$invalidate) {
+    	
+
+        let { id, is_logged_in, getToken } = $$props;
+
+        let mobilities = [];
+        let partners = [];
+        let selectedRows = [];
+
+        let confirm_del = false;
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null){
+                if(table.contains(event.target)){
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if (!confirm_del) {
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    } else if(selectedRows.length > 0) {
+                    axios$1.delete("/api/delete/mobilities", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                        $$invalidate('confirm_del', confirm_del = false);
+                        $$invalidate('selectedRows', selectedRows = []);
+                        getMobilities();
+                    }).catch(err => {
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function getMobilities() {
+        	console.log("Attempting to fetch mobilities");
+            axios$1.get(`/api/get/mobilities${id != null ? `?IDProject=${id}` : ""}`, {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('mobilities', mobilities = res.data);
+            	console.log("Mobilities fetched successfully");
+            }).catch(err => {
+            	console.log("There was an error fetching the mobilities");
+            	console.log(err.response);
+            });
+        }
+
+        function getPartners() {
+        	console.log("Attempting to fetch partners");
+        	axios$1.get("/api/get/partners", {headers: {Authorization: getToken()}}).then(res => {
+        		$$invalidate('partners', partners = res.data);
+        		console.log("Successfully fetched partners");
+        	}).catch(err => {
+        		console.log("There was an error fetching the partners");
+        		console.log(err.response);
+        	});
+        }
+
+        function handleAddButtonClick(){
+        	if (partners.length === 0) {
+                getPartners();
+            }
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                if (partners.length === 0) {
+                    getPartners();
+                }
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['id', 'is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Mobilities> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if (is_logged_in) {
+                	console.log("Hello");
+                	getMobilities();
+                } }
+    	};
+
+    	return {
+    		id,
+    		is_logged_in,
+    		getToken,
+    		mobilities,
+    		partners,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		getMobilities,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Mobilities extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$k, create_fragment$k, safe_not_equal, ["id", "is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<Mobilities> was created without expected prop 'id'");
+    		}
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Mobilities> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Mobilities> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get id() {
+    		throw new Error("<Mobilities>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<Mobilities>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Mobilities>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Mobilities>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Mobilities>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Mobilities>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobility_students\MobilityStudents.svelte generated by Svelte v3.5.1 */
+
+    const file$j = "src\\components\\mobility_students\\MobilityStudents.svelte";
+
+    // (263:0) {#if is_logged_in}
+    function create_if_block$g(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "students",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Students",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getMobilityStudents
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "students",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Students",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getMobilityStudents
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "mobilities_students",
+    		table_headers: ctx.table_headers,
+    		data: ctx.mobility_students,
+    		toggle_fields: ctx.toggle_fields,
+    		onToggle: ctx.getMobilityStudents,
+    		selectedRows: ctx.selectedRows,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selection_field: selection_field$1
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Mobility Students";
+    			t3 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t4 = text(ctx.mobility);
+    			t5 = space();
+    			span2 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t7 = space();
+    			button1 = element("button");
+    			t8 = text("Edit");
+    			t9 = space();
+    			button2 = element("button");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$j, 267, 39, 8365);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$j, 267, 12, 8338);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$j, 268, 39, 8514);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$j, 268, 12, 8487);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$j, 270, 16, 8653);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$j, 271, 16, 8754);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$j, 272, 16, 8939);
+    			add_location(span2, file$j, 269, 12, 8629);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$j, 266, 8, 8239);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$j, 265, 4, 8120);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t4);
+    			append(div0, t5);
+    			append(div0, span2);
+    			append(span2, button0);
+    			append(span2, t7);
+    			append(span2, button1);
+    			append(button1, t8);
+    			append(span2, t9);
+    			append(span2, button2);
+    			append(button2, t10);
+    			append(div0, t11);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getMobilityStudents) basicmodal0_changes.onAdd = ctx.getMobilityStudents;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getMobilityStudents) basicmodal1_changes.onEdit = ctx.getMobilityStudents;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if (!current || changed.mobility) {
+    				set_data(t4, ctx.mobility);
+    			}
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t10_value !== (t10_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t10, t10_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.getToken) basictable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.mobility_students) basictable_changes.data = ctx.mobility_students;
+    			if (changed.toggle_fields) basictable_changes.toggle_fields = ctx.toggle_fields;
+    			if (changed.getMobilityStudents) basictable_changes.onToggle = ctx.getMobilityStudents;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$1;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$l(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$g(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$g(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field$1 = "IDStudent";
+
+    function instance$l($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let selectedRows = [];
+
+        let mobility_students = [];
+        let student_groups = [];
+        let genders = [
+        	{
+        		display: "Male",
+        		value: "Male",
+        	},
+        	{
+        		display: "Female",
+        		value: "Female",
+        	}
+        ];
+
+        let mobility = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isParticipating", toggler: true},
+            {columnName: "Name", key: "name"},
+            {columnName: "Student #", key: "studentNumber"},
+            {columnName: "Age", key: "age"},
+            {columnName: "Gender", key: "gender"},
+            {columnName: "Email", key: "email"},
+        ];
+        let toggle_fields = [
+        	{field: "IDMobility"},
+        	{field: "IDStudent"}
+        ];
+
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+        		field: "studentNumber",
+        	    type: "text",
+        	    display: "Student #",
+        	    placeholder: "eg. a701617004",
+        	    value: ""
+            }, {
+        	    field: "name",
+        	    type: "text",
+        	    display: "Name",
+        	    placeholder: "eg. Vasco Raminhos",
+        	    value: ""
+            }, {
+        	    field: "birthday",
+        	    type: "date",
+        	    display: "Birthday",
+        	    placeholder: "",
+        	    value: ""
+            }, {
+        	    field: "gender",
+        	    type: "select",
+        	    display: "Gender",
+        	    placeholder: "Choose a gender",
+        	    value: "",
+        	    options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. student.email@gmail.com",
+                value: ""
+            }, {
+                field: "IDClass",
+                type: "select",
+                display: "Class",
+                placeholder: "Choose the student's class",
+                value: "",
+                options: student_groups
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+        		field: "studentNumber",
+        	    type: "text",
+        	    display: "Student #",
+        	    placeholder: "eg. a701617004",
+        	    value: ""
+            }, {
+        	    field: "name",
+        	    type: "text",
+        	    display: "Name",
+        	    placeholder: "eg. Vasco Raminhos",
+        	    value: ""
+            }, {
+        	    field: "birthday",
+        	    type: "date",
+        	    display: "Birthday",
+        	    placeholder: "",
+        	    value: ""
+            }, {
+        	    field: "gender",
+        	    type: "select",
+        	    display: "Gender",
+        	    placeholder: "Choose a gender",
+        	    value: "",
+        	    options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. student.email@gmail.com",
+                value: ""
+            }, {
+                field: "IDClass",
+                type: "select",
+                display: "Class",
+                placeholder: "Choose the student's class",
+                value: "",
+                options: student_groups
+            }]
+        };
+
+        function getMobilityStudents(){
+        	axios$1.get(`/api/get/mobility_students?IDMobility=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('mobility_students', mobility_students = res.data);
+        		for(let i = 0; i < mobility_students.length; i++) {
+                    let age = new Date(new Date() - new Date(mobility_students[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    mobility_students[i].age = age; $$invalidate('mobility_students', mobility_students);
+                    console.log(age);
+                }
+        		$$invalidate('mobility', mobility = res.data[0].mobility);
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+
+        function getStudentGroups() {
+        	console.log("Trying to fetch classes");
+            axios$1.get("/api/get/studentgroups", {headers: {Authorization: getToken()}}).then(function(res) {
+                for(let i = 0; i < res.data.length; i++) {
+                    student_groups.push({value: res.data[i].ID, display: res.data[i].grade + res.data[i].designation, original: res.data[i]});
+                }
+                $$invalidate('add_modal_fields', add_modal_fields);
+                $$invalidate('edit_modal_fields', edit_modal_fields);
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	if (student_groups.length === 0) {
+        	    getStudentGroups();
+        	}
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		if (student_groups.length === 0) {
+                    getStudentGroups();
+                }
+                for (let i = 0; i < mobility_students.length; i++) {
+                    if (mobility_students[i][selection_field$1] === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = mobility_students[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(mobility_students[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = mobility_students[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/students", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                    	$$invalidate('selectedRows', selectedRows = []);
+                        getMobilityStudents();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobilityStudents> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getMobilityStudents();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		selectedRows,
+    		mobility_students,
+    		mobility,
+    		table_headers,
+    		toggle_fields,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getMobilityStudents,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick,
+    		handleDeleteClick
+    	};
+    }
+
+    class MobilityStudents extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$l, create_fragment$l, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<MobilityStudents> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<MobilityStudents> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<MobilityStudents> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<MobilityStudents>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<MobilityStudents>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<MobilityStudents>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<MobilityStudents>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<MobilityStudents>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<MobilityStudents>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobility_teachers\MobilityTeachers.svelte generated by Svelte v3.5.1 */
+
+    const file$k = "src\\components\\mobility_teachers\\MobilityTeachers.svelte";
+
+    // (230:0) {#if is_logged_in}
+    function create_if_block$h(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "teachers",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Teachers",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getMobilityTeachers
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "teachers",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Teachers",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getMobilityTeachers
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "mobilities_teachers",
+    		table_headers: ctx.table_headers,
+    		data: ctx.mobility_teachers,
+    		toggle_fields: ctx.toggle_fields,
+    		onToggle: ctx.getMobilityTeachers,
+    		selectedRows: ctx.selectedRows,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selection_field: selection_field$2
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Mobility Teachers";
+    			t3 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t4 = text(ctx.mobility);
+    			t5 = space();
+    			span2 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t7 = space();
+    			button1 = element("button");
+    			t8 = text("Edit");
+    			t9 = space();
+    			button2 = element("button");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$k, 234, 39, 7445);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$k, 234, 12, 7418);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$k, 235, 39, 7594);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$k, 235, 12, 7567);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$k, 237, 16, 7733);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$k, 238, 16, 7834);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$k, 239, 16, 8019);
+    			add_location(span2, file$k, 236, 12, 7709);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$k, 233, 8, 7319);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$k, 232, 4, 7200);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t4);
+    			append(div0, t5);
+    			append(div0, span2);
+    			append(span2, button0);
+    			append(span2, t7);
+    			append(span2, button1);
+    			append(button1, t8);
+    			append(span2, t9);
+    			append(span2, button2);
+    			append(button2, t10);
+    			append(div0, t11);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getMobilityTeachers) basicmodal0_changes.onAdd = ctx.getMobilityTeachers;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getMobilityTeachers) basicmodal1_changes.onEdit = ctx.getMobilityTeachers;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if (!current || changed.mobility) {
+    				set_data(t4, ctx.mobility);
+    			}
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t10_value !== (t10_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t10, t10_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.getToken) basictable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.mobility_teachers) basictable_changes.data = ctx.mobility_teachers;
+    			if (changed.toggle_fields) basictable_changes.toggle_fields = ctx.toggle_fields;
+    			if (changed.getMobilityTeachers) basictable_changes.onToggle = ctx.getMobilityTeachers;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$2;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$m(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$h(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$h(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field$2 = "IDTeacher";
+
+    function instance$m($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let selectedRows = [];
+
+        let mobility_teachers = [];
+        let genders = [
+            {
+                display: "Male",
+                value: "Male",
+            },
+            {
+                display: "Female",
+                value: "Female",
+            }
+        ];
+
+        let mobility = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isParticipating", toggler: true},
+            {columnName: "Name", key: "name"},
+            {columnName: "Teacher #", key: "teacherNumber"},
+            {columnName: 'Age', key: "age"},
+            {columnName: 'Gender', key: "gender"},
+            {columnName: 'Email', key: "email"},
+            {columnName: 'Actions', actions: [
+                {icon: "fa-book", link: "/svelte/teacher_subjects/", query_field: "IDTeacher"}
+            ]},
+        ];
+        let toggle_fields = [
+        	{field: "IDMobility"},
+        	{field: "IDTeacher"}
+        ];
+
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+                field: "teacherNumber",
+                type: "text",
+                display: "Teacher #",
+                placeholder: "eg. p701617004",
+                value: ""
+            }, {
+                field: "name",
+                type: "text",
+                display: "Name",
+                placeholder: "eg. Duarte Duarte",
+                value: ""
+            }, {
+                field: "birthday",
+                type: "date",
+                display: "Birthday",
+                placeholder: "",
+                value: ""
+            }, {
+                field: "gender",
+                type: "select",
+                display: "Gender",
+                placeholder: "Choose a gender",
+                value: "",
+                options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. teacher.email@gmail.com",
+                value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+                field: "teacherNumber",
+                type: "text",
+                display: "Teacher #",
+                placeholder: "eg. p701617004",
+                value: ""
+            }, {
+                field: "name",
+                type: "text",
+                display: "Name",
+                placeholder: "eg. Duarte Duarte",
+                value: ""
+            }, {
+                field: "birthday",
+                type: "date",
+                display: "Birthday",
+                placeholder: "",
+                value: ""
+            }, {
+                field: "gender",
+                type: "select",
+                display: "Gender",
+                placeholder: "Choose a gender",
+                value: "",
+                options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. teacher.email@gmail.com",
+                value: ""
+            }]
+        };
+
+        function getMobilityTeachers(){
+        	axios$1.get(`/api/get/mobility_teachers?IDMobility=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('mobility_teachers', mobility_teachers = res.data);
+        		$$invalidate('mobility', mobility = res.data[0].mobility);
+        		for(let i = 0; i < mobility_teachers.length; i++) {
+                    let age = new Date(new Date() - new Date(mobility_teachers[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    mobility_teachers[i].age = age; $$invalidate('mobility_teachers', mobility_teachers);
+                    console.log(age);
+                }
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < mobility_teachers.length; i++) {
+                    if (mobility_teachers[i][selection_field$2] === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = mobility_teachers[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(mobility_teachers[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = mobility_teachers[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/teachers", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                    	$$invalidate('selectedRows', selectedRows = []);
+                        getMobilityTeachers();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobilityTeachers> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getMobilityTeachers();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		selectedRows,
+    		mobility_teachers,
+    		mobility,
+    		table_headers,
+    		toggle_fields,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getMobilityTeachers,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick,
+    		handleDeleteClick
+    	};
+    }
+
+    class MobilityTeachers extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$m, create_fragment$m, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<MobilityTeachers> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<MobilityTeachers> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<MobilityTeachers> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<MobilityTeachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<MobilityTeachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<MobilityTeachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<MobilityTeachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<MobilityTeachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<MobilityTeachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\partners\Partners.svelte generated by Svelte v3.5.1 */
+
+    const file$l = "src\\components\\partners\\Partners.svelte";
+
+    // (186:0) {#if is_logged_in}
+    function create_if_block$i(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "partners",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Partners",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getPartners
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "partners",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Partners",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getPartners
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.partners,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Partners";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$l, 190, 35, 5967);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$l, 190, 8, 5940);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$l, 192, 16, 6104);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$l, 193, 16, 6205);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$l, 194, 16, 6390);
+    			add_location(span1, file$l, 191, 12, 6080);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$l, 189, 8, 5845);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$l, 188, 4, 5726);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getPartners) basicmodal0_changes.onAdd = ctx.getPartners;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getPartners) basicmodal1_changes.onEdit = ctx.getPartners;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.partners) basictable_changes.data = ctx.partners;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$n(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$i(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$i(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$n($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let selectedRows = [];
+
+        let partners = [];
+        let countries = [];
+
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: 'Name', key: "name"},
+            {columnName: "Country", key: "country"},
+            {columnName: "Description", key: "description", wrap: true}
+        ];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+            	field: "name",
+            	type: "text",
+            	display: "Name",
+            	placeholder: "eg. Escola Secundária de Loulé",
+            	value: ""
+            }, {
+            	field: "IDCountry",
+            	type: "select",
+            	display: "Country",
+            	placeholder: "Choose a country",
+            	value: "",
+            	options: countries
+            }, {
+            	field: "description",
+            	type: "textarea",
+            	display: "Description",
+            	placeholder: "eg. This is a school based in...",
+            	value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+            	field: "name",
+            	type: "text",
+            	display: "Name",
+            	placeholder: "eg. Escola Secundária de Loulé",
+            	value: ""
+            }, {
+            	field: "IDCountry",
+            	type: "select",
+            	display: "Country",
+            	placeholder: "Choose a country",
+            	value: "",
+            	options: countries
+            }, {
+            	field: "description",
+            	type: "textarea",
+            	display: "Description",
+            	placeholder: "eg. This is a school based in...",
+            	value: ""
+            }]
+        };
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if (index === -1) {
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null){
+                if(table.contains(event.target)){
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if (!confirm_del) {
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    } else if(selectedRows.length > 0) {
+                    axios$1.delete("/api/delete/partners", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                        $$invalidate('confirm_del', confirm_del = false);
+                        getPartners();
+                    }).catch(err => {
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function getPartners() {
+        	console.log("Attempting to fetch partners");
+        	axios$1.get("/api/get/partners", {headers: {Authorization: getToken()}}).then(res => {
+        		$$invalidate('partners', partners = res.data);
+        		console.log("Successfully fetched partners");
+        	}).catch(err => {
+        		console.log("There was an error fetching the partners");
+        		console.log(err.response);
+        	});
+        }
+
+        function getCountries() {
+        	console.log("Attempting to fetch countries");
+        	axios$1.get("/api/get/countries", {headers: {Authorization: getToken()}}).then(res => {
+        		for(let i = 0; i < res.data.length; i++) {
+        		    countries.push({value: res.data[i].ID, display: res.data[i].country, original: res.data[i]});
+        		}
+        		$$invalidate('add_modal_fields', add_modal_fields);
+        		$$invalidate('edit_modal_fields', edit_modal_fields);
+        		console.log("Successfully fetched countries");
+        	}).catch(err => {
+        		console.log("There was an error fetching the countries");
+        		console.log(err.response);
+        	});
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	if (countries.length === 0) {
+        		getCountries();
+        	}
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        	    if (countries.length === 0) {
+                    getCountries();
+                }
+                for (let i = 0; i < partners.length; i++) {
+                    if (partners[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		            edit_modal_fields.fields[j].value = partners[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Partners> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if (is_logged_in) {
+                	getPartners();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		selectedRows,
+    		partners,
+    		table_headers,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		getPartners,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Partners extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$n, create_fragment$n, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Partners> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Partners> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Partners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Partners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Partners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Partners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\project_partners\ProjectPartners.svelte generated by Svelte v3.5.1 */
+
+    const file$m = "src\\components\\project_partners\\ProjectPartners.svelte";
+
+    // (206:0) {#if is_logged_in}
+    function create_if_block$j(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "partners",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Partners",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getProjectPartners
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "partners",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Partners",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getProjectPartners
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "partners_projects",
+    		table_headers: ctx.table_headers,
+    		data: ctx.project_partners,
+    		toggle_fields: ctx.toggle_fields,
+    		onToggle: ctx.getProjectPartners,
+    		selectedRows: ctx.selectedRows,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selection_field: selection_field$3
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Project Partners";
+    			t3 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t4 = text(ctx.project_name);
+    			t5 = space();
+    			span2 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t7 = space();
+    			button1 = element("button");
+    			t8 = text("Edit");
+    			t9 = space();
+    			button2 = element("button");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$m, 210, 39, 6769);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$m, 210, 12, 6742);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$m, 211, 39, 6917);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$m, 211, 12, 6890);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$m, 213, 16, 7060);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$m, 214, 16, 7161);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$m, 215, 16, 7346);
+    			add_location(span2, file$m, 212, 12, 7036);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$m, 209, 8, 6643);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$m, 208, 4, 6522);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t4);
+    			append(div0, t5);
+    			append(div0, span2);
+    			append(span2, button0);
+    			append(span2, t7);
+    			append(span2, button1);
+    			append(button1, t8);
+    			append(span2, t9);
+    			append(span2, button2);
+    			append(button2, t10);
+    			append(div0, t11);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getProjectPartners) basicmodal0_changes.onAdd = ctx.getProjectPartners;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getProjectPartners) basicmodal1_changes.onEdit = ctx.getProjectPartners;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if (!current || changed.project_name) {
+    				set_data(t4, ctx.project_name);
+    			}
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t10_value !== (t10_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t10, t10_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.getToken) basictable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.project_partners) basictable_changes.data = ctx.project_partners;
+    			if (changed.toggle_fields) basictable_changes.toggle_fields = ctx.toggle_fields;
+    			if (changed.getProjectPartners) basictable_changes.onToggle = ctx.getProjectPartners;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$3;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$o(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$j(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$j(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field$3 = "IDPartner";
+
+    function instance$o($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let selectedRows = [];
+
+        let project_partners = [];
+        let countries = [];
+        let project_name = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isPartner", toggler: true},
+            {columnName: 'Name', key: "name"},
+            {columnName: "Country", key: "country"},
+            {columnName: "Description", key: "description", wrap: true}
+        ];
+        let toggle_fields = [
+        	{field: "IDPartner"},
+        	{field: "IDProject"}
+        ];
+
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+            	field: "name",
+            	type: "text",
+            	display: "Name",
+            	placeholder: "eg. Escola Secundária de Loulé",
+            	value: ""
+            }, {
+            	field: "IDCountry",
+            	type: "select",
+            	display: "Country",
+            	placeholder: "Choose a country",
+            	value: "",
+            	options: countries
+            }, {
+            	field: "description",
+            	type: "textarea",
+            	display: "Description",
+            	placeholder: "eg. This is a school based in...",
+            	value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+            	field: "name",
+            	type: "text",
+            	display: "Name",
+            	placeholder: "eg. Escola Secundária de Loulé",
+            	value: ""
+            }, {
+            	field: "IDCountry",
+            	type: "select",
+            	display: "Country",
+            	placeholder: "Choose a country",
+            	value: "",
+            	options: countries
+            }, {
+            	field: "description",
+            	type: "textarea",
+            	display: "Description",
+            	placeholder: "eg. This is a school based in...",
+            	value: ""
+            }]
+        };
+
+        function getProjectPartners(){
+        	axios$1.get(`/api/get/project_partners?IDProject=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('project_partners', project_partners = res.data);
+        		$$invalidate('project_name', project_name = res.data[0].projectName);
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+        function getCountries() {
+        	console.log("Attempting to fetch countries");
+        	axios$1.get("/api/get/countries", {headers: {Authorization: getToken()}}).then(res => {
+        		for(let i = 0; i < res.data.length; i++) {
+        		    countries.push({value: res.data[i].ID, display: res.data[i].country, original: res.data[i]});
+        		}
+        		$$invalidate('add_modal_fields', add_modal_fields);
+        		$$invalidate('edit_modal_fields', edit_modal_fields);
+        		console.log("Successfully fetched countries");
+        	}).catch(err => {
+        		console.log("There was an error fetching the countries");
+        		console.log(err.response);
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	if (countries.length === 0) {
+                getCountries();
+            }
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		if (countries.length === 0) {
+        			getCountries();
+        		}
+
+                for (let i = 0; i < project_partners.length; i++) {
+                    if (project_partners[i][selection_field$3] === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = project_partners[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(project_partners[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = project_partners[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/partners", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                    	$$invalidate('selectedRows', selectedRows = []);
+                        getProjectPartners();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<ProjectPartners> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getProjectPartners();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		selectedRows,
+    		project_partners,
+    		project_name,
+    		table_headers,
+    		toggle_fields,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getProjectPartners,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick,
+    		handleDeleteClick
+    	};
+    }
+
+    class ProjectPartners extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$o, create_fragment$o, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<ProjectPartners> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<ProjectPartners> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<ProjectPartners> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<ProjectPartners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<ProjectPartners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<ProjectPartners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<ProjectPartners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<ProjectPartners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<ProjectPartners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
     /* src\App.svelte generated by Svelte v3.5.1 */
 
-    const file$6 = "src\\App.svelte";
+    const file$n = "src\\App.svelte";
 
-    // (56:8) {#if !is_logged_in}
-    function create_if_block_1$1(ctx) {
+    // (69:8) {#if !is_logged_in}
+    function create_if_block_1$4(ctx) {
     	var current;
 
     	var loginmodal = new LoginModal({
@@ -4870,8 +15354,8 @@ var app = (function () {
     	};
     }
 
-    // (61:12) <Route path="/svelte/teachers">
-    function create_default_slot_2$1(ctx) {
+    // (74:12) <Route path="/svelte/teachers">
+    function create_default_slot_6$1(ctx) {
     	var current;
 
     	var teachers = new Teachers({
@@ -4917,11 +15401,11 @@ var app = (function () {
     	};
     }
 
-    // (64:12) <Route path="/svelte/">
-    function create_default_slot_1$1(ctx) {
+    // (78:12) <Route path="/svelte/students">
+    function create_default_slot_5$1(ctx) {
     	var current;
 
-    	var projects = new Projects({
+    	var students = new Students({
     		props: {
     		is_logged_in: ctx.is_logged_in,
     		getToken: getToken
@@ -4931,41 +15415,229 @@ var app = (function () {
 
     	return {
     		c: function create() {
-    			projects.$$.fragment.c();
+    			students.$$.fragment.c();
     		},
 
     		m: function mount(target, anchor) {
-    			mount_component(projects, target, anchor);
+    			mount_component(students, target, anchor);
     			current = true;
     		},
 
     		p: function update(changed, ctx) {
-    			var projects_changes = {};
-    			if (changed.is_logged_in) projects_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) projects_changes.getToken = getToken;
-    			projects.$set(projects_changes);
+    			var students_changes = {};
+    			if (changed.is_logged_in) students_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) students_changes.getToken = getToken;
+    			students.$set(students_changes);
     		},
 
     		i: function intro(local) {
     			if (current) return;
-    			projects.$$.fragment.i(local);
+    			students.$$.fragment.i(local);
 
     			current = true;
     		},
 
     		o: function outro(local) {
-    			projects.$$.fragment.o(local);
+    			students.$$.fragment.o(local);
     			current = false;
     		},
 
     		d: function destroy(detaching) {
-    			projects.$destroy(detaching);
+    			students.$destroy(detaching);
     		}
     	};
     }
 
-    // (67:12) {#if !is_logged_in}
-    function create_if_block$4(ctx) {
+    // (81:12) <Route path="/svelte/courses">
+    function create_default_slot_4$1(ctx) {
+    	var current;
+
+    	var courses = new Courses({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			courses.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(courses, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var courses_changes = {};
+    			if (changed.is_logged_in) courses_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) courses_changes.getToken = getToken;
+    			courses.$set(courses_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			courses.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			courses.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			courses.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (84:12) <Route path="/svelte/studentgroups">
+    function create_default_slot_3$1(ctx) {
+    	var current;
+
+    	var studentgroups = new StudentGroups({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			studentgroups.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(studentgroups, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var studentgroups_changes = {};
+    			if (changed.is_logged_in) studentgroups_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) studentgroups_changes.getToken = getToken;
+    			studentgroups.$set(studentgroups_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			studentgroups.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			studentgroups.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			studentgroups.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (87:12) <Route path="/svelte/countries">
+    function create_default_slot_2$1(ctx) {
+    	var current;
+
+    	var countries = new Countries({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			countries.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(countries, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var countries_changes = {};
+    			if (changed.is_logged_in) countries_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) countries_changes.getToken = getToken;
+    			countries.$set(countries_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			countries.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			countries.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			countries.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (90:12) <Route path="/svelte/subjects">
+    function create_default_slot_1$3(ctx) {
+    	var current;
+
+    	var subjects = new Subjects({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			subjects.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(subjects, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var subjects_changes = {};
+    			if (changed.is_logged_in) subjects_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) subjects_changes.getToken = getToken;
+    			subjects.$set(subjects_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			subjects.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			subjects.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			subjects.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (101:12) {#if !is_logged_in}
+    function create_if_block$k(ctx) {
     	var div, h3;
 
     	return {
@@ -4974,9 +15646,9 @@ var app = (function () {
     			h3 = element("h3");
     			h3.textContent = "You must login with your account to do anything in the backoffice";
     			h3.className = "m-5 p-3 text-center bg-danger rounded shadow-lg d-inline-block";
-    			add_location(h3, file$6, 68, 20, 1984);
+    			add_location(h3, file$n, 102, 20, 4581);
     			div.className = "container p-5 d-flex justify-content-center";
-    			add_location(div, file$6, 67, 16, 1906);
+    			add_location(div, file$n, 101, 16, 4503);
     		},
 
     		m: function mount(target, anchor) {
@@ -4992,11 +15664,11 @@ var app = (function () {
     	};
     }
 
-    // (55:4) <Router url="{url}">
-    function create_default_slot$1(ctx) {
-    	var t0, t1, div, t2, t3, current;
+    // (68:4) <Router url="{url}">
+    function create_default_slot$4(ctx) {
+    	var t0, t1, div, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, current;
 
-    	var if_block0 = (!ctx.is_logged_in) && create_if_block_1$1(ctx);
+    	var if_block0 = (!ctx.is_logged_in) && create_if_block_1$4(ctx);
 
     	var header = new Header({
     		props: {
@@ -5009,7 +15681,7 @@ var app = (function () {
     	var route0 = new Route({
     		props: {
     		path: "/svelte/teachers",
-    		$$slots: { default: [create_default_slot_2$1] },
+    		$$slots: { default: [create_default_slot_6$1] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -5017,14 +15689,140 @@ var app = (function () {
 
     	var route1 = new Route({
     		props: {
-    		path: "/svelte/",
-    		$$slots: { default: [create_default_slot_1$1] },
+    		path: "/svelte/teacher_subjects/:id",
+    		component: TeacherSubjects,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route2 = new Route({
+    		props: {
+    		path: "/svelte/students",
+    		$$slots: { default: [create_default_slot_5$1] },
     		$$scope: { ctx }
     	},
     		$$inline: true
     	});
 
-    	var if_block1 = (!ctx.is_logged_in) && create_if_block$4();
+    	var route3 = new Route({
+    		props: {
+    		path: "/svelte/courses",
+    		$$slots: { default: [create_default_slot_4$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var route4 = new Route({
+    		props: {
+    		path: "/svelte/studentgroups",
+    		$$slots: { default: [create_default_slot_3$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var route5 = new Route({
+    		props: {
+    		path: "/svelte/countries",
+    		$$slots: { default: [create_default_slot_2$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var route6 = new Route({
+    		props: {
+    		path: "/svelte/subjects",
+    		$$slots: { default: [create_default_slot_1$3] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var route7 = new Route({
+    		props: {
+    		path: "/svelte",
+    		component: Projects,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route8 = new Route({
+    		props: {
+    		path: "/svelte/projects",
+    		component: Projects,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route9 = new Route({
+    		props: {
+    		path: "/svelte/mobilities/:id",
+    		component: Mobilities,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route10 = new Route({
+    		props: {
+    		path: "/svelte/mobilities",
+    		component: Mobilities,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route11 = new Route({
+    		props: {
+    		path: "/svelte/mobility_students/:id",
+    		component: MobilityStudents,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route12 = new Route({
+    		props: {
+    		path: "/svelte/mobility_teachers/:id",
+    		component: MobilityTeachers,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route13 = new Route({
+    		props: {
+    		path: "/svelte/partners",
+    		component: Partners,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route14 = new Route({
+    		props: {
+    		path: "/svelte/project_partners/:id",
+    		component: ProjectPartners,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var if_block1 = (!ctx.is_logged_in) && create_if_block$k();
 
     	return {
     		c: function create() {
@@ -5037,8 +15835,34 @@ var app = (function () {
     			t2 = space();
     			route1.$$.fragment.c();
     			t3 = space();
+    			route2.$$.fragment.c();
+    			t4 = space();
+    			route3.$$.fragment.c();
+    			t5 = space();
+    			route4.$$.fragment.c();
+    			t6 = space();
+    			route5.$$.fragment.c();
+    			t7 = space();
+    			route6.$$.fragment.c();
+    			t8 = space();
+    			route7.$$.fragment.c();
+    			t9 = space();
+    			route8.$$.fragment.c();
+    			t10 = space();
+    			route9.$$.fragment.c();
+    			t11 = space();
+    			route10.$$.fragment.c();
+    			t12 = space();
+    			route11.$$.fragment.c();
+    			t13 = space();
+    			route12.$$.fragment.c();
+    			t14 = space();
+    			route13.$$.fragment.c();
+    			t15 = space();
+    			route14.$$.fragment.c();
+    			t16 = space();
     			if (if_block1) if_block1.c();
-    			add_location(div, file$6, 59, 8, 1577);
+    			add_location(div, file$n, 72, 8, 2451);
     		},
 
     		m: function mount(target, anchor) {
@@ -5051,6 +15875,32 @@ var app = (function () {
     			append(div, t2);
     			mount_component(route1, div, null);
     			append(div, t3);
+    			mount_component(route2, div, null);
+    			append(div, t4);
+    			mount_component(route3, div, null);
+    			append(div, t5);
+    			mount_component(route4, div, null);
+    			append(div, t6);
+    			mount_component(route5, div, null);
+    			append(div, t7);
+    			mount_component(route6, div, null);
+    			append(div, t8);
+    			mount_component(route7, div, null);
+    			append(div, t9);
+    			mount_component(route8, div, null);
+    			append(div, t10);
+    			mount_component(route9, div, null);
+    			append(div, t11);
+    			mount_component(route10, div, null);
+    			append(div, t12);
+    			mount_component(route11, div, null);
+    			append(div, t13);
+    			mount_component(route12, div, null);
+    			append(div, t14);
+    			mount_component(route13, div, null);
+    			append(div, t15);
+    			mount_component(route14, div, null);
+    			append(div, t16);
     			if (if_block1) if_block1.m(div, null);
     			current = true;
     		},
@@ -5061,7 +15911,7 @@ var app = (function () {
     					if_block0.p(changed, ctx);
     					if_block0.i(1);
     				} else {
-    					if_block0 = create_if_block_1$1(ctx);
+    					if_block0 = create_if_block_1$4(ctx);
     					if_block0.c();
     					if_block0.i(1);
     					if_block0.m(t0.parentNode, t0);
@@ -5087,12 +15937,82 @@ var app = (function () {
     			route0.$set(route0_changes);
 
     			var route1_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route1_changes.$$scope = { changed, ctx };
+    			if (changed.TeacherSubjects) route1_changes.component = TeacherSubjects;
+    			if (changed.is_logged_in) route1_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route1_changes.getToken = getToken;
     			route1.$set(route1_changes);
+
+    			var route2_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route2_changes.$$scope = { changed, ctx };
+    			route2.$set(route2_changes);
+
+    			var route3_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route3_changes.$$scope = { changed, ctx };
+    			route3.$set(route3_changes);
+
+    			var route4_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route4_changes.$$scope = { changed, ctx };
+    			route4.$set(route4_changes);
+
+    			var route5_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route5_changes.$$scope = { changed, ctx };
+    			route5.$set(route5_changes);
+
+    			var route6_changes = {};
+    			if (changed.$$scope || changed.is_logged_in) route6_changes.$$scope = { changed, ctx };
+    			route6.$set(route6_changes);
+
+    			var route7_changes = {};
+    			if (changed.Projects) route7_changes.component = Projects;
+    			if (changed.is_logged_in) route7_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route7_changes.getToken = getToken;
+    			route7.$set(route7_changes);
+
+    			var route8_changes = {};
+    			if (changed.Projects) route8_changes.component = Projects;
+    			if (changed.is_logged_in) route8_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route8_changes.getToken = getToken;
+    			route8.$set(route8_changes);
+
+    			var route9_changes = {};
+    			if (changed.Mobilities) route9_changes.component = Mobilities;
+    			if (changed.is_logged_in) route9_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route9_changes.getToken = getToken;
+    			route9.$set(route9_changes);
+
+    			var route10_changes = {};
+    			if (changed.Mobilities) route10_changes.component = Mobilities;
+    			if (changed.is_logged_in) route10_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route10_changes.getToken = getToken;
+    			route10.$set(route10_changes);
+
+    			var route11_changes = {};
+    			if (changed.MobilityStudents) route11_changes.component = MobilityStudents;
+    			if (changed.is_logged_in) route11_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route11_changes.getToken = getToken;
+    			route11.$set(route11_changes);
+
+    			var route12_changes = {};
+    			if (changed.MobilityTeachers) route12_changes.component = MobilityTeachers;
+    			if (changed.is_logged_in) route12_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route12_changes.getToken = getToken;
+    			route12.$set(route12_changes);
+
+    			var route13_changes = {};
+    			if (changed.Partners) route13_changes.component = Partners;
+    			if (changed.is_logged_in) route13_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route13_changes.getToken = getToken;
+    			route13.$set(route13_changes);
+
+    			var route14_changes = {};
+    			if (changed.ProjectPartners) route14_changes.component = ProjectPartners;
+    			if (changed.is_logged_in) route14_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route14_changes.getToken = getToken;
+    			route14.$set(route14_changes);
 
     			if (!ctx.is_logged_in) {
     				if (!if_block1) {
-    					if_block1 = create_if_block$4();
+    					if_block1 = create_if_block$k();
     					if_block1.c();
     					if_block1.m(div, null);
     				}
@@ -5112,6 +16032,32 @@ var app = (function () {
 
     			route1.$$.fragment.i(local);
 
+    			route2.$$.fragment.i(local);
+
+    			route3.$$.fragment.i(local);
+
+    			route4.$$.fragment.i(local);
+
+    			route5.$$.fragment.i(local);
+
+    			route6.$$.fragment.i(local);
+
+    			route7.$$.fragment.i(local);
+
+    			route8.$$.fragment.i(local);
+
+    			route9.$$.fragment.i(local);
+
+    			route10.$$.fragment.i(local);
+
+    			route11.$$.fragment.i(local);
+
+    			route12.$$.fragment.i(local);
+
+    			route13.$$.fragment.i(local);
+
+    			route14.$$.fragment.i(local);
+
     			current = true;
     		},
 
@@ -5120,6 +16066,19 @@ var app = (function () {
     			header.$$.fragment.o(local);
     			route0.$$.fragment.o(local);
     			route1.$$.fragment.o(local);
+    			route2.$$.fragment.o(local);
+    			route3.$$.fragment.o(local);
+    			route4.$$.fragment.o(local);
+    			route5.$$.fragment.o(local);
+    			route6.$$.fragment.o(local);
+    			route7.$$.fragment.o(local);
+    			route8.$$.fragment.o(local);
+    			route9.$$.fragment.o(local);
+    			route10.$$.fragment.o(local);
+    			route11.$$.fragment.o(local);
+    			route12.$$.fragment.o(local);
+    			route13.$$.fragment.o(local);
+    			route14.$$.fragment.o(local);
     			current = false;
     		},
 
@@ -5141,18 +16100,44 @@ var app = (function () {
 
     			route1.$destroy();
 
+    			route2.$destroy();
+
+    			route3.$destroy();
+
+    			route4.$destroy();
+
+    			route5.$destroy();
+
+    			route6.$destroy();
+
+    			route7.$destroy();
+
+    			route8.$destroy();
+
+    			route9.$destroy();
+
+    			route10.$destroy();
+
+    			route11.$destroy();
+
+    			route12.$destroy();
+
+    			route13.$destroy();
+
+    			route14.$destroy();
+
     			if (if_block1) if_block1.d();
     		}
     	};
     }
 
-    function create_fragment$8(ctx) {
+    function create_fragment$p(ctx) {
     	var div, current;
 
     	var router = new Router({
     		props: {
     		url: ctx.url,
-    		$$slots: { default: [create_default_slot$1] },
+    		$$slots: { default: [create_default_slot$4] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -5162,7 +16147,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			router.$$.fragment.c();
-    			add_location(div, file$6, 53, 0, 1392);
+    			add_location(div, file$n, 66, 0, 2266);
     		},
 
     		l: function claim(nodes) {
@@ -5212,7 +16197,7 @@ var app = (function () {
     	    localStorage.removeItem("api-auth-token");
     	}
 
-    function instance$8($$self, $$props, $$invalidate) {
+    function instance$p($$self, $$props, $$invalidate) {
     	
 
     	let { url = "" } = $$props;
@@ -5239,9 +16224,11 @@ var app = (function () {
     	    axios$1.get("/api/logincheck", {headers: {Authorization: getToken()}}).then(res => {
                 $$invalidate('is_logged_in', is_logged_in = true);
             }).catch(err => {
+            	$$invalidate('is_logged_in', is_logged_in = false);
                 console.log(err.response.data);
             });
     	}
+
     	checkLogin();
 
     	const writable_props = ['url'];
@@ -5259,7 +16246,7 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, ["url"]);
+    		init(this, options, instance$p, create_fragment$p, safe_not_equal, ["url"]);
     	}
 
     	get url() {

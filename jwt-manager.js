@@ -4,7 +4,7 @@ const JWT_SECRET = "HkgitmTwUH4iK5g6";
 
 module.exports = {
 	generateToken: function generateToken(data) {
-		return jwt.sign(data, JWT_SECRET, {expiresIn: 60 * 60 * 2});
+		return jwt.sign(data, JWT_SECRET, {expiresIn: 60 * 60 * 1});
 	},
 
 	verifyToken: function verifyToken(token) {

@@ -11,48 +11,20 @@
 
 <header class="sticky-top">
 	<nav class="navbar navbar-expand-xl navbar-dark bg-darker">
-		<Link class="navbar-brand" to="/svelte"><img class="h-50px d-none d-sm-block" src="../imgs/esl.png" alt="Logo ESL"></Link>
+		<Link class="navbar-brand" to="/svelte/projects"><img class="h-50px d-none d-sm-block" src="/../imgs/esl.png" alt="Logo ESL"></Link>
 		<button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle Navigation">
 			<span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Teachers</a>
-					<div class="dropdown-menu bg-darker">
-					    <Link to="/svelte/teachers"><div class="dropdown-item text-secondary text-decoration-none">Teachers</div></Link>
-					    <Link to="/svelte/subjects_teachers"><div class="dropdown-item text-secondary">Subjects/Teachers</div></Link>
-					    <Link to="/svelte/projects_teachers"><div class="dropdown-item text-secondary">Projects/Teachers</div></Link>
-					    <Link to="/svelte/mobilities_teachers"><div class="dropdown-item text-secondary">Mobilities/Teachers</div></Link>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Students</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="/students">Students</a><a class="dropdown-item text-secondary" href="./mobilities_students">Mobilities/Students</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Subjects</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="./subjects">Subjects</a><a class="dropdown-item text-secondary" href="./subjects_teachers">Subjects/Teachers</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Partners</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="./partners">Partners</a><a class="dropdown-item text-secondary" href="./partners_projects">Partners/Projects</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Mobilities</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="./mobilities">Mobilities</a><a class="dropdown-item text-secondary" href="./mobilities_students">Mobilities/Students</a><a class="dropdown-item text-secondary" href="./mobilities_teachers">Mobilities/Teachers</a>
-					</div>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-toggle="dropdown">Projects</a>
-					<div class="dropdown-menu bg-darker"><a class="dropdown-item text-secondary" href="./projects">Projects</a><a class="dropdown-item text-secondary" href="./projects_logos">Projects/Logos</a><a class="dropdown-item text-secondary" href="./projects_teachers">Projects/Teachers</a><a class="dropdown-item text-secondary" href="./partners_projects">Partners/Projects</a>
-					</div>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="./courses">Courses</a></li>
-				<li class="nav-item"><a class="nav-link" href="./countries">Countries</a></li>
-				<li class="nav-item"><a class="nav-link text-nowrap" href="./studentgroups">Student Groups</a></li>
+				<Link to="/svelte/projects"><li class="nav-item"><span class="nav-link">Projects</span></li></Link>
+				<Link to="/svelte/teachers"><li class="nav-item"><span class="nav-link">Teachers</span></li></Link>
+				<Link to="/svelte/students"><li class="nav-item"><span class="nav-link">Students</span></li></Link>
+				<Link to="/svelte/partners"><li class="nav-item"><span class="nav-link">Partners</span></li></Link>
+				<Link to="/svelte/mobilities"><li class="nav-item"><span class="nav-link">Mobilities</span></li></Link>
+				<Link to="/svelte/subjects"><li class="nav-item"><span class="nav-link">Subjects</span></li></Link>
+				<Link to="/svelte/courses"><li class="nav-item"><span class="nav-link">Courses</span></li></Link>
+				<Link to="/svelte/countries"><li class="nav-item"><span class="nav-link">Countries</span></li></Link>
+				<Link to="/svelte/studentgroups"><li class="nav-item"><span class="nav-link">Student Groups</span></li></Link>
 			</ul>
 		</div>
 		<ul class="navbar-nav mr-2 flex-row">

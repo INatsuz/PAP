@@ -6,7 +6,8 @@ let dbConfig = {
     host: "localhost",
     user: "user",
     password: "password",
-    database: "erasmus"
+    database: "erasmus",
+    timezone: "Z"
 };
 
 function handleConnection() {

@@ -34,24 +34,30 @@ app.use(express.static(path.join(__dirname, '/public')));
 //     res.send("User-agent: *\nDisallow: /");
 // });
 
+// app.use(function (req, res, next) {
+//     console.log(req.url);
+//     let ip = req.headers['x-forwarded-for'] ||
+//         req.connection.remoteAddress ||
+//         req.socket.remoteAddress ||
+//         (req.connection.socket ? req.connection.socket.remoteAddress : null);
+//     if (ip !== null) {
+//         ip = ip.substring(7);
+//         console.log(ip);
+//     }
+//     fetch(`http://ip-to-geolocation.com/api/json/${ip}?key=${IP_LOCATION_API_KEY}`).then(function (res) {
+//         res.json().then(function (json) {
+//             // console.log(json);
+//             console.log("Country: " + json.country);
+//             console.log("Region: " + json.regionName);
+//             console.log("-----------------------");
+//         });
+//     });
+//
+//     next("route");
+// });
+
 app.use(function (req, res, next) {
     console.log(req.url);
-    // let ip = req.headers['x-forwarded-for'] ||
-    //     req.connection.remoteAddress ||
-    //     req.socket.remoteAddress ||
-    //     (req.connection.socket ? req.connection.socket.remoteAddress : null);
-    // if (ip !== null) {
-    //     ip = ip.substring(7);
-    //     console.log(ip);
-    // }
-    // fetch(`http://ip-to-geolocation.com/api/json/${ip}?key=${IP_LOCATION_API_KEY}`).then(function (res) {
-    //     res.json().then(function (json) {
-    //         // console.log(json);
-    //         console.log("Country: " + json.country);
-    //         console.log("Region: " + json.regionName);
-    //         console.log("-----------------------");
-    //     });
-    // });
 
     next("route");
 });

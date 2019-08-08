@@ -159,7 +159,7 @@ INSERT INTO `partners_projects` (`ID`, `IDPartner`, `IDProject`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `projects`
+-- Table structure for table `mobilities`
 --
 
 CREATE TABLE `projects` (
@@ -171,7 +171,7 @@ CREATE TABLE `projects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `projects`
+-- Dumping data for table `mobilities`
 --
 
 INSERT INTO `projects` (`ID`, `projectCode`, `name`, `description`, `IDCoordinator`) VALUES
@@ -446,7 +446,7 @@ ALTER TABLE `partners_projects`
   ADD KEY `relation_partnersprojects_IDProject` (`IDProject`);
 
 --
--- Indexes for table `projects`
+-- Indexes for table `mobilities`
 --
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`ID`),
@@ -540,7 +540,7 @@ ALTER TABLE `partners_projects`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `projects`
+-- AUTO_INCREMENT for table `mobilities`
 --
 ALTER TABLE `projects`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
@@ -619,7 +619,7 @@ ALTER TABLE `partners_projects`
   ADD CONSTRAINT `relation_partnersprojects_IDProject` FOREIGN KEY (`IDProject`) REFERENCES `projects` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `projects`
+-- Constraints for table `mobilities`
 --
 ALTER TABLE `projects`
   ADD CONSTRAINT `relation_projects_idcoordinator` FOREIGN KEY (`IDCoordinator`) REFERENCES `teachers` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;

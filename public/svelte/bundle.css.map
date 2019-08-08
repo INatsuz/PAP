@@ -1,12 +1,8 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [
-    "..\\..\\svelte-backoffice\\src\\components\\BasicTable.svelte"
-  ],
-  "sourcesContent": [
-    "<script>\r\n    export let table_headers;\r\n    export let data;\r\n\r\n    let keys = [];\r\n    $: console.log(data);\r\n    $: keys = data.length > 0 ? Object.keys(data[0]) : [];\r\n</script>\r\n\r\n<style>\r\n    .table-bordered th{\r\n        border-top: none;\r\n    }\r\n</style>\r\n\r\n<div class=\"table-responsive rounded dark-scroll\">\r\n    <table class=\"table table-dark table-bordered table-hover nowrap m-0\">\r\n        <thead>\r\n            <tr class=\"table-headers\">\r\n                {#each table_headers as header, i}\r\n                <th scope=\"col\" class=\"position-sticky top-0px bg-darkest shadow-top-solid-1px shadow-bottom-dark-1px shadow-top-dark-1px shadow-right-dark-1px shadow-left-dark-1px\">{header}</th>\r\n                {/each}\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            {#each data as row, i}\r\n                <tr class=\"table-row\">\r\n                    {#each keys as key, i}\r\n                        <td>{row[key]}</td>\r\n                    {/each}\r\n                </tr>\r\n            {/each}\r\n        </tbody>\r\n    </table>\r\n</div>\r\n"
-  ],
+  "sources": [],
+  "sourcesContent": [],
   "names": [],
-  "mappings": "AAUI,6BAAe,CAAC,gBAAE,CAAC,AACf,UAAU,CAAE,IAAI,AACpB,CAAC"
+  "mappings": ""
 }

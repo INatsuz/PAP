@@ -169,12 +169,12 @@ router.get("/partners", function (req, res) {
 });
 
 router.get("/partners_projects", function (req, res) {
-    dbConn().query("SELECT pp.ID, pr.name project, pa.name partner FROM partners_projects pp INNER JOIN projects pr ON pp.IDProject = pr.ID INNER JOIN partners pa ON pp.IDPartner = pa.ID", function (err, result) {
+    dbConn().query("SELECT pp.ID, pr.name project, pa.name partner FROM partners_projects pp INNER JOIN mobilities pr ON pp.IDProject = pr.ID INNER JOIN partners pa ON pp.IDPartner = pa.ID", function (err, result) {
         if (err) {
             console.log(err);
         } else {
             dbConn().query("SELECT * FROM partners", function (err, partners) {
-                dbConn().query("SELECT * FROM projects", function (err, projects) {
+                dbConn().query("SELECT * FROM mobilities", function (err, projects) {
                     res.render("backoffice/partners_projects", {
                         title: "Backoffice - Partners/Projects",
                         partners_projects: result,
@@ -189,11 +189,11 @@ router.get("/partners_projects", function (req, res) {
 });
 
 router.get("/projects_teachers", function (req, res) {
-    dbConn().query("SELECT pt.ID, p.name project, t.name teacher FROM projects_teachers pt INNER JOIN projects p ON pt.IDProject = p.ID INNER JOIN teachers t ON pt.IDTeacher = t.ID", function (err, result) {
+    dbConn().query("SELECT pt.ID, p.name project, t.name teacher FROM projects_teachers pt INNER JOIN mobilities p ON pt.IDProject = p.ID INNER JOIN teachers t ON pt.IDTeacher = t.ID", function (err, result) {
         if (err) {
             console.log(err);
         } else {
-            dbConn().query("SELECT * FROM projects", function (err, projects) {
+            dbConn().query("SELECT * FROM mobilities", function (err, projects) {
                 dbConn().query("SELECT * FROM teachers", function (err, teachers) {
                     res.render("backoffice/projects_teachers", {
                         title: "Backoffice - Projects/Teachers",
@@ -213,7 +213,7 @@ router.get("/mobilities", function (req, res) {
     console.log("SELECT m.ID, m.origin, pa1.name originPartner, m.target, pa2.name targetPartner, m.departureDate, m.arrivalDate, p.name project FROM mobilities m INNER JOIN projects p ON m.IDProject = p.ID INNER JOIN partners pa1 ON pa1.ID = m.IDOriginPartner INNER JOIN partners pa2 ON pa2.ID = m.IDTargetPartner" + (req.query.projectID !== undefined ? " WHERE p.ID = " + req.query.projectID : "") + " ORDER BY m.departureDate DESC");
     dbConn().query("SELECT m.ID, m.origin, pa1.name originPartner, m.target, pa2.name targetPartner, m.departureDate, m.arrivalDate, p.name project FROM mobilities m INNER JOIN projects p ON m.IDProject = p.ID INNER JOIN partners pa1 ON pa1.ID = m.IDOriginPartner INNER JOIN partners pa2 ON pa2.ID = m.IDTargetPartner" + (req.query.projectID !== undefined ? " WHERE p.ID = " + req.query.projectID : "") + " ORDER BY m.departureDate DESC", function (err, result) {
         if (err) throw err;
-        dbConn().query("SELECT * FROM projects", function (err, projects) {
+        dbConn().query("SELECT * FROM mobilities", function (err, projects) {
             if (err) throw err;
             dbConn().query("SELECT * FROM partners", function (err, partners) {
                 if (err) throw err;
@@ -230,9 +230,9 @@ router.get("/mobilities", function (req, res) {
 });
 
 router.get("/mobilities_students", function (req, res) {
-    dbConn().query("SELECT ms.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility, s.name student FROM mobilities_students ms INNER JOIN mobilities m ON ms.IDMobility = m.ID INNER JOIN projects p ON m.IDProject = p.ID INNER JOIN students s ON ms.IDStudent = s.ID", function (err, result) {
+    dbConn().query("SELECT ms.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility, s.name student FROM mobilities_students ms INNER JOIN mobilities m ON ms.IDMobility = m.ID INNER JOIN mobilities p ON m.IDProject = p.ID INNER JOIN students s ON ms.IDStudent = s.ID", function (err, result) {
         if (err) throw err;
-        dbConn().query("SELECT m.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility FROM mobilities m INNER JOIN projects p ON m.IDProject = p.ID", function (err, mobilities) {
+        dbConn().query("SELECT m.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility FROM mobilities m INNER JOIN mobilities p ON m.IDProject = p.ID", function (err, mobilities) {
             if (err) throw err;
             dbConn().query("SELECT * FROM students", function (err, students) {
                 if (err) throw err;
@@ -249,10 +249,10 @@ router.get("/mobilities_students", function (req, res) {
 });
 
 router.get("/mobilities_teachers", function (req, res) {
-    dbConn().query("SELECT mt.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility, t.name teacher FROM mobilities_teachers mt INNER JOIN mobilities m ON mt.IDMobility = m.ID INNER JOIN projects p ON m.IDProject = p.ID INNER JOIN teachers t ON mt.IDTeacher = t.ID", function (err, result) {
+    dbConn().query("SELECT mt.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility, t.name teacher FROM mobilities_teachers mt INNER JOIN mobilities m ON mt.IDMobility = m.ID INNER JOIN mobilities p ON m.IDProject = p.ID INNER JOIN teachers t ON mt.IDTeacher = t.ID", function (err, result) {
         if (err) throw err;
 
-        dbConn().query("SELECT m.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility FROM mobilities m INNER JOIN projects p ON m.IDProject = p.ID", function (err, mobilities) {
+        dbConn().query("SELECT m.ID, CONCAT(p.name, CONCAT(\" - \", m.target)) mobility FROM mobilities m INNER JOIN mobilities p ON m.IDProject = p.ID", function (err, mobilities) {
             if (err) throw err;
             dbConn().query("SELECT * FROM teachers", function (err, teachers) {
                 if (err) throw err;
@@ -268,10 +268,10 @@ router.get("/mobilities_teachers", function (req, res) {
     });
 });
 
-router.get('/projects', function (req, res) {
-    dbConn().query("SELECT p.ID, p.projectCode, p.name, p.description FROM projects p ORDER BY projectCode DESC", function (err, result) {
+router.get('/mobilities', function (req, res) {
+    dbConn().query("SELECT p.ID, p.projectCode, p.name, p.description FROM mobilities p ORDER BY projectCode DESC", function (err, result) {
         if (err) throw err;
-        res.render("backoffice/projects", {
+        res.render("backoffice/mobilities", {
             title: "Backoffice - Projects",
             projects: result,
             session: req.session
@@ -318,7 +318,7 @@ router.get('/studentgroups', function (req, res) {
 });
 
 router.get("/projects_logos", function (req, res) {
-    dbConn().query("SELECT projects.ID, projects.projectCode, projects.name FROM projects", function (err, result) {
+    dbConn().query("SELECT mobilities.ID, mobilities.projectCode, mobilities.name FROM mobilities", function (err, result) {
         if (err) throw err;
         res.render("backoffice/projects_logos", {
             title: "Backoffice - Projects Logos",
@@ -334,9 +334,7 @@ router.post("/upload_project_logo", function (req, res) {
         console.log(fields);
     }).on('fileBegin', (name, file) => {
         file.path = __dirname + "/public/imgs/projects/" + name + ".png";
-    }).on('file', (name, file) => {
     });
-
     res.redirect("/backoffice/projects_logos");
 });
 

@@ -135,24 +135,8 @@ a:hover {
     flex-flow: column;
 }
 
-.shadow-dark-1px {
-    box-shadow: 1px 1px #32383e;
-}
-
-.shadow-bottom-dark-1px {
-    box-shadow: 0 1px #32383e;
-}
-
-.shadow-top-dark-1px {
-    box-shadow: 0 -1px #32383e;
-}
-
-.shadow-left-dark-1px {
-    box-shadow: -1px 0 #32383e;
-}
-
-.shadow-right-dark-1px {
-    box-shadow: 1px 0 #32383e;
+.shadow-y-dark-1px {
+    box-shadow: 0 1px #32383e, 0 -1px #32383e;
 }
 
 .border-bottom-3px {
@@ -169,10 +153,18 @@ a:hover {
     vertical-align: middle !important;
 }
 
+.vertical-align-middle{
+    vertical-align: middle !important;
+}
+
 .z-index-1 {
     z-index: 1;
 }
 
 .z-index-2 {
     z-index: 2;
+}
+
+.table-scrollable th{
+    border-top: none;
 }
