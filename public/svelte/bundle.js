@@ -3110,7 +3110,7 @@ var app = (function () {
     const file$1 = "src\\components\\Header.svelte";
 
     // (14:2) <Link class="navbar-brand" to="/svelte/projects">
-    function create_default_slot_9(ctx) {
+    function create_default_slot_3(ctx) {
     	var img;
 
     	return {
@@ -3135,7 +3135,7 @@ var app = (function () {
     }
 
     // (19:4) <Link to="/svelte/projects">
-    function create_default_slot_8(ctx) {
+    function create_default_slot_2(ctx) {
     	var li, span;
 
     	return {
@@ -3162,92 +3162,8 @@ var app = (function () {
     	};
     }
 
-    // (20:4) <Link to="/svelte/teachers">
-    function create_default_slot_7(ctx) {
-    	var li, span;
-
-    	return {
-    		c: function create() {
-    			li = element("li");
-    			span = element("span");
-    			span.textContent = "Teachers";
-    			span.className = "nav-link";
-    			add_location(span, file$1, 19, 53, 909);
-    			li.className = "nav-item";
-    			add_location(li, file$1, 19, 32, 888);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, li, anchor);
-    			append(li, span);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(li);
-    			}
-    		}
-    	};
-    }
-
-    // (21:4) <Link to="/svelte/students">
-    function create_default_slot_6(ctx) {
-    	var li, span;
-
-    	return {
-    		c: function create() {
-    			li = element("li");
-    			span = element("span");
-    			span.textContent = "Students";
-    			span.className = "nav-link";
-    			add_location(span, file$1, 20, 53, 1014);
-    			li.className = "nav-item";
-    			add_location(li, file$1, 20, 32, 993);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, li, anchor);
-    			append(li, span);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(li);
-    			}
-    		}
-    	};
-    }
-
-    // (22:4) <Link to="/svelte/partners">
-    function create_default_slot_5(ctx) {
-    	var li, span;
-
-    	return {
-    		c: function create() {
-    			li = element("li");
-    			span = element("span");
-    			span.textContent = "Partners";
-    			span.className = "nav-link";
-    			add_location(span, file$1, 21, 53, 1119);
-    			li.className = "nav-item";
-    			add_location(li, file$1, 21, 32, 1098);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, li, anchor);
-    			append(li, span);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(li);
-    			}
-    		}
-    	};
-    }
-
-    // (23:4) <Link to="/svelte/mobilities">
-    function create_default_slot_4(ctx) {
+    // (20:4) <Link to="/svelte/mobilities">
+    function create_default_slot_1(ctx) {
     	var li, span;
 
     	return {
@@ -3256,9 +3172,9 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Mobilities";
     			span.className = "nav-link";
-    			add_location(span, file$1, 22, 55, 1226);
+    			add_location(span, file$1, 19, 55, 911);
     			li.className = "nav-item";
-    			add_location(li, file$1, 22, 34, 1205);
+    			add_location(li, file$1, 19, 34, 890);
     		},
 
     		m: function mount(target, anchor) {
@@ -3274,64 +3190,8 @@ var app = (function () {
     	};
     }
 
-    // (24:4) <Link to="/svelte/subjects">
-    function create_default_slot_3(ctx) {
-    	var li, span;
-
-    	return {
-    		c: function create() {
-    			li = element("li");
-    			span = element("span");
-    			span.textContent = "Subjects";
-    			span.className = "nav-link";
-    			add_location(span, file$1, 23, 53, 1333);
-    			li.className = "nav-item";
-    			add_location(li, file$1, 23, 32, 1312);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, li, anchor);
-    			append(li, span);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(li);
-    			}
-    		}
-    	};
-    }
-
-    // (25:4) <Link to="/svelte/courses">
-    function create_default_slot_2(ctx) {
-    	var li, span;
-
-    	return {
-    		c: function create() {
-    			li = element("li");
-    			span = element("span");
-    			span.textContent = "Courses";
-    			span.className = "nav-link";
-    			add_location(span, file$1, 24, 52, 1437);
-    			li.className = "nav-item";
-    			add_location(li, file$1, 24, 31, 1416);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, li, anchor);
-    			append(li, span);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(li);
-    			}
-    		}
-    	};
-    }
-
-    // (26:4) <Link to="/svelte/countries">
-    function create_default_slot_1(ctx) {
+    // (21:4) <Link to="/svelte/countries">
+    function create_default_slot(ctx) {
     	var li, span;
 
     	return {
@@ -3340,9 +3200,9 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Countries";
     			span.className = "nav-link";
-    			add_location(span, file$1, 25, 54, 1542);
+    			add_location(span, file$1, 20, 54, 1019);
     			li.className = "nav-item";
-    			add_location(li, file$1, 25, 33, 1521);
+    			add_location(li, file$1, 20, 33, 998);
     		},
 
     		m: function mount(target, anchor) {
@@ -3358,35 +3218,7 @@ var app = (function () {
     	};
     }
 
-    // (27:4) <Link to="/svelte/studentgroups">
-    function create_default_slot(ctx) {
-    	var li, span;
-
-    	return {
-    		c: function create() {
-    			li = element("li");
-    			span = element("span");
-    			span.textContent = "Student Groups";
-    			span.className = "nav-link";
-    			add_location(span, file$1, 26, 58, 1653);
-    			li.className = "nav-item";
-    			add_location(li, file$1, 26, 37, 1632);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, li, anchor);
-    			append(li, span);
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(li);
-    			}
-    		}
-    	};
-    }
-
-    // (33:3) {:else}
+    // (27:3) {:else}
     function create_else_block$1(ctx) {
     	var li, span, i, t;
 
@@ -3397,13 +3229,13 @@ var app = (function () {
     			i = element("i");
     			t = text(" Login");
     			i.className = "fas fa-user";
-    			add_location(i, file$1, 33, 125, 2090);
+    			add_location(i, file$1, 27, 125, 1451);
     			span.className = "nav-link text-nowrap cursor-pointer";
     			span.dataset.toggle = "modal";
     			span.dataset.target = "#login-modal";
-    			add_location(span, file$1, 33, 28, 1993);
+    			add_location(span, file$1, 27, 28, 1354);
     			li.className = "nav-item";
-    			add_location(li, file$1, 33, 7, 1972);
+    			add_location(li, file$1, 27, 7, 1333);
     		},
 
     		m: function mount(target, anchor) {
@@ -3423,7 +3255,7 @@ var app = (function () {
     	};
     }
 
-    // (31:6) {#if is_logged_in}
+    // (25:6) {#if is_logged_in}
     function create_if_block$1(ctx) {
     	var li, span, i, t, dispose;
 
@@ -3434,11 +3266,11 @@ var app = (function () {
     			i = element("i");
     			t = text(" Logout");
     			i.className = "fas fa-user";
-    			add_location(i, file$1, 31, 107, 1905);
+    			add_location(i, file$1, 25, 107, 1266);
     			span.className = "nav-link text-nowrap cursor-pointer";
-    			add_location(span, file$1, 31, 28, 1826);
+    			add_location(span, file$1, 25, 28, 1187);
     			li.className = "nav-item";
-    			add_location(li, file$1, 31, 7, 1805);
+    			add_location(li, file$1, 25, 7, 1166);
     			dispose = listen(span, "click", ctx.handleLogoutClick);
     		},
 
@@ -3462,13 +3294,13 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	var header, nav, t0, button, span, t1, div, ul0, t2, t3, t4, t5, t6, t7, t8, t9, t10, ul1, current;
+    	var header, nav, t0, button, span, t1, div, ul0, t2, t3, t4, ul1, current;
 
     	var link0 = new Link({
     		props: {
     		class: "navbar-brand",
     		to: "/svelte/projects",
-    		$$slots: { default: [create_default_slot_9] },
+    		$$slots: { default: [create_default_slot_3] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3477,7 +3309,7 @@ var app = (function () {
     	var link1 = new Link({
     		props: {
     		to: "/svelte/projects",
-    		$$slots: { default: [create_default_slot_8] },
+    		$$slots: { default: [create_default_slot_2] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3485,8 +3317,8 @@ var app = (function () {
 
     	var link2 = new Link({
     		props: {
-    		to: "/svelte/teachers",
-    		$$slots: { default: [create_default_slot_7] },
+    		to: "/svelte/mobilities",
+    		$$slots: { default: [create_default_slot_1] },
     		$$scope: { ctx }
     	},
     		$$inline: true
@@ -3494,61 +3326,7 @@ var app = (function () {
 
     	var link3 = new Link({
     		props: {
-    		to: "/svelte/students",
-    		$$slots: { default: [create_default_slot_6] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link4 = new Link({
-    		props: {
-    		to: "/svelte/partners",
-    		$$slots: { default: [create_default_slot_5] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link5 = new Link({
-    		props: {
-    		to: "/svelte/mobilities",
-    		$$slots: { default: [create_default_slot_4] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link6 = new Link({
-    		props: {
-    		to: "/svelte/subjects",
-    		$$slots: { default: [create_default_slot_3] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link7 = new Link({
-    		props: {
-    		to: "/svelte/courses",
-    		$$slots: { default: [create_default_slot_2] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link8 = new Link({
-    		props: {
     		to: "/svelte/countries",
-    		$$slots: { default: [create_default_slot_1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var link9 = new Link({
-    		props: {
-    		to: "/svelte/studentgroups",
     		$$slots: { default: [create_default_slot] },
     		$$scope: { ctx }
     	},
@@ -3580,18 +3358,6 @@ var app = (function () {
     			t3 = space();
     			link3.$$.fragment.c();
     			t4 = space();
-    			link4.$$.fragment.c();
-    			t5 = space();
-    			link5.$$.fragment.c();
-    			t6 = space();
-    			link6.$$.fragment.c();
-    			t7 = space();
-    			link7.$$.fragment.c();
-    			t8 = space();
-    			link8.$$.fragment.c();
-    			t9 = space();
-    			link9.$$.fragment.c();
-    			t10 = space();
     			ul1 = element("ul");
     			if_block.c();
     			span.className = "navbar-toggler-icon";
@@ -3610,7 +3376,7 @@ var app = (function () {
     			div.id = "navbarCollapse";
     			add_location(div, file$1, 16, 2, 663);
     			ul1.className = "navbar-nav mr-2 flex-row";
-    			add_location(ul1, file$1, 29, 2, 1733);
+    			add_location(ul1, file$1, 23, 2, 1094);
     			nav.className = "navbar navbar-expand-xl navbar-dark bg-darker";
     			add_location(nav, file$1, 12, 1, 215);
     			header.className = "sticky-top";
@@ -3636,19 +3402,7 @@ var app = (function () {
     			mount_component(link2, ul0, null);
     			append(ul0, t3);
     			mount_component(link3, ul0, null);
-    			append(ul0, t4);
-    			mount_component(link4, ul0, null);
-    			append(ul0, t5);
-    			mount_component(link5, ul0, null);
-    			append(ul0, t6);
-    			mount_component(link6, ul0, null);
-    			append(ul0, t7);
-    			mount_component(link7, ul0, null);
-    			append(ul0, t8);
-    			mount_component(link8, ul0, null);
-    			append(ul0, t9);
-    			mount_component(link9, ul0, null);
-    			append(nav, t10);
+    			append(nav, t4);
     			append(nav, ul1);
     			if_block.m(ul1, null);
     			current = true;
@@ -3670,30 +3424,6 @@ var app = (function () {
     			var link3_changes = {};
     			if (changed.$$scope) link3_changes.$$scope = { changed, ctx };
     			link3.$set(link3_changes);
-
-    			var link4_changes = {};
-    			if (changed.$$scope) link4_changes.$$scope = { changed, ctx };
-    			link4.$set(link4_changes);
-
-    			var link5_changes = {};
-    			if (changed.$$scope) link5_changes.$$scope = { changed, ctx };
-    			link5.$set(link5_changes);
-
-    			var link6_changes = {};
-    			if (changed.$$scope) link6_changes.$$scope = { changed, ctx };
-    			link6.$set(link6_changes);
-
-    			var link7_changes = {};
-    			if (changed.$$scope) link7_changes.$$scope = { changed, ctx };
-    			link7.$set(link7_changes);
-
-    			var link8_changes = {};
-    			if (changed.$$scope) link8_changes.$$scope = { changed, ctx };
-    			link8.$set(link8_changes);
-
-    			var link9_changes = {};
-    			if (changed.$$scope) link9_changes.$$scope = { changed, ctx };
-    			link9.$set(link9_changes);
 
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
     				if_block.p(changed, ctx);
@@ -3717,18 +3447,6 @@ var app = (function () {
 
     			link3.$$.fragment.i(local);
 
-    			link4.$$.fragment.i(local);
-
-    			link5.$$.fragment.i(local);
-
-    			link6.$$.fragment.i(local);
-
-    			link7.$$.fragment.i(local);
-
-    			link8.$$.fragment.i(local);
-
-    			link9.$$.fragment.i(local);
-
     			current = true;
     		},
 
@@ -3737,12 +3455,6 @@ var app = (function () {
     			link1.$$.fragment.o(local);
     			link2.$$.fragment.o(local);
     			link3.$$.fragment.o(local);
-    			link4.$$.fragment.o(local);
-    			link5.$$.fragment.o(local);
-    			link6.$$.fragment.o(local);
-    			link7.$$.fragment.o(local);
-    			link8.$$.fragment.o(local);
-    			link9.$$.fragment.o(local);
     			current = false;
     		},
 
@@ -3758,18 +3470,6 @@ var app = (function () {
     			link2.$destroy();
 
     			link3.$destroy();
-
-    			link4.$destroy();
-
-    			link5.$destroy();
-
-    			link6.$destroy();
-
-    			link7.$destroy();
-
-    			link8.$destroy();
-
-    			link9.$destroy();
 
     			if_block.d();
     		}
@@ -4069,7 +3769,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (65:16) {#each table_headers as header, i}
+    // (71:16) {#each table_headers as header, i}
     function create_each_block_3(ctx) {
     	var th, t_value = ctx.header.columnName, t, th_class_value;
 
@@ -4078,8 +3778,8 @@ var app = (function () {
     			th = element("th");
     			t = text(t_value);
     			th.scope = "col";
-    			th.className = th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : '');
-    			add_location(th, file$3, 65, 20, 2002);
+    			th.className = th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : '') + " svelte-1c7h2sc";
+    			add_location(th, file$3, 71, 20, 2071);
     		},
 
     		m: function mount(target, anchor) {
@@ -4092,7 +3792,7 @@ var app = (function () {
     				set_data(t, t_value);
     			}
 
-    			if ((changed.table_headers) && th_class_value !== (th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : ''))) {
+    			if ((changed.table_headers) && th_class_value !== (th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : '') + " svelte-1c7h2sc")) {
     				th.className = th_class_value;
     			}
     		},
@@ -4105,7 +3805,7 @@ var app = (function () {
     	};
     }
 
-    // (84:28) {:else}
+    // (90:28) {:else}
     function create_else_block$2(ctx) {
     	var td, t_value = ctx.row[ctx.header.key], t, td_class_value;
 
@@ -4114,7 +3814,7 @@ var app = (function () {
     			td = element("td");
     			t = text(t_value);
     			td.className = td_class_value = ctx.header.wrap ? 'wrap' : '';
-    			add_location(td, file$3, 84, 32, 3315);
+    			add_location(td, file$3, 90, 32, 3384);
     		},
 
     		m: function mount(target, anchor) {
@@ -4143,7 +3843,7 @@ var app = (function () {
     	};
     }
 
-    // (82:28) {#if header.toggler}
+    // (88:28) {#if header.toggler}
     function create_if_block_1$1(ctx) {
     	var td, t, td_class_value, dispose;
 
@@ -4155,8 +3855,8 @@ var app = (function () {
     		c: function create() {
     			td = element("td");
     			t = space();
-    			td.className = td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer toggler";
-    			add_location(td, file$3, 82, 32, 3093);
+    			td.className = td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer toggler" + " svelte-1c7h2sc";
+    			add_location(td, file$3, 88, 32, 3162);
     			dispose = listen(td, "click", click_handler);
     		},
 
@@ -4167,7 +3867,7 @@ var app = (function () {
 
     		p: function update(changed, new_ctx) {
     			ctx = new_ctx;
-    			if ((changed.data || changed.table_headers) && td_class_value !== (td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer toggler")) {
+    			if ((changed.data || changed.table_headers) && td_class_value !== (td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer toggler" + " svelte-1c7h2sc")) {
     				td.className = td_class_value;
     			}
     		},
@@ -4185,7 +3885,7 @@ var app = (function () {
     	};
     }
 
-    // (75:24) {#if header.actions}
+    // (81:24) {#if header.actions}
     function create_if_block$2(ctx) {
     	var td, current;
 
@@ -4218,7 +3918,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			td.className = "text-center vertical-align-middle";
-    			add_location(td, file$3, 75, 28, 2626);
+    			add_location(td, file$3, 81, 28, 2695);
     		},
 
     		m: function mount(target, anchor) {
@@ -4279,15 +3979,15 @@ var app = (function () {
     	};
     }
 
-    // (78:32) <Link to={`${action.link}${row[action.query_field]}`}>
+    // (84:32) <Link to={`${action.link}${row[action.query_field]}`}>
     function create_default_slot$1(ctx) {
     	var i, i_class_value;
 
     	return {
     		c: function create() {
     			i = element("i");
-    			i.className = i_class_value = `fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`;
-    			add_location(i, file$3, 77, 86, 2822);
+    			i.className = i_class_value = "" + (`fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`) + " svelte-1c7h2sc";
+    			add_location(i, file$3, 83, 86, 2891);
     		},
 
     		m: function mount(target, anchor) {
@@ -4295,7 +3995,7 @@ var app = (function () {
     		},
 
     		p: function update(changed, ctx) {
-    			if ((changed.table_headers) && i_class_value !== (i_class_value = `fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`)) {
+    			if ((changed.table_headers) && i_class_value !== (i_class_value = "" + (`fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`) + " svelte-1c7h2sc")) {
     				i.className = i_class_value;
     			}
     		},
@@ -4308,7 +4008,7 @@ var app = (function () {
     	};
     }
 
-    // (77:28) {#each header.actions as action}
+    // (83:28) {#each header.actions as action}
     function create_each_block_2(ctx) {
     	var current;
 
@@ -4356,7 +4056,7 @@ var app = (function () {
     	};
     }
 
-    // (74:20) {#each table_headers as header, i}
+    // (80:20) {#each table_headers as header, i}
     function create_each_block_1(ctx) {
     	var current_block_type_index, if_block, if_block_anchor, current;
 
@@ -4434,7 +4134,7 @@ var app = (function () {
     	};
     }
 
-    // (71:12) {#each data as row, i}
+    // (77:12) {#each data as row, i}
     function create_each_block(ctx) {
     	var tr, t, tr_class_value, current, dispose;
 
@@ -4473,7 +4173,7 @@ var app = (function () {
 
     			t = space();
     			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.row[ctx.selection_field]) === -1 ? 'table-row' : 'table-row bg-secondary';
-    			add_location(tr, file$3, 71, 16, 2304);
+    			add_location(tr, file$3, 77, 16, 2373);
     			dispose = listen(tr, "click", click_handler_1);
     		},
 
@@ -4593,13 +4293,13 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			tr.className = "table-headers";
-    			add_location(tr, file$3, 63, 12, 1902);
-    			add_location(thead, file$3, 62, 8, 1881);
-    			add_location(tbody, file$3, 69, 8, 2243);
+    			add_location(tr, file$3, 69, 12, 1971);
+    			add_location(thead, file$3, 68, 8, 1950);
+    			add_location(tbody, file$3, 75, 8, 2312);
     			table_1.className = "table table-dark table-bordered table-scrollable table-hover nowrap m-0";
-    			add_location(table_1, file$3, 61, 4, 1784);
+    			add_location(table_1, file$3, 67, 4, 1853);
     			div.className = "table-responsive rounded dark-scroll";
-    			add_location(div, file$3, 60, 0, 1728);
+    			add_location(div, file$3, 66, 0, 1797);
     		},
 
     		l: function claim(nodes) {
@@ -5730,11 +5430,11 @@ var app = (function () {
     	}
     }
 
-    /* src\components\teachers\Teachers.svelte generated by Svelte v3.5.1 */
+    /* src\components\countries\Countries.svelte generated by Svelte v3.5.1 */
 
-    const file$5 = "src\\components\\teachers\\Teachers.svelte";
+    const file$5 = "src\\components\\countries\\Countries.svelte";
 
-    // (217:0) {#if is_logged_in}
+    // (135:0) {#if is_logged_in}
     function create_if_block$4(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
 
@@ -5742,12 +5442,12 @@ var app = (function () {
     		props: {
     		mode: "add",
     		getToken: ctx.getToken,
-    		table: "teachers",
-    		table_title: "Teachers",
+    		table: "countries",
+    		table_title: "Countries",
     		fields: ctx.add_modal_fields,
     		isOpen: ctx.isAddModalOpen,
     		setIsOpen: ctx.setIsAddModalOpen,
-    		onAdd: ctx.getTeachers
+    		onAdd: ctx.getCountries
     	},
     		$$inline: true
     	});
@@ -5756,12 +5456,12 @@ var app = (function () {
     		props: {
     		mode: "edit",
     		getToken: ctx.getToken,
-    		table: "teachers",
-    		table_title: "Teachers",
+    		table: "countries",
+    		table_title: "Countries",
     		fields: ctx.edit_modal_fields,
     		isOpen: ctx.isEditModalOpen,
     		setIsOpen: ctx.setIsEditModalOpen,
-    		onEdit: ctx.getTeachers
+    		onEdit: ctx.getCountries
     	},
     		$$inline: true
     	});
@@ -5769,7 +5469,7 @@ var app = (function () {
     	var basictable = new BasicTable({
     		props: {
     		table_headers: ctx.table_headers,
-    		data: ctx.teachers,
+    		data: ctx.countries,
     		toggleRowSelect: ctx.toggleRowSelect,
     		selectedRows: ctx.selectedRows
     	},
@@ -5786,7 +5486,7 @@ var app = (function () {
     			div0 = element("div");
     			h2 = element("h2");
     			span0 = element("span");
-    			span0.textContent = "Teachers";
+    			span0.textContent = "Countries";
     			t3 = space();
     			span1 = element("span");
     			button0 = element("button");
@@ -5800,22 +5500,22 @@ var app = (function () {
     			t9 = space();
     			basictable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$5, 221, 35, 6959);
+    			add_location(span0, file$5, 139, 35, 4272);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$5, 221, 8, 6932);
+    			add_location(h2, file$5, 139, 8, 4245);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$5, 223, 16, 7096);
+    			add_location(button0, file$5, 141, 16, 4410);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$5, 224, 16, 7197);
+    			add_location(button1, file$5, 142, 16, 4511);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$5, 225, 16, 7384);
-    			add_location(span1, file$5, 222, 12, 7072);
+    			add_location(button2, file$5, 143, 16, 4696);
+    			add_location(span1, file$5, 140, 12, 4386);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$5, 220, 8, 6837);
+    			add_location(div0, file$5, 138, 8, 4150);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$5, 219, 4, 6718);
+    			add_location(div1, file$5, 137, 4, 4031);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -5854,7 +5554,7 @@ var app = (function () {
     			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
     			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
     			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
-    			if (changed.getTeachers) basicmodal0_changes.onAdd = ctx.getTeachers;
+    			if (changed.getCountries) basicmodal0_changes.onAdd = ctx.getCountries;
     			basicmodal0.$set(basicmodal0_changes);
 
     			var basicmodal1_changes = {};
@@ -5862,7 +5562,7 @@ var app = (function () {
     			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
     			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
     			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
-    			if (changed.getTeachers) basicmodal1_changes.onEdit = ctx.getTeachers;
+    			if (changed.getCountries) basicmodal1_changes.onEdit = ctx.getCountries;
     			basicmodal1.$set(basicmodal1_changes);
 
     			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
@@ -5879,7 +5579,7 @@ var app = (function () {
 
     			var basictable_changes = {};
     			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.teachers) basictable_changes.data = ctx.teachers;
+    			if (changed.countries) basictable_changes.data = ctx.countries;
     			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
     			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
     			basictable.$set(basictable_changes);
@@ -5990,2390 +5690,6 @@ var app = (function () {
     }
 
     function instance$7($$self, $$props, $$invalidate) {
-    	
-
-        let { is_logged_in, getToken } = $$props;
-
-        let teachers = [];
-        let genders = [
-        	{
-        		display: "Male",
-        		value: "Male",
-        	},
-        	{
-        		display: "Female",
-        		value: "Female",
-        	}
-        ];
-
-        let table_headers = [
-            {columnName: '#', key: "ID"},
-            {columnName: "Teacher #", key: "teacherNumber"},
-            {columnName: 'Name', key: "name"},
-            {columnName: 'Age', key: "age"},
-            {columnName: 'Gender', key: "gender"},
-            {columnName: 'Email', key: "email"},
-            {columnName: 'Actions', actions: [
-            	{icon: "fa-book", link: "/svelte/teacher_subjects/", query_field: "ID"}
-            ]},
-        ];
-
-        let selectedRows = [];
-
-        let confirm_del = false;
-
-        let isAddModalOpen = false;
-        let isEditModalOpen = false;
-
-        let add_modal_fields = {
-        	fields: [{
-                field: "teacherNumber",
-                type: "text",
-                display: "Teacher #",
-                placeholder: "eg. p701617004",
-                value: ""
-            }, {
-                field: "name",
-                type: "text",
-                display: "Name",
-                placeholder: "eg. Duarte Duarte",
-                value: ""
-            }, {
-                field: "birthday",
-                type: "date",
-                display: "Birthday",
-                placeholder: "",
-                value: ""
-            }, {
-                field: "gender",
-                type: "select",
-                display: "Gender",
-                placeholder: "Choose a gender",
-                value: "",
-                options: genders
-            }, {
-                field: "email",
-                type: "email",
-                display: "Email",
-                placeholder: "eg. teacher.email@gmail.com",
-                value: ""
-            }]
-        };
-        let edit_modal_fields = {
-        	ID: null,
-        	fields: [{
-                field: "teacherNumber",
-                type: "text",
-                display: "Teacher #",
-                placeholder: "eg. p701617004",
-                value: ""
-            }, {
-                field: "name",
-                type: "text",
-                display: "Name",
-                placeholder: "eg. Duarte Duarte",
-                value: ""
-            }, {
-                field: "birthday",
-                type: "date",
-                display: "Birthday",
-                placeholder: "",
-                value: ""
-            }, {
-                field: "gender",
-                type: "select",
-                display: "Gender",
-                placeholder: "Choose a gender",
-                value: "",
-                options: genders
-            }, {
-                field: "email",
-                type: "email",
-                display: "Email",
-                placeholder: "eg. teacher.email@gmail.com",
-                value: ""
-            }]
-        };
-
-        // axios.defaults.withCredentials = true;
-
-        function toggleRowSelect(id) {
-        	let index = selectedRows.indexOf(id);
-        	if(index === -1){
-                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
-        	}else {
-                selectedRows.splice(index, 1);
-                $$invalidate('selectedRows', selectedRows);
-        	}
-
-        	console.log(selectedRows);
-        }
-
-        function handleOutsideTableClick(event) {
-            if (event.target.tagName.toLowerCase() === "button"){
-                return;
-            }
-            let table = event.currentTarget.querySelector("table");
-            if(table != null ){
-                if(table.contains(event.target)){
-                    console.log("Hello there General Kenobi");
-                    return;
-                }
-            }
-
-            $$invalidate('confirm_del', confirm_del = false);
-            $$invalidate('selectedRows', selectedRows = []);
-        }
-
-        function handleDeleteClick(event) {
-        	let del_btn_el = event.currentTarget;
-        	if(!del_btn_el.classList.contains("disabled")){
-        	    if(!confirm_del){
-                   $$invalidate('confirm_del', confirm_del = true);
-        	    }else if(selectedRows.length > 0){
-                    axios$1.delete("/api/delete/teachers", {
-                        data: {
-                            rows: selectedRows
-                        },
-                        headers: {
-                            Authorization: getToken()
-                        }
-                    }).then(res =>{
-                    	$$invalidate('confirm_del', confirm_del = false);
-                        getTeachers();
-                    }).catch(err =>{
-                        console.log(err.response);
-                    });
-                }
-        	}
-        }
-
-        function getTeachers() {
-        	console.log("Trying to fetch teachers");
-            axios$1.get("/api/get/teachers", {headers: {Authorization: getToken()}}).then(function(res) {
-            	$$invalidate('teachers', teachers = res.data);
-                console.log(res.data);
-                for(let i = 0; i < teachers.length; i++) {
-                    let age = new Date(new Date() - new Date(teachers[i].birthday)).getFullYear() - 1970;
-                    if(isNaN(age)){
-                        age = 0;
-                    }
-                    teachers[i].age = age; $$invalidate('teachers', teachers);
-                    console.log(age);
-                }
-            });
-        }
-
-        function setIsAddModalOpen(value){
-        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
-        }
-
-        function setIsEditModalOpen(value){
-        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
-        }
-
-        function handleAddButtonClick(){
-            setIsAddModalOpen(true);
-        }
-
-        function handleEditButtonClick(){
-        	if(selectedRows.length === 1){
-                for (let i = 0; i < teachers.length; i++) {
-                    if (teachers[i].ID === selectedRows[0]) {
-                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
-        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
-        		        	if (edit_modal_fields.fields[j].type === "date") {
-                                edit_modal_fields.fields[j].value = teachers[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
-                                console.log(teachers[i][edit_modal_fields.fields[j].field]);
-        		        	} else {
-                                edit_modal_fields.fields[j].value = teachers[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
-                                console.log(edit_modal_fields.fields[j].value);
-        		        	}
-        			    }
-        			}
-        		}
-
-        		setIsEditModalOpen(true);
-        	}
-        }
-
-    	const writable_props = ['is_logged_in', 'getToken'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Teachers> was created with unknown prop '${key}'`);
-    	});
-
-    	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    	};
-
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getTeachers();
-                } }
-    	};
-
-    	return {
-    		is_logged_in,
-    		getToken,
-    		teachers,
-    		table_headers,
-    		selectedRows,
-    		confirm_del,
-    		isAddModalOpen,
-    		isEditModalOpen,
-    		add_modal_fields,
-    		edit_modal_fields,
-    		toggleRowSelect,
-    		handleOutsideTableClick,
-    		handleDeleteClick,
-    		getTeachers,
-    		setIsAddModalOpen,
-    		setIsEditModalOpen,
-    		handleAddButtonClick,
-    		handleEditButtonClick
-    	};
-    }
-
-    class Teachers extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["is_logged_in", "getToken"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<Teachers> was created without expected prop 'is_logged_in'");
-    		}
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<Teachers> was created without expected prop 'getToken'");
-    		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get getToken() {
-    		throw new Error("<Teachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<Teachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\components\BasicRelationTable.svelte generated by Svelte v3.5.1 */
-
-    const file$6 = "src\\components\\BasicRelationTable.svelte";
-
-    function get_each_context_1$2(ctx, list, i) {
-    	const child_ctx = Object.create(ctx);
-    	child_ctx.header = list[i];
-    	child_ctx.i = i;
-    	return child_ctx;
-    }
-
-    function get_each_context$2(ctx, list, i) {
-    	const child_ctx = Object.create(ctx);
-    	child_ctx.row = list[i];
-    	child_ctx.i = i;
-    	return child_ctx;
-    }
-
-    function get_each_context_2$1(ctx, list, i) {
-    	const child_ctx = Object.create(ctx);
-    	child_ctx.header = list[i];
-    	child_ctx.i = i;
-    	return child_ctx;
-    }
-
-    // (54:16) {#each table_headers as header, i}
-    function create_each_block_2$1(ctx) {
-    	var th, t_value = ctx.header.columnName, t;
-
-    	return {
-    		c: function create() {
-    			th = element("th");
-    			t = text(t_value);
-    			th.scope = "col";
-    			th.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
-    			add_location(th, file$6, 54, 20, 1636);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, th, anchor);
-    			append(th, t);
-    		},
-
-    		p: function update(changed, ctx) {
-    			if ((changed.table_headers) && t_value !== (t_value = ctx.header.columnName)) {
-    				set_data(t, t_value);
-    			}
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(th);
-    			}
-    		}
-    	};
-    }
-
-    // (65:24) {:else}
-    function create_else_block$4(ctx) {
-    	var td, t_value = ctx.row[ctx.header.key], t, td_class_value;
-
-    	return {
-    		c: function create() {
-    			td = element("td");
-    			t = text(t_value);
-    			td.className = td_class_value = ctx.header.wrap ? 'wrap' : '';
-    			add_location(td, file$6, 65, 28, 2241);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, td, anchor);
-    			append(td, t);
-    		},
-
-    		p: function update(changed, ctx) {
-    			if ((changed.data || changed.table_headers) && t_value !== (t_value = ctx.row[ctx.header.key])) {
-    				set_data(t, t_value);
-    			}
-
-    			if ((changed.table_headers) && td_class_value !== (td_class_value = ctx.header.wrap ? 'wrap' : '')) {
-    				td.className = td_class_value;
-    			}
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(td);
-    			}
-    		}
-    	};
-    }
-
-    // (63:24) {#if header.toggler}
-    function create_if_block$5(ctx) {
-    	var td, t, td_class_value, dispose;
-
-    	function click_handler(...args) {
-    		return ctx.click_handler(ctx, ...args);
-    	}
-
-    	return {
-    		c: function create() {
-    			td = element("td");
-    			t = space();
-    			td.className = td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer";
-    			add_location(td, file$6, 63, 28, 2035);
-    			dispose = listen(td, "click", click_handler);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, td, anchor);
-    			append(td, t);
-    		},
-
-    		p: function update(changed, new_ctx) {
-    			ctx = new_ctx;
-    			if ((changed.data || changed.table_headers) && td_class_value !== (td_class_value = "" + (ctx.row[ctx.header.key] === 'true' ? 'bg-success' : 'bg-danger') + " cursor-pointer")) {
-    				td.className = td_class_value;
-    			}
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(td);
-    			}
-
-    			dispose();
-    		}
-    	};
-    }
-
-    // (62:20) {#each table_headers as header, i}
-    function create_each_block_1$2(ctx) {
-    	var if_block_anchor;
-
-    	function select_block_type(ctx) {
-    		if (ctx.header.toggler) return create_if_block$5;
-    		return create_else_block$4;
-    	}
-
-    	var current_block_type = select_block_type(ctx);
-    	var if_block = current_block_type(ctx);
-
-    	return {
-    		c: function create() {
-    			if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		m: function mount(target, anchor) {
-    			if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
-    				if_block.p(changed, ctx);
-    			} else {
-    				if_block.d(1);
-    				if_block = current_block_type(ctx);
-    				if (if_block) {
-    					if_block.c();
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			}
-    		},
-
-    		d: function destroy(detaching) {
-    			if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    // (60:12) {#each data as row, i}
-    function create_each_block$2(ctx) {
-    	var tr, t;
-
-    	var each_value_1 = ctx.table_headers;
-
-    	var each_blocks = [];
-
-    	for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
-    		each_blocks[i_1] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i_1));
-    	}
-
-    	return {
-    		c: function create() {
-    			tr = element("tr");
-
-    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
-    				each_blocks[i_1].c();
-    			}
-
-    			t = space();
-    			add_location(tr, file$6, 60, 16, 1899);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, tr, anchor);
-
-    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
-    				each_blocks[i_1].m(tr, null);
-    			}
-
-    			append(tr, t);
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (changed.table_headers || changed.data) {
-    				each_value_1 = ctx.table_headers;
-
-    				for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
-    					const child_ctx = get_each_context_1$2(ctx, each_value_1, i_1);
-
-    					if (each_blocks[i_1]) {
-    						each_blocks[i_1].p(changed, child_ctx);
-    					} else {
-    						each_blocks[i_1] = create_each_block_1$2(child_ctx);
-    						each_blocks[i_1].c();
-    						each_blocks[i_1].m(tr, t);
-    					}
-    				}
-
-    				for (; i_1 < each_blocks.length; i_1 += 1) {
-    					each_blocks[i_1].d(1);
-    				}
-    				each_blocks.length = each_value_1.length;
-    			}
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(tr);
-    			}
-
-    			destroy_each(each_blocks, detaching);
-    		}
-    	};
-    }
-
-    function create_fragment$8(ctx) {
-    	var div, table_1, thead, tr, t, tbody;
-
-    	var each_value_2 = ctx.table_headers;
-
-    	var each_blocks_1 = [];
-
-    	for (var i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2$1(get_each_context_2$1(ctx, each_value_2, i));
-    	}
-
-    	var each_value = ctx.data;
-
-    	var each_blocks = [];
-
-    	for (var i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
-    	}
-
-    	return {
-    		c: function create() {
-    			div = element("div");
-    			table_1 = element("table");
-    			thead = element("thead");
-    			tr = element("tr");
-
-    			for (var i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].c();
-    			}
-
-    			t = space();
-    			tbody = element("tbody");
-
-    			for (var i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-    			tr.className = "table-headers";
-    			add_location(tr, file$6, 52, 12, 1536);
-    			add_location(thead, file$6, 51, 8, 1515);
-    			add_location(tbody, file$6, 58, 8, 1838);
-    			table_1.className = "table table-dark table-bordered table-scrollable table-hover nowrap m-0";
-    			add_location(table_1, file$6, 50, 4, 1418);
-    			div.className = "table-responsive rounded dark-scroll";
-    			add_location(div, file$6, 49, 0, 1362);
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, div, anchor);
-    			append(div, table_1);
-    			append(table_1, thead);
-    			append(thead, tr);
-
-    			for (var i = 0; i < each_blocks_1.length; i += 1) {
-    				each_blocks_1[i].m(tr, null);
-    			}
-
-    			append(table_1, t);
-    			append(table_1, tbody);
-
-    			for (var i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(tbody, null);
-    			}
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (changed.table_headers) {
-    				each_value_2 = ctx.table_headers;
-
-    				for (var i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2$1(ctx, each_value_2, i);
-
-    					if (each_blocks_1[i]) {
-    						each_blocks_1[i].p(changed, child_ctx);
-    					} else {
-    						each_blocks_1[i] = create_each_block_2$1(child_ctx);
-    						each_blocks_1[i].c();
-    						each_blocks_1[i].m(tr, null);
-    					}
-    				}
-
-    				for (; i < each_blocks_1.length; i += 1) {
-    					each_blocks_1[i].d(1);
-    				}
-    				each_blocks_1.length = each_value_2.length;
-    			}
-
-    			if (changed.table_headers || changed.data) {
-    				each_value = ctx.data;
-
-    				for (var i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$2(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(changed, child_ctx);
-    					} else {
-    						each_blocks[i] = create_each_block$2(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(tbody, null);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-    				each_blocks.length = each_value.length;
-    			}
-    		},
-
-    		i: noop,
-    		o: noop,
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(div);
-    			}
-
-    			destroy_each(each_blocks_1, detaching);
-
-    			destroy_each(each_blocks, detaching);
-    		}
-    	};
-    }
-
-    function instance$8($$self, $$props, $$invalidate) {
-    	let { getToken, table, table_headers, data, toggle_fields, onToggle } = $$props;
-
-        function handleToggleClick(row){
-            if (row.ID !== null){
-            	console.log("Hey");
-                axios$1.delete(`/api/delete/${table}`, {
-                    data: {
-                        rows: [row.ID]
-                    },
-                    headers: {
-                        Authorization: getToken()
-                    }
-                }).then(res => {
-                    onToggle();
-                }).catch(err =>{
-                    console.log(err.response);
-                });
-            } else {
-            	console.log("Bye");
-            	let data = {ID: null};
-            	console.log(add_fields);
-            	for(let i = 0; i < add_fields.length; i++) {
-            		console.log(add_fields[i].field);
-            	    data[add_fields[i].field] = row[add_fields[i].field];
-            	}
-            	console.log(data);
-
-                axios$1.post(`/api/insert/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
-                    console.log(`Successfully added relation`);
-                    onToggle();
-                }).catch(err => {
-                    console.log(err.response);
-                });
-            }
-            console.log(row);
-        }
-
-    	const writable_props = ['getToken', 'table', 'table_headers', 'data', 'toggle_fields', 'onToggle'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicRelationTable> was created with unknown prop '${key}'`);
-    	});
-
-    	function click_handler({ row }, event) {handleToggleClick(row);}
-
-    	$$self.$set = $$props => {
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    		if ('table' in $$props) $$invalidate('table', table = $$props.table);
-    		if ('table_headers' in $$props) $$invalidate('table_headers', table_headers = $$props.table_headers);
-    		if ('data' in $$props) $$invalidate('data', data = $$props.data);
-    		if ('toggle_fields' in $$props) $$invalidate('toggle_fields', toggle_fields = $$props.toggle_fields);
-    		if ('onToggle' in $$props) $$invalidate('onToggle', onToggle = $$props.onToggle);
-    	};
-
-    	return {
-    		getToken,
-    		table,
-    		table_headers,
-    		data,
-    		toggle_fields,
-    		onToggle,
-    		handleToggleClick,
-    		click_handler
-    	};
-    }
-
-    class BasicRelationTable extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$8, create_fragment$8, safe_not_equal, ["getToken", "table", "table_headers", "data", "toggle_fields", "onToggle"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<BasicRelationTable> was created without expected prop 'getToken'");
-    		}
-    		if (ctx.table === undefined && !('table' in props)) {
-    			console.warn("<BasicRelationTable> was created without expected prop 'table'");
-    		}
-    		if (ctx.table_headers === undefined && !('table_headers' in props)) {
-    			console.warn("<BasicRelationTable> was created without expected prop 'table_headers'");
-    		}
-    		if (ctx.data === undefined && !('data' in props)) {
-    			console.warn("<BasicRelationTable> was created without expected prop 'data'");
-    		}
-    		if (ctx.toggle_fields === undefined && !('toggle_fields' in props)) {
-    			console.warn("<BasicRelationTable> was created without expected prop 'toggle_fields'");
-    		}
-    		if (ctx.onToggle === undefined && !('onToggle' in props)) {
-    			console.warn("<BasicRelationTable> was created without expected prop 'onToggle'");
-    		}
-    	}
-
-    	get getToken() {
-    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get table() {
-    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set table(value) {
-    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get table_headers() {
-    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set table_headers(value) {
-    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get data() {
-    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set data(value) {
-    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get toggle_fields() {
-    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set toggle_fields(value) {
-    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get onToggle() {
-    		throw new Error("<BasicRelationTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set onToggle(value) {
-    		throw new Error("<BasicRelationTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\components\teacher_subjects\TeacherSubjects.svelte generated by Svelte v3.5.1 */
-
-    const file$7 = "src\\components\\teacher_subjects\\TeacherSubjects.svelte";
-
-    // (39:0) {#if is_logged_in}
-    function create_if_block$6(ctx) {
-    	var div1, div0, h2, span0, t1, h3, span1, t2, t3, current;
-
-    	var basicrelationtable = new BasicRelationTable({
-    		props: {
-    		getToken: ctx.getToken,
-    		table: "subjects_teachers",
-    		table_headers: ctx.table_headers,
-    		data: ctx.teacher_subjects,
-    		add_fields: ctx.add_fields,
-    		onToggle: ctx.getTeacherSubjects
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Teacher Subjects";
-    			t1 = space();
-    			h3 = element("h3");
-    			span1 = element("span");
-    			t2 = text(ctx.teacher_name);
-    			t3 = space();
-    			basicrelationtable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$7, 41, 39, 1188);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$7, 41, 12, 1161);
-    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span1, file$7, 42, 39, 1336);
-    			h3.className = "mb-3 text-dark";
-    			add_location(h3, file$7, 42, 12, 1309);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$7, 40, 8, 1062);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$7, 39, 4, 978);
-    		},
-
-    		m: function mount(target, anchor) {
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t1);
-    			append(div0, h3);
-    			append(h3, span1);
-    			append(span1, t2);
-    			append(div0, t3);
-    			mount_component(basicrelationtable, div0, null);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (!current || changed.teacher_name) {
-    				set_data(t2, ctx.teacher_name);
-    			}
-
-    			var basicrelationtable_changes = {};
-    			if (changed.getToken) basicrelationtable_changes.getToken = ctx.getToken;
-    			if (changed.table_headers) basicrelationtable_changes.table_headers = ctx.table_headers;
-    			if (changed.teacher_subjects) basicrelationtable_changes.data = ctx.teacher_subjects;
-    			if (changed.add_fields) basicrelationtable_changes.add_fields = ctx.add_fields;
-    			if (changed.getTeacherSubjects) basicrelationtable_changes.onToggle = ctx.getTeacherSubjects;
-    			basicrelationtable.$set(basicrelationtable_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			basicrelationtable.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basicrelationtable.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (detaching) {
-    				detach(div1);
-    			}
-
-    			basicrelationtable.$destroy();
-    		}
-    	};
-    }
-
-    function create_fragment$9(ctx) {
-    	var if_block_anchor, current;
-
-    	var if_block = (ctx.is_logged_in) && create_if_block$6(ctx);
-
-    	return {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$6(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
-
-    				if_block.o(1);
-    				check_outros();
-    			}
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    function instance$9($$self, $$props, $$invalidate) {
-    	
-
-        let { is_logged_in, getToken, id } = $$props;
-
-        let teacher_subjects = [];
-        let teacher_name = "";
-
-        let table_headers = [
-            {columnName: ' ', key: "isTeacher", toggler: true},
-            {columnName: "Subject", key: "subject"}
-        ];
-        let add_fields = [
-        	{field: "IDTeacher"},
-        	{field: "IDSubject"}
-        ];
-
-        function getTeacherSubjects(){
-        	axios$1.get(`/api/get/teacher_subjects?IDTeacher=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
-        		$$invalidate('teacher_subjects', teacher_subjects = res.data);
-        		$$invalidate('teacher_name', teacher_name = res.data[0].name);
-        		console.log(res.data);
-        	}).catch(err => {
-        		console.log(err.response);
-        	});
-        }
-
-    	const writable_props = ['is_logged_in', 'getToken', 'id'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<TeacherSubjects> was created with unknown prop '${key}'`);
-    	});
-
-    	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
-    	};
-
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getTeacherSubjects();
-                } }
-    	};
-
-    	return {
-    		is_logged_in,
-    		getToken,
-    		id,
-    		teacher_subjects,
-    		teacher_name,
-    		table_headers,
-    		add_fields,
-    		getTeacherSubjects
-    	};
-    }
-
-    class TeacherSubjects extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, ["is_logged_in", "getToken", "id"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<TeacherSubjects> was created without expected prop 'is_logged_in'");
-    		}
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<TeacherSubjects> was created without expected prop 'getToken'");
-    		}
-    		if (ctx.id === undefined && !('id' in props)) {
-    			console.warn("<TeacherSubjects> was created without expected prop 'id'");
-    		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<TeacherSubjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<TeacherSubjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get getToken() {
-    		throw new Error("<TeacherSubjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<TeacherSubjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get id() {
-    		throw new Error("<TeacherSubjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set id(value) {
-    		throw new Error("<TeacherSubjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\components\students\Students.svelte generated by Svelte v3.5.1 */
-
-    const file$8 = "src\\components\\students\\Students.svelte";
-
-    // (248:0) {#if is_logged_in}
-    function create_if_block$7(ctx) {
-    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
-
-    	var basicmodal0 = new BasicModal({
-    		props: {
-    		mode: "add",
-    		getToken: ctx.getToken,
-    		table: "students",
-    		fields: ctx.add_modal_fields,
-    		table_title: "Students",
-    		isOpen: ctx.isAddModalOpen,
-    		setIsOpen: ctx.setIsAddModalOpen,
-    		onAdd: ctx.getStudents
-    	},
-    		$$inline: true
-    	});
-
-    	var basicmodal1 = new BasicModal({
-    		props: {
-    		mode: "edit",
-    		getToken: ctx.getToken,
-    		table: "students",
-    		fields: ctx.edit_modal_fields,
-    		table_title: "Students",
-    		isOpen: ctx.isEditModalOpen,
-    		setIsOpen: ctx.setIsEditModalOpen,
-    		onEdit: ctx.getStudents
-    	},
-    		$$inline: true
-    	});
-
-    	var basictable = new BasicTable({
-    		props: {
-    		table_headers: ctx.table_headers,
-    		data: ctx.students,
-    		toggleRowSelect: ctx.toggleRowSelect,
-    		selectedRows: ctx.selectedRows,
-    		selection_field: selection_field
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			basicmodal0.$$.fragment.c();
-    			t0 = space();
-    			basicmodal1.$$.fragment.c();
-    			t1 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Students";
-    			t3 = space();
-    			span1 = element("span");
-    			button0 = element("button");
-    			button0.textContent = "Add +";
-    			t5 = space();
-    			button1 = element("button");
-    			t6 = text("Edit");
-    			t7 = space();
-    			button2 = element("button");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$8, 252, 39, 7884);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$8, 252, 12, 7857);
-    			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$8, 254, 16, 8021);
-    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
-    			button1.id = "edit-btn";
-    			add_location(button1, file$8, 255, 16, 8122);
-    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
-    			button2.id = "delete-btn";
-    			add_location(button2, file$8, 256, 16, 8307);
-    			add_location(span1, file$8, 253, 12, 7997);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$8, 251, 8, 7758);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$8, 250, 4, 7639);
-
-    			dispose = [
-    				listen(button0, "click", ctx.handleAddButtonClick),
-    				listen(button1, "click", ctx.handleEditButtonClick),
-    				listen(button2, "click", ctx.handleDeleteClick),
-    				listen(div1, "click", ctx.handleOutsideTableClick)
-    			];
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(basicmodal0, target, anchor);
-    			insert(target, t0, anchor);
-    			mount_component(basicmodal1, target, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t3);
-    			append(div0, span1);
-    			append(span1, button0);
-    			append(span1, t5);
-    			append(span1, button1);
-    			append(button1, t6);
-    			append(span1, t7);
-    			append(span1, button2);
-    			append(button2, t8);
-    			append(div0, t9);
-    			mount_component(basictable, div0, null);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var basicmodal0_changes = {};
-    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
-    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
-    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
-    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
-    			if (changed.getStudents) basicmodal0_changes.onAdd = ctx.getStudents;
-    			basicmodal0.$set(basicmodal0_changes);
-
-    			var basicmodal1_changes = {};
-    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
-    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
-    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
-    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
-    			if (changed.getStudents) basicmodal1_changes.onEdit = ctx.getStudents;
-    			basicmodal1.$set(basicmodal1_changes);
-
-    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
-    				button1.className = button1_class_value;
-    			}
-
-    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
-    				set_data(t8, t8_value);
-    			}
-
-    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
-    				button2.className = button2_class_value;
-    			}
-
-    			var basictable_changes = {};
-    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.students) basictable_changes.data = ctx.students;
-    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
-    			if (changed.selection_field) basictable_changes.selection_field = selection_field;
-    			basictable.$set(basictable_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			basicmodal0.$$.fragment.i(local);
-
-    			basicmodal1.$$.fragment.i(local);
-
-    			basictable.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basicmodal0.$$.fragment.o(local);
-    			basicmodal1.$$.fragment.o(local);
-    			basictable.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			basicmodal0.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t0);
-    			}
-
-    			basicmodal1.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t1);
-    				detach(div1);
-    			}
-
-    			basictable.$destroy();
-
-    			run_all(dispose);
-    		}
-    	};
-    }
-
-    function create_fragment$a(ctx) {
-    	var if_block_anchor, current;
-
-    	var if_block = (ctx.is_logged_in) && create_if_block$7(ctx);
-
-    	return {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$7(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
-
-    				if_block.o(1);
-    				check_outros();
-    			}
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    let selection_field = "ID";
-
-    function instance$a($$self, $$props, $$invalidate) {
-    	
-
-        let { is_logged_in, getToken } = $$props;
-
-        let selectedRows = [];
-
-        let students = [];
-        let student_groups = [];
-        let genders = [
-        	{
-        		display: "Male",
-        		value: "Male",
-        	},
-        	{
-        		display: "Female",
-        		value: "Female",
-        	}
-        ];
-
-        let table_headers = [
-        	{columnName: '#', key: "ID"},
-        	{columnName: "Student #", key: "studentNumber"},
-        	{columnName: 'Name', key: "name"},
-        	{columnName: 'Age', key: "age"},
-        	{columnName: 'Gender', key: "gender"},
-        	{columnName: 'Email', key: "email"},
-        ];
-
-        let confirm_del = false;
-
-        let isAddModalOpen = false;
-        let isEditModalOpen = false;
-
-        let add_modal_fields = {
-        	fields: [{
-        		field: "studentNumber",
-        	    type: "text",
-        	    display: "Student #",
-        	    placeholder: "eg. a701617004",
-        	    value: ""
-            }, {
-        	    field: "name",
-        	    type: "text",
-        	    display: "Name",
-        	    placeholder: "eg. Vasco Raminhos",
-        	    value: ""
-            }, {
-        	    field: "birthday",
-        	    type: "date",
-        	    display: "Birthday",
-        	    placeholder: "",
-        	    value: ""
-            }, {
-        	    field: "gender",
-        	    type: "select",
-        	    display: "Gender",
-        	    placeholder: "Choose a gender",
-        	    value: "",
-        	    options: genders
-            }, {
-                field: "email",
-                type: "email",
-                display: "Email",
-                placeholder: "eg. student.email@gmail.com",
-                value: ""
-            }, {
-                field: "IDClass",
-                type: "select",
-                display: "Class",
-                placeholder: "Choose the student's class",
-                value: "",
-                options: student_groups
-            }]
-        };
-        let edit_modal_fields = {
-        	ID: null,
-        	fields: [{
-        		field: "studentNumber",
-        	    type: "text",
-        	    display: "Student #",
-        	    placeholder: "eg. a701617004",
-        	    value: ""
-            }, {
-        	    field: "name",
-        	    type: "text",
-        	    display: "Name",
-        	    placeholder: "eg. Vasco Raminhos",
-        	    value: ""
-            }, {
-        	    field: "birthday",
-        	    type: "date",
-        	    display: "Birthday",
-        	    placeholder: "",
-        	    value: ""
-            }, {
-        	    field: "gender",
-        	    type: "select",
-        	    display: "Gender",
-        	    placeholder: "Choose a gender",
-        	    value: "",
-        	    options: genders
-            }, {
-                field: "email",
-                type: "email",
-                display: "Email",
-                placeholder: "eg. student.email@gmail.com",
-                value: ""
-            }, {
-                field: "IDClass",
-                type: "select",
-                display: "Class",
-                placeholder: "Choose the student's class",
-                value: "",
-                options: student_groups
-            }]
-        };
-
-        function toggleRowSelect(id) {
-        	let index = selectedRows.indexOf(id);
-        	if(index === -1){
-                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
-        	}else {
-                selectedRows.splice(index, 1);
-                $$invalidate('selectedRows', selectedRows);
-        	}
-
-        	console.log(selectedRows);
-        }
-
-        function handleOutsideTableClick(event) {
-            if (event.target.tagName.toLowerCase() === "button"){
-                return;
-            }
-            let table = event.currentTarget.querySelector("table");
-            if(table != null ){
-                if(table.contains(event.target)){
-                    console.log("Hello there General Kenobi");
-                    return;
-                }
-            }
-
-            $$invalidate('confirm_del', confirm_del = false);
-            $$invalidate('selectedRows', selectedRows = []);
-        }
-
-        function handleDeleteClick(event) {
-        	let del_btn_el = event.currentTarget;
-        	if(!del_btn_el.classList.contains("disabled")){
-        	    if(!confirm_del){
-                   $$invalidate('confirm_del', confirm_del = true);
-        	    }else if(selectedRows.length > 0){
-                    axios$1.delete("/api/delete/students", {
-                        data: {
-                            rows: selectedRows
-                        },
-                        headers: {
-                            Authorization: getToken()
-                        }
-                    }).then(res => {
-                    	$$invalidate('confirm_del', confirm_del = false);
-                        getStudents();
-                    }).catch(err =>{
-                        console.log(err.response);
-                    });
-                }
-        	}
-        }
-
-        function getStudents() {
-        	console.log("Trying to fetch students");
-            axios$1.get("/api/get/students", {headers: {Authorization: getToken()}}).then(function(res) {
-            	$$invalidate('students', students = res.data);
-                console.log(res.data);
-                for(let i = 0; i < students.length; i++) {
-                    let age = new Date(new Date() - new Date(students[i].birthday)).getFullYear() - 1970;
-                    if(isNaN(age)){
-                        age = 0;
-                    }
-                    students[i].age = age; $$invalidate('students', students);
-                    console.log(age);
-                }
-            });
-        }
-
-        function getStudentGroups() {
-        	console.log("Trying to fetch classes");
-            axios$1.get("/api/get/studentgroups", {headers: {Authorization: getToken()}}).then(function(res) {
-                for(let i = 0; i < res.data.length; i++) {
-                    student_groups.push({value: res.data[i].ID, display: res.data[i].grade + res.data[i].designation, original: res.data[i]});
-                }
-                $$invalidate('add_modal_fields', add_modal_fields);
-                $$invalidate('edit_modal_fields', edit_modal_fields);
-            }).catch(err => {
-            	console.log(err.response);
-            });
-        }
-
-        function setIsAddModalOpen(value){
-        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
-        }
-
-        function setIsEditModalOpen(value){
-        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
-        }
-
-        function handleAddButtonClick(){
-        	if (student_groups.length === 0) {
-        	    getStudentGroups();
-        	}
-
-            setIsAddModalOpen(true);
-        }
-
-        function handleEditButtonClick(){
-        	if(selectedRows.length === 1){
-        		if (student_groups.length === 0) {
-                    getStudentGroups();
-                }
-                for (let i = 0; i < students.length; i++) {
-                    if (students[i].ID === selectedRows[0]) {
-                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
-        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
-        		        	if (edit_modal_fields.fields[j].type === "date") {
-                                edit_modal_fields.fields[j].value = students[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
-                                console.log(students[i][edit_modal_fields.fields[j].field]);
-        		        	} else {
-                                edit_modal_fields.fields[j].value = students[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
-                                console.log(edit_modal_fields.fields[j].value);
-        		        	}
-        			    }
-        			}
-        		}
-
-        		setIsEditModalOpen(true);
-        	}
-        }
-
-    	const writable_props = ['is_logged_in', 'getToken'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Students> was created with unknown prop '${key}'`);
-    	});
-
-    	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    	};
-
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getStudents();
-                } }
-    	};
-
-    	return {
-    		is_logged_in,
-    		getToken,
-    		selectedRows,
-    		students,
-    		table_headers,
-    		confirm_del,
-    		isAddModalOpen,
-    		isEditModalOpen,
-    		add_modal_fields,
-    		edit_modal_fields,
-    		toggleRowSelect,
-    		handleOutsideTableClick,
-    		handleDeleteClick,
-    		getStudents,
-    		setIsAddModalOpen,
-    		setIsEditModalOpen,
-    		handleAddButtonClick,
-    		handleEditButtonClick
-    	};
-    }
-
-    class Students extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$a, create_fragment$a, safe_not_equal, ["is_logged_in", "getToken"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<Students> was created without expected prop 'is_logged_in'");
-    		}
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<Students> was created without expected prop 'getToken'");
-    		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<Students>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<Students>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get getToken() {
-    		throw new Error("<Students>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<Students>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\components\student_groups\StudentGroups.svelte generated by Svelte v3.5.1 */
-
-    const file$9 = "src\\components\\student_groups\\StudentGroups.svelte";
-
-    // (182:0) {#if is_logged_in}
-    function create_if_block$8(ctx) {
-    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
-
-    	var basicmodal0 = new BasicModal({
-    		props: {
-    		mode: "add",
-    		getToken: ctx.getToken,
-    		table: "studentgroups",
-    		table_title: "Student Group",
-    		fields: ctx.add_modal_fields,
-    		isOpen: ctx.isAddModalOpen,
-    		setIsOpen: ctx.setIsAddModalOpen,
-    		onAdd: ctx.getStudentGroups
-    	},
-    		$$inline: true
-    	});
-
-    	var basicmodal1 = new BasicModal({
-    		props: {
-    		mode: "edit",
-    		getToken: ctx.getToken,
-    		table: "studentgroups",
-    		table_title: "Student Group",
-    		fields: ctx.edit_modal_fields,
-    		isOpen: ctx.isEditModalOpen,
-    		setIsOpen: ctx.setIsEditModalOpen,
-    		onEdit: ctx.getStudentGroups
-    	},
-    		$$inline: true
-    	});
-
-    	var basictable = new BasicTable({
-    		props: {
-    		table_headers: ctx.table_headers,
-    		data: ctx.student_groups,
-    		toggleRowSelect: ctx.toggleRowSelect,
-    		selectedRows: ctx.selectedRows
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			basicmodal0.$$.fragment.c();
-    			t0 = space();
-    			basicmodal1.$$.fragment.c();
-    			t1 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Student Groups";
-    			t3 = space();
-    			span1 = element("span");
-    			button0 = element("button");
-    			button0.textContent = "Add +";
-    			t5 = space();
-    			button1 = element("button");
-    			t6 = text("Edit");
-    			t7 = space();
-    			button2 = element("button");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$9, 186, 35, 5661);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$9, 186, 8, 5634);
-    			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$9, 188, 16, 5804);
-    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
-    			button1.id = "edit-btn";
-    			add_location(button1, file$9, 189, 16, 5906);
-    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
-    			button2.id = "delete-btn";
-    			add_location(button2, file$9, 190, 16, 6091);
-    			add_location(span1, file$9, 187, 12, 5780);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$9, 185, 8, 5539);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$9, 184, 4, 5420);
-
-    			dispose = [
-    				listen(button0, "click", ctx.handleAddButtonClick),
-    				listen(button1, "click", ctx.handleEditButtonClick),
-    				listen(button2, "click", ctx.handleDeleteClick),
-    				listen(div1, "click", ctx.handleOutsideTableClick)
-    			];
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(basicmodal0, target, anchor);
-    			insert(target, t0, anchor);
-    			mount_component(basicmodal1, target, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t3);
-    			append(div0, span1);
-    			append(span1, button0);
-    			append(span1, t5);
-    			append(span1, button1);
-    			append(button1, t6);
-    			append(span1, t7);
-    			append(span1, button2);
-    			append(button2, t8);
-    			append(div0, t9);
-    			mount_component(basictable, div0, null);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var basicmodal0_changes = {};
-    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
-    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
-    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
-    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
-    			if (changed.getStudentGroups) basicmodal0_changes.onAdd = ctx.getStudentGroups;
-    			basicmodal0.$set(basicmodal0_changes);
-
-    			var basicmodal1_changes = {};
-    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
-    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
-    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
-    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
-    			if (changed.getStudentGroups) basicmodal1_changes.onEdit = ctx.getStudentGroups;
-    			basicmodal1.$set(basicmodal1_changes);
-
-    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
-    				button1.className = button1_class_value;
-    			}
-
-    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
-    				set_data(t8, t8_value);
-    			}
-
-    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
-    				button2.className = button2_class_value;
-    			}
-
-    			var basictable_changes = {};
-    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.student_groups) basictable_changes.data = ctx.student_groups;
-    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
-    			basictable.$set(basictable_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			basicmodal0.$$.fragment.i(local);
-
-    			basicmodal1.$$.fragment.i(local);
-
-    			basictable.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basicmodal0.$$.fragment.o(local);
-    			basicmodal1.$$.fragment.o(local);
-    			basictable.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			basicmodal0.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t0);
-    			}
-
-    			basicmodal1.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t1);
-    				detach(div1);
-    			}
-
-    			basictable.$destroy();
-
-    			run_all(dispose);
-    		}
-    	};
-    }
-
-    function create_fragment$b(ctx) {
-    	var if_block_anchor, current;
-
-    	var if_block = (ctx.is_logged_in) && create_if_block$8(ctx);
-
-    	return {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$8(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
-
-    				if_block.o(1);
-    				check_outros();
-    			}
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    function instance$b($$self, $$props, $$invalidate) {
-    	
-
-        let { is_logged_in, getToken } = $$props;
-
-        let student_groups = [];
-        let courses = [];
-
-        let table_headers = [
-            {columnName: '#', key: "ID"},
-            {columnName: "Grade", key: "grade"},
-            {columnName: "Designation", key: "designation"},
-            {columnName: "Course", key: "course"}
-        ];
-        let selectedRows = [];
-
-        let confirm_del = false;
-
-        let isAddModalOpen = false;
-        let isEditModalOpen = false;
-
-        let add_modal_fields = {
-            fields: [{
-        		field: "grade",
-        		type: "number",
-        		display: "Grade",
-        		placeholder: "eg. 10",
-        		value: ""
-        	}, {
-        		field: "designation",
-        		type: "text",
-        		display: "Designation",
-        		placeholder: "eg. Zi",
-        		value: ""
-        	}, {
-        		field: "IDCourse",
-        		type: "select",
-        		display: "Course",
-        		placeholder: "Choose a course",
-        		value: "",
-        		options: courses
-        	}]
-        };
-        let edit_modal_fields = {
-        	ID: null,
-        	fields: [{
-        		field: "grade",
-        		type: "number",
-        		display: "Grade",
-        		placeholder: "eg. 10",
-        		value: ""
-        	}, {
-        		field: "designation",
-        		type: "text",
-        		display: "Designation",
-        		placeholder: "eg. Zi",
-        		value: ""
-        	}, {
-        		field: "IDCourse",
-        		type: "select",
-        		display: "Course",
-        		placeholder: "Choose a course",
-        		value: "",
-        		options: courses
-        	}]
-        };
-
-        // axios.defaults.withCredentials = true;
-
-        function getStudentGroups() {
-        	console.log("Trying to fetch countries");
-            axios$1.get("/api/get/studentgroups", {headers: {Authorization: getToken()}}).then(function(res) {
-            	$$invalidate('student_groups', student_groups = res.data);
-                console.log(res.data);
-            });
-        }
-
-        function getCourses() {
-        	console.log("Trying to fetch courses");
-            axios$1.get("/api/get/courses", {headers: {Authorization: getToken()}}).then(function(res) {
-            	for(let i = 0; i < res.data.length; i++) {
-            	    courses.push({value: res.data[i].ID, display: res.data[i].course, original: res.data[i]});
-            	}
-            	$$invalidate('add_modal_fields', add_modal_fields);
-            	$$invalidate('edit_modal_fields', edit_modal_fields);
-            });
-        }
-
-        function toggleRowSelect(id) {
-        	let index = selectedRows.indexOf(id);
-        	if(index === -1){
-                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
-        	}else {
-                selectedRows.splice(index, 1);
-                $$invalidate('selectedRows', selectedRows);
-        	}
-
-        	console.log(selectedRows);
-        }
-
-        function handleOutsideTableClick(event) {
-            if (event.target.tagName.toLowerCase() === "button"){
-                return;
-            }
-            let table = event.currentTarget.querySelector("table");
-            if(table != null ){
-                if(table.contains(event.target)){
-                    console.log("Hello there General Kenobi");
-                    return;
-                }
-            }
-
-            $$invalidate('confirm_del', confirm_del = false);
-            $$invalidate('selectedRows', selectedRows = []);
-        }
-
-        function handleDeleteClick(event) {
-        	let del_btn_el = event.currentTarget;
-        	if(!del_btn_el.classList.contains("disabled")){
-        	    if(!confirm_del){
-                   $$invalidate('confirm_del', confirm_del = true);
-        	    }else if(selectedRows.length > 0){
-                    axios$1.delete("/api/delete/studentgroups", {
-                        data: {
-                            rows: selectedRows
-                        },
-                        headers: {
-                            Authorization: getToken()
-                        }
-                    }).then(res =>{
-                    	$$invalidate('confirm_del', confirm_del = false);
-                        getStudentGroups();
-                    }).catch(err =>{
-                        console.log(err.response);
-                    });
-                }
-        	}
-        }
-
-        function setIsAddModalOpen(value){
-        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
-        }
-
-        function setIsEditModalOpen(value){
-        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
-        }
-
-        function handleAddButtonClick(){
-        	if (courses.length === 0) {
-        	    getCourses();
-        	}
-            setIsAddModalOpen(true);
-        }
-
-        function handleEditButtonClick(){
-        	if (selectedRows.length === 1) {
-        		if (courses.length === 0) {
-                    getCourses();
-                }
-                for (let i = 0; i < student_groups.length; i++) {
-                    if (student_groups[i].ID === selectedRows[0]) {
-                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
-        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
-        		            edit_modal_fields.fields[j].value = student_groups[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
-        			    }
-        			}
-        		}
-        		console.log(edit_modal_fields);
-
-        		setIsEditModalOpen(true);
-        	}
-        }
-
-    	const writable_props = ['is_logged_in', 'getToken'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<StudentGroups> was created with unknown prop '${key}'`);
-    	});
-
-    	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    	};
-
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getStudentGroups();
-                } }
-    	};
-
-    	return {
-    		is_logged_in,
-    		getToken,
-    		student_groups,
-    		table_headers,
-    		selectedRows,
-    		confirm_del,
-    		isAddModalOpen,
-    		isEditModalOpen,
-    		add_modal_fields,
-    		edit_modal_fields,
-    		getStudentGroups,
-    		toggleRowSelect,
-    		handleOutsideTableClick,
-    		handleDeleteClick,
-    		setIsAddModalOpen,
-    		setIsEditModalOpen,
-    		handleAddButtonClick,
-    		handleEditButtonClick
-    	};
-    }
-
-    class StudentGroups extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$b, create_fragment$b, safe_not_equal, ["is_logged_in", "getToken"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<StudentGroups> was created without expected prop 'is_logged_in'");
-    		}
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<StudentGroups> was created without expected prop 'getToken'");
-    		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<StudentGroups>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<StudentGroups>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get getToken() {
-    		throw new Error("<StudentGroups>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<StudentGroups>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\components\countries\Countries.svelte generated by Svelte v3.5.1 */
-
-    const file$a = "src\\components\\countries\\Countries.svelte";
-
-    // (135:0) {#if is_logged_in}
-    function create_if_block$9(ctx) {
-    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
-
-    	var basicmodal0 = new BasicModal({
-    		props: {
-    		mode: "add",
-    		getToken: ctx.getToken,
-    		table: "countries",
-    		table_title: "Countries",
-    		fields: ctx.add_modal_fields,
-    		isOpen: ctx.isAddModalOpen,
-    		setIsOpen: ctx.setIsAddModalOpen,
-    		onAdd: ctx.getCountries
-    	},
-    		$$inline: true
-    	});
-
-    	var basicmodal1 = new BasicModal({
-    		props: {
-    		mode: "edit",
-    		getToken: ctx.getToken,
-    		table: "countries",
-    		table_title: "Countries",
-    		fields: ctx.edit_modal_fields,
-    		isOpen: ctx.isEditModalOpen,
-    		setIsOpen: ctx.setIsEditModalOpen,
-    		onEdit: ctx.getCountries
-    	},
-    		$$inline: true
-    	});
-
-    	var basictable = new BasicTable({
-    		props: {
-    		table_headers: ctx.table_headers,
-    		data: ctx.countries,
-    		toggleRowSelect: ctx.toggleRowSelect,
-    		selectedRows: ctx.selectedRows
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			basicmodal0.$$.fragment.c();
-    			t0 = space();
-    			basicmodal1.$$.fragment.c();
-    			t1 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Countries";
-    			t3 = space();
-    			span1 = element("span");
-    			button0 = element("button");
-    			button0.textContent = "Add +";
-    			t5 = space();
-    			button1 = element("button");
-    			t6 = text("Edit");
-    			t7 = space();
-    			button2 = element("button");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$a, 139, 35, 4272);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$a, 139, 8, 4245);
-    			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$a, 141, 16, 4410);
-    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
-    			button1.id = "edit-btn";
-    			add_location(button1, file$a, 142, 16, 4511);
-    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
-    			button2.id = "delete-btn";
-    			add_location(button2, file$a, 143, 16, 4696);
-    			add_location(span1, file$a, 140, 12, 4386);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$a, 138, 8, 4150);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$a, 137, 4, 4031);
-
-    			dispose = [
-    				listen(button0, "click", ctx.handleAddButtonClick),
-    				listen(button1, "click", ctx.handleEditButtonClick),
-    				listen(button2, "click", ctx.handleDeleteClick),
-    				listen(div1, "click", ctx.handleOutsideTableClick)
-    			];
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(basicmodal0, target, anchor);
-    			insert(target, t0, anchor);
-    			mount_component(basicmodal1, target, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t3);
-    			append(div0, span1);
-    			append(span1, button0);
-    			append(span1, t5);
-    			append(span1, button1);
-    			append(button1, t6);
-    			append(span1, t7);
-    			append(span1, button2);
-    			append(button2, t8);
-    			append(div0, t9);
-    			mount_component(basictable, div0, null);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var basicmodal0_changes = {};
-    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
-    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
-    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
-    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
-    			if (changed.getCountries) basicmodal0_changes.onAdd = ctx.getCountries;
-    			basicmodal0.$set(basicmodal0_changes);
-
-    			var basicmodal1_changes = {};
-    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
-    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
-    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
-    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
-    			if (changed.getCountries) basicmodal1_changes.onEdit = ctx.getCountries;
-    			basicmodal1.$set(basicmodal1_changes);
-
-    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
-    				button1.className = button1_class_value;
-    			}
-
-    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
-    				set_data(t8, t8_value);
-    			}
-
-    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
-    				button2.className = button2_class_value;
-    			}
-
-    			var basictable_changes = {};
-    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.countries) basictable_changes.data = ctx.countries;
-    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
-    			basictable.$set(basictable_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			basicmodal0.$$.fragment.i(local);
-
-    			basicmodal1.$$.fragment.i(local);
-
-    			basictable.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basicmodal0.$$.fragment.o(local);
-    			basicmodal1.$$.fragment.o(local);
-    			basictable.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			basicmodal0.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t0);
-    			}
-
-    			basicmodal1.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t1);
-    				detach(div1);
-    			}
-
-    			basictable.$destroy();
-
-    			run_all(dispose);
-    		}
-    	};
-    }
-
-    function create_fragment$c(ctx) {
-    	var if_block_anchor, current;
-
-    	var if_block = (ctx.is_logged_in) && create_if_block$9(ctx);
-
-    	return {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$9(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
-
-    				if_block.o(1);
-    				check_outros();
-    			}
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    function instance$c($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken } = $$props;
@@ -8540,7 +5856,7 @@ var app = (function () {
     class Countries extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$c, create_fragment$c, safe_not_equal, ["is_logged_in", "getToken"]);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["is_logged_in", "getToken"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -8569,923 +5885,11 @@ var app = (function () {
     	}
     }
 
-    /* src\components\courses\Courses.svelte generated by Svelte v3.5.1 */
-
-    const file$b = "src\\components\\courses\\Courses.svelte";
-
-    // (137:0) {#if is_logged_in}
-    function create_if_block$a(ctx) {
-    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
-
-    	var basicmodal0 = new BasicModal({
-    		props: {
-    		mode: "add",
-    		getToken: ctx.getToken,
-    		table: "courses",
-    		table_title: "Courses",
-    		fields: ctx.add_modal_fields,
-    		isOpen: ctx.isAddModalOpen,
-    		setIsOpen: ctx.setIsAddModalOpen,
-    		onAdd: ctx.getCourses
-    	},
-    		$$inline: true
-    	});
-
-    	var basicmodal1 = new BasicModal({
-    		props: {
-    		mode: "edit",
-    		getToken: ctx.getToken,
-    		table: "courses",
-    		table_title: "Courses",
-    		fields: ctx.edit_modal_fields,
-    		isOpen: ctx.isEditModalOpen,
-    		setIsOpen: ctx.setIsEditModalOpen,
-    		onEdit: ctx.getCourses
-    	},
-    		$$inline: true
-    	});
-
-    	var basictable = new BasicTable({
-    		props: {
-    		table_headers: ctx.table_headers,
-    		data: ctx.courses,
-    		toggleRowSelect: ctx.toggleRowSelect,
-    		selectedRows: ctx.selectedRows
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			basicmodal0.$$.fragment.c();
-    			t0 = space();
-    			basicmodal1.$$.fragment.c();
-    			t1 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Courses";
-    			t3 = space();
-    			span1 = element("span");
-    			button0 = element("button");
-    			button0.textContent = "Add +";
-    			t5 = space();
-    			button1 = element("button");
-    			t6 = text("Edit");
-    			t7 = space();
-    			button2 = element("button");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$b, 141, 35, 4233);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$b, 141, 8, 4206);
-    			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$b, 143, 16, 4369);
-    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
-    			button1.id = "edit-btn";
-    			add_location(button1, file$b, 144, 16, 4470);
-    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
-    			button2.id = "delete-btn";
-    			add_location(button2, file$b, 145, 16, 4658);
-    			add_location(span1, file$b, 142, 12, 4345);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$b, 140, 8, 4111);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$b, 139, 4, 3992);
-
-    			dispose = [
-    				listen(button0, "click", ctx.handleAddButtonClick),
-    				listen(button1, "click", ctx.handleEditButtonClick),
-    				listen(button2, "click", ctx.handleDeleteClick),
-    				listen(div1, "click", ctx.handleOutsideTableClick)
-    			];
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(basicmodal0, target, anchor);
-    			insert(target, t0, anchor);
-    			mount_component(basicmodal1, target, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t3);
-    			append(div0, span1);
-    			append(span1, button0);
-    			append(span1, t5);
-    			append(span1, button1);
-    			append(button1, t6);
-    			append(span1, t7);
-    			append(span1, button2);
-    			append(button2, t8);
-    			append(div0, t9);
-    			mount_component(basictable, div0, null);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var basicmodal0_changes = {};
-    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
-    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
-    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
-    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
-    			if (changed.getCourses) basicmodal0_changes.onAdd = ctx.getCourses;
-    			basicmodal0.$set(basicmodal0_changes);
-
-    			var basicmodal1_changes = {};
-    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
-    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
-    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
-    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
-    			if (changed.getCourses) basicmodal1_changes.onEdit = ctx.getCourses;
-    			basicmodal1.$set(basicmodal1_changes);
-
-    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
-    				button1.className = button1_class_value;
-    			}
-
-    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
-    				set_data(t8, t8_value);
-    			}
-
-    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
-    				button2.className = button2_class_value;
-    			}
-
-    			var basictable_changes = {};
-    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.courses) basictable_changes.data = ctx.courses;
-    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
-    			basictable.$set(basictable_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			basicmodal0.$$.fragment.i(local);
-
-    			basicmodal1.$$.fragment.i(local);
-
-    			basictable.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basicmodal0.$$.fragment.o(local);
-    			basicmodal1.$$.fragment.o(local);
-    			basictable.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			basicmodal0.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t0);
-    			}
-
-    			basicmodal1.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t1);
-    				detach(div1);
-    			}
-
-    			basictable.$destroy();
-
-    			run_all(dispose);
-    		}
-    	};
-    }
-
-    function create_fragment$d(ctx) {
-    	var if_block_anchor, current;
-
-    	var if_block = (ctx.is_logged_in) && create_if_block$a(ctx);
-
-    	return {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$a(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
-
-    				if_block.o(1);
-    				check_outros();
-    			}
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    function instance$d($$self, $$props, $$invalidate) {
-    	
-
-        let { is_logged_in, getToken } = $$props;
-
-        let selectedRows = [];
-
-        let courses = [];
-
-        let table_headers = [
-            {columnName: '#', key: "ID"},
-            {columnName: "Course", key: "course"}
-        ];
-
-        let confirm_del = false;
-
-        let isAddModalOpen = false;
-        let isEditModalOpen = false;
-
-        let add_modal_fields = {
-        	fields: [{
-        		field: "course",
-        		type: "text",
-        		display: "Course",
-        		placeholder: "eg. Programming",
-        		value: ""
-        	}]
-        };
-
-        let edit_modal_fields = {
-            ID: null,
-        	fields: [{
-        		field: "course",
-        		type: "text",
-        		display: "Course",
-        		placeholder: "eg. Programming",
-        		value: ""
-        	}]
-        };
-
-        // axios.defaults.withCredentials = true;
-
-        function toggleRowSelect(id) {
-        	let index = selectedRows.indexOf(id);
-        	if(index === -1){
-                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
-        	}else {
-                selectedRows.splice(index, 1);
-                $$invalidate('selectedRows', selectedRows);
-        	}
-
-        	console.log(selectedRows);
-        }
-
-        function handleOutsideTableClick(event) {
-            if (event.target.tagName.toLowerCase() === "button"){
-                return;
-            }
-            let table = event.currentTarget.querySelector("table");
-            if(table != null ){
-                if(table.contains(event.target)){
-                    console.log("Hello there General Kenobi");
-                    return;
-                }
-            }
-
-            $$invalidate('confirm_del', confirm_del = false);
-            $$invalidate('selectedRows', selectedRows = []);
-        }
-
-        function handleDeleteClick(event) {
-        	let del_btn_el = event.currentTarget;
-        	if(!del_btn_el.classList.contains("disabled")){
-        	    if(!confirm_del){
-                   $$invalidate('confirm_del', confirm_del = true);
-        	    }else if(selectedRows.length > 0){
-                    axios$1.delete("/api/delete/courses", {
-                        data: {
-                            rows: selectedRows
-                        },
-                        headers: {
-                            Authorization: getToken()
-                        }
-                    }).then(res =>{
-                    	$$invalidate('confirm_del', confirm_del = false);
-                        getCourses();
-                    }).catch(err =>{
-                        console.log(err.response);
-                    });
-                }
-        	}
-        }
-
-        function getCourses() {
-        	console.log("Trying to fetch courses");
-            axios$1.get("/api/get/courses", {headers: {Authorization: getToken()}}).then(function(res) {
-            	$$invalidate('courses', courses = res.data);
-                console.log(res.data);
-            });
-        }
-
-        function setIsAddModalOpen(value){
-        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
-        }
-
-        function setIsEditModalOpen(value){
-        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
-        }
-
-        function handleAddButtonClick(){
-            setIsAddModalOpen(true);
-        }
-
-        function handleEditButtonClick(){
-        	if(selectedRows.length === 1){
-        		for (let i = 0; i < courses.length; i++) {
-                    if (courses[i].ID === selectedRows[0]) {
-                        edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
-                        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
-                            edit_modal_fields.fields[j].value = courses[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
-                        }
-                    }
-                }
-
-        		setIsEditModalOpen(true);
-        	}
-        }
-
-    	const writable_props = ['is_logged_in', 'getToken'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Courses> was created with unknown prop '${key}'`);
-    	});
-
-    	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    	};
-
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getCourses();
-                } }
-    	};
-
-    	return {
-    		is_logged_in,
-    		getToken,
-    		selectedRows,
-    		courses,
-    		table_headers,
-    		confirm_del,
-    		isAddModalOpen,
-    		isEditModalOpen,
-    		add_modal_fields,
-    		edit_modal_fields,
-    		toggleRowSelect,
-    		handleOutsideTableClick,
-    		handleDeleteClick,
-    		getCourses,
-    		setIsAddModalOpen,
-    		setIsEditModalOpen,
-    		handleAddButtonClick,
-    		handleEditButtonClick
-    	};
-    }
-
-    class Courses extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$d, create_fragment$d, safe_not_equal, ["is_logged_in", "getToken"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<Courses> was created without expected prop 'is_logged_in'");
-    		}
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<Courses> was created without expected prop 'getToken'");
-    		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<Courses>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<Courses>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get getToken() {
-    		throw new Error("<Courses>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<Courses>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
-    /* src\components\subjects\Subjects.svelte generated by Svelte v3.5.1 */
-
-    const file$c = "src\\components\\subjects\\Subjects.svelte";
-
-    // (135:0) {#if is_logged_in}
-    function create_if_block$b(ctx) {
-    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
-
-    	var basicmodal0 = new BasicModal({
-    		props: {
-    		mode: "add",
-    		getToken: ctx.getToken,
-    		table: "subjects",
-    		table_title: "Subjects",
-    		fields: ctx.add_modal_fields,
-    		isOpen: ctx.isAddModalOpen,
-    		setIsOpen: ctx.setIsAddModalOpen,
-    		onAdd: ctx.getSubjects
-    	},
-    		$$inline: true
-    	});
-
-    	var basicmodal1 = new BasicModal({
-    		props: {
-    		mode: "edit",
-    		getToken: ctx.getToken,
-    		table: "subjects",
-    		table_title: "Subjects",
-    		fields: ctx.edit_modal_fields,
-    		isOpen: ctx.isEditModalOpen,
-    		setIsOpen: ctx.setIsEditModalOpen,
-    		onEdit: ctx.getSubjects
-    	},
-    		$$inline: true
-    	});
-
-    	var basictable = new BasicTable({
-    		props: {
-    		table_headers: ctx.table_headers,
-    		data: ctx.subjects,
-    		toggleRowSelect: ctx.toggleRowSelect,
-    		selectedRows: ctx.selectedRows
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			basicmodal0.$$.fragment.c();
-    			t0 = space();
-    			basicmodal1.$$.fragment.c();
-    			t1 = space();
-    			div1 = element("div");
-    			div0 = element("div");
-    			h2 = element("h2");
-    			span0 = element("span");
-    			span0.textContent = "Subjects";
-    			t3 = space();
-    			span1 = element("span");
-    			button0 = element("button");
-    			button0.textContent = "Add +";
-    			t5 = space();
-    			button1 = element("button");
-    			t6 = text("Edit");
-    			t7 = space();
-    			button2 = element("button");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			basictable.$$.fragment.c();
-    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$c, 139, 35, 4359);
-    			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$c, 139, 8, 4332);
-    			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$c, 141, 16, 4496);
-    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
-    			button1.id = "edit-btn";
-    			add_location(button1, file$c, 142, 16, 4599);
-    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
-    			button2.id = "delete-btn";
-    			add_location(button2, file$c, 143, 16, 4784);
-    			add_location(span1, file$c, 140, 12, 4472);
-    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$c, 138, 8, 4237);
-    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$c, 137, 4, 4118);
-
-    			dispose = [
-    				listen(button0, "click", ctx.handleAddButtonClick),
-    				listen(button1, "click", ctx.handleEditButtonClick),
-    				listen(button2, "click", ctx.handleDeleteClick),
-    				listen(div1, "click", ctx.handleOutsideTableClick)
-    			];
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(basicmodal0, target, anchor);
-    			insert(target, t0, anchor);
-    			mount_component(basicmodal1, target, anchor);
-    			insert(target, t1, anchor);
-    			insert(target, div1, anchor);
-    			append(div1, div0);
-    			append(div0, h2);
-    			append(h2, span0);
-    			append(div0, t3);
-    			append(div0, span1);
-    			append(span1, button0);
-    			append(span1, t5);
-    			append(span1, button1);
-    			append(button1, t6);
-    			append(span1, t7);
-    			append(span1, button2);
-    			append(button2, t8);
-    			append(div0, t9);
-    			mount_component(basictable, div0, null);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var basicmodal0_changes = {};
-    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
-    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
-    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
-    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
-    			if (changed.getSubjects) basicmodal0_changes.onAdd = ctx.getSubjects;
-    			basicmodal0.$set(basicmodal0_changes);
-
-    			var basicmodal1_changes = {};
-    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
-    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
-    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
-    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
-    			if (changed.getSubjects) basicmodal1_changes.onEdit = ctx.getSubjects;
-    			basicmodal1.$set(basicmodal1_changes);
-
-    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
-    				button1.className = button1_class_value;
-    			}
-
-    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
-    				set_data(t8, t8_value);
-    			}
-
-    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
-    				button2.className = button2_class_value;
-    			}
-
-    			var basictable_changes = {};
-    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
-    			if (changed.subjects) basictable_changes.data = ctx.subjects;
-    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
-    			basictable.$set(basictable_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			basicmodal0.$$.fragment.i(local);
-
-    			basicmodal1.$$.fragment.i(local);
-
-    			basictable.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			basicmodal0.$$.fragment.o(local);
-    			basicmodal1.$$.fragment.o(local);
-    			basictable.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			basicmodal0.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t0);
-    			}
-
-    			basicmodal1.$destroy(detaching);
-
-    			if (detaching) {
-    				detach(t1);
-    				detach(div1);
-    			}
-
-    			basictable.$destroy();
-
-    			run_all(dispose);
-    		}
-    	};
-    }
-
-    function create_fragment$e(ctx) {
-    	var if_block_anchor, current;
-
-    	var if_block = (ctx.is_logged_in) && create_if_block$b(ctx);
-
-    	return {
-    		c: function create() {
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
-    		},
-
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-
-    		m: function mount(target, anchor) {
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			if (ctx.is_logged_in) {
-    				if (if_block) {
-    					if_block.p(changed, ctx);
-    					if_block.i(1);
-    				} else {
-    					if_block = create_if_block$b(ctx);
-    					if_block.c();
-    					if_block.i(1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
-    				}
-    			} else if (if_block) {
-    				group_outros();
-    				on_outro(() => {
-    					if_block.d(1);
-    					if_block = null;
-    				});
-
-    				if_block.o(1);
-    				check_outros();
-    			}
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			if (if_block) if_block.i();
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			if (if_block) if_block.o();
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			if (if_block) if_block.d(detaching);
-
-    			if (detaching) {
-    				detach(if_block_anchor);
-    			}
-    		}
-    	};
-    }
-
-    function instance$e($$self, $$props, $$invalidate) {
-    	
-
-        let { is_logged_in, getToken } = $$props;
-
-        let subjects = [];
-        let table_headers = [
-            {columnName: '#', key: "ID"},
-            {columnName: "Subject", key: "subject"}
-        ];
-        let selectedRows = [];
-
-        let confirm_del = false;
-
-        let isAddModalOpen = false;
-        let isEditModalOpen = false;
-
-        let add_modal_fields = {
-        	fields: [{
-                field: "subject",
-                type: "text",
-                display: "Subject",
-                placeholder: "eg. Mathematics",
-                value: ""
-            }]
-        };
-        let edit_modal_fields = {
-        	ID: null,
-        	fields: [{
-                field: "subject",
-                type: "text",
-                display: "Subject",
-                placeholder: "eg. Mathematics",
-                value: ""
-            }]
-        };
-
-        // axios.defaults.withCredentials = true;
-
-        function getSubjects() {
-        	console.log("Trying to fetch subjects");
-            axios$1.get("/api/get/subjects", {headers: {Authorization: getToken()}}).then(function(res) {
-            	$$invalidate('subjects', subjects = res.data);
-                console.log(res.data);
-            });
-        }
-
-        function toggleRowSelect(id) {
-        	let index = selectedRows.indexOf(id);
-        	if(index === -1){
-                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
-        	}else {
-                selectedRows.splice(index, 1);
-                $$invalidate('selectedRows', selectedRows);
-        	}
-
-        	console.log(selectedRows);
-        }
-
-        function handleOutsideTableClick(event) {
-            if (event.target.tagName.toLowerCase() === "button"){
-                return;
-            }
-            let table = event.currentTarget.querySelector("table");
-            if(table != null ){
-                if(table.contains(event.target)){
-                    console.log("Hello there General Kenobi");
-                    return;
-                }
-            }
-
-            $$invalidate('confirm_del', confirm_del = false);
-            $$invalidate('selectedRows', selectedRows = []);
-        }
-
-        function handleDeleteClick(event) {
-        	let del_btn_el = event.currentTarget;
-        	if(!del_btn_el.classList.contains("disabled")){
-        	    if(!confirm_del){
-                   $$invalidate('confirm_del', confirm_del = true);
-        	    }else if(selectedRows.length > 0){
-                    axios$1.delete("/api/delete/subjects", {
-                        data: {
-                            rows: selectedRows
-                        },
-                        headers: {
-                            Authorization: getToken()
-                        }
-                    }).then(res =>{
-                    	$$invalidate('confirm_del', confirm_del = false);
-                        getSubjects();
-                    }).catch(err =>{
-                        console.log(err.response);
-                    });
-                }
-        	}
-        }
-
-        function setIsAddModalOpen(value){
-        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
-        }
-
-        function setIsEditModalOpen(value){
-        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
-        }
-
-        function handleAddButtonClick(){
-            setIsAddModalOpen(true);
-        }
-
-        function handleEditButtonClick(){
-        	if(selectedRows.length === 1){
-                for (let i = 0; i < subjects.length; i++) {
-                    if (subjects[i].ID === selectedRows[0]) {
-                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
-        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
-                            edit_modal_fields.fields[j].value = subjects[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
-                            console.log(edit_modal_fields.fields[j].value);
-        			    }
-        			}
-        		}
-
-        		setIsEditModalOpen(true);
-        	}
-        }
-
-    	const writable_props = ['is_logged_in', 'getToken'];
-    	Object.keys($$props).forEach(key => {
-    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Subjects> was created with unknown prop '${key}'`);
-    	});
-
-    	$$self.$set = $$props => {
-    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
-    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
-    	};
-
-    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
-    		if ($$dirty.is_logged_in) { if(is_logged_in){
-                	getSubjects();
-                } }
-    	};
-
-    	return {
-    		is_logged_in,
-    		getToken,
-    		subjects,
-    		table_headers,
-    		selectedRows,
-    		confirm_del,
-    		isAddModalOpen,
-    		isEditModalOpen,
-    		add_modal_fields,
-    		edit_modal_fields,
-    		getSubjects,
-    		toggleRowSelect,
-    		handleOutsideTableClick,
-    		handleDeleteClick,
-    		setIsAddModalOpen,
-    		setIsEditModalOpen,
-    		handleAddButtonClick,
-    		handleEditButtonClick
-    	};
-    }
-
-    class Subjects extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$e, create_fragment$e, safe_not_equal, ["is_logged_in", "getToken"]);
-
-    		const { ctx } = this.$$;
-    		const props = options.props || {};
-    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
-    			console.warn("<Subjects> was created without expected prop 'is_logged_in'");
-    		}
-    		if (ctx.getToken === undefined && !('getToken' in props)) {
-    			console.warn("<Subjects> was created without expected prop 'getToken'");
-    		}
-    	}
-
-    	get is_logged_in() {
-    		throw new Error("<Subjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set is_logged_in(value) {
-    		throw new Error("<Subjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get getToken() {
-    		throw new Error("<Subjects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set getToken(value) {
-    		throw new Error("<Subjects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-    }
-
     /* src\components\projects\ProjectsTable.svelte generated by Svelte v3.5.1 */
 
-    const file$d = "src\\components\\projects\\ProjectsTable.svelte";
+    const file$6 = "src\\components\\projects\\ProjectsTable.svelte";
 
-    function get_each_context$3(ctx, list, i) {
+    function get_each_context$2(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.project = list[i];
     	child_ctx.i = i;
@@ -9500,7 +5904,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			i.className = "fas fa-school fa-fw cursor-pointer mr-1 text-light";
-    			add_location(i, file$d, 46, 76, 2550);
+    			add_location(i, file$6, 46, 76, 2550);
     		},
 
     		m: function mount(target, anchor) {
@@ -9523,7 +5927,7 @@ var app = (function () {
     		c: function create() {
     			i = element("i");
     			i.className = "fas fa-plane fa-fw cursor-pointer ml-1 text-light";
-    			add_location(i, file$d, 47, 70, 2695);
+    			add_location(i, file$6, 47, 70, 2695);
     		},
 
     		m: function mount(target, anchor) {
@@ -9539,7 +5943,7 @@ var app = (function () {
     }
 
     // (34:12) {#each projects as project, i}
-    function create_each_block$3(ctx) {
+    function create_each_block$2(ctx) {
     	var tr, td0, t0_value = ctx.project.ID, t0, t1, td1, t2_value = ctx.project.projectCode, t2, t3, td2, t4_value = ctx.project.name, t4, t5, td3, input, input_name_value, input_id_value, t6, label, img, img_src_value, img_id_value, label_for_value, t7, td4, t8, t9, tr_class_value, current, dispose;
 
     	function change_handler(...args) {
@@ -9591,28 +5995,28 @@ var app = (function () {
     			t8 = space();
     			link1.$$.fragment.c();
     			t9 = space();
-    			add_location(td0, file$d, 36, 20, 1766);
-    			add_location(td1, file$d, 37, 20, 1809);
-    			add_location(td2, file$d, 38, 20, 1861);
+    			add_location(td0, file$6, 36, 20, 1766);
+    			add_location(td1, file$6, 37, 20, 1809);
+    			add_location(td2, file$6, 38, 20, 1861);
     			attr(input, "type", "file");
     			input.className = "d-none";
     			input.name = input_name_value = ctx.project.ID;
     			input.id = input_id_value = `image-input-${ctx.project.ID}`;
-    			add_location(input, file$d, 40, 24, 1956);
+    			add_location(input, file$6, 40, 24, 1956);
     			img.src = img_src_value = `/imgs/projects/${ctx.project.ID}.png`;
     			img.id = img_id_value = `image-${ctx.project.ID}`;
     			img.height = "50";
     			img.className = "cursor-pointer";
     			img.alt = "Project Logo";
-    			add_location(img, file$d, 42, 28, 2214);
+    			add_location(img, file$6, 42, 28, 2214);
     			label.htmlFor = label_for_value = `image-input-${ctx.project.ID}`;
-    			add_location(label, file$d, 41, 24, 2143);
+    			add_location(label, file$6, 41, 24, 2143);
     			td3.className = "text-center";
-    			add_location(td3, file$d, 39, 20, 1906);
+    			add_location(td3, file$6, 39, 20, 1906);
     			td4.className = "text-center vertical-align-middle";
-    			add_location(td4, file$d, 45, 20, 2426);
+    			add_location(td4, file$6, 45, 20, 2426);
     			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.project.ID) === -1 ? 'table-row' : 'table-row bg-secondary';
-    			add_location(tr, file$d, 34, 16, 1574);
+    			add_location(tr, file$6, 34, 16, 1574);
 
     			dispose = [
     				listen(input, "change", change_handler),
@@ -9723,7 +6127,7 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$f(ctx) {
+    function create_fragment$8(ctx) {
     	var div, table, thead, tr, th0, t1, th1, t3, th2, t5, th3, i, t6, th4, t8, tbody, current;
 
     	var each_value = ctx.projects;
@@ -9731,7 +6135,7 @@ var app = (function () {
     	var each_blocks = [];
 
     	for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) {
-    		each_blocks[i_1] = create_each_block$3(get_each_context$3(ctx, each_value, i_1));
+    		each_blocks[i_1] = create_each_block$2(get_each_context$2(ctx, each_value, i_1));
     	}
 
     	function outro_block(i, detaching, local) {
@@ -9775,29 +6179,29 @@ var app = (function () {
     			}
     			th0.scope = "col";
     			th0.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
-    			add_location(th0, file$d, 25, 16, 748);
+    			add_location(th0, file$6, 25, 16, 748);
     			th1.scope = "col";
     			th1.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
-    			add_location(th1, file$d, 26, 16, 878);
+    			add_location(th1, file$6, 26, 16, 878);
     			th2.scope = "col";
     			th2.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
-    			add_location(th2, file$d, 27, 16, 1019);
+    			add_location(th2, file$6, 27, 16, 1019);
     			i.className = "fas fa-images fa-fw";
-    			add_location(i, file$d, 28, 134, 1270);
+    			add_location(i, file$6, 28, 134, 1270);
     			th3.scope = "col";
     			th3.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center";
-    			add_location(th3, file$d, 28, 16, 1152);
+    			add_location(th3, file$6, 28, 16, 1152);
     			th4.scope = "col";
     			th4.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center";
-    			add_location(th4, file$d, 29, 16, 1328);
+    			add_location(th4, file$6, 29, 16, 1328);
     			tr.className = "table-headers";
-    			add_location(tr, file$d, 24, 12, 704);
-    			add_location(thead, file$d, 23, 8, 683);
-    			add_location(tbody, file$d, 32, 8, 1505);
+    			add_location(tr, file$6, 24, 12, 704);
+    			add_location(thead, file$6, 23, 8, 683);
+    			add_location(tbody, file$6, 32, 8, 1505);
     			table.className = "table table-dark table-bordered table-hover nowrap m-0";
-    			add_location(table, file$d, 22, 4, 603);
+    			add_location(table, file$6, 22, 4, 603);
     			div.className = "table-responsive rounded dark-scroll";
-    			add_location(div, file$d, 21, 0, 547);
+    			add_location(div, file$6, 21, 0, 547);
     		},
 
     		l: function claim(nodes) {
@@ -9834,13 +6238,13 @@ var app = (function () {
     				each_value = ctx.projects;
 
     				for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) {
-    					const child_ctx = get_each_context$3(ctx, each_value, i_1);
+    					const child_ctx = get_each_context$2(ctx, each_value, i_1);
 
     					if (each_blocks[i_1]) {
     						each_blocks[i_1].p(changed, child_ctx);
     						each_blocks[i_1].i(1);
     					} else {
-    						each_blocks[i_1] = create_each_block$3(child_ctx);
+    						each_blocks[i_1] = create_each_block$2(child_ctx);
     						each_blocks[i_1].c();
     						each_blocks[i_1].i(1);
     						each_blocks[i_1].m(tbody, null);
@@ -9877,7 +6281,7 @@ var app = (function () {
     	};
     }
 
-    function instance$f($$self, $$props, $$invalidate) {
+    function instance$8($$self, $$props, $$invalidate) {
     	let { projects, toggleRowSelect, selectedRows, updateImage } = $$props;
 
         function handleRowClick(event, id) {
@@ -9924,7 +6328,7 @@ var app = (function () {
     class ProjectsTable extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$f, create_fragment$f, safe_not_equal, ["projects", "toggleRowSelect", "selectedRows", "updateImage"]);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, ["projects", "toggleRowSelect", "selectedRows", "updateImage"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -9977,10 +6381,10 @@ var app = (function () {
 
     /* src\components\projects\Projects.svelte generated by Svelte v3.5.1 */
 
-    const file$e = "src\\components\\projects\\Projects.svelte";
+    const file$7 = "src\\components\\projects\\Projects.svelte";
 
     // (169:0) {#if is_logged_in}
-    function create_if_block$c(ctx) {
+    function create_if_block$5(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
 
     	var basicmodal0 = new BasicModal({
@@ -10045,22 +6449,22 @@ var app = (function () {
     			t9 = space();
     			projectstable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$e, 173, 35, 5146);
+    			add_location(span0, file$7, 173, 35, 5146);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$e, 173, 8, 5119);
+    			add_location(h2, file$7, 173, 8, 5119);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$e, 175, 16, 5283);
+    			add_location(button0, file$7, 175, 16, 5283);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$e, 176, 16, 5384);
+    			add_location(button1, file$7, 176, 16, 5384);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$e, 177, 16, 5571);
-    			add_location(span1, file$e, 174, 12, 5259);
+    			add_location(button2, file$7, 177, 16, 5571);
+    			add_location(span1, file$7, 174, 12, 5259);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$e, 172, 8, 5024);
+    			add_location(div0, file$7, 172, 8, 5024);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$e, 171, 4, 4905);
+    			add_location(div1, file$7, 171, 4, 4905);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -10169,10 +6573,10 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$g(ctx) {
+    function create_fragment$9(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$c(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$5(ctx);
 
     	return {
     		c: function create() {
@@ -10196,7 +6600,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$c(ctx);
+    					if_block = create_if_block$5(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -10234,7 +6638,7 @@ var app = (function () {
     	};
     }
 
-    function instance$g($$self, $$props, $$invalidate) {
+    function instance$9($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken } = $$props;
@@ -10431,7 +6835,7 @@ var app = (function () {
     class Projects extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$g, create_fragment$g, safe_not_equal, ["is_logged_in", "getToken"]);
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, ["is_logged_in", "getToken"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -10462,9 +6866,9 @@ var app = (function () {
 
     /* src\components\mobilities\MobilitiesTable.svelte generated by Svelte v3.5.1 */
 
-    const file$f = "src\\components\\mobilities\\MobilitiesTable.svelte";
+    const file$8 = "src\\components\\mobilities\\MobilitiesTable.svelte";
 
-    function get_each_context$4(ctx, list, i) {
+    function get_each_context$3(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.mobility = list[i];
     	child_ctx.i = i;
@@ -10480,7 +6884,7 @@ var app = (function () {
     			i = element("i");
     			i.className = "fas fa-chalkboard-teacher fa-fw cursor-pointer mr-1 text-light";
     			i.title = "Teachers";
-    			add_location(i, file$f, 35, 78, 1978);
+    			add_location(i, file$8, 35, 78, 1978);
     		},
 
     		m: function mount(target, anchor) {
@@ -10504,7 +6908,7 @@ var app = (function () {
     			i = element("i");
     			i.className = "fas fa-user-graduate fa-fw cursor-pointer ml-1 text-light";
     			i.title = "Students";
-    			add_location(i, file$f, 36, 78, 2157);
+    			add_location(i, file$8, 36, 78, 2157);
     		},
 
     		m: function mount(target, anchor) {
@@ -10520,7 +6924,7 @@ var app = (function () {
     }
 
     // (27:12) {#each mobilities as mobility, i}
-    function create_each_block$4(ctx) {
+    function create_each_block$3(ctx) {
     	var tr, td0, t0_value = ctx.mobility.ID, t0, t1, td1, t2_value = ctx.mobility.origin, t2, t3, td2, t4_value = ctx.mobility.target, t4, t5, td3, t6_value = ctx.mobility.departureDate.slice(0, -14), t6, t7, td4, t8_value = ctx.mobility.arrivalDate.slice(0, -14), t8, t9, td5, t10, t11, tr_class_value, current, dispose;
 
     	var link0 = new Link({
@@ -10568,15 +6972,15 @@ var app = (function () {
     			t10 = space();
     			link1.$$.fragment.c();
     			t11 = space();
-    			add_location(td0, file$f, 29, 20, 1576);
-    			add_location(td1, file$f, 30, 20, 1620);
-    			add_location(td2, file$f, 31, 20, 1668);
-    			add_location(td3, file$f, 32, 20, 1716);
-    			add_location(td4, file$f, 33, 20, 1785);
+    			add_location(td0, file$8, 29, 20, 1576);
+    			add_location(td1, file$8, 30, 20, 1620);
+    			add_location(td2, file$8, 31, 20, 1668);
+    			add_location(td3, file$8, 32, 20, 1716);
+    			add_location(td4, file$8, 33, 20, 1785);
     			td5.className = "text-center vertical-align-middle";
-    			add_location(td5, file$f, 34, 20, 1852);
+    			add_location(td5, file$8, 34, 20, 1852);
     			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.mobility.ID) === -1 ? 'table-row' : 'table-row bg-secondary';
-    			add_location(tr, file$f, 27, 16, 1382);
+    			add_location(tr, file$8, 27, 16, 1382);
     			dispose = listen(tr, "click", click_handler);
     		},
 
@@ -10671,7 +7075,7 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$h(ctx) {
+    function create_fragment$a(ctx) {
     	var div, table, thead, tr, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, current;
 
     	var each_value = ctx.mobilities;
@@ -10679,7 +7083,7 @@ var app = (function () {
     	var each_blocks = [];
 
     	for (var i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
     	}
 
     	function outro_block(i, detaching, local) {
@@ -10726,30 +7130,30 @@ var app = (function () {
     			}
     			th0.scope = "col";
     			th0.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
-    			add_location(th0, file$f, 17, 16, 442);
+    			add_location(th0, file$8, 17, 16, 442);
     			th1.scope = "col";
     			th1.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
-    			add_location(th1, file$f, 18, 16, 570);
+    			add_location(th1, file$8, 18, 16, 570);
     			th2.scope = "col";
     			th2.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
-    			add_location(th2, file$f, 19, 16, 703);
+    			add_location(th2, file$8, 19, 16, 703);
     			th3.scope = "col";
     			th3.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
-    			add_location(th3, file$f, 20, 16, 841);
+    			add_location(th3, file$8, 20, 16, 841);
     			th4.scope = "col";
     			th4.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
-    			add_location(th4, file$f, 21, 16, 989);
+    			add_location(th4, file$8, 21, 16, 989);
     			th5.scope = "col";
     			th5.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
-    			add_location(th5, file$f, 22, 16, 1135);
+    			add_location(th5, file$8, 22, 16, 1135);
     			tr.className = "table-headers";
-    			add_location(tr, file$f, 16, 12, 398);
-    			add_location(thead, file$f, 15, 8, 377);
-    			add_location(tbody, file$f, 25, 8, 1310);
+    			add_location(tr, file$8, 16, 12, 398);
+    			add_location(thead, file$8, 15, 8, 377);
+    			add_location(tbody, file$8, 25, 8, 1310);
     			table.className = "table table-dark table-bordered table-hover nowrap m-0";
-    			add_location(table, file$f, 14, 4, 297);
+    			add_location(table, file$8, 14, 4, 297);
     			div.className = "table-responsive rounded dark-scroll";
-    			add_location(div, file$f, 13, 0, 241);
+    			add_location(div, file$8, 13, 0, 241);
     		},
 
     		l: function claim(nodes) {
@@ -10787,13 +7191,13 @@ var app = (function () {
     				each_value = ctx.mobilities;
 
     				for (var i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$4(ctx, each_value, i);
+    					const child_ctx = get_each_context$3(ctx, each_value, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(changed, child_ctx);
     						each_blocks[i].i(1);
     					} else {
-    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i] = create_each_block$3(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].i(1);
     						each_blocks[i].m(tbody, null);
@@ -10830,7 +7234,7 @@ var app = (function () {
     	};
     }
 
-    function instance$h($$self, $$props, $$invalidate) {
+    function instance$a($$self, $$props, $$invalidate) {
     	let { mobilities, toggleRowSelect, selectedRows } = $$props;
 
         function handleRowClick(event, id) {
@@ -10862,7 +7266,7 @@ var app = (function () {
     class MobilitiesTable extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$h, create_fragment$h, safe_not_equal, ["mobilities", "toggleRowSelect", "selectedRows"]);
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, ["mobilities", "toggleRowSelect", "selectedRows"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -10904,23 +7308,23 @@ var app = (function () {
 
     /* src\components\mobilities\AddMobilityModal.svelte generated by Svelte v3.5.1 */
 
-    const file$g = "src\\components\\mobilities\\AddMobilityModal.svelte";
+    const file$9 = "src\\components\\mobilities\\AddMobilityModal.svelte";
 
-    function get_each_context$5(ctx, list, i) {
+    function get_each_context$4(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.project = list[i];
     	child_ctx.i = i;
     	return child_ctx;
     }
 
-    function get_each_context_1$3(ctx, list, i) {
+    function get_each_context_1$2(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.partner = list[i];
     	child_ctx.i = i;
     	return child_ctx;
     }
 
-    function get_each_context_2$2(ctx, list, i) {
+    function get_each_context_2$1(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.partner = list[i];
     	child_ctx.i = i;
@@ -10928,7 +7332,7 @@ var app = (function () {
     }
 
     // (100:28) {#each partners as partner, i}
-    function create_each_block_2$2(ctx) {
+    function create_each_block_2$1(ctx) {
     	var option, t_value = ctx.partner.name, t, option_value_value;
 
     	return {
@@ -10937,7 +7341,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = ctx.partner.ID;
     			option.value = option.__value;
-    			add_location(option, file$g, 100, 32, 3423);
+    			add_location(option, file$9, 100, 32, 3423);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -10966,7 +7370,7 @@ var app = (function () {
     }
 
     // (121:28) {#each partners as partner, i}
-    function create_each_block_1$3(ctx) {
+    function create_each_block_1$2(ctx) {
     	var option, t_value = ctx.partner.name, t, option_value_value;
 
     	return {
@@ -10975,7 +7379,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = ctx.partner.ID;
     			option.value = option.__value;
-    			add_location(option, file$g, 121, 32, 4648);
+    			add_location(option, file$9, 121, 32, 4648);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -11004,7 +7408,7 @@ var app = (function () {
     }
 
     // (143:16) {#if projectID == null}
-    function create_if_block$d(ctx) {
+    function create_if_block$6(ctx) {
     	var div3, div2, div1, div0, t_1, select, option, div3_class_value, dispose;
 
     	var each_value = ctx.projects;
@@ -11012,7 +7416,7 @@ var app = (function () {
     	var each_blocks = [];
 
     	for (var i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
     	}
 
     	return {
@@ -11031,21 +7435,21 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			div0.className = "input-group-text w-100";
-    			add_location(div0, file$g, 146, 32, 6022);
+    			add_location(div0, file$9, 146, 32, 6022);
     			div1.className = "input-group-prepend w-25";
-    			add_location(div1, file$g, 145, 28, 5950);
+    			add_location(div1, file$9, 145, 28, 5950);
     			option.__value = "0";
     			option.value = option.__value;
     			option.disabled = true;
     			option.selected = true;
     			option.className = "d-none";
-    			add_location(option, file$g, 149, 32, 6252);
+    			add_location(option, file$9, 149, 32, 6252);
     			select.className = "form-control";
-    			add_location(select, file$g, 148, 28, 6137);
+    			add_location(select, file$9, 148, 28, 6137);
     			div2.className = "input-group";
-    			add_location(div2, file$g, 144, 24, 5895);
+    			add_location(div2, file$9, 144, 24, 5895);
     			div3.className = div3_class_value = `form-group ${ctx.projectID != null ? '' : 'mb-0'}`;
-    			add_location(div3, file$g, 143, 20, 5806);
+    			add_location(div3, file$9, 143, 20, 5806);
     			dispose = listen(select, "change", ctx.change_handler_6);
     		},
 
@@ -11068,12 +7472,12 @@ var app = (function () {
     				each_value = ctx.projects;
 
     				for (var i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$5(ctx, each_value, i);
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(changed, child_ctx);
     					} else {
-    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i] = create_each_block$4(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(select, null);
     					}
@@ -11103,7 +7507,7 @@ var app = (function () {
     }
 
     // (151:32) {#each projects as project, i}
-    function create_each_block$5(ctx) {
+    function create_each_block$4(ctx) {
     	var option, t_value = ctx.project.name, t, option_value_value;
 
     	return {
@@ -11112,7 +7516,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = ctx.project.ID;
     			option.value = option.__value;
-    			add_location(option, file$g, 151, 36, 6428);
+    			add_location(option, file$9, 151, 36, 6428);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -11140,7 +7544,7 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$i(ctx) {
+    function create_fragment$b(ctx) {
     	var div29, div28, div27, div0, h5, t1, button0, span, t3, div25, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, select0, option0, t10, div12, div11, div10, div9, t12, input1, t13, div16, div15, div14, div13, t15, select1, option1, t17, div20, div19, div18, div17, t19, input2, t20, div24, div23, div22, div21, t22, input3, div24_class_value, t23, t24, div26, button1, dispose;
 
     	var each_value_2 = ctx.partners;
@@ -11148,7 +7552,7 @@ var app = (function () {
     	var each_blocks_1 = [];
 
     	for (var i = 0; i < each_value_2.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_2$2(get_each_context_2$2(ctx, each_value_2, i));
+    		each_blocks_1[i] = create_each_block_2$1(get_each_context_2$1(ctx, each_value_2, i));
     	}
 
     	var each_value_1 = ctx.partners;
@@ -11156,10 +7560,10 @@ var app = (function () {
     	var each_blocks = [];
 
     	for (var i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
+    		each_blocks[i] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i));
     	}
 
-    	var if_block = (ctx.projectID == null) && create_if_block$d(ctx);
+    	var if_block = (ctx.projectID == null) && create_if_block$6(ctx);
 
     	return {
     		c: function create() {
@@ -11243,108 +7647,108 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Add";
     			h5.className = "modal-title";
-    			add_location(h5, file$g, 80, 16, 2175);
-    			add_location(span, file$g, 81, 73, 2291);
+    			add_location(h5, file$9, 80, 16, 2175);
+    			add_location(span, file$9, 81, 73, 2291);
     			button0.className = "close";
     			button0.type = "button";
     			button0.dataset.dismiss = "modal";
-    			add_location(button0, file$g, 81, 16, 2234);
+    			add_location(button0, file$9, 81, 16, 2234);
     			div0.className = "modal-header";
-    			add_location(div0, file$g, 79, 12, 2131);
+    			add_location(div0, file$9, 79, 12, 2131);
     			div1.className = "input-group-text w-100";
-    			add_location(div1, file$g, 87, 28, 2555);
+    			add_location(div1, file$9, 87, 28, 2555);
     			div2.className = "input-group-prepend w-25";
-    			add_location(div2, file$g, 86, 24, 2487);
+    			add_location(div2, file$9, 86, 24, 2487);
     			input0.className = "form-control";
     			attr(input0, "type", "text");
     			input0.placeholder = "eg. Sweden, Stockholm";
-    			add_location(input0, file$g, 89, 24, 2661);
+    			add_location(input0, file$9, 89, 24, 2661);
     			div3.className = "input-group";
-    			add_location(div3, file$g, 85, 20, 2436);
+    			add_location(div3, file$9, 85, 20, 2436);
     			div4.className = "form-group";
-    			add_location(div4, file$g, 84, 16, 2390);
+    			add_location(div4, file$9, 84, 16, 2390);
     			div5.className = "input-group-text w-100";
-    			add_location(div5, file$g, 95, 28, 3024);
+    			add_location(div5, file$9, 95, 28, 3024);
     			div6.className = "input-group-prepend w-25";
-    			add_location(div6, file$g, 94, 24, 2956);
+    			add_location(div6, file$9, 94, 24, 2956);
     			option0.__value = "0";
     			option0.value = option0.__value;
     			option0.disabled = true;
     			option0.selected = true;
     			option0.className = "d-none";
-    			add_location(option0, file$g, 98, 28, 3255);
+    			add_location(option0, file$9, 98, 28, 3255);
     			select0.className = "form-control";
-    			add_location(select0, file$g, 97, 24, 3138);
+    			add_location(select0, file$9, 97, 24, 3138);
     			div7.className = "input-group";
-    			add_location(div7, file$g, 93, 20, 2905);
+    			add_location(div7, file$9, 93, 20, 2905);
     			div8.className = "form-group";
-    			add_location(div8, file$g, 92, 16, 2859);
+    			add_location(div8, file$9, 92, 16, 2859);
     			div9.className = "input-group-text w-100";
-    			add_location(div9, file$g, 108, 28, 3780);
+    			add_location(div9, file$9, 108, 28, 3780);
     			div10.className = "input-group-prepend w-25";
-    			add_location(div10, file$g, 107, 24, 3712);
+    			add_location(div10, file$9, 107, 24, 3712);
     			input1.className = "form-control";
     			attr(input1, "type", "text");
     			input1.placeholder = "eg. Sweden, Stockholm";
-    			add_location(input1, file$g, 110, 24, 3886);
+    			add_location(input1, file$9, 110, 24, 3886);
     			div11.className = "input-group";
-    			add_location(div11, file$g, 106, 20, 3661);
+    			add_location(div11, file$9, 106, 20, 3661);
     			div12.className = "form-group";
-    			add_location(div12, file$g, 105, 16, 3615);
+    			add_location(div12, file$9, 105, 16, 3615);
     			div13.className = "input-group-text w-100";
-    			add_location(div13, file$g, 116, 28, 4249);
+    			add_location(div13, file$9, 116, 28, 4249);
     			div14.className = "input-group-prepend w-25";
-    			add_location(div14, file$g, 115, 24, 4181);
+    			add_location(div14, file$9, 115, 24, 4181);
     			option1.__value = "0";
     			option1.value = option1.__value;
     			option1.disabled = true;
     			option1.selected = true;
     			option1.className = "d-none";
-    			add_location(option1, file$g, 119, 28, 4480);
+    			add_location(option1, file$9, 119, 28, 4480);
     			select1.className = "form-control";
-    			add_location(select1, file$g, 118, 24, 4363);
+    			add_location(select1, file$9, 118, 24, 4363);
     			div15.className = "input-group";
-    			add_location(div15, file$g, 114, 20, 4130);
+    			add_location(div15, file$9, 114, 20, 4130);
     			div16.className = "form-group";
-    			add_location(div16, file$g, 113, 16, 4084);
+    			add_location(div16, file$9, 113, 16, 4084);
     			div17.className = "input-group-text w-100";
-    			add_location(div17, file$g, 129, 28, 5005);
+    			add_location(div17, file$9, 129, 28, 5005);
     			div18.className = "input-group-prepend w-25";
-    			add_location(div18, file$g, 128, 24, 4937);
+    			add_location(div18, file$9, 128, 24, 4937);
     			attr(input2, "type", "date");
     			input2.className = "form-control";
-    			add_location(input2, file$g, 131, 24, 5114);
+    			add_location(input2, file$9, 131, 24, 5114);
     			div19.className = "input-group";
-    			add_location(div19, file$g, 127, 20, 4886);
+    			add_location(div19, file$9, 127, 20, 4886);
     			div20.className = "form-group";
-    			add_location(div20, file$g, 126, 16, 4840);
+    			add_location(div20, file$9, 126, 16, 4840);
     			div21.className = "input-group-text w-100";
-    			add_location(div21, file$g, 137, 28, 5487);
+    			add_location(div21, file$9, 137, 28, 5487);
     			div22.className = "input-group-prepend w-25";
-    			add_location(div22, file$g, 136, 24, 5419);
+    			add_location(div22, file$9, 136, 24, 5419);
     			attr(input3, "type", "date");
     			input3.className = "form-control";
-    			add_location(input3, file$g, 139, 24, 5594);
+    			add_location(input3, file$9, 139, 24, 5594);
     			div23.className = "input-group";
-    			add_location(div23, file$g, 135, 20, 5368);
+    			add_location(div23, file$9, 135, 20, 5368);
     			div24.className = div24_class_value = `form-group ${ctx.projectID != null ? 'mb-0' : ''}`;
-    			add_location(div24, file$g, 134, 16, 5283);
+    			add_location(div24, file$9, 134, 16, 5283);
     			div25.className = "modal-body";
-    			add_location(div25, file$g, 83, 12, 2348);
+    			add_location(div25, file$9, 83, 12, 2348);
     			button1.className = "btn btn-success w-100";
     			button1.id = "modal-add-btn";
-    			add_location(button1, file$g, 159, 16, 6719);
+    			add_location(button1, file$9, 159, 16, 6719);
     			div26.className = "modal-footer";
-    			add_location(div26, file$g, 158, 12, 6675);
+    			add_location(div26, file$9, 158, 12, 6675);
     			div27.className = "modal-content";
-    			add_location(div27, file$g, 78, 8, 2090);
+    			add_location(div27, file$9, 78, 8, 2090);
     			div28.className = "modal-dialog";
     			attr(div28, "role", "document");
-    			add_location(div28, file$g, 77, 4, 2038);
+    			add_location(div28, file$9, 77, 4, 2038);
     			div29.className = "modal fade";
     			div29.id = "add-modal";
     			div29.tabIndex = "-1";
-    			add_location(div29, file$g, 76, 0, 1979);
+    			add_location(div29, file$9, 76, 0, 1979);
 
     			dispose = [
     				listen(input0, "change", ctx.change_handler),
@@ -11437,12 +7841,12 @@ var app = (function () {
     				each_value_2 = ctx.partners;
 
     				for (var i = 0; i < each_value_2.length; i += 1) {
-    					const child_ctx = get_each_context_2$2(ctx, each_value_2, i);
+    					const child_ctx = get_each_context_2$1(ctx, each_value_2, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(changed, child_ctx);
     					} else {
-    						each_blocks_1[i] = create_each_block_2$2(child_ctx);
+    						each_blocks_1[i] = create_each_block_2$1(child_ctx);
     						each_blocks_1[i].c();
     						each_blocks_1[i].m(select0, null);
     					}
@@ -11458,12 +7862,12 @@ var app = (function () {
     				each_value_1 = ctx.partners;
 
     				for (var i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1$3(ctx, each_value_1, i);
+    					const child_ctx = get_each_context_1$2(ctx, each_value_1, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(changed, child_ctx);
     					} else {
-    						each_blocks[i] = create_each_block_1$3(child_ctx);
+    						each_blocks[i] = create_each_block_1$2(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(select1, null);
     					}
@@ -11483,7 +7887,7 @@ var app = (function () {
     				if (if_block) {
     					if_block.p(changed, ctx);
     				} else {
-    					if_block = create_if_block$d(ctx);
+    					if_block = create_if_block$6(ctx);
     					if_block.c();
     					if_block.m(div25, null);
     				}
@@ -11511,7 +7915,7 @@ var app = (function () {
     	};
     }
 
-    function instance$i($$self, $$props, $$invalidate) {
+    function instance$b($$self, $$props, $$invalidate) {
     	let { getMobilities, partners, getToken, projectID, isOpen, setIsOpen } = $$props;
 
         let projects = [];
@@ -11660,7 +8064,7 @@ var app = (function () {
     class AddMobilityModal extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$i, create_fragment$i, safe_not_equal, ["getMobilities", "partners", "getToken", "projectID", "isOpen", "setIsOpen"]);
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, ["getMobilities", "partners", "getToken", "projectID", "isOpen", "setIsOpen"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -11735,16 +8139,16 @@ var app = (function () {
 
     /* src\components\mobilities\EditMobilityModal.svelte generated by Svelte v3.5.1 */
 
-    const file$h = "src\\components\\mobilities\\EditMobilityModal.svelte";
+    const file$a = "src\\components\\mobilities\\EditMobilityModal.svelte";
 
-    function get_each_context$6(ctx, list, i) {
+    function get_each_context$5(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.partner = list[i];
     	child_ctx.i = i;
     	return child_ctx;
     }
 
-    function get_each_context_1$4(ctx, list, i) {
+    function get_each_context_1$3(ctx, list, i) {
     	const child_ctx = Object.create(ctx);
     	child_ctx.partner = list[i];
     	child_ctx.i = i;
@@ -11761,7 +8165,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = ctx.partner.ID;
     			option.value = option.__value;
-    			add_location(option, file$h, 106, 40, 3758);
+    			add_location(option, file$a, 106, 40, 3758);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -11800,7 +8204,7 @@ var app = (function () {
     			option.__value = option_value_value = ctx.partner.ID;
     			option.value = option.__value;
     			option.selected = true;
-    			add_location(option, file$h, 104, 40, 3612);
+    			add_location(option, file$a, 104, 40, 3612);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -11829,7 +8233,7 @@ var app = (function () {
     }
 
     // (103:32) {#each partners as partner, i}
-    function create_each_block_1$4(ctx) {
+    function create_each_block_1$3(ctx) {
     	var if_block_anchor;
 
     	function select_block_type(ctx) {
@@ -11875,7 +8279,7 @@ var app = (function () {
     }
 
     // (130:36) {:else}
-    function create_else_block$5(ctx) {
+    function create_else_block$4(ctx) {
     	var option, t_value = ctx.partner.name, t, option_value_value;
 
     	return {
@@ -11884,7 +8288,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = ctx.partner.ID;
     			option.value = option.__value;
-    			add_location(option, file$h, 130, 40, 5239);
+    			add_location(option, file$a, 130, 40, 5239);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -11913,7 +8317,7 @@ var app = (function () {
     }
 
     // (128:36) {#if partner.ID === targetPartner}
-    function create_if_block$e(ctx) {
+    function create_if_block$7(ctx) {
     	var option, t_value = ctx.partner.name, t, option_value_value;
 
     	return {
@@ -11923,7 +8327,7 @@ var app = (function () {
     			option.__value = option_value_value = ctx.partner.ID;
     			option.value = option.__value;
     			option.selected = true;
-    			add_location(option, file$h, 128, 40, 5093);
+    			add_location(option, file$a, 128, 40, 5093);
     		},
 
     		m: function mount(target_1, anchor) {
@@ -11952,12 +8356,12 @@ var app = (function () {
     }
 
     // (127:32) {#each partners as partner, i}
-    function create_each_block$6(ctx) {
+    function create_each_block$5(ctx) {
     	var if_block_anchor;
 
     	function select_block_type_1(ctx) {
-    		if (ctx.partner.ID === ctx.targetPartner) return create_if_block$e;
-    		return create_else_block$5;
+    		if (ctx.partner.ID === ctx.targetPartner) return create_if_block$7;
+    		return create_else_block$4;
     	}
 
     	var current_block_type = select_block_type_1(ctx);
@@ -11997,7 +8401,7 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$j(ctx) {
+    function create_fragment$c(ctx) {
     	var div30, div29, div28, div0, h5, t1, button0, span, t3, div26, div25, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, select0, t9, div12, div11, div10, div9, t11, input1, t12, div16, div15, div14, div13, t14, select1, t15, div20, div19, div18, div17, t17, input2, input2_value_value, t18, div24, div23, div22, div21, t20, input3, input3_value_value, t21, div27, button1, dispose;
 
     	var each_value_1 = ctx.partners;
@@ -12005,7 +8409,7 @@ var app = (function () {
     	var each_blocks_1 = [];
 
     	for (var i = 0; i < each_value_1.length; i += 1) {
-    		each_blocks_1[i] = create_each_block_1$4(get_each_context_1$4(ctx, each_value_1, i));
+    		each_blocks_1[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
     	}
 
     	var each_value = ctx.partners;
@@ -12013,7 +8417,7 @@ var app = (function () {
     	var each_blocks = [];
 
     	for (var i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$6(get_each_context$6(ctx, each_value, i));
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
     	}
 
     	return {
@@ -12093,101 +8497,101 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "Edit";
     			h5.className = "modal-title";
-    			add_location(h5, file$h, 83, 16, 2271);
-    			add_location(span, file$h, 84, 73, 2387);
+    			add_location(h5, file$a, 83, 16, 2271);
+    			add_location(span, file$a, 84, 73, 2387);
     			button0.className = "close";
     			button0.type = "button";
     			button0.dataset.dismiss = "modal";
-    			add_location(button0, file$h, 84, 16, 2330);
+    			add_location(button0, file$a, 84, 16, 2330);
     			div0.className = "modal-header";
-    			add_location(div0, file$h, 82, 12, 2227);
+    			add_location(div0, file$a, 82, 12, 2227);
     			div1.className = "input-group-text w-100";
-    			add_location(div1, file$h, 91, 32, 2709);
+    			add_location(div1, file$a, 91, 32, 2709);
     			div2.className = "input-group-prepend w-25";
-    			add_location(div2, file$h, 90, 28, 2637);
+    			add_location(div2, file$a, 90, 28, 2637);
     			input0.className = "form-control";
     			attr(input0, "type", "text");
     			input0.value = ctx.origin;
     			input0.placeholder = "eg. Sweden, Stockholm";
-    			add_location(input0, file$h, 93, 28, 2823);
+    			add_location(input0, file$a, 93, 28, 2823);
     			div3.className = "input-group";
-    			add_location(div3, file$h, 89, 24, 2582);
+    			add_location(div3, file$a, 89, 24, 2582);
     			div4.className = "form-group";
-    			add_location(div4, file$h, 88, 20, 2532);
+    			add_location(div4, file$a, 88, 20, 2532);
     			div5.className = "input-group-text w-100";
-    			add_location(div5, file$h, 99, 32, 3225);
+    			add_location(div5, file$a, 99, 32, 3225);
     			div6.className = "input-group-prepend w-25";
-    			add_location(div6, file$h, 98, 28, 3153);
+    			add_location(div6, file$a, 98, 28, 3153);
     			select0.className = "form-control";
-    			add_location(select0, file$h, 101, 28, 3347);
+    			add_location(select0, file$a, 101, 28, 3347);
     			div7.className = "input-group";
-    			add_location(div7, file$h, 97, 24, 3098);
+    			add_location(div7, file$a, 97, 24, 3098);
     			div8.className = "form-group";
-    			add_location(div8, file$h, 96, 20, 3048);
+    			add_location(div8, file$a, 96, 20, 3048);
     			div9.className = "input-group-text w-100";
-    			add_location(div9, file$h, 115, 32, 4190);
+    			add_location(div9, file$a, 115, 32, 4190);
     			div10.className = "input-group-prepend w-25";
-    			add_location(div10, file$h, 114, 28, 4118);
+    			add_location(div10, file$a, 114, 28, 4118);
     			input1.className = "form-control";
     			attr(input1, "type", "text");
     			input1.value = ctx.target;
     			input1.placeholder = "eg. Sweden, Stockholm";
-    			add_location(input1, file$h, 117, 28, 4304);
+    			add_location(input1, file$a, 117, 28, 4304);
     			div11.className = "input-group";
-    			add_location(div11, file$h, 113, 24, 4063);
+    			add_location(div11, file$a, 113, 24, 4063);
     			div12.className = "form-group";
-    			add_location(div12, file$h, 112, 20, 4013);
+    			add_location(div12, file$a, 112, 20, 4013);
     			div13.className = "input-group-text w-100";
-    			add_location(div13, file$h, 123, 32, 4706);
+    			add_location(div13, file$a, 123, 32, 4706);
     			div14.className = "input-group-prepend w-25";
-    			add_location(div14, file$h, 122, 28, 4634);
+    			add_location(div14, file$a, 122, 28, 4634);
     			select1.className = "form-control";
-    			add_location(select1, file$h, 125, 28, 4828);
+    			add_location(select1, file$a, 125, 28, 4828);
     			div15.className = "input-group";
-    			add_location(div15, file$h, 121, 24, 4579);
+    			add_location(div15, file$a, 121, 24, 4579);
     			div16.className = "form-group";
-    			add_location(div16, file$h, 120, 20, 4529);
+    			add_location(div16, file$a, 120, 20, 4529);
     			div17.className = "input-group-text w-100";
-    			add_location(div17, file$h, 139, 32, 5671);
+    			add_location(div17, file$a, 139, 32, 5671);
     			div18.className = "input-group-prepend w-25";
-    			add_location(div18, file$h, 138, 28, 5599);
+    			add_location(div18, file$a, 138, 28, 5599);
     			attr(input2, "type", "date");
     			input2.value = input2_value_value = ctx.departureDate.slice(0, -14);
     			input2.className = "form-control";
-    			add_location(input2, file$h, 141, 28, 5788);
+    			add_location(input2, file$a, 141, 28, 5788);
     			div19.className = "input-group";
-    			add_location(div19, file$h, 137, 24, 5544);
+    			add_location(div19, file$a, 137, 24, 5544);
     			div20.className = "form-group";
-    			add_location(div20, file$h, 136, 20, 5494);
+    			add_location(div20, file$a, 136, 20, 5494);
     			div21.className = "input-group-text w-100";
-    			add_location(div21, file$h, 147, 32, 6189);
+    			add_location(div21, file$a, 147, 32, 6189);
     			div22.className = "input-group-prepend w-25";
-    			add_location(div22, file$h, 146, 28, 6117);
+    			add_location(div22, file$a, 146, 28, 6117);
     			attr(input3, "type", "date");
     			input3.value = input3_value_value = ctx.arrivalDate.slice(0, -14);
     			input3.className = "form-control";
-    			add_location(input3, file$h, 149, 28, 6304);
+    			add_location(input3, file$a, 149, 28, 6304);
     			div23.className = "input-group";
-    			add_location(div23, file$h, 145, 24, 6062);
+    			add_location(div23, file$a, 145, 24, 6062);
     			div24.className = "form-group mb-0";
-    			add_location(div24, file$h, 144, 20, 6007);
+    			add_location(div24, file$a, 144, 20, 6007);
     			div25.className = "modal-body";
-    			add_location(div25, file$h, 87, 16, 2486);
+    			add_location(div25, file$a, 87, 16, 2486);
     			div26.className = "modal-body";
-    			add_location(div26, file$h, 86, 12, 2444);
+    			add_location(div26, file$a, 86, 12, 2444);
     			button1.className = "btn btn-info w-100";
-    			add_location(button1, file$h, 155, 16, 6599);
+    			add_location(button1, file$a, 155, 16, 6599);
     			div27.className = "modal-footer";
-    			add_location(div27, file$h, 154, 12, 6555);
+    			add_location(div27, file$a, 154, 12, 6555);
     			div28.className = "modal-content";
-    			add_location(div28, file$h, 81, 8, 2186);
+    			add_location(div28, file$a, 81, 8, 2186);
     			div29.className = "modal-dialog";
     			attr(div29, "role", "document");
-    			add_location(div29, file$h, 80, 4, 2134);
+    			add_location(div29, file$a, 80, 4, 2134);
     			div30.className = "modal fade";
     			div30.id = "edit-modal";
     			div30.tabIndex = "-1";
-    			add_location(div30, file$h, 79, 0, 2074);
+    			add_location(div30, file$a, 79, 0, 2074);
 
     			dispose = [
     				listen(input0, "change", ctx.change_handler),
@@ -12281,12 +8685,12 @@ var app = (function () {
     				each_value_1 = ctx.partners;
 
     				for (var i = 0; i < each_value_1.length; i += 1) {
-    					const child_ctx = get_each_context_1$4(ctx, each_value_1, i);
+    					const child_ctx = get_each_context_1$3(ctx, each_value_1, i);
 
     					if (each_blocks_1[i]) {
     						each_blocks_1[i].p(changed, child_ctx);
     					} else {
-    						each_blocks_1[i] = create_each_block_1$4(child_ctx);
+    						each_blocks_1[i] = create_each_block_1$3(child_ctx);
     						each_blocks_1[i].c();
     						each_blocks_1[i].m(select0, null);
     					}
@@ -12306,12 +8710,12 @@ var app = (function () {
     				each_value = ctx.partners;
 
     				for (var i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$6(ctx, each_value, i);
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(changed, child_ctx);
     					} else {
-    						each_blocks[i] = create_each_block$6(child_ctx);
+    						each_blocks[i] = create_each_block$5(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(select1, null);
     					}
@@ -12349,7 +8753,7 @@ var app = (function () {
     	};
     }
 
-    function instance$j($$self, $$props, $$invalidate) {
+    function instance$c($$self, $$props, $$invalidate) {
     	let { getMobilities, getToken, mobilities, partners, selectedRows, isOpen, setIsOpen } = $$props;
 
         let id = 0;
@@ -12498,7 +8902,7 @@ var app = (function () {
     class EditMobilityModal extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$j, create_fragment$j, safe_not_equal, ["getMobilities", "getToken", "mobilities", "partners", "selectedRows", "isOpen", "setIsOpen"]);
+    		init(this, options, instance$c, create_fragment$c, safe_not_equal, ["getMobilities", "getToken", "mobilities", "partners", "selectedRows", "isOpen", "setIsOpen"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -12584,10 +8988,10 @@ var app = (function () {
 
     /* src\components\mobilities\Mobilities.svelte generated by Svelte v3.5.1 */
 
-    const file$i = "src\\components\\mobilities\\Mobilities.svelte";
+    const file$b = "src\\components\\mobilities\\Mobilities.svelte";
 
     // (123:0) {#if is_logged_in}
-    function create_if_block$f(ctx) {
+    function create_if_block$8(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
 
     	var addmobilitymodal = new AddMobilityModal({
@@ -12648,22 +9052,22 @@ var app = (function () {
     			t9 = space();
     			mobilitiestable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$i, 127, 35, 4135);
+    			add_location(span0, file$b, 127, 35, 4135);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$i, 127, 8, 4108);
+    			add_location(h2, file$b, 127, 8, 4108);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$i, 129, 16, 4274);
+    			add_location(button0, file$b, 129, 16, 4274);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$i, 130, 16, 4375);
+    			add_location(button1, file$b, 130, 16, 4375);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$i, 131, 16, 4560);
-    			add_location(span1, file$i, 128, 12, 4250);
+    			add_location(button2, file$b, 131, 16, 4560);
+    			add_location(span1, file$b, 128, 12, 4250);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$i, 126, 8, 4013);
+    			add_location(div0, file$b, 126, 8, 4013);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$i, 125, 4, 3894);
+    			add_location(div1, file$b, 125, 4, 3894);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -12774,10 +9178,10 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$k(ctx) {
+    function create_fragment$d(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$f(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$8(ctx);
 
     	return {
     		c: function create() {
@@ -12801,7 +9205,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$f(ctx);
+    					if_block = create_if_block$8(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -12839,7 +9243,7 @@ var app = (function () {
     	};
     }
 
-    function instance$k($$self, $$props, $$invalidate) {
+    function instance$d($$self, $$props, $$invalidate) {
     	
 
         let { id, is_logged_in, getToken } = $$props;
@@ -12991,7 +9395,7 @@ var app = (function () {
     class Mobilities extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$k, create_fragment$k, safe_not_equal, ["id", "is_logged_in", "getToken"]);
+    		init(this, options, instance$d, create_fragment$d, safe_not_equal, ["id", "is_logged_in", "getToken"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -13033,10 +9437,10 @@ var app = (function () {
 
     /* src\components\mobility_students\MobilityStudents.svelte generated by Svelte v3.5.1 */
 
-    const file$j = "src\\components\\mobility_students\\MobilityStudents.svelte";
+    const file$c = "src\\components\\mobility_students\\MobilityStudents.svelte";
 
     // (263:0) {#if is_logged_in}
-    function create_if_block$g(ctx) {
+    function create_if_block$9(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
 
     	var basicmodal0 = new BasicModal({
@@ -13077,7 +9481,7 @@ var app = (function () {
     		onToggle: ctx.getMobilityStudents,
     		selectedRows: ctx.selectedRows,
     		toggleRowSelect: ctx.toggleRowSelect,
-    		selection_field: selection_field$1
+    		selection_field: selection_field
     	},
     		$$inline: true
     	});
@@ -13110,26 +9514,26 @@ var app = (function () {
     			t11 = space();
     			basictable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$j, 267, 39, 8365);
+    			add_location(span0, file$c, 267, 39, 8365);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$j, 267, 12, 8338);
+    			add_location(h2, file$c, 267, 12, 8338);
     			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span1, file$j, 268, 39, 8514);
+    			add_location(span1, file$c, 268, 39, 8514);
     			h3.className = "mb-3 text-dark";
-    			add_location(h3, file$j, 268, 12, 8487);
+    			add_location(h3, file$c, 268, 12, 8487);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$j, 270, 16, 8653);
+    			add_location(button0, file$c, 270, 16, 8653);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$j, 271, 16, 8754);
+    			add_location(button1, file$c, 271, 16, 8754);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$j, 272, 16, 8939);
-    			add_location(span2, file$j, 269, 12, 8629);
+    			add_location(button2, file$c, 272, 16, 8939);
+    			add_location(span2, file$c, 269, 12, 8629);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$j, 266, 8, 8239);
+    			add_location(div0, file$c, 266, 8, 8239);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$j, 265, 4, 8120);
+    			add_location(div1, file$c, 265, 4, 8120);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -13207,7 +9611,7 @@ var app = (function () {
     			if (changed.getMobilityStudents) basictable_changes.onToggle = ctx.getMobilityStudents;
     			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
     			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selection_field) basictable_changes.selection_field = selection_field$1;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field;
     			basictable.$set(basictable_changes);
     		},
 
@@ -13250,10 +9654,10 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$l(ctx) {
+    function create_fragment$e(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$g(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$9(ctx);
 
     	return {
     		c: function create() {
@@ -13277,7 +9681,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$g(ctx);
+    					if_block = create_if_block$9(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -13315,9 +9719,9 @@ var app = (function () {
     	};
     }
 
-    let selection_field$1 = "IDStudent";
+    let selection_field = "IDStudent";
 
-    function instance$l($$self, $$props, $$invalidate) {
+    function instance$e($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken, id } = $$props;
@@ -13524,7 +9928,7 @@ var app = (function () {
                     getStudentGroups();
                 }
                 for (let i = 0; i < mobility_students.length; i++) {
-                    if (mobility_students[i][selection_field$1] === selectedRows[0]) {
+                    if (mobility_students[i][selection_field] === selectedRows[0]) {
                     	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
         		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
         		        	if (edit_modal_fields.fields[j].type === "date") {
@@ -13611,7 +10015,7 @@ var app = (function () {
     class MobilityStudents extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$l, create_fragment$l, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+    		init(this, options, instance$e, create_fragment$e, safe_not_equal, ["is_logged_in", "getToken", "id"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -13653,10 +10057,10 @@ var app = (function () {
 
     /* src\components\mobility_teachers\MobilityTeachers.svelte generated by Svelte v3.5.1 */
 
-    const file$k = "src\\components\\mobility_teachers\\MobilityTeachers.svelte";
+    const file$d = "src\\components\\mobility_teachers\\MobilityTeachers.svelte";
 
     // (230:0) {#if is_logged_in}
-    function create_if_block$h(ctx) {
+    function create_if_block$a(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
 
     	var basicmodal0 = new BasicModal({
@@ -13697,7 +10101,7 @@ var app = (function () {
     		onToggle: ctx.getMobilityTeachers,
     		selectedRows: ctx.selectedRows,
     		toggleRowSelect: ctx.toggleRowSelect,
-    		selection_field: selection_field$2
+    		selection_field: selection_field$1
     	},
     		$$inline: true
     	});
@@ -13730,26 +10134,26 @@ var app = (function () {
     			t11 = space();
     			basictable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$k, 234, 39, 7445);
+    			add_location(span0, file$d, 234, 39, 7445);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$k, 234, 12, 7418);
+    			add_location(h2, file$d, 234, 12, 7418);
     			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span1, file$k, 235, 39, 7594);
+    			add_location(span1, file$d, 235, 39, 7594);
     			h3.className = "mb-3 text-dark";
-    			add_location(h3, file$k, 235, 12, 7567);
+    			add_location(h3, file$d, 235, 12, 7567);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$k, 237, 16, 7733);
+    			add_location(button0, file$d, 237, 16, 7733);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$k, 238, 16, 7834);
+    			add_location(button1, file$d, 238, 16, 7834);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$k, 239, 16, 8019);
-    			add_location(span2, file$k, 236, 12, 7709);
+    			add_location(button2, file$d, 239, 16, 8019);
+    			add_location(span2, file$d, 236, 12, 7709);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$k, 233, 8, 7319);
+    			add_location(div0, file$d, 233, 8, 7319);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$k, 232, 4, 7200);
+    			add_location(div1, file$d, 232, 4, 7200);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -13827,7 +10231,7 @@ var app = (function () {
     			if (changed.getMobilityTeachers) basictable_changes.onToggle = ctx.getMobilityTeachers;
     			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
     			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selection_field) basictable_changes.selection_field = selection_field$2;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$1;
     			basictable.$set(basictable_changes);
     		},
 
@@ -13870,10 +10274,10 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$m(ctx) {
+    function create_fragment$f(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$h(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$a(ctx);
 
     	return {
     		c: function create() {
@@ -13897,7 +10301,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$h(ctx);
+    					if_block = create_if_block$a(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -13935,9 +10339,9 @@ var app = (function () {
     	};
     }
 
-    let selection_field$2 = "IDTeacher";
+    let selection_field$1 = "IDTeacher";
 
-    function instance$m($$self, $$props, $$invalidate) {
+    function instance$f($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken, id } = $$props;
@@ -14111,7 +10515,7 @@ var app = (function () {
         function handleEditButtonClick(){
         	if(selectedRows.length === 1){
                 for (let i = 0; i < mobility_teachers.length; i++) {
-                    if (mobility_teachers[i][selection_field$2] === selectedRows[0]) {
+                    if (mobility_teachers[i][selection_field$1] === selectedRows[0]) {
                     	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
         		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
         		        	if (edit_modal_fields.fields[j].type === "date") {
@@ -14198,7 +10602,7 @@ var app = (function () {
     class MobilityTeachers extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$m, create_fragment$m, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+    		init(this, options, instance$f, create_fragment$f, safe_not_equal, ["is_logged_in", "getToken", "id"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -14240,10 +10644,10 @@ var app = (function () {
 
     /* src\components\partners\Partners.svelte generated by Svelte v3.5.1 */
 
-    const file$l = "src\\components\\partners\\Partners.svelte";
+    const file$e = "src\\components\\partners\\Partners.svelte";
 
     // (186:0) {#if is_logged_in}
-    function create_if_block$i(ctx) {
+    function create_if_block$b(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
 
     	var basicmodal0 = new BasicModal({
@@ -14308,22 +10712,22 @@ var app = (function () {
     			t9 = space();
     			basictable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$l, 190, 35, 5967);
+    			add_location(span0, file$e, 190, 35, 5967);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$l, 190, 8, 5940);
+    			add_location(h2, file$e, 190, 8, 5940);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$l, 192, 16, 6104);
+    			add_location(button0, file$e, 192, 16, 6104);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$l, 193, 16, 6205);
+    			add_location(button1, file$e, 193, 16, 6205);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$l, 194, 16, 6390);
-    			add_location(span1, file$l, 191, 12, 6080);
+    			add_location(button2, file$e, 194, 16, 6390);
+    			add_location(span1, file$e, 191, 12, 6080);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$l, 189, 8, 5845);
+    			add_location(div0, file$e, 189, 8, 5845);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$l, 188, 4, 5726);
+    			add_location(div1, file$e, 188, 4, 5726);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -14432,10 +10836,10 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$n(ctx) {
+    function create_fragment$g(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$i(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$b(ctx);
 
     	return {
     		c: function create() {
@@ -14459,7 +10863,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$i(ctx);
+    					if_block = create_if_block$b(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -14497,7 +10901,7 @@ var app = (function () {
     	};
     }
 
-    function instance$n($$self, $$props, $$invalidate) {
+    function instance$g($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken } = $$props;
@@ -14715,7 +11119,7 @@ var app = (function () {
     class Partners extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$n, create_fragment$n, safe_not_equal, ["is_logged_in", "getToken"]);
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, ["is_logged_in", "getToken"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -14746,10 +11150,10 @@ var app = (function () {
 
     /* src\components\project_partners\ProjectPartners.svelte generated by Svelte v3.5.1 */
 
-    const file$m = "src\\components\\project_partners\\ProjectPartners.svelte";
+    const file$f = "src\\components\\project_partners\\ProjectPartners.svelte";
 
     // (206:0) {#if is_logged_in}
-    function create_if_block$j(ctx) {
+    function create_if_block$c(ctx) {
     	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
 
     	var basicmodal0 = new BasicModal({
@@ -14790,7 +11194,7 @@ var app = (function () {
     		onToggle: ctx.getProjectPartners,
     		selectedRows: ctx.selectedRows,
     		toggleRowSelect: ctx.toggleRowSelect,
-    		selection_field: selection_field$3
+    		selection_field: selection_field$2
     	},
     		$$inline: true
     	});
@@ -14823,26 +11227,26 @@ var app = (function () {
     			t11 = space();
     			basictable.$$.fragment.c();
     			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span0, file$m, 210, 39, 6769);
+    			add_location(span0, file$f, 210, 39, 6769);
     			h2.className = "mb-3 text-dark";
-    			add_location(h2, file$m, 210, 12, 6742);
+    			add_location(h2, file$f, 210, 12, 6742);
     			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
-    			add_location(span1, file$m, 211, 39, 6917);
+    			add_location(span1, file$f, 211, 39, 6917);
     			h3.className = "mb-3 text-dark";
-    			add_location(h3, file$m, 211, 12, 6890);
+    			add_location(h3, file$f, 211, 12, 6890);
     			button0.className = "btn btn-success mb-2";
-    			add_location(button0, file$m, 213, 16, 7060);
+    			add_location(button0, file$f, 213, 16, 7060);
     			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
     			button1.id = "edit-btn";
-    			add_location(button1, file$m, 214, 16, 7161);
+    			add_location(button1, file$f, 214, 16, 7161);
     			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
     			button2.id = "delete-btn";
-    			add_location(button2, file$m, 215, 16, 7346);
-    			add_location(span2, file$m, 212, 12, 7036);
+    			add_location(button2, file$f, 215, 16, 7346);
+    			add_location(span2, file$f, 212, 12, 7036);
     			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
-    			add_location(div0, file$m, 209, 8, 6643);
+    			add_location(div0, file$f, 209, 8, 6643);
     			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
-    			add_location(div1, file$m, 208, 4, 6522);
+    			add_location(div1, file$f, 208, 4, 6522);
 
     			dispose = [
     				listen(button0, "click", ctx.handleAddButtonClick),
@@ -14920,7 +11324,7 @@ var app = (function () {
     			if (changed.getProjectPartners) basictable_changes.onToggle = ctx.getProjectPartners;
     			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
     			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
-    			if (changed.selection_field) basictable_changes.selection_field = selection_field$3;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$2;
     			basictable.$set(basictable_changes);
     		},
 
@@ -14963,10 +11367,10 @@ var app = (function () {
     	};
     }
 
-    function create_fragment$o(ctx) {
+    function create_fragment$h(ctx) {
     	var if_block_anchor, current;
 
-    	var if_block = (ctx.is_logged_in) && create_if_block$j(ctx);
+    	var if_block = (ctx.is_logged_in) && create_if_block$c(ctx);
 
     	return {
     		c: function create() {
@@ -14990,7 +11394,7 @@ var app = (function () {
     					if_block.p(changed, ctx);
     					if_block.i(1);
     				} else {
-    					if_block = create_if_block$j(ctx);
+    					if_block = create_if_block$c(ctx);
     					if_block.c();
     					if_block.i(1);
     					if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -15028,9 +11432,9 @@ var app = (function () {
     	};
     }
 
-    let selection_field$3 = "IDPartner";
+    let selection_field$2 = "IDPartner";
 
-    function instance$o($$self, $$props, $$invalidate) {
+    function instance$h($$self, $$props, $$invalidate) {
     	
 
         let { is_logged_in, getToken, id } = $$props;
@@ -15180,7 +11584,7 @@ var app = (function () {
         		}
 
                 for (let i = 0; i < project_partners.length; i++) {
-                    if (project_partners[i][selection_field$3] === selectedRows[0]) {
+                    if (project_partners[i][selection_field$2] === selectedRows[0]) {
                     	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
         		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
         		        	if (edit_modal_fields.fields[j].type === "date") {
@@ -15267,7 +11671,7 @@ var app = (function () {
     class ProjectPartners extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$o, create_fragment$o, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, ["is_logged_in", "getToken", "id"]);
 
     		const { ctx } = this.$$;
     		const props = options.props || {};
@@ -15309,9 +11713,9 @@ var app = (function () {
 
     /* src\App.svelte generated by Svelte v3.5.1 */
 
-    const file$n = "src\\App.svelte";
+    const file$g = "src\\App.svelte";
 
-    // (69:8) {#if !is_logged_in}
+    // (62:8) {#if !is_logged_in}
     function create_if_block_1$4(ctx) {
     	var current;
 
@@ -15354,290 +11758,8 @@ var app = (function () {
     	};
     }
 
-    // (74:12) <Route path="/svelte/teachers">
-    function create_default_slot_6$1(ctx) {
-    	var current;
-
-    	var teachers = new Teachers({
-    		props: {
-    		is_logged_in: ctx.is_logged_in,
-    		getToken: getToken
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			teachers.$$.fragment.c();
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(teachers, target, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var teachers_changes = {};
-    			if (changed.is_logged_in) teachers_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) teachers_changes.getToken = getToken;
-    			teachers.$set(teachers_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			teachers.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			teachers.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			teachers.$destroy(detaching);
-    		}
-    	};
-    }
-
-    // (78:12) <Route path="/svelte/students">
-    function create_default_slot_5$1(ctx) {
-    	var current;
-
-    	var students = new Students({
-    		props: {
-    		is_logged_in: ctx.is_logged_in,
-    		getToken: getToken
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			students.$$.fragment.c();
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(students, target, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var students_changes = {};
-    			if (changed.is_logged_in) students_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) students_changes.getToken = getToken;
-    			students.$set(students_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			students.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			students.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			students.$destroy(detaching);
-    		}
-    	};
-    }
-
-    // (81:12) <Route path="/svelte/courses">
-    function create_default_slot_4$1(ctx) {
-    	var current;
-
-    	var courses = new Courses({
-    		props: {
-    		is_logged_in: ctx.is_logged_in,
-    		getToken: getToken
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			courses.$$.fragment.c();
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(courses, target, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var courses_changes = {};
-    			if (changed.is_logged_in) courses_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) courses_changes.getToken = getToken;
-    			courses.$set(courses_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			courses.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			courses.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			courses.$destroy(detaching);
-    		}
-    	};
-    }
-
-    // (84:12) <Route path="/svelte/studentgroups">
-    function create_default_slot_3$1(ctx) {
-    	var current;
-
-    	var studentgroups = new StudentGroups({
-    		props: {
-    		is_logged_in: ctx.is_logged_in,
-    		getToken: getToken
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			studentgroups.$$.fragment.c();
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(studentgroups, target, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var studentgroups_changes = {};
-    			if (changed.is_logged_in) studentgroups_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) studentgroups_changes.getToken = getToken;
-    			studentgroups.$set(studentgroups_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			studentgroups.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			studentgroups.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			studentgroups.$destroy(detaching);
-    		}
-    	};
-    }
-
-    // (87:12) <Route path="/svelte/countries">
-    function create_default_slot_2$1(ctx) {
-    	var current;
-
-    	var countries = new Countries({
-    		props: {
-    		is_logged_in: ctx.is_logged_in,
-    		getToken: getToken
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			countries.$$.fragment.c();
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(countries, target, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var countries_changes = {};
-    			if (changed.is_logged_in) countries_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) countries_changes.getToken = getToken;
-    			countries.$set(countries_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			countries.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			countries.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			countries.$destroy(detaching);
-    		}
-    	};
-    }
-
-    // (90:12) <Route path="/svelte/subjects">
-    function create_default_slot_1$3(ctx) {
-    	var current;
-
-    	var subjects = new Subjects({
-    		props: {
-    		is_logged_in: ctx.is_logged_in,
-    		getToken: getToken
-    	},
-    		$$inline: true
-    	});
-
-    	return {
-    		c: function create() {
-    			subjects.$$.fragment.c();
-    		},
-
-    		m: function mount(target, anchor) {
-    			mount_component(subjects, target, anchor);
-    			current = true;
-    		},
-
-    		p: function update(changed, ctx) {
-    			var subjects_changes = {};
-    			if (changed.is_logged_in) subjects_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) subjects_changes.getToken = getToken;
-    			subjects.$set(subjects_changes);
-    		},
-
-    		i: function intro(local) {
-    			if (current) return;
-    			subjects.$$.fragment.i(local);
-
-    			current = true;
-    		},
-
-    		o: function outro(local) {
-    			subjects.$$.fragment.o(local);
-    			current = false;
-    		},
-
-    		d: function destroy(detaching) {
-    			subjects.$destroy(detaching);
-    		}
-    	};
-    }
-
-    // (101:12) {#if !is_logged_in}
-    function create_if_block$k(ctx) {
+    // (76:12) {#if !is_logged_in}
+    function create_if_block$d(ctx) {
     	var div, h3;
 
     	return {
@@ -15646,9 +11768,9 @@ var app = (function () {
     			h3 = element("h3");
     			h3.textContent = "You must login with your account to do anything in the backoffice";
     			h3.className = "m-5 p-3 text-center bg-danger rounded shadow-lg d-inline-block";
-    			add_location(h3, file$n, 102, 20, 4581);
+    			add_location(h3, file$g, 77, 20, 3220);
     			div.className = "container p-5 d-flex justify-content-center";
-    			add_location(div, file$n, 101, 16, 4503);
+    			add_location(div, file$g, 76, 16, 3142);
     		},
 
     		m: function mount(target, anchor) {
@@ -15664,9 +11786,9 @@ var app = (function () {
     	};
     }
 
-    // (68:4) <Router url="{url}">
+    // (61:4) <Router url="{url}">
     function create_default_slot$4(ctx) {
-    	var t0, t1, div, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, current;
+    	var t0, t1, div, t2, t3, t4, t5, t6, t7, t8, t9, t10, current;
 
     	var if_block0 = (!ctx.is_logged_in) && create_if_block_1$4(ctx);
 
@@ -15680,69 +11802,15 @@ var app = (function () {
 
     	var route0 = new Route({
     		props: {
-    		path: "/svelte/teachers",
-    		$$slots: { default: [create_default_slot_6$1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route1 = new Route({
-    		props: {
-    		path: "/svelte/teacher_subjects/:id",
-    		component: TeacherSubjects,
+    		path: "/svelte/countries",
+    		component: Countries,
     		is_logged_in: ctx.is_logged_in,
     		getToken: getToken
     	},
     		$$inline: true
     	});
 
-    	var route2 = new Route({
-    		props: {
-    		path: "/svelte/students",
-    		$$slots: { default: [create_default_slot_5$1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route3 = new Route({
-    		props: {
-    		path: "/svelte/courses",
-    		$$slots: { default: [create_default_slot_4$1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route4 = new Route({
-    		props: {
-    		path: "/svelte/studentgroups",
-    		$$slots: { default: [create_default_slot_3$1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route5 = new Route({
-    		props: {
-    		path: "/svelte/countries",
-    		$$slots: { default: [create_default_slot_2$1] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route6 = new Route({
-    		props: {
-    		path: "/svelte/subjects",
-    		$$slots: { default: [create_default_slot_1$3] },
-    		$$scope: { ctx }
-    	},
-    		$$inline: true
-    	});
-
-    	var route7 = new Route({
+    	var route1 = new Route({
     		props: {
     		path: "/svelte",
     		component: Projects,
@@ -15752,7 +11820,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route8 = new Route({
+    	var route2 = new Route({
     		props: {
     		path: "/svelte/projects",
     		component: Projects,
@@ -15762,7 +11830,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route9 = new Route({
+    	var route3 = new Route({
     		props: {
     		path: "/svelte/mobilities/:id",
     		component: Mobilities,
@@ -15772,7 +11840,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route10 = new Route({
+    	var route4 = new Route({
     		props: {
     		path: "/svelte/mobilities",
     		component: Mobilities,
@@ -15782,7 +11850,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route11 = new Route({
+    	var route5 = new Route({
     		props: {
     		path: "/svelte/mobility_students/:id",
     		component: MobilityStudents,
@@ -15792,7 +11860,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route12 = new Route({
+    	var route6 = new Route({
     		props: {
     		path: "/svelte/mobility_teachers/:id",
     		component: MobilityTeachers,
@@ -15802,7 +11870,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route13 = new Route({
+    	var route7 = new Route({
     		props: {
     		path: "/svelte/partners",
     		component: Partners,
@@ -15812,7 +11880,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var route14 = new Route({
+    	var route8 = new Route({
     		props: {
     		path: "/svelte/project_partners/:id",
     		component: ProjectPartners,
@@ -15822,7 +11890,7 @@ var app = (function () {
     		$$inline: true
     	});
 
-    	var if_block1 = (!ctx.is_logged_in) && create_if_block$k();
+    	var if_block1 = (!ctx.is_logged_in) && create_if_block$d();
 
     	return {
     		c: function create() {
@@ -15849,20 +11917,8 @@ var app = (function () {
     			t9 = space();
     			route8.$$.fragment.c();
     			t10 = space();
-    			route9.$$.fragment.c();
-    			t11 = space();
-    			route10.$$.fragment.c();
-    			t12 = space();
-    			route11.$$.fragment.c();
-    			t13 = space();
-    			route12.$$.fragment.c();
-    			t14 = space();
-    			route13.$$.fragment.c();
-    			t15 = space();
-    			route14.$$.fragment.c();
-    			t16 = space();
     			if (if_block1) if_block1.c();
-    			add_location(div, file$n, 72, 8, 2451);
+    			add_location(div, file$g, 65, 8, 1969);
     		},
 
     		m: function mount(target, anchor) {
@@ -15889,18 +11945,6 @@ var app = (function () {
     			append(div, t9);
     			mount_component(route8, div, null);
     			append(div, t10);
-    			mount_component(route9, div, null);
-    			append(div, t11);
-    			mount_component(route10, div, null);
-    			append(div, t12);
-    			mount_component(route11, div, null);
-    			append(div, t13);
-    			mount_component(route12, div, null);
-    			append(div, t14);
-    			mount_component(route13, div, null);
-    			append(div, t15);
-    			mount_component(route14, div, null);
-    			append(div, t16);
     			if (if_block1) if_block1.m(div, null);
     			current = true;
     		},
@@ -15933,86 +11977,62 @@ var app = (function () {
     			header.$set(header_changes);
 
     			var route0_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route0_changes.$$scope = { changed, ctx };
+    			if (changed.Countries) route0_changes.component = Countries;
+    			if (changed.is_logged_in) route0_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route0_changes.getToken = getToken;
     			route0.$set(route0_changes);
 
     			var route1_changes = {};
-    			if (changed.TeacherSubjects) route1_changes.component = TeacherSubjects;
+    			if (changed.Projects) route1_changes.component = Projects;
     			if (changed.is_logged_in) route1_changes.is_logged_in = ctx.is_logged_in;
     			if (changed.getToken) route1_changes.getToken = getToken;
     			route1.$set(route1_changes);
 
     			var route2_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route2_changes.$$scope = { changed, ctx };
+    			if (changed.Projects) route2_changes.component = Projects;
+    			if (changed.is_logged_in) route2_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route2_changes.getToken = getToken;
     			route2.$set(route2_changes);
 
     			var route3_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route3_changes.$$scope = { changed, ctx };
+    			if (changed.Mobilities) route3_changes.component = Mobilities;
+    			if (changed.is_logged_in) route3_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route3_changes.getToken = getToken;
     			route3.$set(route3_changes);
 
     			var route4_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route4_changes.$$scope = { changed, ctx };
+    			if (changed.Mobilities) route4_changes.component = Mobilities;
+    			if (changed.is_logged_in) route4_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route4_changes.getToken = getToken;
     			route4.$set(route4_changes);
 
     			var route5_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route5_changes.$$scope = { changed, ctx };
+    			if (changed.MobilityStudents) route5_changes.component = MobilityStudents;
+    			if (changed.is_logged_in) route5_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route5_changes.getToken = getToken;
     			route5.$set(route5_changes);
 
     			var route6_changes = {};
-    			if (changed.$$scope || changed.is_logged_in) route6_changes.$$scope = { changed, ctx };
+    			if (changed.MobilityTeachers) route6_changes.component = MobilityTeachers;
+    			if (changed.is_logged_in) route6_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route6_changes.getToken = getToken;
     			route6.$set(route6_changes);
 
     			var route7_changes = {};
-    			if (changed.Projects) route7_changes.component = Projects;
+    			if (changed.Partners) route7_changes.component = Partners;
     			if (changed.is_logged_in) route7_changes.is_logged_in = ctx.is_logged_in;
     			if (changed.getToken) route7_changes.getToken = getToken;
     			route7.$set(route7_changes);
 
     			var route8_changes = {};
-    			if (changed.Projects) route8_changes.component = Projects;
+    			if (changed.ProjectPartners) route8_changes.component = ProjectPartners;
     			if (changed.is_logged_in) route8_changes.is_logged_in = ctx.is_logged_in;
     			if (changed.getToken) route8_changes.getToken = getToken;
     			route8.$set(route8_changes);
 
-    			var route9_changes = {};
-    			if (changed.Mobilities) route9_changes.component = Mobilities;
-    			if (changed.is_logged_in) route9_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) route9_changes.getToken = getToken;
-    			route9.$set(route9_changes);
-
-    			var route10_changes = {};
-    			if (changed.Mobilities) route10_changes.component = Mobilities;
-    			if (changed.is_logged_in) route10_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) route10_changes.getToken = getToken;
-    			route10.$set(route10_changes);
-
-    			var route11_changes = {};
-    			if (changed.MobilityStudents) route11_changes.component = MobilityStudents;
-    			if (changed.is_logged_in) route11_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) route11_changes.getToken = getToken;
-    			route11.$set(route11_changes);
-
-    			var route12_changes = {};
-    			if (changed.MobilityTeachers) route12_changes.component = MobilityTeachers;
-    			if (changed.is_logged_in) route12_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) route12_changes.getToken = getToken;
-    			route12.$set(route12_changes);
-
-    			var route13_changes = {};
-    			if (changed.Partners) route13_changes.component = Partners;
-    			if (changed.is_logged_in) route13_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) route13_changes.getToken = getToken;
-    			route13.$set(route13_changes);
-
-    			var route14_changes = {};
-    			if (changed.ProjectPartners) route14_changes.component = ProjectPartners;
-    			if (changed.is_logged_in) route14_changes.is_logged_in = ctx.is_logged_in;
-    			if (changed.getToken) route14_changes.getToken = getToken;
-    			route14.$set(route14_changes);
-
     			if (!ctx.is_logged_in) {
     				if (!if_block1) {
-    					if_block1 = create_if_block$k();
+    					if_block1 = create_if_block$d();
     					if_block1.c();
     					if_block1.m(div, null);
     				}
@@ -16046,18 +12066,6 @@ var app = (function () {
 
     			route8.$$.fragment.i(local);
 
-    			route9.$$.fragment.i(local);
-
-    			route10.$$.fragment.i(local);
-
-    			route11.$$.fragment.i(local);
-
-    			route12.$$.fragment.i(local);
-
-    			route13.$$.fragment.i(local);
-
-    			route14.$$.fragment.i(local);
-
     			current = true;
     		},
 
@@ -16073,12 +12081,6 @@ var app = (function () {
     			route6.$$.fragment.o(local);
     			route7.$$.fragment.o(local);
     			route8.$$.fragment.o(local);
-    			route9.$$.fragment.o(local);
-    			route10.$$.fragment.o(local);
-    			route11.$$.fragment.o(local);
-    			route12.$$.fragment.o(local);
-    			route13.$$.fragment.o(local);
-    			route14.$$.fragment.o(local);
     			current = false;
     		},
 
@@ -16114,24 +12116,12 @@ var app = (function () {
 
     			route8.$destroy();
 
-    			route9.$destroy();
-
-    			route10.$destroy();
-
-    			route11.$destroy();
-
-    			route12.$destroy();
-
-    			route13.$destroy();
-
-    			route14.$destroy();
-
     			if (if_block1) if_block1.d();
     		}
     	};
     }
 
-    function create_fragment$p(ctx) {
+    function create_fragment$i(ctx) {
     	var div, current;
 
     	var router = new Router({
@@ -16147,7 +12137,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			router.$$.fragment.c();
-    			add_location(div, file$n, 66, 0, 2266);
+    			add_location(div, file$g, 59, 0, 1784);
     		},
 
     		l: function claim(nodes) {
@@ -16197,7 +12187,7 @@ var app = (function () {
     	    localStorage.removeItem("api-auth-token");
     	}
 
-    function instance$p($$self, $$props, $$invalidate) {
+    function instance$i($$self, $$props, $$invalidate) {
     	
 
     	let { url = "" } = $$props;
@@ -16246,7 +12236,7 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$p, create_fragment$p, safe_not_equal, ["url"]);
+    		init(this, options, instance$i, create_fragment$i, safe_not_equal, ["url"]);
     	}
 
     	get url() {

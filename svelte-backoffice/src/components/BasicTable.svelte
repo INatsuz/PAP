@@ -58,6 +58,12 @@
     }
 </script>
 
+<style>
+    .toggler{
+        min-width: 50px;
+    }
+</style>
+
 <div class="table-responsive rounded dark-scroll">
     <table class="table table-dark table-bordered table-scrollable table-hover nowrap m-0">
         <thead>

@@ -17,14 +17,8 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav">
 				<Link to="/svelte/projects"><li class="nav-item"><span class="nav-link">Projects</span></li></Link>
-				<Link to="/svelte/teachers"><li class="nav-item"><span class="nav-link">Teachers</span></li></Link>
-				<Link to="/svelte/students"><li class="nav-item"><span class="nav-link">Students</span></li></Link>
-				<Link to="/svelte/partners"><li class="nav-item"><span class="nav-link">Partners</span></li></Link>
 				<Link to="/svelte/mobilities"><li class="nav-item"><span class="nav-link">Mobilities</span></li></Link>
-				<Link to="/svelte/subjects"><li class="nav-item"><span class="nav-link">Subjects</span></li></Link>
-				<Link to="/svelte/courses"><li class="nav-item"><span class="nav-link">Courses</span></li></Link>
 				<Link to="/svelte/countries"><li class="nav-item"><span class="nav-link">Countries</span></li></Link>
-				<Link to="/svelte/studentgroups"><li class="nav-item"><span class="nav-link">Student Groups</span></li></Link>
 			</ul>
 		</div>
 		<ul class="navbar-nav mr-2 flex-row">
