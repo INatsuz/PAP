@@ -58,6 +58,14 @@
     }
 
     function open(){
+        origin = "";
+        originPartner = 0;
+        target = "";
+        targetPartner = 0;
+        departureDate = "";
+        arrivalDate = "";
+        project = 0;
+
     	setIsOpen(true);
         window.$("#add-modal").modal('show');
     }
@@ -87,7 +95,7 @@
                         <div class="input-group-prepend w-25">
                             <div class="input-group-text w-100">Origin</div>
                         </div>
-                        <input class="form-control" type="text" placeholder="eg. Sweden, Stockholm" on:change="{event => origin = event.target.value}"/>
+                        <input class="form-control" type="text" value="{origin}" placeholder="eg. Sweden, Stockholm" on:change="{event => origin = event.target.value}"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -96,9 +104,15 @@
                             <div class="input-group-text w-100">Origin Partner</div>
                         </div>
                         <select class="form-control" on:change="{event => originPartner = event.target.value}">
-                            <option value="0" disabled selected class="d-none">Select Partner</option>
+                            {#if originPartner === 0}
+                                <option value="0" disabled selected class="d-none">Select Partner</option>
+                            {/if}
                             {#each partners as partner, i}
-                                <option value={partner.ID}>{partner.name}</option>
+                                {#if originPartner === partner.ID}
+                                    <option value={partner.ID} selected>{partner.name}</option>
+                                {:else}
+                                    <option value={partner.ID}>{partner.name}</option>
+                                {/if}
                             {/each}
                         </select>
                     </div>
@@ -108,7 +122,7 @@
                         <div class="input-group-prepend w-25">
                             <div class="input-group-text w-100">Target</div>
                         </div>
-                        <input class="form-control" type="text" placeholder="eg. Sweden, Stockholm" on:change="{event => target = event.target.value}"/>
+                        <input class="form-control" type="text" value="{target}" placeholder="eg. Sweden, Stockholm" on:change="{event => target = event.target.value}"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -117,9 +131,15 @@
                             <div class="input-group-text w-100">Target Partner</div>
                         </div>
                         <select class="form-control" on:change="{event => targetPartner = event.target.value}">
-                            <option value="0" disabled selected class="d-none">Select Partner</option>
+                            {#if originPartner === 0}
+                                <option value="0" disabled selected class="d-none">Select Partner</option>
+                            {/if}
                             {#each partners as partner, i}
-                                <option value={partner.ID}>{partner.name}</option>
+                                {#if targetPartner === partner.ID}
+                                    <option value={partner.ID} selected>{partner.name}</option>
+                                {:else}
+                                    <option value={partner.ID}>{partner.name}</option>
+                                {/if}
                             {/each}
                         </select>
                     </div>
@@ -129,7 +149,7 @@
                         <div class="input-group-prepend w-25">
                             <div class="input-group-text w-100">Departure</div>
                         </div>
-                        <input type="date" class="form-control" on:change="{event => departureDate = event.target.value}"/>
+                        <input type="date" class="form-control" value="{departureDate}" on:change="{event => departureDate = event.target.value}"/>
                     </div>
                 </div>
                 <div class="{`form-group ${projectID != null ? 'mb-0' : ''}`}">
@@ -137,24 +157,9 @@
                         <div class="input-group-prepend w-25">
                             <div class="input-group-text w-100">Arrival</div>
                         </div>
-                        <input type="date" class="form-control" on:change="{event => arrivalDate = event.target.value}"/>
+                        <input type="date" class="form-control" value="{arrivalDate}" on:change="{event => arrivalDate = event.target.value}"/>
                     </div>
                 </div>
-                {#if projectID == null}
-                    <div class="{`form-group ${projectID != null ? '' : 'mb-0'}`}">
-                        <div class="input-group">
-                            <div class="input-group-prepend w-25">
-                                <div class="input-group-text w-100">Project</div>
-                            </div>
-                            <select class="form-control" on:change="{event => project = event.target.value}">
-                                <option value="0" disabled selected class="d-none">Select Project</option>
-                                {#each projects as project, i}
-                                    <option value={project.ID}>{project.name}</option>
-                                {/each}
-                            </select>
-                        </div>
-                    </div>
-                {/if}
             </div>
             <div class="modal-footer">
                 <button class="btn btn-success w-100" id="modal-add-btn" on:click={addMobility}>Add</button>

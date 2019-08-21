@@ -44,20 +44,6 @@ router.get("/logincheck", function (req, res) {
 	});
 });
 
-router.get("/get/teacher_subjects", function (req, res) {
-	if (isAuthenticated(req, res)) {
-		let query = "SELECT subjects_teachers.ID, subjects.ID IDSubject, teachers.ID IDTeacher, subjects.subject, teachers.name, IF(subjects_teachers.ID, 'true', 'false') isTeacher FROM subjects LEFT JOIN subjects_teachers ON subjects_teachers.IDTeacher = " + dbConn().escape(req.query.IDTeacher) + " AND subjects_teachers.IDSubject = subjects.ID INNER JOIN teachers ON teachers.ID = " + dbConn().escape(req.query.IDTeacher) + " ORDER BY subjects.subject";
-		console.log(query);
-		dbConn().query(query, function (err, result) {
-			if (err) {
-				console.log(err);
-			} else {
-				res.status(200).send(result);
-			}
-		});
-	}
-});
-
 router.get("/get/project_partners", function (req, res) {
 	if (isAuthenticated(req, res)) {
 		let query = "SELECT partners_projects.ID, partners.ID IDPartner, projects.ID IDProject, partners.name, partners.description, countries.country, projects.name projectName, IF(partners_projects.ID, 'true', 'false') isPartner FROM partners LEFT JOIN partners_projects ON partners.ID = partners_projects.IDPartner AND partners_projects.IDProject = " + dbConn().escape(req.query.IDProject) + " INNER JOIN projects ON projects.ID = " + dbConn().escape(req.query.IDProject) + " INNER JOIN countries on countries.ID = partners.IDCountry ORDER BY partners.name";
@@ -100,23 +86,9 @@ router.get("/get/mobility_teachers", function (req, res) {
 	}
 });
 
-router.get("/get/studentgroups", function (req, res) {
-	if (isAuthenticated(req, res)) {
-		let query = "SELECT sg.*, c.course FROM studentgroups sg INNER JOIN courses c ON sg.IDCourse = c.ID";
-
-		dbConn().query(query, function (err, result) {
-			if (err) {
-				console.log(err);
-			} else {
-				res.status(200).send(result);
-			}
-		});
-	}
-});
-
 router.get("/get/partners", function (req, res) {
 	if (isAuthenticated(req, res)) {
-		let query = `SELECT p.*, c.country FROM partners p INNER JOIN countries c ON p.IDCountry = c.ID`;
+		let query = `SELECT p.*, c.country FROM partners p INNER JOIN countries c ON p.IDCountry = c.ID ORDER BY p.name`;
 
 		if (req.query != null) {
 			let keys = Object.keys(req.query);

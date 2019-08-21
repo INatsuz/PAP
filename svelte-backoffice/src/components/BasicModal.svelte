@@ -1,5 +1,6 @@
 <script>
     import axios from 'axios';
+    import {beforeUpdate} from 'svelte';
 
     export let getToken;
 
@@ -14,6 +15,12 @@
     export let onEdit;
 
     export let mode;
+
+    beforeUpdate(() => {
+    	fields = fields;
+
+    	console.log("Hey before");
+    });
 
     function add() {
         console.log(`Attempting to add ${table}`);
@@ -92,7 +99,7 @@
                             {#if field.type === "select"}
                                 <select class="form-control" on:change="{event => {field.value = event.target.value}}">
                                     {#if field.value === ""}
-                                    <option class="d-none" value="null" selected disabled>Choose an option</option>
+                                        <option class="d-none" value="null" selected disabled>Choose an option</option>
                                     {/if}
                                     {#each field.options as option}
                                         {#if field.value === option.value}
@@ -106,11 +113,7 @@
                                 {#if field.type === "textarea"}
                                     <textarea class="form-control" placeholder={field.placeholder} on:change="{event => {field.value = event.target.value}}">{field.value}</textarea>
                                 {:else}
-                                    {#if field.value !== ""}
-                                        <input class="form-control" type={field.type} value={field.value} placeholder={field.placeholder} on:change="{event => {field.value = event.target.value}}" />
-                                    {:else}
-                                        <input class="form-control" type={field.type} value={field.value} placeholder={field.placeholder} on:change="{event => {field.value = event.target.value}}" />
-                                    {/if}
+                                    <input class="form-control" type={field.type} value={field.value} placeholder={field.placeholder} on:change="{event => {field.value = event.target.value}}" />
                                 {/if}
                             {/if}
                         </div>

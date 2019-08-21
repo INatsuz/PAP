@@ -62,13 +62,16 @@ app.use(function (req, res, next) {
     next("route");
 });
 
-app.use("/backoffice", backoffice_router.router);
-app.use("/svelte/", function (req, res, next) {
-    res.sendFile(path.join(__dirname, "public/svelte/index.html"));
+app.use("/old_backoffice", backoffice_router.router);
+app.use("/backoffice/", function (req, res, next) {
+    res.sendFile(path.join(__dirname, "public/backoffice/index.html"));
 });
 app.use("/api", api_router.router);
 app.use("/", frontoffice_router.router);
 
+app.use("/404", function (req, res) {
+    res.render("err");
+});
 app.use(function (req, res) {
     res.render("err404");
 });

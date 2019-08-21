@@ -19,7 +19,6 @@
         {columnName: ' ', key: "isPartner", toggler: true},
         {columnName: 'Name', key: "name"},
         {columnName: "Country", key: "country"},
-        {columnName: "Description", key: "description", wrap: true}
     ];
     let toggle_fields = [
     	{field: "IDPartner"},
@@ -143,6 +142,9 @@
     	if (countries.length === 0) {
             getCountries();
         }
+    	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+    	    add_modal_fields.fields[i].value = "";
+    	}
 
         setIsAddModalOpen(true);
     }

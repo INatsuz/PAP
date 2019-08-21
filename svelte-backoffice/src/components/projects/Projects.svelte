@@ -135,6 +135,10 @@
     }
 
     function setIsAddModalOpen(value){
+    	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+    	    add_modal_fields.fields[i].value = "";
+    	}
+
     	isAddModalOpen = value;
     }
 

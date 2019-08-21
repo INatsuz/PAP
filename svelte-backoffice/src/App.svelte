@@ -9,7 +9,6 @@
     import Mobilities from './components/mobilities/Mobilities.svelte';
     import MobilityStudents from './components/mobility_students/MobilityStudents.svelte';
     import MobilityTeachers from './components/mobility_teachers/MobilityTeachers.svelte';
-    import Partners from './components/partners/Partners.svelte';
     import ProjectPartners from './components/project_partners/ProjectPartners.svelte';
 
 	export let url = "";
@@ -64,15 +63,13 @@
         {/if}
         <Header is_logged_in={is_logged_in} logout={logout} />
         <div>
-            <Route path="/svelte/countries" component="{Countries}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte" component="{Projects}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/projects" component="{Projects}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/mobilities/:id" component="{Mobilities}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/mobilities" component="{Mobilities}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/mobility_students/:id" component="{MobilityStudents}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/mobility_teachers/:id" component="{MobilityTeachers}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/partners" component="{Partners}" is_logged_in={is_logged_in} getToken={getToken} />
-            <Route path="/svelte/project_partners/:id" component="{ProjectPartners}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice" component="{Projects}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice/projects" component="{Projects}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice/project_partners/:id" component="{ProjectPartners}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice/mobilities/:id" component="{Mobilities}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice/mobility_students/:id" component="{MobilityStudents}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice/mobility_teachers/:id" component="{MobilityTeachers}" is_logged_in={is_logged_in} getToken={getToken} />
+            <Route path="/backoffice/countries" component="{Countries}" is_logged_in={is_logged_in} getToken={getToken} />
             {#if !is_logged_in}
                 <div class="container p-5 d-flex justify-content-center">
                     <h3 class="m-5 p-3 text-center bg-danger rounded shadow-lg d-inline-block">You must login with your account to do anything in the backoffice</h3>

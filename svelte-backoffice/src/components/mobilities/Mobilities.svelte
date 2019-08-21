@@ -102,6 +102,7 @@
     	if (partners.length === 0) {
             getPartners();
         }
+
         setIsAddModalOpen(true);
     }
 
@@ -115,7 +116,6 @@
     }
 
     $: if (is_logged_in) {
-    	console.log("Hello");
     	getMobilities();
     }
 </script>

@@ -19,6 +19,23 @@
 
 </script>
 
+<style>
+    .project-logo{
+        position: relative;
+    }
+
+    .project-logo:hover:before{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        content: '+';
+        background: rgba(0, 0, 0, 0.3);
+    }
+</style>
+
 <div class="table-responsive rounded dark-scroll">
     <table class="table table-dark table-bordered table-hover nowrap m-0">
         <thead>
@@ -39,13 +56,13 @@
                     <td>{project.name}</td>
                     <td class="text-center">
                         <input type="file" class="d-none" name={project.ID} id={`image-input-${project.ID}`} on:change="{event => handleImageChange(event.target.files[0], project.ID)}">
-                        <label for={`image-input-${project.ID}`}>
-                            <img src={`/imgs/projects/${project.ID}.png`} id="{`image-${project.ID}`}" height="50" class="cursor-pointer" alt="Project Logo">
+                        <label for={`image-input-${project.ID}`} class="project-logo cursor-pointer m-0">
+                            <img src={`/imgs/projects/${project.ID}.png`} id="{`image-${project.ID}`}" height="50" alt="Project Logo">
                         </label>
                     </td>
                     <td class="text-center vertical-align-middle">
-                        <Link to={`/svelte/project_partners/${project.ID}`}><i class="fas fa-school fa-fw cursor-pointer mr-1 text-light"></i></Link>
-                        <Link to={`/svelte/mobilities/${project.ID}`}><i class="fas fa-plane fa-fw cursor-pointer ml-1 text-light"></i></Link>
+                        <Link to={`/backoffice/project_partners/${project.ID}`}><i class="fas fa-school fa-fw cursor-pointer mr-1 text-light"></i></Link>
+                        <Link to={`/backoffice/mobilities/${project.ID}`}><i class="fas fa-plane fa-fw cursor-pointer ml-1 text-light"></i></Link>
                     </td>
                 </tr>
             {/each}

@@ -12,7 +12,6 @@
     let selection_field = "IDStudent";
 
     let mobility_students = [];
-    let student_groups = [];
     let genders = [
     	{
     		display: "Male",
@@ -77,13 +76,6 @@
             display: "Email",
             placeholder: "eg. student.email@gmail.com",
             value: ""
-        }, {
-            field: "IDClass",
-            type: "select",
-            display: "Class",
-            placeholder: "Choose the student's class",
-            value: "",
-            options: student_groups
         }]
     };
     let edit_modal_fields = {
@@ -119,13 +111,6 @@
             display: "Email",
             placeholder: "eg. student.email@gmail.com",
             value: ""
-        }, {
-            field: "IDClass",
-            type: "select",
-            display: "Class",
-            placeholder: "Choose the student's class",
-            value: "",
-            options: student_groups
         }]
     };
 
@@ -145,20 +130,6 @@
     	}).catch(err => {
     		console.log(err.response);
     	});
-    }
-
-
-    function getStudentGroups() {
-    	console.log("Trying to fetch classes");
-        axios.get("/api/get/studentgroups", {headers: {Authorization: getToken()}}).then(function(res) {
-            for(let i = 0; i < res.data.length; i++) {
-                student_groups.push({value: res.data[i].ID, display: res.data[i].grade + res.data[i].designation, original: res.data[i]});
-            }
-            add_modal_fields = add_modal_fields;
-            edit_modal_fields = edit_modal_fields;
-        }).catch(err => {
-        	console.log(err.response);
-        });
     }
 
     function toggleRowSelect(id) {
@@ -198,8 +169,8 @@
     }
 
     function handleAddButtonClick(){
-    	if (student_groups.length === 0) {
-    	    getStudentGroups();
+    	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+    	    add_modal_fields.fields[i].value = "";
     	}
 
         setIsAddModalOpen(true);
@@ -207,9 +178,6 @@
 
     function handleEditButtonClick(){
     	if(selectedRows.length === 1){
-    		if (student_groups.length === 0) {
-                getStudentGroups();
-            }
             for (let i = 0; i < mobility_students.length; i++) {
                 if (mobility_students[i][selection_field] === selectedRows[0]) {
                 	edit_modal_fields.ID = selectedRows[0];

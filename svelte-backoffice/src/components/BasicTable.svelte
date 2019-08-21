@@ -51,7 +51,7 @@
     }
 
     function handleRowClick(event, id) {
-    	if (!event.target.classList.contains("toggler")) {
+    	if (!event.target.classList.contains("toggler") && !event.target.parentElement.classList.contains("toggler")) {
             toggleRowSelect(id);
     	}
     	// event.currentTarget.classList.toggle("bg-secondary");
@@ -60,7 +60,7 @@
 
 <style>
     .toggler{
-        min-width: 50px;
+        width: 50px;
     }
 </style>
 
@@ -86,7 +86,11 @@
                             </td>
                         {:else}
                             {#if header.toggler}
-                                <td class="{row[header.key] === 'true' ? 'bg-success' : 'bg-danger'} cursor-pointer toggler" on:click="{event => {handleToggleClick(row)}}">&nbsp;</td>
+                                <td class="toggler cursor-pointer text-center" on:click="{event => {handleToggleClick(row)}}">
+                                {#if row[header.key] === 'true'}
+                                    <i class="fas fa-check"></i>
+                                {/if}
+                                </td>
                             {:else}
                                 <td class="{header.wrap ? 'wrap' : ''}">{row[header.key]}</td>
                             {/if}

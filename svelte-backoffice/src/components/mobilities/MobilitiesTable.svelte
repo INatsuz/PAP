@@ -33,8 +33,8 @@
                     <td>{mobility.departureDate.slice(0, -14)}</td>
                     <td>{mobility.arrivalDate.slice(0, -14)}</td>
                     <td class="text-center vertical-align-middle">
-                        <Link to={`/svelte/mobility_teachers/${mobility.ID}`}><i class="fas fa-chalkboard-teacher fa-fw cursor-pointer mr-1 text-light" title="Teachers"/></Link>
-                        <Link to={`/svelte/mobility_students/${mobility.ID}`}><i class="fas fa-user-graduate fa-fw cursor-pointer ml-1 text-light" title="Students"/></Link>
+                        <Link to={`/backoffice/mobility_teachers/${mobility.ID}`}><i class="fas fa-chalkboard-teacher fa-fw cursor-pointer mr-1 text-light" title="Teachers"/></Link>
+                        <Link to={`/backoffice/mobility_students/${mobility.ID}`}><i class="fas fa-user-graduate fa-fw cursor-pointer ml-1 text-light" title="Students"/></Link>
                     </td>
                 </tr>
             {/each}

@@ -31,10 +31,7 @@
         {columnName: "Teacher #", key: "teacherNumber"},
         {columnName: 'Age', key: "age"},
         {columnName: 'Gender', key: "gender"},
-        {columnName: 'Email', key: "email"},
-        {columnName: 'Actions', actions: [
-            {icon: "fa-book", link: "/svelte/teacher_subjects/", query_field: "IDTeacher"}
-        ]},
+        {columnName: 'Email', key: "email"}
     ];
     let toggle_fields = [
     	{field: "IDMobility"},
@@ -172,6 +169,10 @@
     }
 
     function handleAddButtonClick(){
+    	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+    	    add_modal_fields.fields[i].value = "";
+    	}
+
         setIsAddModalOpen(true);
     }
 
