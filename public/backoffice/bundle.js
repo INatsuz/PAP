@@ -1,2 +1,11599 @@
-var app=function(){"use strict";function e(){}function t(e,t){for(const n in t)e[n]=t[n];return e}function n(e){return e()}function o(){return Object.create(null)}function a(e){e.forEach(n)}function l(e){return"function"==typeof e}function r(e,t){return e!=e?t==t:e!==t||e&&"object"==typeof e||"function"==typeof e}function i(e,t,n){const o=t.subscribe(n);e.$$.on_destroy.push(o.unsubscribe?()=>o.unsubscribe():o)}function s(e,t,n){if(e){const o=d(e,t,n);return e[0](o)}}function d(e,n,o){return e[1]?t({},t(n.$$scope.ctx,e[1](o?o(n):{}))):n.$$scope.ctx}function c(e,n,o,a){return e[1]?t({},t(n.$$scope.changed||{},e[1](a?a(o):{}))):n.$$scope.changed||{}}function u(e){const t={};for(const n in e)"$"!==n[0]&&(t[n]=e[n]);return t}function p(e,t){e.appendChild(t)}function g(e,t,n){e.insertBefore(t,n||null)}function f(e){e.parentNode.removeChild(e)}function m(e,t){for(let n=0;n<e.length;n+=1)e[n]&&e[n].d(t)}function h(e){return document.createElement(e)}function b(e){return document.createTextNode(e)}function _(){return b(" ")}function v(){return b("")}function $(e,t,n,o){return e.addEventListener(t,n,o),()=>e.removeEventListener(t,n,o)}function y(e,t,n){null==n?e.removeAttribute(t):e.setAttribute(t,n)}function w(e,t){for(const n in t)"style"===n?e.style.cssText=t[n]:n in e?e[n]=t[n]:y(e,n,t[n])}function k(e,t){t=""+t,e.data!==t&&(e.data=t)}let x;function T(e){x=e}function O(){if(!x)throw new Error("Function called outside component initialization");return x}function N(){const e=x;return(t,n)=>{const o=e.$$.callbacks[t];if(o){const a=function(e,t){const n=document.createEvent("CustomEvent");return n.initCustomEvent(e,!1,!1,t),n}(t,n);o.slice().forEach(t=>{t.call(e,a)})}}}function R(e,t){O().$$.context.set(e,t)}function I(e){return O().$$.context.get(e)}const D=[],M=Promise.resolve();let j=!1;const A=[],E=[],C=[];function S(e){E.push(e)}function P(){const e=new Set;do{for(;D.length;){const e=D.shift();T(e),L(e.$$)}for(;A.length;)A.shift()();for(;E.length;){const t=E.pop();e.has(t)||(t(),e.add(t))}}while(D.length);for(;C.length;)C.pop()();j=!1}function L(e){e.fragment&&(e.update(e.dirty),a(e.before_render),e.fragment.p(e.dirty,e.ctx),e.dirty=null,e.after_render.forEach(S))}let B;function H(){B={remaining:0,callbacks:[]}}function z(){B.remaining||a(B.callbacks)}function q(e){B.callbacks.push(e)}function U(e,t){const n={},o={},a={$$scope:1};let l=e.length;for(;l--;){const r=e[l],i=t[l];if(i){for(const e in r)e in i||(o[e]=1);for(const e in i)a[e]||(n[e]=i[e],a[e]=1);e[l]=i}else for(const e in r)a[e]=1}for(const e in o)e in n||(n[e]=void 0);return n}function F(e,t,o){const{fragment:r,on_mount:i,on_destroy:s,after_render:d}=e.$$;r.m(t,o),S(()=>{const t=i.map(n).filter(l);s?s.push(...t):a(t),e.$$.on_mount=[]}),d.forEach(S)}function K(e,t){e.$$.dirty||(D.push(e),j||(j=!0,M.then(P)),e.$$.dirty=o()),e.$$.dirty[t]=!0}function G(t,n,l,r,i,s){const d=x;T(t);const c=n.props||{},u=t.$$={fragment:null,ctx:null,props:s,update:e,not_equal:i,bound:o(),on_mount:[],on_destroy:[],before_render:[],after_render:[],context:new Map(d?d.$$.context:[]),callbacks:o(),dirty:null};let p=!1;var g;u.ctx=l?l(t,c,(e,n)=>{u.ctx&&i(u.ctx[e],u.ctx[e]=n)&&(u.bound[e]&&u.bound[e](n),p&&K(t,e))}):c,u.update(),p=!0,a(u.before_render),u.fragment=r(u.ctx),n.target&&(n.hydrate?u.fragment.l((g=n.target,Array.from(g.childNodes))):u.fragment.c(),n.intro&&t.$$.fragment.i&&t.$$.fragment.i(),F(t,n.target,n.anchor),P()),T(d)}class V{$destroy(){var t,n;n=!0,(t=this).$$&&(a(t.$$.on_destroy),t.$$.fragment.d(n),t.$$.on_destroy=t.$$.fragment=null,t.$$.ctx={}),this.$destroy=e}$on(e,t){const n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(t),()=>{const e=n.indexOf(t);-1!==e&&n.splice(e,1)}}$set(){}}function X(t,n=e){let o;const a=[];function l(e){if(r(t,e)){if(t=e,!o)return;a.forEach(e=>e[1]()),a.forEach(e=>e[0](t))}}return{set:l,update:function(e){l(e(t))},subscribe:function(r,i=e){const s=[r,i];return a.push(s),1===a.length&&(o=n(l)||e),r(t),()=>{const e=a.indexOf(s);-1!==e&&a.splice(e,1),0===a.length&&o()}}}}function J(t,n,o){const r=!Array.isArray(t),i=r?[t]:t,s=n.length<2,d=[],c={subscribe:X(o,t=>{let o=!1;const c=[];let u=0,p=e;const g=()=>{if(u)return;p();const o=n(r?c[0]:c,t);s?t(o):p=l(o)?o:e},f=i.map((e,t)=>e.subscribe(e=>{c[t]=e,u&=~(1<<t),o&&g()},()=>{a(d),u|=1<<t}));return o=!0,g(),function(){a(f),p()}}).subscribe};return{subscribe(t,n=e){d.push(n);const o=c.subscribe(t,n);return()=>{const e=d.indexOf(n);-1!==e&&d.splice(e,1),o()}}}}const Y={},Q={};function W(e){return{...e.location,state:e.history.state,key:e.history.state&&e.history.state.key||"initial"}}const Z=function(e,t){const n=[];let o=W(e);return{get location(){return o},listen(t){n.push(t);const a=()=>{o=W(e),t({location:o,action:"POP"})};return e.addEventListener("popstate",a),()=>{e.removeEventListener("popstate",a);const o=n.indexOf(t);n.splice(o,1)}},navigate(t,{state:a,replace:l=!1}={}){a={...a,key:Date.now()+""};try{l?e.history.replaceState(a,null,t):e.history.pushState(a,null,t)}catch(n){e.location[l?"replace":"assign"](t)}o=W(e),n.forEach(e=>e({location:o,action:"PUSH"}))}}}(Boolean("undefined"!=typeof window&&window.document&&window.document.createElement)?window:function(e="/"){let t=0;const n=[{pathname:e,search:""}],o=[];return{get location(){return n[t]},addEventListener(e,t){},removeEventListener(e,t){},history:{get entries(){return n},get index(){return t},get state(){return o[t]},pushState(e,a,l){const[r,i=""]=l.split("?");t++,n.push({pathname:r,search:i}),o.push(e)},replaceState(e,a,l){const[r,i=""]=l.split("?");n[t]={pathname:r,search:i},o[t]=e}}}}()),{navigate:ee}=Z,te=/^:(.+)/,ne=4,oe=3,ae=2,le=1,re=1;function ie(e,t){return e.substr(0,t.length)===t}function se(e){return"*"===e[0]}function de(e){return e.replace(/(^\/+|\/+$)/g,"").split("/")}function ce(e){return e.replace(/(^\/+|\/+$)/g,"")}function ue(e,t){return{route:e,score:e.default?0:de(e.path).reduce((e,t)=>(e+=ne,!function(e){return""===e}(t)?!function(e){return te.test(e)}(t)?se(t)?e-=ne+le:e+=oe:e+=ae:e+=re,e),0),index:t}}function pe(e,t){let n,o;const[a]=t.split("?"),l=de(a),r=""===l[0],i=function(e){return e.map(ue).sort((e,t)=>e.score<t.score?1:e.score>t.score?-1:e.index-t.index)}(e);for(let e=0,a=i.length;e<a;e++){const a=i[e].route;let s=!1;if(a.default){o={route:a,params:{},uri:t};continue}const d=de(a.path),c={},u=Math.max(l.length,d.length);let p=0;for(;p<u;p++){const e=d[p],t=l[p];if(void 0!==e&&se(e)){c["*"===e?"*":e.slice(1)]=l.slice(p).map(decodeURIComponent).join("/");break}if(void 0===t){s=!0;break}let n=te.exec(e);if(n&&!r){const e=decodeURIComponent(t);c[n[1]]=e}else if(e!==t){s=!0;break}}if(!s){n={route:a,params:c,uri:"/"+l.slice(0,p).join("/")};break}}return n||o||null}function ge(e,t){return e+(t?`?${t}`:"")}function fe(e,t){return`${ce("/"===t?e:`${ce(e)}/${ce(t)}`)}/`}function me(e){var t;const n=e.$$slots.default,o=s(n,e,null);return{c(){o&&o.c()},l(e){o&&o.l(e)},m(e,n){o&&o.m(e,n),t=!0},p(e,t){o&&o.p&&e.$$scope&&o.p(c(n,t,e,null),d(n,t,null))},i(e){t||(o&&o.i&&o.i(e),t=!0)},o(e){o&&o.o&&o.o(e),t=!1},d(e){o&&o.d(e)}}}function he(e,t,n){let o,a,l,{basepath:r="/",url:s=null}=t;const d=I(Y),c=I(Q),u=X([]);i(e,u,e=>{n("$routes",l=e)});const p=X(null);let g=!1;const f=d||X(s?{pathname:s}:Z.location);i(e,f,e=>{n("$location",a=e)});const m=c?c.routerBase:X({path:r,uri:r});i(e,m,e=>{n("$base",o=e)});const h=J([m,p],([e,t])=>{if(null===t)return e;const{path:n}=e,{route:o,uri:a}=t;return{path:o.default?n:o.path.replace(/\*.*$/,""),uri:a}});var b;d||(b=(()=>Z.listen(e=>{f.set(e.location)})),O().$$.on_mount.push(b),R(Y,f)),R(Q,{activeRoute:p,base:m,routerBase:h,registerRoute:function(e){const{path:t}=o;let{path:n}=e;if(e._path=n,e.path=fe(t,n),"undefined"==typeof window){if(g)return;const t=function(e,t){return pe([e],t)}(e,a.pathname);t&&(p.set(t),g=!0)}else u.update(t=>(t.push(e),t))},unregisterRoute:function(e){u.update(t=>{const n=t.indexOf(e);return t.splice(n,1),t})}});let{$$slots:_={},$$scope:v}=t;return e.$set=(e=>{"basepath"in e&&n("basepath",r=e.basepath),"url"in e&&n("url",s=e.url),"$$scope"in e&&n("$$scope",v=e.$$scope)}),e.$$.update=((e={$base:1,$routes:1,$location:1})=>{if(e.$base){const{path:e}=o;u.update(t=>(t.forEach(t=>t.path=fe(e,t._path)),t))}if(e.$routes||e.$location){const e=pe(l,a.pathname);p.set(e)}}),{basepath:r,url:s,routes:u,location:f,base:m,$$slots:_,$$scope:v}}class be extends V{constructor(e){super(),G(this,e,he,me,r,["basepath","url"])}}function _e(e){var t,n,o,a,l=[$e,ve],r=[];function i(e){return null!==e.component?0:1}return t=i(e),n=r[t]=l[t](e),{c(){n.c(),o=v()},m(e,n){r[t].m(e,n),g(e,o,n),a=!0},p(e,a){var s=t;(t=i(a))===s?r[t].p(e,a):(H(),q(()=>{r[s].d(1),r[s]=null}),n.o(1),z(),(n=r[t])||(n=r[t]=l[t](a)).c(),n.i(1),n.m(o.parentNode,o))},i(e){a||(n&&n.i(),a=!0)},o(e){n&&n.o(),a=!1},d(e){r[t].d(e),e&&f(o)}}}function ve(e){var t;const n=e.$$slots.default,o=s(n,e,null);return{c(){o&&o.c()},l(e){o&&o.l(e)},m(e,n){o&&o.m(e,n),t=!0},p(e,t){o&&o.p&&e.$$scope&&o.p(c(n,t,e,null),d(n,t,null))},i(e){t||(o&&o.i&&o.i(e),t=!0)},o(e){o&&o.o&&o.o(e),t=!1},d(e){o&&o.d(e)}}}function $e(e){var n,o,a=[e.routeParams,e.routeProps],l=e.component;function r(e){let n={};for(var o=0;o<a.length;o+=1)n=t(n,a[o]);return{props:n}}if(l)var i=new l(r());return{c(){i&&i.$$.fragment.c(),n=v()},m(e,t){i&&F(i,e,t),g(e,n,t),o=!0},p(e,t){var o=e.routeParams||e.routeProps?U(a,[e.routeParams&&t.routeParams,e.routeProps&&t.routeProps]):{};if(l!==(l=t.component)){if(i){H();const e=i;q(()=>{e.$destroy()}),e.$$.fragment.o(1),z()}l?((i=new l(r())).$$.fragment.c(),i.$$.fragment.i(1),F(i,n.parentNode,n)):i=null}else l&&i.$set(o)},i(e){o||(i&&i.$$.fragment.i(e),o=!0)},o(e){i&&i.$$.fragment.o(e),o=!1},d(e){e&&f(n),i&&i.$destroy(e)}}}function ye(e){var t,n,o=null!==e.$activeRoute&&e.$activeRoute.route===e.route&&_e(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){null!==n.$activeRoute&&n.$activeRoute.route===n.route?o?(o.p(e,n),o.i(1)):((o=_e(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}function we(e,n,o){let a,{path:l="",component:r=null}=n;const{registerRoute:s,unregisterRoute:d,activeRoute:c}=I(Q);i(e,c,e=>{o("$activeRoute",a=e)});const p={path:l,default:""===l};let g={},f={};var m;s(p),"undefined"!=typeof window&&(m=(()=>{d(p)}),O().$$.on_destroy.push(m));let{$$slots:h={},$$scope:b}=n;return e.$set=(e=>{o("$$props",n=t(t({},n),e)),"path"in n&&o("path",l=n.path),"component"in n&&o("component",r=n.component),"$$scope"in e&&o("$$scope",b=e.$$scope)}),e.$$.update=((e={$activeRoute:1,$$props:1})=>{e.$activeRoute&&a&&a.route===p&&o("routeParams",g=a.params);{const{path:e,component:t,...a}=n;o("routeProps",f=a)}}),{path:l,component:r,activeRoute:c,route:p,routeParams:g,routeProps:f,$activeRoute:a,$$props:n=u(n),$$slots:h,$$scope:b}}class ke extends V{constructor(e){super(),G(this,e,we,ye,r,["path","component"])}}function xe(e){var n,o,a;const l=e.$$slots.default,r=s(l,e,null);for(var i=[{href:e.href},{"aria-current":e.ariaCurrent},e.props],u={},p=0;p<i.length;p+=1)u=t(u,i[p]);return{c(){n=h("a"),r&&r.c(),w(n,u),a=$(n,"click",e.onClick)},l(e){r&&r.l(a_nodes)},m(e,t){g(e,n,t),r&&r.m(n,null),o=!0},p(e,t){r&&r.p&&e.$$scope&&r.p(c(l,t,e,null),d(l,t,null)),w(n,U(i,[e.href&&{href:t.href},e.ariaCurrent&&{"aria-current":t.ariaCurrent},e.props&&t.props]))},i(e){o||(r&&r.i&&r.i(e),o=!0)},o(e){r&&r.o&&r.o(e),o=!1},d(e){e&&f(n),r&&r.d(e),a()}}}function Te(e,t,n){let o,a,{to:l="#",replace:r=!1,state:s={},getProps:d=(()=>({}))}=t;const{base:c}=I(Q);i(e,c,e=>{n("$base",o=e)});const u=I(Y);i(e,u,e=>{n("$location",a=e)});const p=N();let g,f,m,h;let b,{$$slots:_={},$$scope:v}=t;return e.$set=(e=>{"to"in e&&n("to",l=e.to),"replace"in e&&n("replace",r=e.replace),"state"in e&&n("state",s=e.state),"getProps"in e&&n("getProps",d=e.getProps),"$$scope"in e&&n("$$scope",v=e.$$scope)}),e.$$.update=((e={to:1,$base:1,$location:1,href:1,isCurrent:1,getProps:1,isPartiallyCurrent:1})=>{(e.to||e.$base)&&n("href",g="/"===l?o.uri:function(e,t){if(ie(e,"/"))return e;const[n,o]=e.split("?"),[a]=t.split("?"),l=de(n),r=de(a);if(""===l[0])return ge(a,o);if(!ie(l[0],"."))return ge(("/"===a?"":"/")+r.concat(l).join("/"),o);const i=r.concat(l),s=[];return i.forEach(e=>{".."===e?s.pop():"."!==e&&s.push(e)}),ge("/"+s.join("/"),o)}(l,o.uri)),(e.$location||e.href)&&n("isPartiallyCurrent",f=ie(a.pathname,g)),(e.href||e.$location)&&n("isCurrent",m=g===a.pathname),e.isCurrent&&n("ariaCurrent",b=m?"page":void 0),(e.getProps||e.$location||e.href||e.isPartiallyCurrent||e.isCurrent)&&n("props",h=d({location:a,href:g,isPartiallyCurrent:f,isCurrent:m}))}),{to:l,replace:r,state:s,getProps:d,base:c,location:u,href:g,props:h,onClick:function(e){if(p("click",e),function(e){return!e.defaultPrevented&&0===e.button&&!(e.metaKey||e.altKey||e.ctrlKey||e.shiftKey)}(e)){e.preventDefault();const t=a.pathname===g||r;ee(g,{state:s,replace:t})}},ariaCurrent:b,$$slots:_,$$scope:v}}class Oe extends V{constructor(e){super(),G(this,e,Te,xe,r,["to","replace","state","getProps"])}}var Ne=function(e,t){return function(){for(var n=new Array(arguments.length),o=0;o<n.length;o++)n[o]=arguments[o];return e.apply(t,n)}},Re=Object.prototype.toString;function Ie(e){return"[object Array]"===Re.call(e)}function De(e){return null!==e&&"object"==typeof e}function Me(e){return"[object Function]"===Re.call(e)}function je(e,t){if(null!=e)if("object"!=typeof e&&(e=[e]),Ie(e))for(var n=0,o=e.length;n<o;n++)t.call(null,e[n],n,e);else for(var a in e)Object.prototype.hasOwnProperty.call(e,a)&&t.call(null,e[a],a,e)}var Ae={isArray:Ie,isArrayBuffer:function(e){return"[object ArrayBuffer]"===Re.call(e)},isBuffer:function(e){return null!=e&&null!=e.constructor&&"function"==typeof e.constructor.isBuffer&&e.constructor.isBuffer(e)},isFormData:function(e){return"undefined"!=typeof FormData&&e instanceof FormData},isArrayBufferView:function(e){return"undefined"!=typeof ArrayBuffer&&ArrayBuffer.isView?ArrayBuffer.isView(e):e&&e.buffer&&e.buffer instanceof ArrayBuffer},isString:function(e){return"string"==typeof e},isNumber:function(e){return"number"==typeof e},isObject:De,isUndefined:function(e){return void 0===e},isDate:function(e){return"[object Date]"===Re.call(e)},isFile:function(e){return"[object File]"===Re.call(e)},isBlob:function(e){return"[object Blob]"===Re.call(e)},isFunction:Me,isStream:function(e){return De(e)&&Me(e.pipe)},isURLSearchParams:function(e){return"undefined"!=typeof URLSearchParams&&e instanceof URLSearchParams},isStandardBrowserEnv:function(){return("undefined"==typeof navigator||"ReactNative"!==navigator.product&&"NativeScript"!==navigator.product&&"NS"!==navigator.product)&&"undefined"!=typeof window&&"undefined"!=typeof document},forEach:je,merge:function e(){var t={};function n(n,o){"object"==typeof t[o]&&"object"==typeof n?t[o]=e(t[o],n):t[o]=n}for(var o=0,a=arguments.length;o<a;o++)je(arguments[o],n);return t},deepMerge:function e(){var t={};function n(n,o){"object"==typeof t[o]&&"object"==typeof n?t[o]=e(t[o],n):t[o]="object"==typeof n?e({},n):n}for(var o=0,a=arguments.length;o<a;o++)je(arguments[o],n);return t},extend:function(e,t,n){return je(t,function(t,o){e[o]=n&&"function"==typeof t?Ne(t,n):t}),e},trim:function(e){return e.replace(/^\s*/,"").replace(/\s*$/,"")}};function Ee(e){return encodeURIComponent(e).replace(/%40/gi,"@").replace(/%3A/gi,":").replace(/%24/g,"$").replace(/%2C/gi,",").replace(/%20/g,"+").replace(/%5B/gi,"[").replace(/%5D/gi,"]")}var Ce=function(e,t,n){if(!t)return e;var o;if(n)o=n(t);else if(Ae.isURLSearchParams(t))o=t.toString();else{var a=[];Ae.forEach(t,function(e,t){null!=e&&(Ae.isArray(e)?t+="[]":e=[e],Ae.forEach(e,function(e){Ae.isDate(e)?e=e.toISOString():Ae.isObject(e)&&(e=JSON.stringify(e)),a.push(Ee(t)+"="+Ee(e))}))}),o=a.join("&")}if(o){var l=e.indexOf("#");-1!==l&&(e=e.slice(0,l)),e+=(-1===e.indexOf("?")?"?":"&")+o}return e};function Se(){this.handlers=[]}Se.prototype.use=function(e,t){return this.handlers.push({fulfilled:e,rejected:t}),this.handlers.length-1},Se.prototype.eject=function(e){this.handlers[e]&&(this.handlers[e]=null)},Se.prototype.forEach=function(e){Ae.forEach(this.handlers,function(t){null!==t&&e(t)})};var Pe=Se,Le=function(e,t,n){return Ae.forEach(n,function(n){e=n(e,t)}),e},Be=function(e){return!(!e||!e.__CANCEL__)},He=function(e,t){Ae.forEach(e,function(n,o){o!==t&&o.toUpperCase()===t.toUpperCase()&&(e[t]=n,delete e[o])})},ze=function(e,t,n,o,a){return function(e,t,n,o,a){return e.config=t,n&&(e.code=n),e.request=o,e.response=a,e.isAxiosError=!0,e.toJSON=function(){return{message:this.message,name:this.name,description:this.description,number:this.number,fileName:this.fileName,lineNumber:this.lineNumber,columnNumber:this.columnNumber,stack:this.stack,config:this.config,code:this.code}},e}(new Error(e),t,n,o,a)},qe=["age","authorization","content-length","content-type","etag","expires","from","host","if-modified-since","if-unmodified-since","last-modified","location","max-forwards","proxy-authorization","referer","retry-after","user-agent"],Ue=Ae.isStandardBrowserEnv()?function(){var e,t=/(msie|trident)/i.test(navigator.userAgent),n=document.createElement("a");function o(e){var o=e;return t&&(n.setAttribute("href",o),o=n.href),n.setAttribute("href",o),{href:n.href,protocol:n.protocol?n.protocol.replace(/:$/,""):"",host:n.host,search:n.search?n.search.replace(/^\?/,""):"",hash:n.hash?n.hash.replace(/^#/,""):"",hostname:n.hostname,port:n.port,pathname:"/"===n.pathname.charAt(0)?n.pathname:"/"+n.pathname}}return e=o(window.location.href),function(t){var n=Ae.isString(t)?o(t):t;return n.protocol===e.protocol&&n.host===e.host}}():function(){return!0},Fe=Ae.isStandardBrowserEnv()?{write:function(e,t,n,o,a,l){var r=[];r.push(e+"="+encodeURIComponent(t)),Ae.isNumber(n)&&r.push("expires="+new Date(n).toGMTString()),Ae.isString(o)&&r.push("path="+o),Ae.isString(a)&&r.push("domain="+a),!0===l&&r.push("secure"),document.cookie=r.join("; ")},read:function(e){var t=document.cookie.match(new RegExp("(^|;\\s*)("+e+")=([^;]*)"));return t?decodeURIComponent(t[3]):null},remove:function(e){this.write(e,"",Date.now()-864e5)}}:{write:function(){},read:function(){return null},remove:function(){}},Ke=function(e){return new Promise(function(t,n){var o=e.data,a=e.headers;Ae.isFormData(o)&&delete a["Content-Type"];var l=new XMLHttpRequest;if(e.auth){var r=e.auth.username||"",i=e.auth.password||"";a.Authorization="Basic "+btoa(r+":"+i)}if(l.open(e.method.toUpperCase(),Ce(e.url,e.params,e.paramsSerializer),!0),l.timeout=e.timeout,l.onreadystatechange=function(){if(l&&4===l.readyState&&(0!==l.status||l.responseURL&&0===l.responseURL.indexOf("file:"))){var o,a,r,i,s,d="getAllResponseHeaders"in l?(o=l.getAllResponseHeaders(),s={},o?(Ae.forEach(o.split("\n"),function(e){if(i=e.indexOf(":"),a=Ae.trim(e.substr(0,i)).toLowerCase(),r=Ae.trim(e.substr(i+1)),a){if(s[a]&&qe.indexOf(a)>=0)return;s[a]="set-cookie"===a?(s[a]?s[a]:[]).concat([r]):s[a]?s[a]+", "+r:r}}),s):s):null,c={data:e.responseType&&"text"!==e.responseType?l.response:l.responseText,status:l.status,statusText:l.statusText,headers:d,config:e,request:l};!function(e,t,n){var o=n.config.validateStatus;!o||o(n.status)?e(n):t(ze("Request failed with status code "+n.status,n.config,null,n.request,n))}(t,n,c),l=null}},l.onabort=function(){l&&(n(ze("Request aborted",e,"ECONNABORTED",l)),l=null)},l.onerror=function(){n(ze("Network Error",e,null,l)),l=null},l.ontimeout=function(){n(ze("timeout of "+e.timeout+"ms exceeded",e,"ECONNABORTED",l)),l=null},Ae.isStandardBrowserEnv()){var s=Fe,d=(e.withCredentials||Ue(e.url))&&e.xsrfCookieName?s.read(e.xsrfCookieName):void 0;d&&(a[e.xsrfHeaderName]=d)}if("setRequestHeader"in l&&Ae.forEach(a,function(e,t){void 0===o&&"content-type"===t.toLowerCase()?delete a[t]:l.setRequestHeader(t,e)}),e.withCredentials&&(l.withCredentials=!0),e.responseType)try{l.responseType=e.responseType}catch(t){if("json"!==e.responseType)throw t}"function"==typeof e.onDownloadProgress&&l.addEventListener("progress",e.onDownloadProgress),"function"==typeof e.onUploadProgress&&l.upload&&l.upload.addEventListener("progress",e.onUploadProgress),e.cancelToken&&e.cancelToken.promise.then(function(e){l&&(l.abort(),n(e),l=null)}),void 0===o&&(o=null),l.send(o)})},Ge={"Content-Type":"application/x-www-form-urlencoded"};function Ve(e,t){!Ae.isUndefined(e)&&Ae.isUndefined(e["Content-Type"])&&(e["Content-Type"]=t)}var Xe,Je={adapter:("undefined"!=typeof process&&"[object process]"===Object.prototype.toString.call(process)?Xe=Ke:"undefined"!=typeof XMLHttpRequest&&(Xe=Ke),Xe),transformRequest:[function(e,t){return He(t,"Accept"),He(t,"Content-Type"),Ae.isFormData(e)||Ae.isArrayBuffer(e)||Ae.isBuffer(e)||Ae.isStream(e)||Ae.isFile(e)||Ae.isBlob(e)?e:Ae.isArrayBufferView(e)?e.buffer:Ae.isURLSearchParams(e)?(Ve(t,"application/x-www-form-urlencoded;charset=utf-8"),e.toString()):Ae.isObject(e)?(Ve(t,"application/json;charset=utf-8"),JSON.stringify(e)):e}],transformResponse:[function(e){if("string"==typeof e)try{e=JSON.parse(e)}catch(e){}return e}],timeout:0,xsrfCookieName:"XSRF-TOKEN",xsrfHeaderName:"X-XSRF-TOKEN",maxContentLength:-1,validateStatus:function(e){return e>=200&&e<300}};Je.headers={common:{Accept:"application/json, text/plain, */*"}},Ae.forEach(["delete","get","head"],function(e){Je.headers[e]={}}),Ae.forEach(["post","put","patch"],function(e){Je.headers[e]=Ae.merge(Ge)});var Ye=Je;function Qe(e){e.cancelToken&&e.cancelToken.throwIfRequested()}var We=function(e){var t,n,o;return Qe(e),e.baseURL&&(o=e.url,!/^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(o))&&(e.url=(t=e.baseURL,(n=e.url)?t.replace(/\/+$/,"")+"/"+n.replace(/^\/+/,""):t)),e.headers=e.headers||{},e.data=Le(e.data,e.headers,e.transformRequest),e.headers=Ae.merge(e.headers.common||{},e.headers[e.method]||{},e.headers||{}),Ae.forEach(["delete","get","head","post","put","patch","common"],function(t){delete e.headers[t]}),(e.adapter||Ye.adapter)(e).then(function(t){return Qe(e),t.data=Le(t.data,t.headers,e.transformResponse),t},function(t){return Be(t)||(Qe(e),t&&t.response&&(t.response.data=Le(t.response.data,t.response.headers,e.transformResponse))),Promise.reject(t)})},Ze=function(e,t){t=t||{};var n={};return Ae.forEach(["url","method","params","data"],function(e){void 0!==t[e]&&(n[e]=t[e])}),Ae.forEach(["headers","auth","proxy"],function(o){Ae.isObject(t[o])?n[o]=Ae.deepMerge(e[o],t[o]):void 0!==t[o]?n[o]=t[o]:Ae.isObject(e[o])?n[o]=Ae.deepMerge(e[o]):void 0!==e[o]&&(n[o]=e[o])}),Ae.forEach(["baseURL","transformRequest","transformResponse","paramsSerializer","timeout","withCredentials","adapter","responseType","xsrfCookieName","xsrfHeaderName","onUploadProgress","onDownloadProgress","maxContentLength","validateStatus","maxRedirects","httpAgent","httpsAgent","cancelToken","socketPath"],function(o){void 0!==t[o]?n[o]=t[o]:void 0!==e[o]&&(n[o]=e[o])}),n};function et(e){this.defaults=e,this.interceptors={request:new Pe,response:new Pe}}et.prototype.request=function(e){"string"==typeof e?(e=arguments[1]||{}).url=arguments[0]:e=e||{},(e=Ze(this.defaults,e)).method=e.method?e.method.toLowerCase():"get";var t=[We,void 0],n=Promise.resolve(e);for(this.interceptors.request.forEach(function(e){t.unshift(e.fulfilled,e.rejected)}),this.interceptors.response.forEach(function(e){t.push(e.fulfilled,e.rejected)});t.length;)n=n.then(t.shift(),t.shift());return n},et.prototype.getUri=function(e){return e=Ze(this.defaults,e),Ce(e.url,e.params,e.paramsSerializer).replace(/^\?/,"")},Ae.forEach(["delete","get","head","options"],function(e){et.prototype[e]=function(t,n){return this.request(Ae.merge(n||{},{method:e,url:t}))}}),Ae.forEach(["post","put","patch"],function(e){et.prototype[e]=function(t,n,o){return this.request(Ae.merge(o||{},{method:e,url:t,data:n}))}});var tt=et;function nt(e){this.message=e}nt.prototype.toString=function(){return"Cancel"+(this.message?": "+this.message:"")},nt.prototype.__CANCEL__=!0;var ot=nt;function at(e){if("function"!=typeof e)throw new TypeError("executor must be a function.");var t;this.promise=new Promise(function(e){t=e});var n=this;e(function(e){n.reason||(n.reason=new ot(e),t(n.reason))})}at.prototype.throwIfRequested=function(){if(this.reason)throw this.reason},at.source=function(){var e;return{token:new at(function(t){e=t}),cancel:e}};var lt=at;function rt(e){var t=new tt(e),n=Ne(tt.prototype.request,t);return Ae.extend(n,tt.prototype,t),Ae.extend(n,t),n}var it=rt(Ye);it.Axios=tt,it.create=function(e){return rt(Ze(it.defaults,e))},it.Cancel=ot,it.CancelToken=lt,it.isCancel=Be,it.all=function(e){return Promise.all(e)},it.spread=function(e){return function(t){return e.apply(null,t)}};var st=it,dt=it;st.default=dt;var ct=st;function ut(e){var t;return{c(){(t=h("img")).className="h-50px d-none d-sm-block",t.src="/../imgs/esl.png",t.alt="Logo ESL"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function pt(t){var n;return{c(){(n=h("li")).innerHTML='<span class="nav-link text-nowrap cursor-pointer" data-toggle="modal" data-target="#login-modal"><i class="fas fa-user"></i> Login</span>',n.className="nav-item"},m(e,t){g(e,n,t)},p:e,d(e){e&&f(n)}}}function gt(t){var n,o,a;return{c(){n=h("li"),(o=h("span")).innerHTML='<i class="fas fa-user"></i> Logout',o.className="nav-link text-nowrap cursor-pointer",n.className="nav-item",a=$(o,"click",t.handleLogoutClick)},m(e,t){g(e,n,t),p(n,o)},p:e,d(e){e&&f(n),a()}}}function ft(e){var t,n,o,a,l,r=new Oe({props:{class:"navbar-brand",to:"/backoffice/projects",$$slots:{default:[ut]},$$scope:{ctx:e}}});function i(e){return e.is_logged_in?gt:pt}var s=i(e),d=s(e);return{c(){t=h("header"),n=h("nav"),r.$$.fragment.c(),o=_(),a=h("ul"),d.c(),a.className="navbar-nav mr-2 ml-auto flex-row",n.className="navbar navbar-expand-xl navbar-dark bg-darker",t.className="sticky-top"},m(e,i){g(e,t,i),p(t,n),F(r,n,null),p(n,o),p(n,a),d.m(a,null),l=!0},p(e,t){var n={};e.$$scope&&(n.$$scope={changed:e,ctx:t}),r.$set(n),s===(s=i(t))&&d?d.p(e,t):(d.d(1),(d=s(t))&&(d.c(),d.m(a,null)))},i(e){l||(r.$$.fragment.i(e),l=!0)},o(e){r.$$.fragment.o(e),l=!1},d(e){e&&f(t),r.$destroy(),d.d()}}}function mt(e,t,n){let{is_logged_in:o,logout:a}=t;return e.$set=(e=>{"is_logged_in"in e&&n("is_logged_in",o=e.is_logged_in),"logout"in e&&n("logout",a=e.logout)}),{is_logged_in:o,logout:a,handleLogoutClick:function(){a()}}}class ht extends V{constructor(e){super(),G(this,e,mt,ft,r,["is_logged_in","logout"])}}function bt(t){var n,o,l,r,i,s,d,c,u,m,b,v,w,k,x,T,O,N,R,I,D;return{c(){n=h("div"),o=h("div"),l=h("div"),(r=h("div")).innerHTML='<h5 class="modal-title">Login</h5>\n\t\t\t                <button class="close" type="button" data-dismiss="modal"><span>x</span></button>',i=_(),s=h("div"),d=h("div"),c=h("div"),(u=h("div")).innerHTML='<div class="input-group-text">Username</div>',m=_(),b=h("input"),v=_(),w=h("div"),k=h("div"),(x=h("div")).innerHTML='<div class="input-group-text">Password</div>',T=_(),O=h("input"),N=_(),R=h("div"),(I=h("button")).textContent="Login",r.className="modal-header",u.className="input-group-prepend",b.className="form-control",y(b,"type","text"),b.placeholder="Username",b.name="username",c.className="input-group",d.className="form-group",x.className="input-group-prepend",O.className="form-control",y(O,"type","password"),O.placeholder="Password",O.name="password",k.className="input-group",w.className="form-group mb-0",s.className="modal-body",I.className="btn btn-primary mr-auto w-25",R.className="modal-footer",l.className="modal-content",o.className="modal-dialog",y(o,"role","document"),n.className="modal fade",n.id="login-modal",n.tabIndex="-1",y(n,"role","dialog"),D=[$(b,"change",t.change_handler),$(O,"change",t.change_handler_1),$(I,"click",t.handleLoginClick)]},m(e,t){g(e,n,t),p(n,o),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(d,c),p(c,u),p(c,m),p(c,b),p(s,v),p(s,w),p(w,k),p(k,x),p(k,T),p(k,O),p(l,N),p(l,R),p(R,I)},p:e,i:e,o:e,d(e){e&&f(n),a(D)}}}function _t(e,t,n){let{login:o}=t,a="",l="";return e.$set=(e=>{"login"in e&&n("login",o=e.login)}),{login:o,username:a,password:l,handleLoginClick:function(e){o(a,l),window.$("#login-modal").modal("hide")},change_handler:function(e){const t=a=e.target.value;return n("username",a),t},change_handler_1:function(e){const t=l=e.target.value;return n("password",l),t}}}class vt extends V{constructor(e){super(),G(this,e,_t,bt,r,["login"])}}function $t(e,t,n){const o=Object.create(e);return o.action=t[n],o}function yt(e,t,n){const o=Object.create(e);return o.header=t[n],o.i=n,o}function wt(e,t,n){const o=Object.create(e);return o.row=t[n],o.i=n,o}function kt(e,t,n){const o=Object.create(e);return o.header=t[n],o.i=n,o}function xt(e){var t,n,o,a=e.header.columnName;return{c(){t=h("th"),n=b(a),t.scope="col",t.className=o="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px "+(e.header.actions?" text-center":"")+" svelte-r8msfx"},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.table_headers&&a!==(a=l.header.columnName)&&k(n,a),e.table_headers&&o!==(o="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px "+(l.header.actions?" text-center":"")+" svelte-r8msfx")&&(t.className=o)},d(e){e&&f(t)}}}function Tt(t){var n,o,a,l=t.row[t.header.key];return{c(){n=h("td"),o=b(l),n.className=a=t.header.wrap?"wrap":""},m(e,t){g(e,n,t),p(n,o)},p(e,t){(e.data||e.table_headers)&&l!==(l=t.row[t.header.key])&&k(o,l),e.table_headers&&a!==(a=t.header.wrap?"wrap":"")&&(n.className=a)},i:e,o:e,d(e){e&&f(n)}}}function Ot(t){var n,o,a="true"===t.row[t.header.key]&&Rt();function l(...e){return t.click_handler(t,...e)}return{c(){n=h("td"),a&&a.c(),n.className="toggler cursor-pointer text-center svelte-r8msfx",o=$(n,"click",l)},m(e,t){g(e,n,t),a&&a.m(n,null)},p(e,o){"true"===(t=o).row[t.header.key]?a||((a=Rt()).c(),a.m(n,null)):a&&(a.d(1),a=null)},i:e,o:e,d(e){e&&f(n),a&&a.d(),o()}}}function Nt(e){for(var t,n,o=e.header.actions,a=[],l=0;l<o.length;l+=1)a[l]=Dt($t(e,o,l));function r(e,t,n){a[e]&&(t&&q(()=>{a[e].d(t),a[e]=null}),a[e].o(n))}return{c(){t=h("td");for(var e=0;e<a.length;e+=1)a[e].c();t.className="text-center vertical-align-middle"},m(e,o){g(e,t,o);for(var l=0;l<a.length;l+=1)a[l].m(t,null);n=!0},p(e,n){if(e.table_headers||e.data){o=n.header.actions;for(var l=0;l<o.length;l+=1){const r=$t(n,o,l);a[l]?(a[l].p(e,r),a[l].i(1)):(a[l]=Dt(r),a[l].c(),a[l].i(1),a[l].m(t,null))}for(H();l<a.length;l+=1)r(l,1,1);z()}},i(e){if(!n){for(var t=0;t<o.length;t+=1)a[t].i();n=!0}},o(e){a=a.filter(Boolean);for(let e=0;e<a.length;e+=1)r(e,0,0);n=!1},d(e){e&&f(t),m(a,e)}}}function Rt(e){var t;return{c(){(t=h("i")).className="fas fa-check"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function It(e){var t,n;return{c(){(t=h("i")).className=n=`fas ${e.action.icon} fa-fw cursor-pointer mr-1 text-light`+" svelte-r8msfx"},m(e,n){g(e,t,n)},p(e,o){e.table_headers&&n!==(n=`fas ${o.action.icon} fa-fw cursor-pointer mr-1 text-light`+" svelte-r8msfx")&&(t.className=n)},d(e){e&&f(t)}}}function Dt(e){var t,n=new Oe({props:{to:`${e.action.link}${e.row[e.action.query_field]}`,$$slots:{default:[It]},$$scope:{ctx:e}}});return{c(){n.$$.fragment.c()},m(e,o){F(n,e,o),t=!0},p(e,t){var o={};(e.table_headers||e.data)&&(o.to=`${t.action.link}${t.row[t.action.query_field]}`),(e.$$scope||e.table_headers)&&(o.$$scope={changed:e,ctx:t}),n.$set(o)},i(e){t||(n.$$.fragment.i(e),t=!0)},o(e){n.$$.fragment.o(e),t=!1},d(e){n.$destroy(e)}}}function Mt(e){var t,n,o,a,l=[Nt,Ot,Tt],r=[];function i(e){return e.header.actions?0:e.header.toggler?1:2}return t=i(e),n=r[t]=l[t](e),{c(){n.c(),o=v()},m(e,n){r[t].m(e,n),g(e,o,n),a=!0},p(e,a){var s=t;(t=i(a))===s?r[t].p(e,a):(H(),q(()=>{r[s].d(1),r[s]=null}),n.o(1),z(),(n=r[t])||(n=r[t]=l[t](a)).c(),n.i(1),n.m(o.parentNode,o))},i(e){a||(n&&n.i(),a=!0)},o(e){n&&n.o(),a=!1},d(e){r[t].d(e),e&&f(o)}}}function jt(e){for(var t,n,o,a,l,r=e.table_headers,i=[],s=0;s<r.length;s+=1)i[s]=Mt(yt(e,r,s));function d(e,t,n){i[e]&&(t&&q(()=>{i[e].d(t),i[e]=null}),i[e].o(n))}function c(...t){return e.click_handler_1(e,...t)}return{c(){t=h("tr");for(var a=0;a<i.length;a+=1)i[a].c();n=_(),t.className=o=-1===e.selectedRows.indexOf(e.row[e.selection_field])?"table-row":"table-row bg-secondary",l=$(t,"click",c)},m(e,o){g(e,t,o);for(var l=0;l<i.length;l+=1)i[l].m(t,null);p(t,n),a=!0},p(l,s){if(e=s,l.table_headers||l.data){r=e.table_headers;for(var c=0;c<r.length;c+=1){const o=yt(e,r,c);i[c]?(i[c].p(l,o),i[c].i(1)):(i[c]=Mt(o),i[c].c(),i[c].i(1),i[c].m(t,n))}for(H();c<i.length;c+=1)d(c,1,1);z()}(!a||l.selectedRows||l.data||l.selection_field)&&o!==(o=-1===e.selectedRows.indexOf(e.row[e.selection_field])?"table-row":"table-row bg-secondary")&&(t.className=o)},i(e){if(!a){for(var t=0;t<r.length;t+=1)i[t].i();a=!0}},o(e){i=i.filter(Boolean);for(let e=0;e<i.length;e+=1)d(e,0,0);a=!1},d(e){e&&f(t),m(i,e),l()}}}function At(e){for(var t,n,o,a,l,r,i,s=e.table_headers,d=[],c=0;c<s.length;c+=1)d[c]=xt(kt(e,s,c));var u=e.data,b=[];for(c=0;c<u.length;c+=1)b[c]=jt(wt(e,u,c));function v(e,t,n){b[e]&&(t&&q(()=>{b[e].d(t),b[e]=null}),b[e].o(n))}return{c(){t=h("div"),n=h("table"),o=h("thead"),a=h("tr");for(var e=0;e<d.length;e+=1)d[e].c();l=_(),r=h("tbody");for(e=0;e<b.length;e+=1)b[e].c();a.className="table-headers",n.className="table table-dark table-bordered table-scrollable table-hover nowrap m-0",t.className="table-responsive rounded dark-scroll"},m(e,s){g(e,t,s),p(t,n),p(n,o),p(o,a);for(var c=0;c<d.length;c+=1)d[c].m(a,null);p(n,l),p(n,r);for(c=0;c<b.length;c+=1)b[c].m(r,null);i=!0},p(e,t){if(e.table_headers){s=t.table_headers;for(var n=0;n<s.length;n+=1){const o=kt(t,s,n);d[n]?d[n].p(e,o):(d[n]=xt(o),d[n].c(),d[n].m(a,null))}for(;n<d.length;n+=1)d[n].d(1);d.length=s.length}if(e.selectedRows||e.data||e.selection_field||e.table_headers){u=t.data;for(n=0;n<u.length;n+=1){const o=wt(t,u,n);b[n]?(b[n].p(e,o),b[n].i(1)):(b[n]=jt(o),b[n].c(),b[n].i(1),b[n].m(r,null))}for(H();n<b.length;n+=1)v(n,1,1);z()}},i(e){if(!i){for(var t=0;t<u.length;t+=1)b[t].i();i=!0}},o(e){b=b.filter(Boolean);for(let e=0;e<b.length;e+=1)v(e,0,0);i=!1},d(e){e&&f(t),m(d,e),m(b,e)}}}function Et(e,t,n){let{getToken:o,table:a,table_headers:l,data:r,toggleRowSelect:i,selectedRows:s,selection_field:d,toggle_fields:c,onToggle:u}=t;function p(e){if(null!==e.ID)console.log("Hey"),ct.delete(`/api/delete/${a}`,{data:{rows:[e.ID]},headers:{Authorization:o()}}).then(e=>{u()}).catch(e=>{console.log(e.response)});else{console.log("Bye");let t={ID:null};console.log(c);for(let n=0;n<c.length;n++)console.log(c[n].field),t[c[n].field]=e[c[n].field];console.log(t),ct.post(`/api/insert/${a}`,t,{headers:{Authorization:o()}}).then(e=>{console.log("Successfully added relation"),u()}).catch(e=>{console.log(e.response)})}console.log(e)}function g(e,t){e.target.classList.contains("toggler")||e.target.parentElement.classList.contains("toggler")||i(t)}return e.$set=(e=>{"getToken"in e&&n("getToken",o=e.getToken),"table"in e&&n("table",a=e.table),"table_headers"in e&&n("table_headers",l=e.table_headers),"data"in e&&n("data",r=e.data),"toggleRowSelect"in e&&n("toggleRowSelect",i=e.toggleRowSelect),"selectedRows"in e&&n("selectedRows",s=e.selectedRows),"selection_field"in e&&n("selection_field",d=e.selection_field),"toggle_fields"in e&&n("toggle_fields",c=e.toggle_fields),"onToggle"in e&&n("onToggle",u=e.onToggle)}),{getToken:o,table:a,table_headers:l,data:r,toggleRowSelect:i,selectedRows:s,selection_field:d,toggle_fields:c,onToggle:u,handleToggleClick:p,handleRowClick:g,click_handler:function({row:e},t){p(e)},click_handler_1:function({row:e},t){g(t,e[d])}}}class Ct extends V{constructor(e){super(),G(this,e,Et,At,r,["getToken","table","table_headers","data","toggleRowSelect","selectedRows","selection_field","toggle_fields","onToggle"])}}function St(e,t,n){const o=Object.create(e);return o.option=t[n],o}function Pt(e,t,n){const o=Object.create(e);return o.field=t[n],o.i=n,o}function Lt(e){var t,n,o,a,l;function r(...t){return e.change_handler_2(e,...t)}return{c(){(t=h("input")).className="form-control",y(t,"type",n=e.field.type),t.value=o=e.field.value,t.placeholder=a=e.field.placeholder,l=$(t,"change",r)},m(e,n){g(e,t,n)},p(l,r){e=r,l.fields&&n!==(n=e.field.type)&&y(t,"type",n),l.fields&&o!==(o=e.field.value)&&(t.value=o),l.fields&&a!==(a=e.field.placeholder)&&(t.placeholder=a)},d(e){e&&f(t),l()}}}function Bt(e){var t,n,o,a;function l(...t){return e.change_handler_1(e,...t)}return{c(){(t=h("textarea")).className="form-control",t.placeholder=n=e.field.placeholder,t.value=o=e.field.value,a=$(t,"change",l)},m(e,n){g(e,t,n)},p(a,l){e=l,a.fields&&n!==(n=e.field.placeholder)&&(t.placeholder=n),a.fields&&o!==(o=e.field.value)&&(t.value=o)},d(e){e&&f(t),a()}}}function Ht(e){for(var t,n,o,a=""===e.field.value&&zt(),l=e.field.options,r=[],i=0;i<l.length;i+=1)r[i]=Ft(St(e,l,i));function s(...t){return e.change_handler(e,...t)}return{c(){t=h("select"),a&&a.c(),n=v();for(var e=0;e<r.length;e+=1)r[e].c();t.className="form-control",o=$(t,"change",s)},m(e,o){g(e,t,o),a&&a.m(t,null),p(t,n);for(var l=0;l<r.length;l+=1)r[l].m(t,null)},p(o,i){if(""===(e=i).field.value?a||((a=zt()).c(),a.m(t,n)):a&&(a.d(1),a=null),o.fields){l=e.field.options;for(var s=0;s<l.length;s+=1){const n=St(e,l,s);r[s]?r[s].p(o,n):(r[s]=Ft(n),r[s].c(),r[s].m(t,null))}for(;s<r.length;s+=1)r[s].d(1);r.length=l.length}},d(e){e&&f(t),a&&a.d(),m(r,e),o()}}}function zt(e){var t;return{c(){(t=h("option")).textContent="Choose an option",t.className="d-none",t.__value="null",t.value=t.__value,t.selected=!0,t.disabled=!0},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function qt(e){var t,n,o,a=e.option.display;return{c(){t=h("option"),n=b(a),t.__value=o=e.option.value,t.value=t.__value},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.fields&&a!==(a=l.option.display)&&k(n,a),e.fields&&o!==(o=l.option.value)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function Ut(e){var t,n,o,a=e.option.display;return{c(){t=h("option"),n=b(a),t.__value=o=e.option.value,t.value=t.__value,t.selected=!0},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.fields&&a!==(a=l.option.display)&&k(n,a),e.fields&&o!==(o=l.option.value)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function Ft(e){var t;function n(e){return e.field.value===e.option.value?Ut:qt}var o=n(e),a=o(e);return{c(){a.c(),t=v()},m(e,n){a.m(e,n),g(e,t,n)},p(e,l){o===(o=n(l))&&a?a.p(e,l):(a.d(1),(a=o(l))&&(a.c(),a.m(t.parentNode,t)))},d(e){a.d(e),e&&f(t)}}}function Kt(e){var t,n,o,a,l,r,i=e.field.display;function s(e){return"select"===e.field.type?Ht:"textarea"===e.field.type?Bt:Lt}var d=s(e),c=d(e);return{c(){t=h("div"),n=h("div"),o=h("div"),a=h("div"),l=b(i),r=_(),c.c(),a.className="input-group-text w-100",o.className="input-group-prepend w-25",n.className="input-group",t.className="form-group"},m(e,i){g(e,t,i),p(t,n),p(n,o),p(o,a),p(a,l),p(n,r),c.m(n,null)},p(e,t){e.fields&&i!==(i=t.field.display)&&k(l,i),d===(d=s(t))&&c?c.p(e,t):(c.d(1),(c=d(t))&&(c.c(),c.m(n,null)))},d(e){e&&f(t),c.d()}}}function Gt(t){for(var n,o,a,l,r,i,s,d,c,u,v,w,x,T,O,N,R,I,D,M,j="add"===t.mode?"Add":"Edit",A="add"===t.mode?"Add":"Edit",E=t.fields.fields,C=[],S=0;S<E.length;S+=1)C[S]=Kt(Pt(t,E,S));return{c(){n=h("div"),o=h("div"),a=h("div"),l=h("div"),r=h("h5"),i=b(j),s=_(),d=b(t.table_title),c=_(),(u=h("button")).innerHTML="<span>x</span>",v=_(),w=h("div");for(var e=0;e<C.length;e+=1)C[e].c();x=_(),T=h("div"),O=h("button"),N=b(A),r.className="modal-title",u.className="close",u.type="button",u.dataset.dismiss="modal",l.className="modal-header",w.className="modal-body",O.className=R="btn "+("add"===t.mode?"btn-success":"btn-info")+" w-100",O.id=I=`modal-${t.mode}-btn`,T.className="modal-footer",a.className="modal-content",o.className="modal-dialog",y(o,"role","document"),n.className="modal fade",n.id=D=`${t.mode}-modal`,n.tabIndex="-1",M=$(O,"click",t.handleSubmit)},m(e,t){g(e,n,t),p(n,o),p(o,a),p(a,l),p(l,r),p(r,i),p(r,s),p(r,d),p(l,c),p(l,u),p(a,v),p(a,w);for(var f=0;f<C.length;f+=1)C[f].m(w,null);p(a,x),p(a,T),p(T,O),p(O,N)},p(e,t){if(e.mode&&j!==(j="add"===t.mode?"Add":"Edit")&&k(i,j),e.table_title&&k(d,t.table_title),e.fields){E=t.fields.fields;for(var o=0;o<E.length;o+=1){const n=Pt(t,E,o);C[o]?C[o].p(e,n):(C[o]=Kt(n),C[o].c(),C[o].m(w,null))}for(;o<C.length;o+=1)C[o].d(1);C.length=E.length}e.mode&&A!==(A="add"===t.mode?"Add":"Edit")&&k(N,A),e.mode&&R!==(R="btn "+("add"===t.mode?"btn-success":"btn-info")+" w-100")&&(O.className=R),e.mode&&I!==(I=`modal-${t.mode}-btn`)&&(O.id=I),e.mode&&D!==(D=`${t.mode}-modal`)&&(n.id=D)},i:e,o:e,d(e){e&&f(n),m(C,e),M()}}}function Vt(e,t,n){let{getToken:o,table:a,table_title:l,fields:r,isOpen:i,setIsOpen:s,onAdd:d,onEdit:c,mode:u}=t;var p;function g(){s(!1),window.$(`#${u}-modal`).modal("hide")}return p=(()=>{n("fields",r),console.log("Hey before")}),O().$$.before_render.push(p),e.$set=(e=>{"getToken"in e&&n("getToken",o=e.getToken),"table"in e&&n("table",a=e.table),"table_title"in e&&n("table_title",l=e.table_title),"fields"in e&&n("fields",r=e.fields),"isOpen"in e&&n("isOpen",i=e.isOpen),"setIsOpen"in e&&n("setIsOpen",s=e.setIsOpen),"onAdd"in e&&n("onAdd",d=e.onAdd),"onEdit"in e&&n("onEdit",c=e.onEdit),"mode"in e&&n("mode",u=e.mode)}),e.$$.update=((e={isOpen:1,setIsOpen:1})=>{(e.isOpen||e.setIsOpen)&&i&&(s(!0),window.$(`#${u}-modal`).modal("show"),s(!1))}),{getToken:o,table:a,table_title:l,fields:r,isOpen:i,setIsOpen:s,onAdd:d,onEdit:c,mode:u,handleSubmit:function(e){"add"===u?function(){console.log(`Attempting to add ${a}`);let e={ID:null};for(let t=0;t<r.fields.length;t++)e[r.fields[t].field]=r.fields[t].value;console.log(e),ct.post(`/api/insert/${a}`,e,{headers:{Authorization:o()}}).then(e=>{console.log(`Successfully added ${l}`),d(),g()}).catch(e=>{console.log(e.response)})}():"edit"===u&&function(){console.log(`Attempting to add ${a}`);let e={ID:r.ID};for(let t=0;t<r.fields.length;t++)e[r.fields[t].field]=r.fields[t].value;console.log(e),ct.put(`/api/edit/${a}`,e,{headers:{Authorization:o()}}).then(e=>{console.log(`Successfully edited ${l}`),c(),g()}).catch(e=>{console.log(e.response)})}()},change_handler:function({field:e},t){e.value=t.target.value,n("field",e)},change_handler_1:function({field:e},t){e.value=t.target.value,n("field",e)},change_handler_2:function({field:e},t){e.value=t.target.value,n("field",e)}}}class Xt extends V{constructor(e){super(),G(this,e,Vt,Gt,r,["getToken","table","table_title","fields","isOpen","setIsOpen","onAdd","onEdit","mode"])}}function Jt(e){var t,n,o,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I=e.confirm_del?"Are you sure?":"Delete",D=new Xt({props:{mode:"add",getToken:e.getToken,table:"countries",table_title:"Countries",fields:e.add_modal_fields,isOpen:e.isAddModalOpen,setIsOpen:e.setIsAddModalOpen,onAdd:e.getCountries}}),M=new Xt({props:{mode:"edit",getToken:e.getToken,table:"countries",table_title:"Countries",fields:e.edit_modal_fields,isOpen:e.isEditModalOpen,setIsOpen:e.setIsEditModalOpen,onEdit:e.getCountries}}),j=new Ct({props:{table_headers:e.table_headers,data:e.countries,toggleRowSelect:e.toggleRowSelect,selectedRows:e.selectedRows}});return{c(){D.$$.fragment.c(),t=_(),M.$$.fragment.c(),n=_(),o=h("div"),l=h("div"),(r=h("h2")).innerHTML='<span class="border-bottom-3px border-top-3px border-dark px-2 d-inline-block">Countries</span>',i=_(),s=h("span"),(d=h("button")).textContent="Add +",c=_(),u=h("button"),m=b("Edit"),y=_(),w=h("button"),x=b(I),O=_(),j.$$.fragment.c(),r.className="mb-3 text-dark",d.className="btn btn-success mb-2",u.className=v=1!==e.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2",u.id="edit-btn",w.className=T=`btn btn-danger mb-2 ${e.selectedRows.length>=1?"":"disabled"}`,w.id="delete-btn",l.className="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column",o.className="p-5 position-absolute bottom-0px top-76px left-0px right-0px",R=[$(d,"click",e.handleAddButtonClick),$(u,"click",e.handleEditButtonClick),$(w,"click",e.handleDeleteClick),$(o,"click",e.handleOutsideTableClick)]},m(e,a){F(D,e,a),g(e,t,a),F(M,e,a),g(e,n,a),g(e,o,a),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(s,c),p(s,u),p(u,m),p(s,y),p(s,w),p(w,x),p(l,O),F(j,l,null),N=!0},p(e,t){var n={};e.getToken&&(n.getToken=t.getToken),e.add_modal_fields&&(n.fields=t.add_modal_fields),e.isAddModalOpen&&(n.isOpen=t.isAddModalOpen),e.setIsAddModalOpen&&(n.setIsOpen=t.setIsAddModalOpen),e.getCountries&&(n.onAdd=t.getCountries),D.$set(n);var o={};e.getToken&&(o.getToken=t.getToken),e.edit_modal_fields&&(o.fields=t.edit_modal_fields),e.isEditModalOpen&&(o.isOpen=t.isEditModalOpen),e.setIsEditModalOpen&&(o.setIsOpen=t.setIsEditModalOpen),e.getCountries&&(o.onEdit=t.getCountries),M.$set(o),N&&!e.selectedRows||v===(v=1!==t.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2")||(u.className=v),N&&!e.confirm_del||I===(I=t.confirm_del?"Are you sure?":"Delete")||k(x,I),N&&!e.selectedRows||T===(T=`btn btn-danger mb-2 ${t.selectedRows.length>=1?"":"disabled"}`)||(w.className=T);var a={};e.table_headers&&(a.table_headers=t.table_headers),e.countries&&(a.data=t.countries),e.toggleRowSelect&&(a.toggleRowSelect=t.toggleRowSelect),e.selectedRows&&(a.selectedRows=t.selectedRows),j.$set(a)},i(e){N||(D.$$.fragment.i(e),M.$$.fragment.i(e),j.$$.fragment.i(e),N=!0)},o(e){D.$$.fragment.o(e),M.$$.fragment.o(e),j.$$.fragment.o(e),N=!1},d(e){D.$destroy(e),e&&f(t),M.$destroy(e),e&&(f(n),f(o)),j.$destroy(),a(R)}}}function Yt(e){var t,n,o=e.is_logged_in&&Jt(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){n.is_logged_in?o?(o.p(e,n),o.i(1)):((o=Jt(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}function Qt(e,t,n){let{is_logged_in:o,getToken:a}=t,l=[],r=[],i=!1,s=!1,d=!1,c={ID:null,fields:[{field:"country",type:"text",display:"Country",placeholder:"eg. Portugal",value:""}]};function u(){console.log("Trying to fetch countries"),ct.get("/api/get/countries",{headers:{Authorization:a()}}).then(function(e){n("countries",l=e.data),console.log(e.data)})}function p(e){n("isAddModalOpen",s=e)}function g(e){n("isEditModalOpen",d=e)}return e.$set=(e=>{"is_logged_in"in e&&n("is_logged_in",o=e.is_logged_in),"getToken"in e&&n("getToken",a=e.getToken)}),e.$$.update=((e={is_logged_in:1})=>{e.is_logged_in&&o&&u()}),{is_logged_in:o,getToken:a,countries:l,table_headers:[{columnName:"#",key:"ID"},{columnName:"Country",key:"country"}],selectedRows:r,confirm_del:i,isAddModalOpen:s,isEditModalOpen:d,add_modal_fields:{fields:[{field:"country",type:"text",display:"Country",placeholder:"eg. Portugal",value:""}]},edit_modal_fields:c,toggleRowSelect:function(e){let t=r.indexOf(e);-1===t?n("selectedRows",r=[...r,e]):(r.splice(t,1),n("selectedRows",r)),console.log(r)},handleOutsideTableClick:function(e){if("button"===e.target.tagName.toLowerCase())return;let t=e.currentTarget.querySelector("table");null!=t&&t.contains(e.target)?console.log("Hello there General Kenobi"):(n("confirm_del",i=!1),n("selectedRows",r=[]))},handleDeleteClick:function(e){e.currentTarget.classList.contains("disabled")||(i?r.length>0&&ct.delete("/api/delete/countries",{data:{rows:r},headers:{Authorization:a()}}).then(e=>{n("confirm_del",i=!1),u()}).catch(e=>{console.log(e.response)}):n("confirm_del",i=!0))},getCountries:u,setIsAddModalOpen:p,setIsEditModalOpen:g,handleAddButtonClick:function(){p(!0)},handleEditButtonClick:function(){if(1===r.length){for(let e=0;e<l.length;e++)if(l[e].ID===r[0]){c.ID=r[0],n("edit_modal_fields",c);for(let t=0;t<c.fields.length;t++)c.fields[t].value=l[e][c.fields[t].field],n("edit_modal_fields",c)}g(!0)}}}}class Wt extends V{constructor(e){super(),G(this,e,Qt,Yt,r,["is_logged_in","getToken"])}}function Zt(e,t,n){const o=Object.create(e);return o.project=t[n],o.i=n,o}function en(e){var t;return{c(){(t=h("i")).className="fas fa-school fa-fw cursor-pointer mr-1 text-light"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function tn(e){var t;return{c(){(t=h("i")).className="fas fa-plane fa-fw cursor-pointer ml-1 text-light"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function nn(e){var t,n,o,l,r,i,s,d,c,u,m,v,w,x,T,O,N,R,I,D,M,j,A,E,C,S,P,L=e.project.ID,B=e.project.projectCode,H=e.project.name;function z(...t){return e.change_handler(e,...t)}var q=new Oe({props:{to:`/backoffice/project_partners/${e.project.ID}`,$$slots:{default:[en]},$$scope:{ctx:e}}}),U=new Oe({props:{to:`/backoffice/mobilities/${e.project.ID}`,$$slots:{default:[tn]},$$scope:{ctx:e}}});function K(...t){return e.click_handler(e,...t)}return{c(){t=h("tr"),n=h("td"),o=b(L),l=_(),r=h("td"),i=b(B),s=_(),d=h("td"),c=b(H),u=_(),m=h("td"),v=h("input"),T=_(),O=h("label"),N=h("img"),M=_(),j=h("td"),q.$$.fragment.c(),A=_(),U.$$.fragment.c(),E=_(),y(v,"type","file"),v.className="d-none",v.name=w=e.project.ID,v.id=x=`image-input-${e.project.ID}`,N.src=R=`/imgs/projects/${e.project.ID}.png`,N.id=I=`image-${e.project.ID}`,N.height="50",N.alt="Project Logo",O.htmlFor=D=`image-input-${e.project.ID}`,O.className="project-logo cursor-pointer m-0 svelte-126gmv9",m.className="text-center",j.className="text-center vertical-align-middle",t.className=C=-1===e.selectedRows.indexOf(e.project.ID)?"table-row":"table-row bg-secondary",P=[$(v,"change",z),$(t,"click",K)]},m(e,a){g(e,t,a),p(t,n),p(n,o),p(t,l),p(t,r),p(r,i),p(t,s),p(t,d),p(d,c),p(t,u),p(t,m),p(m,v),p(m,T),p(m,O),p(O,N),p(t,M),p(t,j),F(q,j,null),p(j,A),F(U,j,null),p(t,E),S=!0},p(n,a){e=a,S&&!n.projects||L===(L=e.project.ID)||k(o,L),S&&!n.projects||B===(B=e.project.projectCode)||k(i,B),S&&!n.projects||H===(H=e.project.name)||k(c,H),S&&!n.projects||w===(w=e.project.ID)||(v.name=w),S&&!n.projects||x===(x=`image-input-${e.project.ID}`)||(v.id=x),S&&!n.projects||R===(R=`/imgs/projects/${e.project.ID}.png`)||(N.src=R),S&&!n.projects||I===(I=`image-${e.project.ID}`)||(N.id=I),S&&!n.projects||D===(D=`image-input-${e.project.ID}`)||(O.htmlFor=D);var l={};n.projects&&(l.to=`/backoffice/project_partners/${e.project.ID}`),n.$$scope&&(l.$$scope={changed:n,ctx:e}),q.$set(l);var r={};n.projects&&(r.to=`/backoffice/mobilities/${e.project.ID}`),n.$$scope&&(r.$$scope={changed:n,ctx:e}),U.$set(r),S&&!n.selectedRows&&!n.projects||C===(C=-1===e.selectedRows.indexOf(e.project.ID)?"table-row":"table-row bg-secondary")||(t.className=C)},i(e){S||(q.$$.fragment.i(e),U.$$.fragment.i(e),S=!0)},o(e){q.$$.fragment.o(e),U.$$.fragment.o(e),S=!1},d(e){e&&f(t),q.$destroy(),U.$destroy(),a(P)}}}function on(e){for(var t,n,o,a,l,r,i=e.projects,s=[],d=0;d<i.length;d+=1)s[d]=nn(Zt(e,i,d));function c(e,t,n){s[e]&&(t&&q(()=>{s[e].d(t),s[e]=null}),s[e].o(n))}return{c(){t=h("div"),n=h("table"),(o=h("thead")).innerHTML='<tr class="table-headers"><th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px">#</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px">Project Code</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px">Name</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center"><i class="fas fa-images fa-fw"></i></th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center">Actions</th></tr>',a=_(),l=h("tbody");for(var e=0;e<s.length;e+=1)s[e].c();n.className="table table-dark table-bordered table-hover nowrap m-0",t.className="table-responsive rounded dark-scroll"},m(e,i){g(e,t,i),p(t,n),p(n,o),p(n,a),p(n,l);for(var d=0;d<s.length;d+=1)s[d].m(l,null);r=!0},p(e,t){if(e.selectedRows||e.projects){i=t.projects;for(var n=0;n<i.length;n+=1){const o=Zt(t,i,n);s[n]?(s[n].p(e,o),s[n].i(1)):(s[n]=nn(o),s[n].c(),s[n].i(1),s[n].m(l,null))}for(H();n<s.length;n+=1)c(n,1,1);z()}},i(e){if(!r){for(var t=0;t<i.length;t+=1)s[t].i();r=!0}},o(e){s=s.filter(Boolean);for(let e=0;e<s.length;e+=1)c(e,0,0);r=!1},d(e){e&&f(t),m(s,e)}}}function an(e,t,n){let{projects:o,toggleRowSelect:a,selectedRows:l,updateImage:r}=t;function i(e,t){a(t)}function s(e,t){r(e,t).then(e=>{let n=document.querySelector(`#image-${t}`);n.setAttribute("src",n.getAttribute("src")+"?time="+(new Date).getTime())})}return e.$set=(e=>{"projects"in e&&n("projects",o=e.projects),"toggleRowSelect"in e&&n("toggleRowSelect",a=e.toggleRowSelect),"selectedRows"in e&&n("selectedRows",l=e.selectedRows),"updateImage"in e&&n("updateImage",r=e.updateImage)}),{projects:o,toggleRowSelect:a,selectedRows:l,updateImage:r,handleRowClick:i,handleImageChange:s,change_handler:function({project:e},t){return s(t.target.files[0],e.ID)},click_handler:function({project:e},t){i(0,e.ID)}}}class ln extends V{constructor(e){super(),G(this,e,an,on,r,["projects","toggleRowSelect","selectedRows","updateImage"])}}function rn(e){var t,n,o,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I=e.confirm_del?"Are you sure?":"Delete",D=new Xt({props:{mode:"add",getToken:e.getToken,table:"projects",table_title:"Projects",fields:e.add_modal_fields,isOpen:e.isAddModalOpen,setIsOpen:e.setIsAddModalOpen,onAdd:e.getProjects}}),M=new Xt({props:{mode:"edit",getToken:e.getToken,table:"projects",table_title:"Projects",fields:e.edit_modal_fields,isOpen:e.isEditModalOpen,setIsOpen:e.setIsEditModalOpen,onEdit:e.getProjects}}),j=new ln({props:{projects:e.projects,toggleRowSelect:e.toggleRowSelect,selectedRows:e.selectedRows,updateImage:e.updateImage}});return{c(){D.$$.fragment.c(),t=_(),M.$$.fragment.c(),n=_(),o=h("div"),l=h("div"),(r=h("h2")).innerHTML='<span class="border-bottom-3px border-top-3px border-dark px-2 d-inline-block">Projects</span>',i=_(),s=h("span"),(d=h("button")).textContent="Add +",c=_(),u=h("button"),m=b("Edit"),y=_(),w=h("button"),x=b(I),O=_(),j.$$.fragment.c(),r.className="mb-3 text-dark",d.className="btn btn-success mb-2",u.className=v=1!==e.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2",u.id="edit-btn",w.className=T=`btn btn-danger mb-2 ${e.selectedRows.length>=1?"":"disabled"}`,w.id="delete-btn",l.className="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column",o.className="p-5 position-absolute bottom-0px top-76px left-0px right-0px",R=[$(d,"click",e.handleAddButtonClick),$(u,"click",e.handleEditButtonClick),$(w,"click",e.handleDeleteClick),$(o,"click",e.handleOutsideTableClick)]},m(e,a){F(D,e,a),g(e,t,a),F(M,e,a),g(e,n,a),g(e,o,a),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(s,c),p(s,u),p(u,m),p(s,y),p(s,w),p(w,x),p(l,O),F(j,l,null),N=!0},p(e,t){var n={};e.getToken&&(n.getToken=t.getToken),e.add_modal_fields&&(n.fields=t.add_modal_fields),e.isAddModalOpen&&(n.isOpen=t.isAddModalOpen),e.setIsAddModalOpen&&(n.setIsOpen=t.setIsAddModalOpen),e.getProjects&&(n.onAdd=t.getProjects),D.$set(n);var o={};e.getToken&&(o.getToken=t.getToken),e.edit_modal_fields&&(o.fields=t.edit_modal_fields),e.isEditModalOpen&&(o.isOpen=t.isEditModalOpen),e.setIsEditModalOpen&&(o.setIsOpen=t.setIsEditModalOpen),e.getProjects&&(o.onEdit=t.getProjects),M.$set(o),N&&!e.selectedRows||v===(v=1!==t.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2")||(u.className=v),N&&!e.confirm_del||I===(I=t.confirm_del?"Are you sure?":"Delete")||k(x,I),N&&!e.selectedRows||T===(T=`btn btn-danger mb-2 ${t.selectedRows.length>=1?"":"disabled"}`)||(w.className=T);var a={};e.projects&&(a.projects=t.projects),e.toggleRowSelect&&(a.toggleRowSelect=t.toggleRowSelect),e.selectedRows&&(a.selectedRows=t.selectedRows),e.updateImage&&(a.updateImage=t.updateImage),j.$set(a)},i(e){N||(D.$$.fragment.i(e),M.$$.fragment.i(e),j.$$.fragment.i(e),N=!0)},o(e){D.$$.fragment.o(e),M.$$.fragment.o(e),j.$$.fragment.o(e),N=!1},d(e){D.$destroy(e),e&&f(t),M.$destroy(e),e&&(f(n),f(o)),j.$destroy(),a(R)}}}function sn(e){var t,n,o=e.is_logged_in&&rn(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){n.is_logged_in?o?(o.p(e,n),o.i(1)):((o=rn(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}function dn(e,t,n){let{is_logged_in:o,getToken:a}=t,l=[],r=[],i=!1,s=!1,d=!1,c={fields:[{field:"projectCode",type:"text",display:"Project Code",placeholder:"eg. KA+ 123456798",value:""},{field:"name",type:"text",display:"Name",placeholder:"eg. Trails2Education",value:""},{field:"description",type:"textarea",display:"Description",placeholder:"eg. This is a project description",value:""}]},u={ID:null,fields:[{field:"projectCode",type:"text",display:"Project Code",placeholder:"eg. KA+ 123456798",value:""},{field:"name",type:"text",display:"Name",placeholder:"eg. Trails2Education",value:""},{field:"description",type:"textarea",display:"Description",placeholder:"eg. This is a project description",value:""}]};function p(){console.log("Trying to fetch projects"),ct.get("/api/get/projects",{headers:{Authorization:a()}}).then(function(e){n("projects",l=e.data)})}function g(e){for(let e=0;e<c.fields.length;e++)c.fields[e].value="",n("add_modal_fields",c);n("isAddModalOpen",s=e)}function f(e){n("isEditModalOpen",d=e)}return e.$set=(e=>{"is_logged_in"in e&&n("is_logged_in",o=e.is_logged_in),"getToken"in e&&n("getToken",a=e.getToken)}),e.$$.update=((e={is_logged_in:1})=>{e.is_logged_in&&o&&p()}),{is_logged_in:o,getToken:a,projects:l,selectedRows:r,confirm_del:i,isAddModalOpen:s,isEditModalOpen:d,add_modal_fields:c,edit_modal_fields:u,getProjects:p,updateImage:function(e,t){let n=new FormData;return n.append(`${t}`,e),n.append("ID",t),ct.put("/api/edit/project_logo",n,{headers:{Authorization:a()}}).then(function(e){return console.log("Hello"),e}).catch(e=>(console.log(e.response),e))},toggleRowSelect:function(e){let t=r.indexOf(e);-1===t?n("selectedRows",r=[...r,e]):(r.splice(t,1),n("selectedRows",r)),console.log(r)},handleOutsideTableClick:function(e){if("button"===e.target.tagName.toLowerCase())return;let t=e.currentTarget.querySelector("table");null!=t&&t.contains(e.target)?console.log("Hello there General Kenobi"):(n("confirm_del",i=!1),n("selectedRows",r=[]))},handleDeleteClick:function(e){e.currentTarget.classList.contains("disabled")||(i?r.length>0&&ct.delete("/api/delete/projects",{data:{rows:r},headers:{Authorization:a()}}).then(e=>{n("confirm_del",i=!1),p()}).catch(e=>{console.log(e.response)}):n("confirm_del",i=!0))},setIsAddModalOpen:g,setIsEditModalOpen:f,handleAddButtonClick:function(){g(!0)},handleEditButtonClick:function(){if(1===r.length){for(let e=0;e<l.length;e++)if(l[e].ID===r[0]){u.ID=r[0],n("edit_modal_fields",u);for(let t=0;t<u.fields.length;t++)u.fields[t].value=l[e][u.fields[t].field],n("edit_modal_fields",u)}f(!0)}}}}class cn extends V{constructor(e){super(),G(this,e,dn,sn,r,["is_logged_in","getToken"])}}function un(e,t,n){const o=Object.create(e);return o.mobility=t[n],o.i=n,o}function pn(e){var t;return{c(){(t=h("i")).className="fas fa-chalkboard-teacher fa-fw cursor-pointer mr-1 text-light",t.title="Teachers"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function gn(e){var t;return{c(){(t=h("i")).className="fas fa-user-graduate fa-fw cursor-pointer ml-1 text-light",t.title="Students"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function fn(e){var t,n,o,a,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I,D,M=e.mobility.ID,j=e.mobility.origin,A=e.mobility.target,E=e.mobility.departureDate.slice(0,-14),C=e.mobility.arrivalDate.slice(0,-14),S=new Oe({props:{to:`/backoffice/mobility_teachers/${e.mobility.ID}`,$$slots:{default:[pn]},$$scope:{ctx:e}}}),P=new Oe({props:{to:`/backoffice/mobility_students/${e.mobility.ID}`,$$slots:{default:[gn]},$$scope:{ctx:e}}});function L(...t){return e.click_handler(e,...t)}return{c(){t=h("tr"),n=h("td"),o=b(M),a=_(),l=h("td"),r=b(j),i=_(),s=h("td"),d=b(A),c=_(),u=h("td"),m=b(E),v=_(),y=h("td"),w=b(C),x=_(),T=h("td"),S.$$.fragment.c(),O=_(),P.$$.fragment.c(),N=_(),T.className="text-center vertical-align-middle",t.className=R=-1===e.selectedRows.indexOf(e.mobility.ID)?"table-row":"table-row bg-secondary",D=$(t,"click",L)},m(e,f){g(e,t,f),p(t,n),p(n,o),p(t,a),p(t,l),p(l,r),p(t,i),p(t,s),p(s,d),p(t,c),p(t,u),p(u,m),p(t,v),p(t,y),p(y,w),p(t,x),p(t,T),F(S,T,null),p(T,O),F(P,T,null),p(t,N),I=!0},p(n,a){e=a,I&&!n.mobilities||M===(M=e.mobility.ID)||k(o,M),I&&!n.mobilities||j===(j=e.mobility.origin)||k(r,j),I&&!n.mobilities||A===(A=e.mobility.target)||k(d,A),I&&!n.mobilities||E===(E=e.mobility.departureDate.slice(0,-14))||k(m,E),I&&!n.mobilities||C===(C=e.mobility.arrivalDate.slice(0,-14))||k(w,C);var l={};n.mobilities&&(l.to=`/backoffice/mobility_teachers/${e.mobility.ID}`),n.$$scope&&(l.$$scope={changed:n,ctx:e}),S.$set(l);var i={};n.mobilities&&(i.to=`/backoffice/mobility_students/${e.mobility.ID}`),n.$$scope&&(i.$$scope={changed:n,ctx:e}),P.$set(i),I&&!n.selectedRows&&!n.mobilities||R===(R=-1===e.selectedRows.indexOf(e.mobility.ID)?"table-row":"table-row bg-secondary")||(t.className=R)},i(e){I||(S.$$.fragment.i(e),P.$$.fragment.i(e),I=!0)},o(e){S.$$.fragment.o(e),P.$$.fragment.o(e),I=!1},d(e){e&&f(t),S.$destroy(),P.$destroy(),D()}}}function mn(e){for(var t,n,o,a,l,r,i=e.mobilities,s=[],d=0;d<i.length;d+=1)s[d]=fn(un(e,i,d));function c(e,t,n){s[e]&&(t&&q(()=>{s[e].d(t),s[e]=null}),s[e].o(n))}return{c(){t=h("div"),n=h("table"),(o=h("thead")).innerHTML='<tr class="table-headers"><th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px">#</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px">Origin</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px">Destination</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center">Departure</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center">Arrival</th>\n\t\t\t                <th scope="col" class="position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center">Actions</th></tr>',a=_(),l=h("tbody");for(var e=0;e<s.length;e+=1)s[e].c();n.className="table table-dark table-bordered table-hover nowrap m-0",t.className="table-responsive rounded dark-scroll"},m(e,i){g(e,t,i),p(t,n),p(n,o),p(n,a),p(n,l);for(var d=0;d<s.length;d+=1)s[d].m(l,null);r=!0},p(e,t){if(e.selectedRows||e.mobilities){i=t.mobilities;for(var n=0;n<i.length;n+=1){const o=un(t,i,n);s[n]?(s[n].p(e,o),s[n].i(1)):(s[n]=fn(o),s[n].c(),s[n].i(1),s[n].m(l,null))}for(H();n<s.length;n+=1)c(n,1,1);z()}},i(e){if(!r){for(var t=0;t<i.length;t+=1)s[t].i();r=!0}},o(e){s=s.filter(Boolean);for(let e=0;e<s.length;e+=1)c(e,0,0);r=!1},d(e){e&&f(t),m(s,e)}}}function hn(e,t,n){let{mobilities:o,toggleRowSelect:a,selectedRows:l}=t;function r(e,t){a(t)}return e.$set=(e=>{"mobilities"in e&&n("mobilities",o=e.mobilities),"toggleRowSelect"in e&&n("toggleRowSelect",a=e.toggleRowSelect),"selectedRows"in e&&n("selectedRows",l=e.selectedRows)}),{mobilities:o,toggleRowSelect:a,selectedRows:l,handleRowClick:r,click_handler:function({mobility:e},t){r(0,e.ID)}}}class bn extends V{constructor(e){super(),G(this,e,hn,mn,r,["mobilities","toggleRowSelect","selectedRows"])}}function _n(e,t,n){const o=Object.create(e);return o.partner=t[n],o.i=n,o}function vn(e,t,n){const o=Object.create(e);return o.partner=t[n],o.i=n,o}function $n(e){var t;return{c(){(t=h("option")).textContent="Select Partner",t.__value="0",t.value=t.__value,t.disabled=!0,t.selected=!0,t.className="d-none"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function yn(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function wn(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value,t.selected=!0},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function kn(e){var t;function n(e){return e.originPartner===e.partner.ID?wn:yn}var o=n(e),a=o(e);return{c(){a.c(),t=v()},m(e,n){a.m(e,n),g(e,t,n)},p(e,l){o===(o=n(l))&&a?a.p(e,l):(a.d(1),(a=o(l))&&(a.c(),a.m(t.parentNode,t)))},d(e){a.d(e),e&&f(t)}}}function xn(e){var t;return{c(){(t=h("option")).textContent="Select Partner",t.__value="0",t.value=t.__value,t.disabled=!0,t.selected=!0,t.className="d-none"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function Tn(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function On(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value,t.selected=!0},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function Nn(e){var t;function n(e){return e.targetPartner===e.partner.ID?On:Tn}var o=n(e),a=o(e);return{c(){a.c(),t=v()},m(e,n){a.m(e,n),g(e,t,n)},p(e,l){o===(o=n(l))&&a?a.p(e,l):(a.d(1),(a=o(l))&&(a.c(),a.m(t.parentNode,t)))},d(e){a.d(e),e&&f(t)}}}function Rn(t){for(var n,o,l,r,i,s,d,c,u,b,w,k,x,T,O,N,R,I,D,M,j,A,E,C,S,P,L,B,H,z,q,U,F,K,G,V,X,J,Y,Q,W,Z,ee,te,ne,oe,ae,le,re=0===t.originPartner&&$n(),ie=t.partners,se=[],de=0;de<ie.length;de+=1)se[de]=kn(vn(t,ie,de));var ce=0===t.originPartner&&xn(),ue=t.partners,pe=[];for(de=0;de<ue.length;de+=1)pe[de]=Nn(_n(t,ue,de));return{c(){n=h("div"),o=h("div"),l=h("div"),(r=h("div")).innerHTML='<h5 class="modal-title">Add Mobility</h5>\n\t\t\t                <button class="close" type="button" data-dismiss="modal"><span>x</span></button>',i=_(),s=h("div"),d=h("div"),c=h("div"),(u=h("div")).innerHTML='<div class="input-group-text w-100">Origin</div>',b=_(),w=h("input"),k=_(),x=h("div"),T=h("div"),(O=h("div")).innerHTML='<div class="input-group-text w-100">Origin Partner</div>',N=_(),R=h("select"),re&&re.c(),I=v();for(var e=0;e<se.length;e+=1)se[e].c();D=_(),M=h("div"),j=h("div"),(A=h("div")).innerHTML='<div class="input-group-text w-100">Target</div>',E=_(),C=h("input"),S=_(),P=h("div"),L=h("div"),(B=h("div")).innerHTML='<div class="input-group-text w-100">Target Partner</div>',H=_(),z=h("select"),ce&&ce.c(),q=v();for(e=0;e<pe.length;e+=1)pe[e].c();U=_(),F=h("div"),K=h("div"),(G=h("div")).innerHTML='<div class="input-group-text w-100">Departure</div>',V=_(),X=h("input"),J=_(),Y=h("div"),Q=h("div"),(W=h("div")).innerHTML='<div class="input-group-text w-100">Arrival</div>',Z=_(),ee=h("input"),ne=_(),oe=h("div"),(ae=h("button")).textContent="Add",r.className="modal-header",u.className="input-group-prepend w-25",w.className="form-control",y(w,"type","text"),w.value=t.origin,w.placeholder="eg. Sweden, Stockholm",c.className="input-group",d.className="form-group",O.className="input-group-prepend w-25",R.className="form-control",T.className="input-group",x.className="form-group",A.className="input-group-prepend w-25",C.className="form-control",y(C,"type","text"),C.value=t.target,C.placeholder="eg. Sweden, Stockholm",j.className="input-group",M.className="form-group",B.className="input-group-prepend w-25",z.className="form-control",L.className="input-group",P.className="form-group",G.className="input-group-prepend w-25",y(X,"type","date"),X.className="form-control",X.value=t.departureDate,K.className="input-group",F.className="form-group",W.className="input-group-prepend w-25",y(ee,"type","date"),ee.className="form-control",ee.value=t.arrivalDate,Q.className="input-group",Y.className=te=`form-group ${null!=t.projectID?"mb-0":""}`,s.className="modal-body",ae.className="btn btn-success w-100",ae.id="modal-add-btn",oe.className="modal-footer",l.className="modal-content",o.className="modal-dialog",y(o,"role","document"),n.className="modal fade",n.id="add-modal",n.tabIndex="-1",le=[$(w,"change",t.change_handler),$(R,"change",t.change_handler_1),$(C,"change",t.change_handler_2),$(z,"change",t.change_handler_3),$(X,"change",t.change_handler_4),$(ee,"change",t.change_handler_5),$(ae,"click",t.addMobility)]},m(e,t){g(e,n,t),p(n,o),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(d,c),p(c,u),p(c,b),p(c,w),p(s,k),p(s,x),p(x,T),p(T,O),p(T,N),p(T,R),re&&re.m(R,null),p(R,I);for(var a=0;a<se.length;a+=1)se[a].m(R,null);p(s,D),p(s,M),p(M,j),p(j,A),p(j,E),p(j,C),p(s,S),p(s,P),p(P,L),p(L,B),p(L,H),p(L,z),ce&&ce.m(z,null),p(z,q);for(a=0;a<pe.length;a+=1)pe[a].m(z,null);p(s,U),p(s,F),p(F,K),p(K,G),p(K,V),p(K,X),p(s,J),p(s,Y),p(Y,Q),p(Q,W),p(Q,Z),p(Q,ee),p(l,ne),p(l,oe),p(oe,ae)},p(e,t){if(e.origin&&(w.value=t.origin),0===t.originPartner?re||((re=$n()).c(),re.m(R,I)):re&&(re.d(1),re=null),e.originPartner||e.partners){ie=t.partners;for(var n=0;n<ie.length;n+=1){const o=vn(t,ie,n);se[n]?se[n].p(e,o):(se[n]=kn(o),se[n].c(),se[n].m(R,null))}for(;n<se.length;n+=1)se[n].d(1);se.length=ie.length}if(e.target&&(C.value=t.target),0===t.originPartner?ce||((ce=xn()).c(),ce.m(z,q)):ce&&(ce.d(1),ce=null),e.targetPartner||e.partners){ue=t.partners;for(n=0;n<ue.length;n+=1){const o=_n(t,ue,n);pe[n]?pe[n].p(e,o):(pe[n]=Nn(o),pe[n].c(),pe[n].m(z,null))}for(;n<pe.length;n+=1)pe[n].d(1);pe.length=ue.length}e.departureDate&&(X.value=t.departureDate),e.arrivalDate&&(ee.value=t.arrivalDate),e.projectID&&te!==(te=`form-group ${null!=t.projectID?"mb-0":""}`)&&(Y.className=te)},i:e,o:e,d(e){e&&f(n),re&&re.d(),m(se,e),ce&&ce.d(),m(pe,e),a(le)}}}function In(e,t,n){let{getMobilities:o,partners:a,getToken:l,projectID:r,isOpen:i,setIsOpen:s}=t,d=[],c="",u=0,p="",g=0,f="",m="",h=0;return console.log(r),e.$set=(e=>{"getMobilities"in e&&n("getMobilities",o=e.getMobilities),"partners"in e&&n("partners",a=e.partners),"getToken"in e&&n("getToken",l=e.getToken),"projectID"in e&&n("projectID",r=e.projectID),"isOpen"in e&&n("isOpen",i=e.isOpen),"setIsOpen"in e&&n("setIsOpen",s=e.setIsOpen)}),e.$$.update=((e={isOpen:1,projectID:1,setIsOpen:1})=>{(e.isOpen||e.projectID||e.setIsOpen)&&i&&(null==r&&(console.log("Attempting to fetch projects"),ct.get("/api/get/projects",{headers:{Authorization:l()}}).then(e=>{d=e.data,console.log("Successfully fetched projects")}).catch(e=>{console.log("There was an error fetching the projects"),console.log(e.response)})),n("origin",c=""),n("originPartner",u=0),n("target",p=""),n("targetPartner",g=0),n("departureDate",f=""),n("arrivalDate",m=""),h=0,s(!0),window.$("#add-modal").modal("show"),s(!1))}),{getMobilities:o,partners:a,getToken:l,projectID:r,isOpen:i,setIsOpen:s,origin:c,originPartner:u,target:p,targetPartner:g,departureDate:f,arrivalDate:m,addMobility:function(){console.log("Attempting to add mobility");let e={ID:null,origin:c,IDOriginPartner:u,target:p,IDTargetPartner:g,departureDate:f,arrivalDate:m,IDProject:null!=r?r:h};console.log(e),ct.post("/api/insert/mobilities",e,{headers:{Authorization:l()}}).then(e=>{console.log("Successfully added mobility"),o()}).catch(e=>{console.log(e.response)})},change_handler:function(e){const t=c=e.target.value;return n("origin",c),t},change_handler_1:function(e){const t=u=e.target.value;return n("originPartner",u),t},change_handler_2:function(e){const t=p=e.target.value;return n("target",p),t},change_handler_3:function(e){const t=g=e.target.value;return n("targetPartner",g),t},change_handler_4:function(e){const t=f=e.target.value;return n("departureDate",f),t},change_handler_5:function(e){const t=m=e.target.value;return n("arrivalDate",m),t}}}class Dn extends V{constructor(e){super(),G(this,e,In,Rn,r,["getMobilities","partners","getToken","projectID","isOpen","setIsOpen"])}}function Mn(e,t,n){const o=Object.create(e);return o.partner=t[n],o.i=n,o}function jn(e,t,n){const o=Object.create(e);return o.partner=t[n],o.i=n,o}function An(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function En(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value,t.selected=!0},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function Cn(e){var t;function n(e){return e.partner.ID===e.originPartner?En:An}var o=n(e),a=o(e);return{c(){a.c(),t=v()},m(e,n){a.m(e,n),g(e,t,n)},p(e,l){o===(o=n(l))&&a?a.p(e,l):(a.d(1),(a=o(l))&&(a.c(),a.m(t.parentNode,t)))},d(e){a.d(e),e&&f(t)}}}function Sn(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function Pn(e){var t,n,o,a=e.partner.name;return{c(){t=h("option"),n=b(a),t.__value=o=e.partner.ID,t.value=t.__value,t.selected=!0},m(e,o){g(e,t,o),p(t,n)},p(e,l){e.partners&&a!==(a=l.partner.name)&&k(n,a),e.partners&&o!==(o=l.partner.ID)&&(t.__value=o),t.value=t.__value},d(e){e&&f(t)}}}function Ln(e){var t;function n(e){return e.partner.ID===e.targetPartner?Pn:Sn}var o=n(e),a=o(e);return{c(){a.c(),t=v()},m(e,n){a.m(e,n),g(e,t,n)},p(e,l){o===(o=n(l))&&a?a.p(e,l):(a.d(1),(a=o(l))&&(a.c(),a.m(t.parentNode,t)))},d(e){a.d(e),e&&f(t)}}}function Bn(t){for(var n,o,l,r,i,s,d,c,u,b,v,w,k,x,T,O,N,R,I,D,M,j,A,E,C,S,P,L,B,H,z,q,U,F,K,G,V,X,J,Y,Q,W,Z,ee,te,ne,oe,ae,le=t.partners,re=[],ie=0;ie<le.length;ie+=1)re[ie]=Cn(jn(t,le,ie));var se=t.partners,de=[];for(ie=0;ie<se.length;ie+=1)de[ie]=Ln(Mn(t,se,ie));return{c(){n=h("div"),o=h("div"),l=h("div"),(r=h("div")).innerHTML='<h5 class="modal-title">Edit Project</h5>\n\t\t\t                <button class="close" type="button" data-dismiss="modal"><span>x</span></button>',i=_(),s=h("div"),d=h("div"),c=h("div"),u=h("div"),(b=h("div")).innerHTML='<div class="input-group-text w-100">Origin</div>',v=_(),w=h("input"),k=_(),x=h("div"),T=h("div"),(O=h("div")).innerHTML='<div class="input-group-text w-100">Origin Partner</div>',N=_(),R=h("select");for(var e=0;e<re.length;e+=1)re[e].c();I=_(),D=h("div"),M=h("div"),(j=h("div")).innerHTML='<div class="input-group-text w-100">Target</div>',A=_(),E=h("input"),C=_(),S=h("div"),P=h("div"),(L=h("div")).innerHTML='<div class="input-group-text w-100">Target Partner</div>',B=_(),H=h("select");for(e=0;e<de.length;e+=1)de[e].c();z=_(),q=h("div"),U=h("div"),(F=h("div")).innerHTML='<div class="input-group-text w-100">Departure</div>',K=_(),G=h("input"),X=_(),J=h("div"),Y=h("div"),(Q=h("div")).innerHTML='<div class="input-group-text w-100">Arrival</div>',W=_(),Z=h("input"),te=_(),ne=h("div"),(oe=h("button")).textContent="Edit",r.className="modal-header",b.className="input-group-prepend w-25",w.className="form-control",y(w,"type","text"),w.value=t.origin,w.placeholder="eg. Sweden, Stockholm",u.className="input-group",c.className="form-group",O.className="input-group-prepend w-25",R.className="form-control",T.className="input-group",x.className="form-group",j.className="input-group-prepend w-25",E.className="form-control",y(E,"type","text"),E.value=t.target,E.placeholder="eg. Sweden, Stockholm",M.className="input-group",D.className="form-group",L.className="input-group-prepend w-25",H.className="form-control",P.className="input-group",S.className="form-group",F.className="input-group-prepend w-25",y(G,"type","date"),G.value=V=t.departureDate.slice(0,-14),G.className="form-control",U.className="input-group",q.className="form-group",Q.className="input-group-prepend w-25",y(Z,"type","date"),Z.value=ee=t.arrivalDate.slice(0,-14),Z.className="form-control",Y.className="input-group",J.className="form-group mb-0",d.className="modal-body",s.className="modal-body",oe.className="btn btn-info w-100",ne.className="modal-footer",l.className="modal-content",o.className="modal-dialog",y(o,"role","document"),n.className="modal fade",n.id="edit-modal",n.tabIndex="-1",ae=[$(w,"change",t.change_handler),$(R,"change",t.change_handler_1),$(E,"change",t.change_handler_2),$(H,"change",t.change_handler_3),$(G,"change",t.change_handler_4),$(Z,"change",t.change_handler_5),$(oe,"click",t.editMobility)]},m(e,t){g(e,n,t),p(n,o),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(d,c),p(c,u),p(u,b),p(u,v),p(u,w),p(d,k),p(d,x),p(x,T),p(T,O),p(T,N),p(T,R);for(var a=0;a<re.length;a+=1)re[a].m(R,null);p(d,I),p(d,D),p(D,M),p(M,j),p(M,A),p(M,E),p(d,C),p(d,S),p(S,P),p(P,L),p(P,B),p(P,H);for(a=0;a<de.length;a+=1)de[a].m(H,null);p(d,z),p(d,q),p(q,U),p(U,F),p(U,K),p(U,G),p(d,X),p(d,J),p(J,Y),p(Y,Q),p(Y,W),p(Y,Z),p(l,te),p(l,ne),p(ne,oe)},p(e,t){if(e.origin&&(w.value=t.origin),e.partners||e.originPartner){le=t.partners;for(var n=0;n<le.length;n+=1){const o=jn(t,le,n);re[n]?re[n].p(e,o):(re[n]=Cn(o),re[n].c(),re[n].m(R,null))}for(;n<re.length;n+=1)re[n].d(1);re.length=le.length}if(e.target&&(E.value=t.target),e.partners||e.targetPartner){se=t.partners;for(n=0;n<se.length;n+=1){const o=Mn(t,se,n);de[n]?de[n].p(e,o):(de[n]=Ln(o),de[n].c(),de[n].m(H,null))}for(;n<de.length;n+=1)de[n].d(1);de.length=se.length}e.departureDate&&V!==(V=t.departureDate.slice(0,-14))&&(G.value=V),e.arrivalDate&&ee!==(ee=t.arrivalDate.slice(0,-14))&&(Z.value=ee)},i:e,o:e,d(e){e&&f(n),m(re,e),m(de,e),a(ae)}}}function Hn(e,t,n){let{getMobilities:o,getToken:a,mobilities:l,partners:r,selectedRows:i,isOpen:s,setIsOpen:d}=t,c=0,u="",p=0,g="",f=0,m="",h="";return e.$set=(e=>{"getMobilities"in e&&n("getMobilities",o=e.getMobilities),"getToken"in e&&n("getToken",a=e.getToken),"mobilities"in e&&n("mobilities",l=e.mobilities),"partners"in e&&n("partners",r=e.partners),"selectedRows"in e&&n("selectedRows",i=e.selectedRows),"isOpen"in e&&n("isOpen",s=e.isOpen),"setIsOpen"in e&&n("setIsOpen",d=e.setIsOpen)}),e.$$.update=((e={isOpen:1,mobilities:1,selectedRows:1,departureDate:1,arrivalDate:1,setIsOpen:1})=>{if((e.isOpen||e.mobilities||e.selectedRows||e.departureDate||e.arrivalDate||e.setIsOpen)&&s){d(!0),window.$("#edit-modal").modal("show"),console.log(l),console.log(i);for(let e=0;e<l.length;e++)l[e].ID===i[0]&&(c=i[0],n("origin",u=l[e].origin),n("originPartner",p=l[e].IDOriginPartner),n("target",g=l[e].target),n("targetPartner",f=l[e].IDTargetPartner),n("departureDate",m=l[e].departureDate),n("arrivalDate",h=l[e].arrivalDate),console.log("Hey"),console.log(m),console.log(h));d(!1)}}),{getMobilities:o,getToken:a,mobilities:l,partners:r,selectedRows:i,isOpen:s,setIsOpen:d,origin:u,originPartner:p,target:g,targetPartner:f,departureDate:m,arrivalDate:h,editMobility:function(){let e={ID:c,origin:u,IDOriginPartner:p,target:g,IDTargetPartner:f,departureDate:m,arrivalDate:h};console.log(e),console.log("Trying to edit mobilities"),ct.put("/api/edit/mobilities",e,{headers:{Authorization:a()}}).then(e=>{console.log("Successfully edited mobility"),o(),d(!1),window.$("#edit-modal").modal("hide")}).catch(e=>{console.log("There was an error editing the project")})},change_handler:function(e){const t=u=e.target.value;return n("origin",u),n("isOpen",s),n("mobilities",l),n("selectedRows",i),n("departureDate",m),n("arrivalDate",h),n("setIsOpen",d),t},change_handler_1:function(e){const t=p=e.target.value;return n("originPartner",p),n("isOpen",s),n("mobilities",l),n("selectedRows",i),n("departureDate",m),n("arrivalDate",h),n("setIsOpen",d),t},change_handler_2:function(e){const t=g=e.target.value;return n("target",g),n("isOpen",s),n("mobilities",l),n("selectedRows",i),n("departureDate",m),n("arrivalDate",h),n("setIsOpen",d),t},change_handler_3:function(e){const t=f=e.target.value;return n("targetPartner",f),n("isOpen",s),n("mobilities",l),n("selectedRows",i),n("departureDate",m),n("arrivalDate",h),n("setIsOpen",d),t},change_handler_4:function(e){const t=m=e.target.value;return n("departureDate",m),n("isOpen",s),n("mobilities",l),n("selectedRows",i),n("arrivalDate",h),n("setIsOpen",d),t},change_handler_5:function(e){const t=h=e.target.value;return n("arrivalDate",h),n("isOpen",s),n("mobilities",l),n("selectedRows",i),n("departureDate",m),n("setIsOpen",d),t}}}class zn extends V{constructor(e){super(),G(this,e,Hn,Bn,r,["getMobilities","getToken","mobilities","partners","selectedRows","isOpen","setIsOpen"])}}function qn(e){var t,n,o,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I=e.confirm_del?"Are you sure?":"Delete",D=new Dn({props:{getMobilities:e.getMobilities,partners:e.partners,getToken:e.getToken,projectID:e.id,isOpen:e.isAddModalOpen,setIsOpen:e.setIsAddModalOpen}}),M=new zn({props:{getMobilities:e.getMobilities,mobilities:e.mobilities,partners:e.partners,getToken:e.getToken,selectedRows:e.selectedRows,isOpen:e.isEditModalOpen,setIsOpen:e.setIsEditModalOpen}}),j=new bn({props:{mobilities:e.mobilities,toggleRowSelect:e.toggleRowSelect,selectedRows:e.selectedRows}});return{c(){D.$$.fragment.c(),t=_(),M.$$.fragment.c(),n=_(),o=h("div"),l=h("div"),(r=h("h2")).innerHTML='<span class="border-bottom-3px border-top-3px border-dark px-2 d-inline-block">Mobilities</span>',i=_(),s=h("span"),(d=h("button")).textContent="Add +",c=_(),u=h("button"),m=b("Edit"),y=_(),w=h("button"),x=b(I),O=_(),j.$$.fragment.c(),r.className="mb-3 text-dark",d.className="btn btn-success mb-2",u.className=v=1!==e.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2",u.id="edit-btn",w.className=T=`btn btn-danger mb-2 ${e.selectedRows.length>=1?"":"disabled"}`,w.id="delete-btn",l.className="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column",o.className="p-5 position-absolute bottom-0px top-76px left-0px right-0px",R=[$(d,"click",e.handleAddButtonClick),$(u,"click",e.handleEditButtonClick),$(w,"click",e.handleDeleteClick),$(o,"click",e.handleOutsideTableClick)]},m(e,a){F(D,e,a),g(e,t,a),F(M,e,a),g(e,n,a),g(e,o,a),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(s,c),p(s,u),p(u,m),p(s,y),p(s,w),p(w,x),p(l,O),F(j,l,null),N=!0},p(e,t){var n={};e.getMobilities&&(n.getMobilities=t.getMobilities),e.partners&&(n.partners=t.partners),e.getToken&&(n.getToken=t.getToken),e.id&&(n.projectID=t.id),e.isAddModalOpen&&(n.isOpen=t.isAddModalOpen),e.setIsAddModalOpen&&(n.setIsOpen=t.setIsAddModalOpen),D.$set(n);var o={};e.getMobilities&&(o.getMobilities=t.getMobilities),e.mobilities&&(o.mobilities=t.mobilities),e.partners&&(o.partners=t.partners),e.getToken&&(o.getToken=t.getToken),e.selectedRows&&(o.selectedRows=t.selectedRows),e.isEditModalOpen&&(o.isOpen=t.isEditModalOpen),e.setIsEditModalOpen&&(o.setIsOpen=t.setIsEditModalOpen),M.$set(o),N&&!e.selectedRows||v===(v=1!==t.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2")||(u.className=v),N&&!e.confirm_del||I===(I=t.confirm_del?"Are you sure?":"Delete")||k(x,I),N&&!e.selectedRows||T===(T=`btn btn-danger mb-2 ${t.selectedRows.length>=1?"":"disabled"}`)||(w.className=T);var a={};e.mobilities&&(a.mobilities=t.mobilities),e.toggleRowSelect&&(a.toggleRowSelect=t.toggleRowSelect),e.selectedRows&&(a.selectedRows=t.selectedRows),j.$set(a)},i(e){N||(D.$$.fragment.i(e),M.$$.fragment.i(e),j.$$.fragment.i(e),N=!0)},o(e){D.$$.fragment.o(e),M.$$.fragment.o(e),j.$$.fragment.o(e),N=!1},d(e){D.$destroy(e),e&&f(t),M.$destroy(e),e&&(f(n),f(o)),j.$destroy(),a(R)}}}function Un(e){var t,n,o=e.is_logged_in&&qn(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){n.is_logged_in?o?(o.p(e,n),o.i(1)):((o=qn(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}function Fn(e,t,n){let{id:o,is_logged_in:a,getToken:l}=t,r=[],i=[],s=[],d=!1,c=!1,u=!1;function p(e){n("isAddModalOpen",c=e)}function g(e){n("isEditModalOpen",u=e)}function f(){console.log("Attempting to fetch mobilities"),ct.get(`/api/get/mobilities${null!=o?`?IDProject=${o}`:""}`,{headers:{Authorization:l()}}).then(function(e){n("mobilities",r=e.data),console.log("Mobilities fetched successfully")}).catch(e=>{console.log("There was an error fetching the mobilities"),console.log(e.response)})}function m(){console.log("Attempting to fetch partners"),ct.get("/api/get/partners",{headers:{Authorization:l()}}).then(e=>{n("partners",i=e.data),console.log("Successfully fetched partners")}).catch(e=>{console.log("There was an error fetching the partners"),console.log(e.response)})}return e.$set=(e=>{"id"in e&&n("id",o=e.id),"is_logged_in"in e&&n("is_logged_in",a=e.is_logged_in),"getToken"in e&&n("getToken",l=e.getToken)}),e.$$.update=((e={is_logged_in:1})=>{e.is_logged_in&&a&&f()}),{id:o,is_logged_in:a,getToken:l,mobilities:r,partners:i,selectedRows:s,confirm_del:d,isAddModalOpen:c,isEditModalOpen:u,toggleRowSelect:function(e){let t=s.indexOf(e);-1===t?n("selectedRows",s=[...s,e]):(s.splice(t,1),n("selectedRows",s)),console.log(s)},handleOutsideTableClick:function(e){if("button"===e.target.tagName.toLowerCase())return;let t=e.currentTarget.querySelector("table");null!=t&&t.contains(e.target)||(n("confirm_del",d=!1),n("selectedRows",s=[]))},handleDeleteClick:function(e){e.currentTarget.classList.contains("disabled")||(d?s.length>0&&ct.delete("/api/delete/mobilities",{data:{rows:s},headers:{Authorization:l()}}).then(e=>{n("confirm_del",d=!1),n("selectedRows",s=[]),f()}).catch(e=>{console.log(e.response)}):n("confirm_del",d=!0))},setIsAddModalOpen:p,setIsEditModalOpen:g,getMobilities:f,handleAddButtonClick:function(){0===i.length&&m(),p(!0)},handleEditButtonClick:function(){1===s.length&&(0===i.length&&m(),g(!0))}}}class Kn extends V{constructor(e){super(),G(this,e,Fn,Un,r,["id","is_logged_in","getToken"])}}function Gn(e){var t,n,o,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I,D,M,j,A=e.confirm_del?"Are you sure?":"Delete",E=new Xt({props:{mode:"add",getToken:e.getToken,table:"students",fields:e.add_modal_fields,table_title:"Students",isOpen:e.isAddModalOpen,setIsOpen:e.setIsAddModalOpen,onAdd:e.getMobilityStudents}}),C=new Xt({props:{mode:"edit",getToken:e.getToken,table:"students",fields:e.edit_modal_fields,table_title:"Students",isOpen:e.isEditModalOpen,setIsOpen:e.setIsEditModalOpen,onEdit:e.getMobilityStudents}}),S=new Ct({props:{getToken:e.getToken,table:"mobilities_students",table_headers:e.table_headers,data:e.mobility_students,toggle_fields:e.toggle_fields,onToggle:e.getMobilityStudents,selectedRows:e.selectedRows,toggleRowSelect:e.toggleRowSelect,selection_field:Xn}});return{c(){E.$$.fragment.c(),t=_(),C.$$.fragment.c(),n=_(),o=h("div"),l=h("div"),(r=h("h2")).innerHTML='<span class="border-bottom-3px border-top-3px border-dark px-2 d-inline-block">Mobility Students</span>',i=_(),s=h("h3"),d=h("span"),c=b(e.mobility),u=_(),m=h("span"),(v=h("button")).textContent="Add +",y=_(),w=h("button"),x=b("Edit"),O=_(),N=h("button"),R=b(A),D=_(),S.$$.fragment.c(),r.className="mb-3 text-dark",d.className="border-bottom-3px border-top-3px border-dark px-2 d-inline-block",s.className="mb-3 text-dark",v.className="btn btn-success mb-2",w.className=T=1!==e.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2",w.id="edit-btn",N.className=I=`btn btn-danger mb-2 ${e.selectedRows.length>=1?"":"disabled"}`,N.id="delete-btn",l.className="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column",o.className="p-5 position-absolute bottom-0px top-76px left-0px right-0px",j=[$(v,"click",e.handleAddButtonClick),$(w,"click",e.handleEditButtonClick),$(N,"click",e.handleDeleteClick),$(o,"click",e.handleOutsideTableClick)]},m(e,a){F(E,e,a),g(e,t,a),F(C,e,a),g(e,n,a),g(e,o,a),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(d,c),p(l,u),p(l,m),p(m,v),p(m,y),p(m,w),p(w,x),p(m,O),p(m,N),p(N,R),p(l,D),F(S,l,null),M=!0},p(e,t){var n={};e.getToken&&(n.getToken=t.getToken),e.add_modal_fields&&(n.fields=t.add_modal_fields),e.isAddModalOpen&&(n.isOpen=t.isAddModalOpen),e.setIsAddModalOpen&&(n.setIsOpen=t.setIsAddModalOpen),e.getMobilityStudents&&(n.onAdd=t.getMobilityStudents),E.$set(n);var o={};e.getToken&&(o.getToken=t.getToken),e.edit_modal_fields&&(o.fields=t.edit_modal_fields),e.isEditModalOpen&&(o.isOpen=t.isEditModalOpen),e.setIsEditModalOpen&&(o.setIsOpen=t.setIsEditModalOpen),e.getMobilityStudents&&(o.onEdit=t.getMobilityStudents),C.$set(o),M&&!e.mobility||k(c,t.mobility),M&&!e.selectedRows||T===(T=1!==t.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2")||(w.className=T),M&&!e.confirm_del||A===(A=t.confirm_del?"Are you sure?":"Delete")||k(R,A),M&&!e.selectedRows||I===(I=`btn btn-danger mb-2 ${t.selectedRows.length>=1?"":"disabled"}`)||(N.className=I);var a={};e.getToken&&(a.getToken=t.getToken),e.table_headers&&(a.table_headers=t.table_headers),e.mobility_students&&(a.data=t.mobility_students),e.toggle_fields&&(a.toggle_fields=t.toggle_fields),e.getMobilityStudents&&(a.onToggle=t.getMobilityStudents),e.selectedRows&&(a.selectedRows=t.selectedRows),e.toggleRowSelect&&(a.toggleRowSelect=t.toggleRowSelect),e.selection_field&&(a.selection_field=Xn),S.$set(a)},i(e){M||(E.$$.fragment.i(e),C.$$.fragment.i(e),S.$$.fragment.i(e),M=!0)},o(e){E.$$.fragment.o(e),C.$$.fragment.o(e),S.$$.fragment.o(e),M=!1},d(e){E.$destroy(e),e&&f(t),C.$destroy(e),e&&(f(n),f(o)),S.$destroy(),a(j)}}}function Vn(e){var t,n,o=e.is_logged_in&&Gn(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){n.is_logged_in?o?(o.p(e,n),o.i(1)):((o=Gn(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}let Xn="IDStudent";function Jn(e,t,n){let{is_logged_in:o,getToken:a,id:l}=t,r=[],i=[],s=[{display:"Male",value:"Male"},{display:"Female",value:"Female"}],d="",c=!1,u=!1,p=!1,g={fields:[{field:"studentNumber",type:"text",display:"Student #",placeholder:"eg. a701617004",value:""},{field:"name",type:"text",display:"Name",placeholder:"eg. Vasco Raminhos",value:""},{field:"birthday",type:"date",display:"Birthday",placeholder:"",value:""},{field:"gender",type:"select",display:"Gender",placeholder:"Choose a gender",value:"",options:s},{field:"email",type:"email",display:"Email",placeholder:"eg. student.email@gmail.com",value:""}]},f={ID:null,fields:[{field:"studentNumber",type:"text",display:"Student #",placeholder:"eg. a701617004",value:""},{field:"name",type:"text",display:"Name",placeholder:"eg. Vasco Raminhos",value:""},{field:"birthday",type:"date",display:"Birthday",placeholder:"",value:""},{field:"gender",type:"select",display:"Gender",placeholder:"Choose a gender",value:"",options:s},{field:"email",type:"email",display:"Email",placeholder:"eg. student.email@gmail.com",value:""}]};function m(){ct.get(`/api/get/mobility_students?IDMobility=${l}`,{headers:{Authorization:a()}}).then(function(e){n("mobility_students",i=e.data);for(let e=0;e<i.length;e++){let t=new Date(new Date-new Date(i[e].birthday)).getFullYear()-1970;isNaN(t)&&(t=0),i[e].age=t,n("mobility_students",i),console.log(t)}n("mobility",d=e.data[0].mobility),console.log(e.data)}).catch(e=>{console.log(e.response)})}function h(e){n("isAddModalOpen",u=e)}function b(e){n("isEditModalOpen",p=e)}return e.$set=(e=>{"is_logged_in"in e&&n("is_logged_in",o=e.is_logged_in),"getToken"in e&&n("getToken",a=e.getToken),"id"in e&&n("id",l=e.id)}),e.$$.update=((e={is_logged_in:1})=>{e.is_logged_in&&o&&m()}),{is_logged_in:o,getToken:a,id:l,selectedRows:r,mobility_students:i,mobility:d,table_headers:[{columnName:" ",key:"isParticipating",toggler:!0},{columnName:"Name",key:"name"},{columnName:"Student #",key:"studentNumber"},{columnName:"Age",key:"age"},{columnName:"Gender",key:"gender"},{columnName:"Email",key:"email"}],toggle_fields:[{field:"IDMobility"},{field:"IDStudent"}],confirm_del:c,isAddModalOpen:u,isEditModalOpen:p,add_modal_fields:g,edit_modal_fields:f,getMobilityStudents:m,toggleRowSelect:function(e){let t=r.indexOf(e);-1===t?n("selectedRows",r=[...r,e]):(r.splice(t,1),n("selectedRows",r)),console.log(r)},handleOutsideTableClick:function(e){if("button"===e.target.tagName.toLowerCase())return;let t=e.currentTarget.querySelector("table");null!=t&&t.contains(e.target)?console.log("Hello there General Kenobi"):(n("confirm_del",c=!1),n("selectedRows",r=[]))},setIsAddModalOpen:h,setIsEditModalOpen:b,handleAddButtonClick:function(){for(let e=0;e<g.fields.length;e++)g.fields[e].value="",n("add_modal_fields",g);h(!0)},handleEditButtonClick:function(){if(1===r.length){for(let e=0;e<i.length;e++)if(i[e][Xn]===r[0]){f.ID=r[0],n("edit_modal_fields",f);for(let t=0;t<f.fields.length;t++)"date"===f.fields[t].type?(f.fields[t].value=i[e][f.fields[t].field].slice(0,-14),n("edit_modal_fields",f),console.log(i[e][f.fields[t].field])):(f.fields[t].value=i[e][f.fields[t].field],n("edit_modal_fields",f),console.log(f.fields[t].value))}b(!0)}},handleDeleteClick:function(e){e.currentTarget.classList.contains("disabled")||(c?r.length>0&&ct.delete("/api/delete/students",{data:{rows:r},headers:{Authorization:a()}}).then(e=>{n("confirm_del",c=!1),n("selectedRows",r=[]),m()}).catch(e=>{console.log(e.response)}):n("confirm_del",c=!0))}}}class Yn extends V{constructor(e){super(),G(this,e,Jn,Vn,r,["is_logged_in","getToken","id"])}}function Qn(e){var t,n,o,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I,D,M,j,A=e.confirm_del?"Are you sure?":"Delete",E=new Xt({props:{mode:"add",getToken:e.getToken,table:"teachers",fields:e.add_modal_fields,table_title:"Teachers",isOpen:e.isAddModalOpen,setIsOpen:e.setIsAddModalOpen,onAdd:e.getMobilityTeachers}}),C=new Xt({props:{mode:"edit",getToken:e.getToken,table:"teachers",fields:e.edit_modal_fields,table_title:"Teachers",isOpen:e.isEditModalOpen,setIsOpen:e.setIsEditModalOpen,onEdit:e.getMobilityTeachers}}),S=new Ct({props:{getToken:e.getToken,table:"mobilities_teachers",table_headers:e.table_headers,data:e.mobility_teachers,toggle_fields:e.toggle_fields,onToggle:e.getMobilityTeachers,selectedRows:e.selectedRows,toggleRowSelect:e.toggleRowSelect,selection_field:Zn}});return{c(){E.$$.fragment.c(),t=_(),C.$$.fragment.c(),n=_(),o=h("div"),l=h("div"),(r=h("h2")).innerHTML='<span class="border-bottom-3px border-top-3px border-dark px-2 d-inline-block">Mobility Teachers</span>',i=_(),s=h("h3"),d=h("span"),c=b(e.mobility),u=_(),m=h("span"),(v=h("button")).textContent="Add +",y=_(),w=h("button"),x=b("Edit"),O=_(),N=h("button"),R=b(A),D=_(),S.$$.fragment.c(),r.className="mb-3 text-dark",d.className="border-bottom-3px border-top-3px border-dark px-2 d-inline-block",s.className="mb-3 text-dark",v.className="btn btn-success mb-2",w.className=T=1!==e.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2",w.id="edit-btn",N.className=I=`btn btn-danger mb-2 ${e.selectedRows.length>=1?"":"disabled"}`,N.id="delete-btn",l.className="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column",o.className="p-5 position-absolute bottom-0px top-76px left-0px right-0px",j=[$(v,"click",e.handleAddButtonClick),$(w,"click",e.handleEditButtonClick),$(N,"click",e.handleDeleteClick),$(o,"click",e.handleOutsideTableClick)]},m(e,a){F(E,e,a),g(e,t,a),F(C,e,a),g(e,n,a),g(e,o,a),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(d,c),p(l,u),p(l,m),p(m,v),p(m,y),p(m,w),p(w,x),p(m,O),p(m,N),p(N,R),p(l,D),F(S,l,null),M=!0},p(e,t){var n={};e.getToken&&(n.getToken=t.getToken),e.add_modal_fields&&(n.fields=t.add_modal_fields),e.isAddModalOpen&&(n.isOpen=t.isAddModalOpen),e.setIsAddModalOpen&&(n.setIsOpen=t.setIsAddModalOpen),e.getMobilityTeachers&&(n.onAdd=t.getMobilityTeachers),E.$set(n);var o={};e.getToken&&(o.getToken=t.getToken),e.edit_modal_fields&&(o.fields=t.edit_modal_fields),e.isEditModalOpen&&(o.isOpen=t.isEditModalOpen),e.setIsEditModalOpen&&(o.setIsOpen=t.setIsEditModalOpen),e.getMobilityTeachers&&(o.onEdit=t.getMobilityTeachers),C.$set(o),M&&!e.mobility||k(c,t.mobility),M&&!e.selectedRows||T===(T=1!==t.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2")||(w.className=T),M&&!e.confirm_del||A===(A=t.confirm_del?"Are you sure?":"Delete")||k(R,A),M&&!e.selectedRows||I===(I=`btn btn-danger mb-2 ${t.selectedRows.length>=1?"":"disabled"}`)||(N.className=I);var a={};e.getToken&&(a.getToken=t.getToken),e.table_headers&&(a.table_headers=t.table_headers),e.mobility_teachers&&(a.data=t.mobility_teachers),e.toggle_fields&&(a.toggle_fields=t.toggle_fields),e.getMobilityTeachers&&(a.onToggle=t.getMobilityTeachers),e.selectedRows&&(a.selectedRows=t.selectedRows),e.toggleRowSelect&&(a.toggleRowSelect=t.toggleRowSelect),e.selection_field&&(a.selection_field=Zn),S.$set(a)},i(e){M||(E.$$.fragment.i(e),C.$$.fragment.i(e),S.$$.fragment.i(e),M=!0)},o(e){E.$$.fragment.o(e),C.$$.fragment.o(e),S.$$.fragment.o(e),M=!1},d(e){E.$destroy(e),e&&f(t),C.$destroy(e),e&&(f(n),f(o)),S.$destroy(),a(j)}}}function Wn(e){var t,n,o=e.is_logged_in&&Qn(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){n.is_logged_in?o?(o.p(e,n),o.i(1)):((o=Qn(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}let Zn="IDTeacher";function eo(e,t,n){let{is_logged_in:o,getToken:a,id:l}=t,r=[],i=[],s=[{display:"Male",value:"Male"},{display:"Female",value:"Female"}],d="",c=!1,u=!1,p=!1,g={fields:[{field:"teacherNumber",type:"text",display:"Teacher #",placeholder:"eg. p701617004",value:""},{field:"name",type:"text",display:"Name",placeholder:"eg. Duarte Duarte",value:""},{field:"birthday",type:"date",display:"Birthday",placeholder:"",value:""},{field:"gender",type:"select",display:"Gender",placeholder:"Choose a gender",value:"",options:s},{field:"email",type:"email",display:"Email",placeholder:"eg. teacher.email@gmail.com",value:""}]},f={ID:null,fields:[{field:"teacherNumber",type:"text",display:"Teacher #",placeholder:"eg. p701617004",value:""},{field:"name",type:"text",display:"Name",placeholder:"eg. Duarte Duarte",value:""},{field:"birthday",type:"date",display:"Birthday",placeholder:"",value:""},{field:"gender",type:"select",display:"Gender",placeholder:"Choose a gender",value:"",options:s},{field:"email",type:"email",display:"Email",placeholder:"eg. teacher.email@gmail.com",value:""}]};function m(){ct.get(`/api/get/mobility_teachers?IDMobility=${l}`,{headers:{Authorization:a()}}).then(function(e){n("mobility_teachers",i=e.data),n("mobility",d=e.data[0].mobility);for(let e=0;e<i.length;e++){let t=new Date(new Date-new Date(i[e].birthday)).getFullYear()-1970;isNaN(t)&&(t=0),i[e].age=t,n("mobility_teachers",i),console.log(t)}console.log(e.data)}).catch(e=>{console.log(e.response)})}function h(e){n("isAddModalOpen",u=e)}function b(e){n("isEditModalOpen",p=e)}return e.$set=(e=>{"is_logged_in"in e&&n("is_logged_in",o=e.is_logged_in),"getToken"in e&&n("getToken",a=e.getToken),"id"in e&&n("id",l=e.id)}),e.$$.update=((e={is_logged_in:1})=>{e.is_logged_in&&o&&m()}),{is_logged_in:o,getToken:a,id:l,selectedRows:r,mobility_teachers:i,mobility:d,table_headers:[{columnName:" ",key:"isParticipating",toggler:!0},{columnName:"Name",key:"name"},{columnName:"Teacher #",key:"teacherNumber"},{columnName:"Age",key:"age"},{columnName:"Gender",key:"gender"},{columnName:"Email",key:"email"}],toggle_fields:[{field:"IDMobility"},{field:"IDTeacher"}],confirm_del:c,isAddModalOpen:u,isEditModalOpen:p,add_modal_fields:g,edit_modal_fields:f,getMobilityTeachers:m,toggleRowSelect:function(e){let t=r.indexOf(e);-1===t?n("selectedRows",r=[...r,e]):(r.splice(t,1),n("selectedRows",r)),console.log(r)},handleOutsideTableClick:function(e){if("button"===e.target.tagName.toLowerCase())return;let t=e.currentTarget.querySelector("table");null!=t&&t.contains(e.target)?console.log("Hello there General Kenobi"):(n("confirm_del",c=!1),n("selectedRows",r=[]))},setIsAddModalOpen:h,setIsEditModalOpen:b,handleAddButtonClick:function(){for(let e=0;e<g.fields.length;e++)g.fields[e].value="",n("add_modal_fields",g);h(!0)},handleEditButtonClick:function(){if(1===r.length){for(let e=0;e<i.length;e++)if(i[e][Zn]===r[0]){f.ID=r[0],n("edit_modal_fields",f);for(let t=0;t<f.fields.length;t++)"date"===f.fields[t].type?(f.fields[t].value=i[e][f.fields[t].field].slice(0,-14),n("edit_modal_fields",f),console.log(i[e][f.fields[t].field])):(f.fields[t].value=i[e][f.fields[t].field],n("edit_modal_fields",f),console.log(f.fields[t].value))}b(!0)}},handleDeleteClick:function(e){e.currentTarget.classList.contains("disabled")||(c?r.length>0&&ct.delete("/api/delete/teachers",{data:{rows:r},headers:{Authorization:a()}}).then(e=>{n("confirm_del",c=!1),n("selectedRows",r=[]),m()}).catch(e=>{console.log(e.response)}):n("confirm_del",c=!0))}}}class to extends V{constructor(e){super(),G(this,e,eo,Wn,r,["is_logged_in","getToken","id"])}}function no(e){var t,n,o,l,r,i,s,d,c,u,m,v,y,w,x,T,O,N,R,I,D,M,j,A=e.confirm_del?"Are you sure?":"Delete",E=new Xt({props:{mode:"add",getToken:e.getToken,table:"partners",fields:e.add_modal_fields,table_title:"Partners",isOpen:e.isAddModalOpen,setIsOpen:e.setIsAddModalOpen,onAdd:e.getProjectPartners}}),C=new Xt({props:{mode:"edit",getToken:e.getToken,table:"partners",fields:e.edit_modal_fields,table_title:"Partners",isOpen:e.isEditModalOpen,setIsOpen:e.setIsEditModalOpen,onEdit:e.getProjectPartners}}),S=new Ct({props:{getToken:e.getToken,table:"partners_projects",table_headers:e.table_headers,data:e.project_partners,toggle_fields:e.toggle_fields,onToggle:e.getProjectPartners,selectedRows:e.selectedRows,toggleRowSelect:e.toggleRowSelect,selection_field:ao}});return{c(){E.$$.fragment.c(),t=_(),C.$$.fragment.c(),n=_(),o=h("div"),l=h("div"),(r=h("h2")).innerHTML='<span class="border-bottom-3px border-top-3px border-dark px-2 d-inline-block">Project Partners</span>',i=_(),s=h("h3"),d=h("span"),c=b(e.project_name),u=_(),m=h("span"),(v=h("button")).textContent="Add +",y=_(),w=h("button"),x=b("Edit"),O=_(),N=h("button"),R=b(A),D=_(),S.$$.fragment.c(),r.className="mb-3 text-dark",d.className="border-bottom-3px border-top-3px border-dark px-2 d-inline-block",s.className="mb-3 text-dark",v.className="btn btn-success mb-2",w.className=T=1!==e.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2",w.id="edit-btn",N.className=I=`btn btn-danger mb-2 ${e.selectedRows.length>=1?"":"disabled"}`,N.id="delete-btn",l.className="container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column",o.className="p-5 position-absolute bottom-0px top-76px left-0px right-0px",j=[$(v,"click",e.handleAddButtonClick),$(w,"click",e.handleEditButtonClick),$(N,"click",e.handleDeleteClick),$(o,"click",e.handleOutsideTableClick)]},m(e,a){F(E,e,a),g(e,t,a),F(C,e,a),g(e,n,a),g(e,o,a),p(o,l),p(l,r),p(l,i),p(l,s),p(s,d),p(d,c),p(l,u),p(l,m),p(m,v),p(m,y),p(m,w),p(w,x),p(m,O),p(m,N),p(N,R),p(l,D),F(S,l,null),M=!0},p(e,t){var n={};e.getToken&&(n.getToken=t.getToken),e.add_modal_fields&&(n.fields=t.add_modal_fields),e.isAddModalOpen&&(n.isOpen=t.isAddModalOpen),e.setIsAddModalOpen&&(n.setIsOpen=t.setIsAddModalOpen),e.getProjectPartners&&(n.onAdd=t.getProjectPartners),E.$set(n);var o={};e.getToken&&(o.getToken=t.getToken),e.edit_modal_fields&&(o.fields=t.edit_modal_fields),e.isEditModalOpen&&(o.isOpen=t.isEditModalOpen),e.setIsEditModalOpen&&(o.setIsOpen=t.setIsEditModalOpen),e.getProjectPartners&&(o.onEdit=t.getProjectPartners),C.$set(o),M&&!e.project_name||k(c,t.project_name),M&&!e.selectedRows||T===(T=1!==t.selectedRows.length?"btn btn-info mb-2 mx-2 disabled":"btn btn-info mb-2 mx-2")||(w.className=T),M&&!e.confirm_del||A===(A=t.confirm_del?"Are you sure?":"Delete")||k(R,A),M&&!e.selectedRows||I===(I=`btn btn-danger mb-2 ${t.selectedRows.length>=1?"":"disabled"}`)||(N.className=I);var a={};e.getToken&&(a.getToken=t.getToken),e.table_headers&&(a.table_headers=t.table_headers),e.project_partners&&(a.data=t.project_partners),e.toggle_fields&&(a.toggle_fields=t.toggle_fields),e.getProjectPartners&&(a.onToggle=t.getProjectPartners),e.selectedRows&&(a.selectedRows=t.selectedRows),e.toggleRowSelect&&(a.toggleRowSelect=t.toggleRowSelect),e.selection_field&&(a.selection_field=ao),S.$set(a)},i(e){M||(E.$$.fragment.i(e),C.$$.fragment.i(e),S.$$.fragment.i(e),M=!0)},o(e){E.$$.fragment.o(e),C.$$.fragment.o(e),S.$$.fragment.o(e),M=!1},d(e){E.$destroy(e),e&&f(t),C.$destroy(e),e&&(f(n),f(o)),S.$destroy(),a(j)}}}function oo(e){var t,n,o=e.is_logged_in&&no(e);return{c(){o&&o.c(),t=v()},m(e,a){o&&o.m(e,a),g(e,t,a),n=!0},p(e,n){n.is_logged_in?o?(o.p(e,n),o.i(1)):((o=no(n)).c(),o.i(1),o.m(t.parentNode,t)):o&&(H(),q(()=>{o.d(1),o=null}),o.o(1),z())},i(e){n||(o&&o.i(),n=!0)},o(e){o&&o.o(),n=!1},d(e){o&&o.d(e),e&&f(t)}}}let ao="IDPartner";function lo(e,t,n){let{is_logged_in:o,getToken:a,id:l}=t,r=[],i=[],s=[],d="",c=!1,u=!1,p=!1,g={fields:[{field:"name",type:"text",display:"Name",placeholder:"eg. Escola Secundária de Loulé",value:""},{field:"IDCountry",type:"select",display:"Country",placeholder:"Choose a country",value:"",options:s},{field:"description",type:"textarea",display:"Description",placeholder:"eg. This is a school based in...",value:""}]},f={ID:null,fields:[{field:"name",type:"text",display:"Name",placeholder:"eg. Escola Secundária de Loulé",value:""},{field:"IDCountry",type:"select",display:"Country",placeholder:"Choose a country",value:"",options:s},{field:"description",type:"textarea",display:"Description",placeholder:"eg. This is a school based in...",value:""}]};function m(){ct.get(`/api/get/project_partners?IDProject=${l}`,{headers:{Authorization:a()}}).then(function(e){n("project_partners",i=e.data),n("project_name",d=e.data[0].projectName),console.log(e.data)}).catch(e=>{console.log(e.response)})}function h(){console.log("Attempting to fetch countries"),ct.get("/api/get/countries",{headers:{Authorization:a()}}).then(e=>{for(let t=0;t<e.data.length;t++)s.push({value:e.data[t].ID,display:e.data[t].country,original:e.data[t]});n("add_modal_fields",g),n("edit_modal_fields",f),console.log("Successfully fetched countries")}).catch(e=>{console.log("There was an error fetching the countries"),console.log(e.response)})}function b(e){n("isAddModalOpen",u=e)}function _(e){n("isEditModalOpen",p=e)}return e.$set=(e=>{"is_logged_in"in e&&n("is_logged_in",o=e.is_logged_in),"getToken"in e&&n("getToken",a=e.getToken),"id"in e&&n("id",l=e.id)}),e.$$.update=((e={is_logged_in:1})=>{e.is_logged_in&&o&&m()}),{is_logged_in:o,getToken:a,id:l,selectedRows:r,project_partners:i,project_name:d,table_headers:[{columnName:" ",key:"isPartner",toggler:!0},{columnName:"Name",key:"name"},{columnName:"Country",key:"country"}],toggle_fields:[{field:"IDPartner"},{field:"IDProject"}],confirm_del:c,isAddModalOpen:u,isEditModalOpen:p,add_modal_fields:g,edit_modal_fields:f,getProjectPartners:m,toggleRowSelect:function(e){let t=r.indexOf(e);-1===t?n("selectedRows",r=[...r,e]):(r.splice(t,1),n("selectedRows",r)),console.log(r)},handleOutsideTableClick:function(e){if("button"===e.target.tagName.toLowerCase())return;let t=e.currentTarget.querySelector("table");null!=t&&t.contains(e.target)?console.log("Hello there General Kenobi"):(n("confirm_del",c=!1),n("selectedRows",r=[]))},setIsAddModalOpen:b,setIsEditModalOpen:_,handleAddButtonClick:function(){0===s.length&&h();for(let e=0;e<g.fields.length;e++)g.fields[e].value="",n("add_modal_fields",g);b(!0)},handleEditButtonClick:function(){if(1===r.length){0===s.length&&h();for(let e=0;e<i.length;e++)if(i[e][ao]===r[0]){f.ID=r[0],n("edit_modal_fields",f);for(let t=0;t<f.fields.length;t++)"date"===f.fields[t].type?(f.fields[t].value=i[e][f.fields[t].field].slice(0,-14),n("edit_modal_fields",f),console.log(i[e][f.fields[t].field])):(f.fields[t].value=i[e][f.fields[t].field],n("edit_modal_fields",f),console.log(f.fields[t].value))}_(!0)}},handleDeleteClick:function(e){e.currentTarget.classList.contains("disabled")||(c?r.length>0&&ct.delete("/api/delete/partners",{data:{rows:r},headers:{Authorization:a()}}).then(e=>{n("confirm_del",c=!1),n("selectedRows",r=[]),m()}).catch(e=>{console.log(e.response)}):n("confirm_del",c=!0))}}}class ro extends V{constructor(e){super(),G(this,e,lo,oo,r,["is_logged_in","getToken","id"])}}function io(e){var t,n=new vt({props:{login:e.login}});return{c(){n.$$.fragment.c()},m(e,o){F(n,e,o),t=!0},p(e,t){var o={};e.login&&(o.login=t.login),n.$set(o)},i(e){t||(n.$$.fragment.i(e),t=!0)},o(e){n.$$.fragment.o(e),t=!1},d(e){n.$destroy(e)}}}function so(e){var t;return{c(){(t=h("div")).innerHTML='<h3 class="m-5 p-3 text-center bg-danger rounded shadow-lg d-inline-block">You must login with your account to do anything in the backoffice</h3>',t.className="container p-5 d-flex justify-content-center"},m(e,n){g(e,t,n)},d(e){e&&f(t)}}}function co(e){var t,n,o,a,l,r,i,s,d,c,u,m=!e.is_logged_in&&io(e),b=new ht({props:{is_logged_in:e.is_logged_in,logout:e.logout}}),v=new ke({props:{path:"/backoffice",component:cn,is_logged_in:e.is_logged_in,getToken:po}}),$=new ke({props:{path:"/backoffice/projects",component:cn,is_logged_in:e.is_logged_in,getToken:po}}),y=new ke({props:{path:"/backoffice/project_partners/:id",component:ro,is_logged_in:e.is_logged_in,getToken:po}}),w=new ke({props:{path:"/backoffice/mobilities/:id",component:Kn,is_logged_in:e.is_logged_in,getToken:po}}),k=new ke({props:{path:"/backoffice/mobility_students/:id",component:Yn,is_logged_in:e.is_logged_in,getToken:po}}),x=new ke({props:{path:"/backoffice/mobility_teachers/:id",component:to,is_logged_in:e.is_logged_in,getToken:po}}),T=new ke({props:{path:"/backoffice/countries",component:Wt,is_logged_in:e.is_logged_in,getToken:po}}),O=!e.is_logged_in&&so();return{c(){m&&m.c(),t=_(),b.$$.fragment.c(),n=_(),o=h("div"),v.$$.fragment.c(),a=_(),$.$$.fragment.c(),l=_(),y.$$.fragment.c(),r=_(),w.$$.fragment.c(),i=_(),k.$$.fragment.c(),s=_(),x.$$.fragment.c(),d=_(),T.$$.fragment.c(),c=_(),O&&O.c()},m(e,f){m&&m.m(e,f),g(e,t,f),F(b,e,f),g(e,n,f),g(e,o,f),F(v,o,null),p(o,a),F($,o,null),p(o,l),F(y,o,null),p(o,r),F(w,o,null),p(o,i),F(k,o,null),p(o,s),F(x,o,null),p(o,d),F(T,o,null),p(o,c),O&&O.m(o,null),u=!0},p(e,n){n.is_logged_in?m&&(H(),q(()=>{m.d(1),m=null}),m.o(1),z()):m?(m.p(e,n),m.i(1)):((m=io(n)).c(),m.i(1),m.m(t.parentNode,t));var a={};e.is_logged_in&&(a.is_logged_in=n.is_logged_in),e.logout&&(a.logout=n.logout),b.$set(a);var l={};e.Projects&&(l.component=cn),e.is_logged_in&&(l.is_logged_in=n.is_logged_in),e.getToken&&(l.getToken=po),v.$set(l);var r={};e.Projects&&(r.component=cn),e.is_logged_in&&(r.is_logged_in=n.is_logged_in),e.getToken&&(r.getToken=po),$.$set(r);var i={};e.ProjectPartners&&(i.component=ro),e.is_logged_in&&(i.is_logged_in=n.is_logged_in),e.getToken&&(i.getToken=po),y.$set(i);var s={};e.Mobilities&&(s.component=Kn),e.is_logged_in&&(s.is_logged_in=n.is_logged_in),e.getToken&&(s.getToken=po),w.$set(s);var d={};e.MobilityStudents&&(d.component=Yn),e.is_logged_in&&(d.is_logged_in=n.is_logged_in),e.getToken&&(d.getToken=po),k.$set(d);var c={};e.MobilityTeachers&&(c.component=to),e.is_logged_in&&(c.is_logged_in=n.is_logged_in),e.getToken&&(c.getToken=po),x.$set(c);var u={};e.Countries&&(u.component=Wt),e.is_logged_in&&(u.is_logged_in=n.is_logged_in),e.getToken&&(u.getToken=po),T.$set(u),n.is_logged_in?O&&(O.d(1),O=null):O||((O=so()).c(),O.m(o,null))},i(e){u||(m&&m.i(),b.$$.fragment.i(e),v.$$.fragment.i(e),$.$$.fragment.i(e),y.$$.fragment.i(e),w.$$.fragment.i(e),k.$$.fragment.i(e),x.$$.fragment.i(e),T.$$.fragment.i(e),u=!0)},o(e){m&&m.o(),b.$$.fragment.o(e),v.$$.fragment.o(e),$.$$.fragment.o(e),y.$$.fragment.o(e),w.$$.fragment.o(e),k.$$.fragment.o(e),x.$$.fragment.o(e),T.$$.fragment.o(e),u=!1},d(e){m&&m.d(e),e&&f(t),b.$destroy(e),e&&(f(n),f(o)),v.$destroy(),$.$destroy(),y.$destroy(),w.$destroy(),k.$destroy(),x.$destroy(),T.$destroy(),O&&O.d()}}}function uo(e){var t,n,o=new be({props:{url:e.url,$$slots:{default:[co]},$$scope:{ctx:e}}});return{c(){t=h("div"),o.$$.fragment.c()},m(e,a){g(e,t,a),F(o,t,null),n=!0},p(e,t){var n={};e.url&&(n.url=t.url),(e.$$scope||e.is_logged_in)&&(n.$$scope={changed:e,ctx:t}),o.$set(n)},i(e){n||(o.$$.fragment.i(e),n=!0)},o(e){o.$$.fragment.o(e),n=!1},d(e){e&&f(t),o.$destroy()}}}function po(){return localStorage.getItem("api-auth-token")}function go(e,t,n){let{url:o=""}=t,a=!1;return ct.get("/api/logincheck",{headers:{Authorization:po()}}).then(e=>{n("is_logged_in",a=!0)}).catch(e=>{n("is_logged_in",a=!1),console.log(e.response.data)}),e.$set=(e=>{"url"in e&&n("url",o=e.url)}),{url:o,is_logged_in:a,login:function(e,t){console.log("Trying to log in"),ct.post("/api/login",{username:e,password:t}).then(e=>{localStorage.setItem("api-auth-token",e.data.token),n("is_logged_in",a=!0),console.log(e.data)}).catch(e=>{console.log(e.response.data)})},logout:function(){localStorage.removeItem("api-auth-token"),n("is_logged_in",a=!1)}}}return new class extends V{constructor(e){super(),G(this,e,go,uo,r,["url"])}}({target:document.body})}();
+
+(function(l, i, v, e) { v = l.createElement(i); v.async = 1; v.src = '//' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; e = l.getElementsByTagName(i)[0]; e.parentNode.insertBefore(v, e)})(document, 'script');
+var app = (function () {
+    'use strict';
+
+    function noop() { }
+    function assign(tar, src) {
+        // @ts-ignore
+        for (const k in src)
+            tar[k] = src[k];
+        return tar;
+    }
+    function add_location(element, file, line, column, char) {
+        element.__svelte_meta = {
+            loc: { file, line, column, char }
+        };
+    }
+    function run(fn) {
+        return fn();
+    }
+    function blank_object() {
+        return Object.create(null);
+    }
+    function run_all(fns) {
+        fns.forEach(run);
+    }
+    function is_function(thing) {
+        return typeof thing === 'function';
+    }
+    function safe_not_equal(a, b) {
+        return a != a ? b == b : a !== b || ((a && typeof a === 'object') || typeof a === 'function');
+    }
+    function validate_store(store, name) {
+        if (!store || typeof store.subscribe !== 'function') {
+            throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+        }
+    }
+    function subscribe(component, store, callback) {
+        const unsub = store.subscribe(callback);
+        component.$$.on_destroy.push(unsub.unsubscribe
+            ? () => unsub.unsubscribe()
+            : unsub);
+    }
+    function create_slot(definition, ctx, fn) {
+        if (definition) {
+            const slot_ctx = get_slot_context(definition, ctx, fn);
+            return definition[0](slot_ctx);
+        }
+    }
+    function get_slot_context(definition, ctx, fn) {
+        return definition[1]
+            ? assign({}, assign(ctx.$$scope.ctx, definition[1](fn ? fn(ctx) : {})))
+            : ctx.$$scope.ctx;
+    }
+    function get_slot_changes(definition, ctx, changed, fn) {
+        return definition[1]
+            ? assign({}, assign(ctx.$$scope.changed || {}, definition[1](fn ? fn(changed) : {})))
+            : ctx.$$scope.changed || {};
+    }
+    function exclude_internal_props(props) {
+        const result = {};
+        for (const k in props)
+            if (k[0] !== '$')
+                result[k] = props[k];
+        return result;
+    }
+
+    function append(target, node) {
+        target.appendChild(node);
+    }
+    function insert(target, node, anchor) {
+        target.insertBefore(node, anchor || null);
+    }
+    function detach(node) {
+        node.parentNode.removeChild(node);
+    }
+    function destroy_each(iterations, detaching) {
+        for (let i = 0; i < iterations.length; i += 1) {
+            if (iterations[i])
+                iterations[i].d(detaching);
+        }
+    }
+    function element(name) {
+        return document.createElement(name);
+    }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function space() {
+        return text(' ');
+    }
+    function empty() {
+        return text('');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
+    }
+    function attr(node, attribute, value) {
+        if (value == null)
+            node.removeAttribute(attribute);
+        else
+            node.setAttribute(attribute, value);
+    }
+    function set_attributes(node, attributes) {
+        for (const key in attributes) {
+            if (key === 'style') {
+                node.style.cssText = attributes[key];
+            }
+            else if (key in node) {
+                node[key] = attributes[key];
+            }
+            else {
+                attr(node, key, attributes[key]);
+            }
+        }
+    }
+    function children(element) {
+        return Array.from(element.childNodes);
+    }
+    function set_data(text, data) {
+        data = '' + data;
+        if (text.data !== data)
+            text.data = data;
+    }
+    function custom_event(type, detail) {
+        const e = document.createEvent('CustomEvent');
+        e.initCustomEvent(type, false, false, detail);
+        return e;
+    }
+
+    let current_component;
+    function set_current_component(component) {
+        current_component = component;
+    }
+    function get_current_component() {
+        if (!current_component)
+            throw new Error(`Function called outside component initialization`);
+        return current_component;
+    }
+    function beforeUpdate(fn) {
+        get_current_component().$$.before_render.push(fn);
+    }
+    function onMount(fn) {
+        get_current_component().$$.on_mount.push(fn);
+    }
+    function onDestroy(fn) {
+        get_current_component().$$.on_destroy.push(fn);
+    }
+    function createEventDispatcher() {
+        const component = current_component;
+        return (type, detail) => {
+            const callbacks = component.$$.callbacks[type];
+            if (callbacks) {
+                // TODO are there situations where events could be dispatched
+                // in a server (non-DOM) environment?
+                const event = custom_event(type, detail);
+                callbacks.slice().forEach(fn => {
+                    fn.call(component, event);
+                });
+            }
+        };
+    }
+    function setContext(key, context) {
+        get_current_component().$$.context.set(key, context);
+    }
+    function getContext(key) {
+        return get_current_component().$$.context.get(key);
+    }
+
+    const dirty_components = [];
+    const resolved_promise = Promise.resolve();
+    let update_scheduled = false;
+    const binding_callbacks = [];
+    const render_callbacks = [];
+    const flush_callbacks = [];
+    function schedule_update() {
+        if (!update_scheduled) {
+            update_scheduled = true;
+            resolved_promise.then(flush);
+        }
+    }
+    function add_render_callback(fn) {
+        render_callbacks.push(fn);
+    }
+    function flush() {
+        const seen_callbacks = new Set();
+        do {
+            // first, call beforeUpdate functions
+            // and update components
+            while (dirty_components.length) {
+                const component = dirty_components.shift();
+                set_current_component(component);
+                update(component.$$);
+            }
+            while (binding_callbacks.length)
+                binding_callbacks.shift()();
+            // then, once components are updated, call
+            // afterUpdate functions. This may cause
+            // subsequent updates...
+            while (render_callbacks.length) {
+                const callback = render_callbacks.pop();
+                if (!seen_callbacks.has(callback)) {
+                    callback();
+                    // ...so guard against infinite loops
+                    seen_callbacks.add(callback);
+                }
+            }
+        } while (dirty_components.length);
+        while (flush_callbacks.length) {
+            flush_callbacks.pop()();
+        }
+        update_scheduled = false;
+    }
+    function update($$) {
+        if ($$.fragment) {
+            $$.update($$.dirty);
+            run_all($$.before_render);
+            $$.fragment.p($$.dirty, $$.ctx);
+            $$.dirty = null;
+            $$.after_render.forEach(add_render_callback);
+        }
+    }
+    let outros;
+    function group_outros() {
+        outros = {
+            remaining: 0,
+            callbacks: []
+        };
+    }
+    function check_outros() {
+        if (!outros.remaining) {
+            run_all(outros.callbacks);
+        }
+    }
+    function on_outro(callback) {
+        outros.callbacks.push(callback);
+    }
+
+    function get_spread_update(levels, updates) {
+        const update = {};
+        const to_null_out = {};
+        const accounted_for = { $$scope: 1 };
+        let i = levels.length;
+        while (i--) {
+            const o = levels[i];
+            const n = updates[i];
+            if (n) {
+                for (const key in o) {
+                    if (!(key in n))
+                        to_null_out[key] = 1;
+                }
+                for (const key in n) {
+                    if (!accounted_for[key]) {
+                        update[key] = n[key];
+                        accounted_for[key] = 1;
+                    }
+                }
+                levels[i] = n;
+            }
+            else {
+                for (const key in o) {
+                    accounted_for[key] = 1;
+                }
+            }
+        }
+        for (const key in to_null_out) {
+            if (!(key in update))
+                update[key] = undefined;
+        }
+        return update;
+    }
+    function mount_component(component, target, anchor) {
+        const { fragment, on_mount, on_destroy, after_render } = component.$$;
+        fragment.m(target, anchor);
+        // onMount happens after the initial afterUpdate. Because
+        // afterUpdate callbacks happen in reverse order (inner first)
+        // we schedule onMount callbacks before afterUpdate callbacks
+        add_render_callback(() => {
+            const new_on_destroy = on_mount.map(run).filter(is_function);
+            if (on_destroy) {
+                on_destroy.push(...new_on_destroy);
+            }
+            else {
+                // Edge case - component was destroyed immediately,
+                // most likely as a result of a binding initialising
+                run_all(new_on_destroy);
+            }
+            component.$$.on_mount = [];
+        });
+        after_render.forEach(add_render_callback);
+    }
+    function destroy(component, detaching) {
+        if (component.$$) {
+            run_all(component.$$.on_destroy);
+            component.$$.fragment.d(detaching);
+            // TODO null out other refs, including component.$$ (but need to
+            // preserve final state?)
+            component.$$.on_destroy = component.$$.fragment = null;
+            component.$$.ctx = {};
+        }
+    }
+    function make_dirty(component, key) {
+        if (!component.$$.dirty) {
+            dirty_components.push(component);
+            schedule_update();
+            component.$$.dirty = blank_object();
+        }
+        component.$$.dirty[key] = true;
+    }
+    function init(component, options, instance, create_fragment, not_equal$$1, prop_names) {
+        const parent_component = current_component;
+        set_current_component(component);
+        const props = options.props || {};
+        const $$ = component.$$ = {
+            fragment: null,
+            ctx: null,
+            // state
+            props: prop_names,
+            update: noop,
+            not_equal: not_equal$$1,
+            bound: blank_object(),
+            // lifecycle
+            on_mount: [],
+            on_destroy: [],
+            before_render: [],
+            after_render: [],
+            context: new Map(parent_component ? parent_component.$$.context : []),
+            // everything else
+            callbacks: blank_object(),
+            dirty: null
+        };
+        let ready = false;
+        $$.ctx = instance
+            ? instance(component, props, (key, value) => {
+                if ($$.ctx && not_equal$$1($$.ctx[key], $$.ctx[key] = value)) {
+                    if ($$.bound[key])
+                        $$.bound[key](value);
+                    if (ready)
+                        make_dirty(component, key);
+                }
+            })
+            : props;
+        $$.update();
+        ready = true;
+        run_all($$.before_render);
+        $$.fragment = create_fragment($$.ctx);
+        if (options.target) {
+            if (options.hydrate) {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment.l(children(options.target));
+            }
+            else {
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                $$.fragment.c();
+            }
+            if (options.intro && component.$$.fragment.i)
+                component.$$.fragment.i();
+            mount_component(component, options.target, options.anchor);
+            flush();
+        }
+        set_current_component(parent_component);
+    }
+    class SvelteComponent {
+        $destroy() {
+            destroy(this, true);
+            this.$destroy = noop;
+        }
+        $on(type, callback) {
+            const callbacks = (this.$$.callbacks[type] || (this.$$.callbacks[type] = []));
+            callbacks.push(callback);
+            return () => {
+                const index = callbacks.indexOf(callback);
+                if (index !== -1)
+                    callbacks.splice(index, 1);
+            };
+        }
+        $set() {
+            // overridden by instance, if it has props
+        }
+    }
+    class SvelteComponentDev extends SvelteComponent {
+        constructor(options) {
+            if (!options || (!options.target && !options.$$inline)) {
+                throw new Error(`'target' is a required option`);
+            }
+            super();
+        }
+        $destroy() {
+            super.$destroy();
+            this.$destroy = () => {
+                console.warn(`Component was already destroyed`); // eslint-disable-line no-console
+            };
+        }
+    }
+
+    /**
+     * Creates a `Readable` store that allows reading by subscription.
+     * @param value initial value
+     * @param {StartStopNotifier}start start and stop notifications for subscriptions
+     */
+    function readable(value, start) {
+        return {
+            subscribe: writable(value, start).subscribe,
+        };
+    }
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=}start start and stop notifications for subscriptions
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = [];
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (!stop) {
+                    return; // not ready
+                }
+                subscribers.forEach((s) => s[1]());
+                subscribers.forEach((s) => s[0](value));
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.push(subscriber);
+            if (subscribers.length === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                const index = subscribers.indexOf(subscriber);
+                if (index !== -1) {
+                    subscribers.splice(index, 1);
+                }
+                if (subscribers.length === 0) {
+                    stop();
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
+    /**
+     * Derived value store by synchronizing one or more readable stores and
+     * applying an aggregation function over its input values.
+     * @param {Stores} stores input stores
+     * @param {function(Stores=, function(*)=):*}fn function callback that aggregates the values
+     * @param {*=}initial_value when used asynchronously
+     */
+    function derived(stores, fn, initial_value) {
+        const single = !Array.isArray(stores);
+        const stores_array = single
+            ? [stores]
+            : stores;
+        const auto = fn.length < 2;
+        const invalidators = [];
+        const store = readable(initial_value, (set) => {
+            let inited = false;
+            const values = [];
+            let pending = 0;
+            let cleanup = noop;
+            const sync = () => {
+                if (pending) {
+                    return;
+                }
+                cleanup();
+                const result = fn(single ? values[0] : values, set);
+                if (auto) {
+                    set(result);
+                }
+                else {
+                    cleanup = is_function(result) ? result : noop;
+                }
+            };
+            const unsubscribers = stores_array.map((store, i) => store.subscribe((value) => {
+                values[i] = value;
+                pending &= ~(1 << i);
+                if (inited) {
+                    sync();
+                }
+            }, () => {
+                run_all(invalidators);
+                pending |= (1 << i);
+            }));
+            inited = true;
+            sync();
+            return function stop() {
+                run_all(unsubscribers);
+                cleanup();
+            };
+        });
+        return {
+            subscribe(run, invalidate = noop) {
+                invalidators.push(invalidate);
+                const unsubscribe = store.subscribe(run, invalidate);
+                return () => {
+                    const index = invalidators.indexOf(invalidate);
+                    if (index !== -1) {
+                        invalidators.splice(index, 1);
+                    }
+                    unsubscribe();
+                };
+            }
+        };
+    }
+
+    const LOCATION = {};
+    const ROUTER = {};
+
+    /**
+     * Adapted from https://github.com/reach/router/blob/b60e6dd781d5d3a4bdaaf4de665649c0f6a7e78d/src/lib/history.js
+     *
+     * https://github.com/reach/router/blob/master/LICENSE
+     * */
+
+    function getLocation(source) {
+      return {
+        ...source.location,
+        state: source.history.state,
+        key: (source.history.state && source.history.state.key) || "initial"
+      };
+    }
+
+    function createHistory(source, options) {
+      const listeners = [];
+      let location = getLocation(source);
+
+      return {
+        get location() {
+          return location;
+        },
+
+        listen(listener) {
+          listeners.push(listener);
+
+          const popstateListener = () => {
+            location = getLocation(source);
+            listener({ location, action: "POP" });
+          };
+
+          source.addEventListener("popstate", popstateListener);
+
+          return () => {
+            source.removeEventListener("popstate", popstateListener);
+
+            const index = listeners.indexOf(listener);
+            listeners.splice(index, 1);
+          };
+        },
+
+        navigate(to, { state, replace = false } = {}) {
+          state = { ...state, key: Date.now() + "" };
+          // try...catch iOS Safari limits to 100 pushState calls
+          try {
+            if (replace) {
+              source.history.replaceState(state, null, to);
+            } else {
+              source.history.pushState(state, null, to);
+            }
+          } catch (e) {
+            source.location[replace ? "replace" : "assign"](to);
+          }
+
+          location = getLocation(source);
+          listeners.forEach(listener => listener({ location, action: "PUSH" }));
+        }
+      };
+    }
+
+    // Stores history entries in memory for testing or other platforms like Native
+    function createMemorySource(initialPathname = "/") {
+      let index = 0;
+      const stack = [{ pathname: initialPathname, search: "" }];
+      const states = [];
+
+      return {
+        get location() {
+          return stack[index];
+        },
+        addEventListener(name, fn) {},
+        removeEventListener(name, fn) {},
+        history: {
+          get entries() {
+            return stack;
+          },
+          get index() {
+            return index;
+          },
+          get state() {
+            return states[index];
+          },
+          pushState(state, _, uri) {
+            const [pathname, search = ""] = uri.split("?");
+            index++;
+            stack.push({ pathname, search });
+            states.push(state);
+          },
+          replaceState(state, _, uri) {
+            const [pathname, search = ""] = uri.split("?");
+            stack[index] = { pathname, search };
+            states[index] = state;
+          }
+        }
+      };
+    }
+
+    // Global history uses window.history as the source if available,
+    // otherwise a memory history
+    const canUseDOM = Boolean(
+      typeof window !== "undefined" &&
+        window.document &&
+        window.document.createElement
+    );
+    const globalHistory = createHistory(canUseDOM ? window : createMemorySource());
+    const { navigate } = globalHistory;
+
+    /**
+     * Adapted from https://github.com/reach/router/blob/b60e6dd781d5d3a4bdaaf4de665649c0f6a7e78d/src/lib/utils.js
+     *
+     * https://github.com/reach/router/blob/master/LICENSE
+     * */
+
+    const paramRe = /^:(.+)/;
+
+    const SEGMENT_POINTS = 4;
+    const STATIC_POINTS = 3;
+    const DYNAMIC_POINTS = 2;
+    const SPLAT_PENALTY = 1;
+    const ROOT_POINTS = 1;
+
+    /**
+     * Check if `string` starts with `search`
+     * @param {string} string
+     * @param {string} search
+     * @return {boolean}
+     */
+    function startsWith(string, search) {
+      return string.substr(0, search.length) === search;
+    }
+
+    /**
+     * Check if `segment` is a root segment
+     * @param {string} segment
+     * @return {boolean}
+     */
+    function isRootSegment(segment) {
+      return segment === "";
+    }
+
+    /**
+     * Check if `segment` is a dynamic segment
+     * @param {string} segment
+     * @return {boolean}
+     */
+    function isDynamic(segment) {
+      return paramRe.test(segment);
+    }
+
+    /**
+     * Check if `segment` is a splat
+     * @param {string} segment
+     * @return {boolean}
+     */
+    function isSplat(segment) {
+      return segment[0] === "*";
+    }
+
+    /**
+     * Split up the URI into segments delimited by `/`
+     * @param {string} uri
+     * @return {string[]}
+     */
+    function segmentize(uri) {
+      return (
+        uri
+          // Strip starting/ending `/`
+          .replace(/(^\/+|\/+$)/g, "")
+          .split("/")
+      );
+    }
+
+    /**
+     * Strip `str` of potential start and end `/`
+     * @param {string} str
+     * @return {string}
+     */
+    function stripSlashes(str) {
+      return str.replace(/(^\/+|\/+$)/g, "");
+    }
+
+    /**
+     * Score a route depending on how its individual segments look
+     * @param {object} route
+     * @param {number} index
+     * @return {object}
+     */
+    function rankRoute(route, index) {
+      const score = route.default
+        ? 0
+        : segmentize(route.path).reduce((score, segment) => {
+            score += SEGMENT_POINTS;
+
+            if (isRootSegment(segment)) {
+              score += ROOT_POINTS;
+            } else if (isDynamic(segment)) {
+              score += DYNAMIC_POINTS;
+            } else if (isSplat(segment)) {
+              score -= SEGMENT_POINTS + SPLAT_PENALTY;
+            } else {
+              score += STATIC_POINTS;
+            }
+
+            return score;
+          }, 0);
+
+      return { route, score, index };
+    }
+
+    /**
+     * Give a score to all routes and sort them on that
+     * @param {object[]} routes
+     * @return {object[]}
+     */
+    function rankRoutes(routes) {
+      return (
+        routes
+          .map(rankRoute)
+          // If two routes have the exact same score, we go by index instead
+          .sort((a, b) =>
+            a.score < b.score ? 1 : a.score > b.score ? -1 : a.index - b.index
+          )
+      );
+    }
+
+    /**
+     * Ranks and picks the best route to match. Each segment gets the highest
+     * amount of points, then the type of segment gets an additional amount of
+     * points where
+     *
+     *  static > dynamic > splat > root
+     *
+     * This way we don't have to worry about the order of our routes, let the
+     * computers do it.
+     *
+     * A route looks like this
+     *
+     *  { path, default, value }
+     *
+     * And a returned match looks like:
+     *
+     *  { route, params, uri }
+     *
+     * @param {object[]} routes
+     * @param {string} uri
+     * @return {?object}
+     */
+    function pick(routes, uri) {
+      let match;
+      let default_;
+
+      const [uriPathname] = uri.split("?");
+      const uriSegments = segmentize(uriPathname);
+      const isRootUri = uriSegments[0] === "";
+      const ranked = rankRoutes(routes);
+
+      for (let i = 0, l = ranked.length; i < l; i++) {
+        const route = ranked[i].route;
+        let missed = false;
+
+        if (route.default) {
+          default_ = {
+            route,
+            params: {},
+            uri
+          };
+          continue;
+        }
+
+        const routeSegments = segmentize(route.path);
+        const params = {};
+        const max = Math.max(uriSegments.length, routeSegments.length);
+        let index = 0;
+
+        for (; index < max; index++) {
+          const routeSegment = routeSegments[index];
+          const uriSegment = uriSegments[index];
+
+          if (routeSegment !== undefined && isSplat(routeSegment)) {
+            // Hit a splat, just grab the rest, and return a match
+            // uri:   /files/documents/work
+            // route: /files/* or /files/*splatname
+            const splatName = routeSegment === "*" ? "*" : routeSegment.slice(1);
+
+            params[splatName] = uriSegments
+              .slice(index)
+              .map(decodeURIComponent)
+              .join("/");
+            break;
+          }
+
+          if (uriSegment === undefined) {
+            // URI is shorter than the route, no match
+            // uri:   /users
+            // route: /users/:userId
+            missed = true;
+            break;
+          }
+
+          let dynamicMatch = paramRe.exec(routeSegment);
+
+          if (dynamicMatch && !isRootUri) {
+            const value = decodeURIComponent(uriSegment);
+            params[dynamicMatch[1]] = value;
+          } else if (routeSegment !== uriSegment) {
+            // Current segments don't match, not dynamic, not splat, so no match
+            // uri:   /users/123/settings
+            // route: /users/:id/profile
+            missed = true;
+            break;
+          }
+        }
+
+        if (!missed) {
+          match = {
+            route,
+            params,
+            uri: "/" + uriSegments.slice(0, index).join("/")
+          };
+          break;
+        }
+      }
+
+      return match || default_ || null;
+    }
+
+    /**
+     * Check if the `path` matches the `uri`.
+     * @param {string} path
+     * @param {string} uri
+     * @return {?object}
+     */
+    function match(route, uri) {
+      return pick([route], uri);
+    }
+
+    /**
+     * Add the query to the pathname if a query is given
+     * @param {string} pathname
+     * @param {string} [query]
+     * @return {string}
+     */
+    function addQuery(pathname, query) {
+      return pathname + (query ? `?${query}` : "");
+    }
+
+    /**
+     * Resolve URIs as though every path is a directory, no files. Relative URIs
+     * in the browser can feel awkward because not only can you be "in a directory",
+     * you can be "at a file", too. For example:
+     *
+     *  browserSpecResolve('foo', '/bar/') => /bar/foo
+     *  browserSpecResolve('foo', '/bar') => /foo
+     *
+     * But on the command line of a file system, it's not as complicated. You can't
+     * `cd` from a file, only directories. This way, links have to know less about
+     * their current path. To go deeper you can do this:
+     *
+     *  <Link to="deeper"/>
+     *  // instead of
+     *  <Link to=`{${props.uri}/deeper}`/>
+     *
+     * Just like `cd`, if you want to go deeper from the command line, you do this:
+     *
+     *  cd deeper
+     *  # not
+     *  cd $(pwd)/deeper
+     *
+     * By treating every path as a directory, linking to relative paths should
+     * require less contextual information and (fingers crossed) be more intuitive.
+     * @param {string} to
+     * @param {string} base
+     * @return {string}
+     */
+    function resolve(to, base) {
+      // /foo/bar, /baz/qux => /foo/bar
+      if (startsWith(to, "/")) {
+        return to;
+      }
+
+      const [toPathname, toQuery] = to.split("?");
+      const [basePathname] = base.split("?");
+      const toSegments = segmentize(toPathname);
+      const baseSegments = segmentize(basePathname);
+
+      // ?a=b, /users?b=c => /users?a=b
+      if (toSegments[0] === "") {
+        return addQuery(basePathname, toQuery);
+      }
+
+      // profile, /users/789 => /users/789/profile
+      if (!startsWith(toSegments[0], ".")) {
+        const pathname = baseSegments.concat(toSegments).join("/");
+
+        return addQuery((basePathname === "/" ? "" : "/") + pathname, toQuery);
+      }
+
+      // ./       , /users/123 => /users/123
+      // ../      , /users/123 => /users
+      // ../..    , /users/123 => /
+      // ../../one, /a/b/c/d   => /a/b/one
+      // .././one , /a/b/c/d   => /a/b/c/one
+      const allSegments = baseSegments.concat(toSegments);
+      const segments = [];
+
+      allSegments.forEach(segment => {
+        if (segment === "..") {
+          segments.pop();
+        } else if (segment !== ".") {
+          segments.push(segment);
+        }
+      });
+
+      return addQuery("/" + segments.join("/"), toQuery);
+    }
+
+    /**
+     * Combines the `basepath` and the `path` into one path.
+     * @param {string} basepath
+     * @param {string} path
+     */
+    function combinePaths(basepath, path) {
+      return `${stripSlashes(
+    path === "/" ? basepath : `${stripSlashes(basepath)}/${stripSlashes(path)}`
+  )}/`;
+    }
+
+    /**
+     * Decides whether a given `event` should result in a navigation or not.
+     * @param {object} event
+     */
+    function shouldNavigate(event) {
+      return (
+        !event.defaultPrevented &&
+        event.button === 0 &&
+        !(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey)
+      );
+    }
+
+    /* node_modules\svelte-routing\src\Router.svelte generated by Svelte v3.5.1 */
+
+    function create_fragment(ctx) {
+    	var current;
+
+    	const default_slot_1 = ctx.$$slots.default;
+    	const default_slot = create_slot(default_slot_1, ctx, null);
+
+    	return {
+    		c: function create() {
+    			if (default_slot) default_slot.c();
+    		},
+
+    		l: function claim(nodes) {
+    			if (default_slot) default_slot.l(nodes);
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (default_slot && default_slot.p && changed.$$scope) {
+    				default_slot.p(get_slot_changes(default_slot_1, ctx, changed, null), get_slot_context(default_slot_1, ctx, null));
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (default_slot && default_slot.i) default_slot.i(local);
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (default_slot && default_slot.o) default_slot.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    function instance($$self, $$props, $$invalidate) {
+    	let $base, $location, $routes;
+
+    	
+
+      let { basepath = "/", url = null } = $$props;
+
+      const locationContext = getContext(LOCATION);
+      const routerContext = getContext(ROUTER);
+
+      const routes = writable([]); validate_store(routes, 'routes'); subscribe($$self, routes, $$value => { $routes = $$value; $$invalidate('$routes', $routes); });
+      const activeRoute = writable(null);
+      let hasActiveRoute = false; // Used in SSR to synchronously set that a Route is active.
+
+      // If locationContext is not set, this is the topmost Router in the tree.
+      // If the `url` prop is given we force the location to it.
+      const location =
+        locationContext ||
+        writable(url ? { pathname: url } : globalHistory.location); validate_store(location, 'location'); subscribe($$self, location, $$value => { $location = $$value; $$invalidate('$location', $location); });
+
+      // If routerContext is set, the routerBase of the parent Router
+      // will be the base for this Router's descendants.
+      // If routerContext is not set, the path and resolved uri will both
+      // have the value of the basepath prop.
+      const base = routerContext
+        ? routerContext.routerBase
+        : writable({
+            path: basepath,
+            uri: basepath
+          }); validate_store(base, 'base'); subscribe($$self, base, $$value => { $base = $$value; $$invalidate('$base', $base); });
+
+      const routerBase = derived([base, activeRoute], ([base, activeRoute]) => {
+        // If there is no activeRoute, the routerBase will be identical to the base.
+        if (activeRoute === null) {
+          return base;
+        }
+
+        const { path: basepath } = base;
+        const { route, uri } = activeRoute;
+        // Remove the potential /* or /*splatname from
+        // the end of the child Routes relative paths.
+        const path = route.default ? basepath : route.path.replace(/\*.*$/, "");
+
+        return { path, uri };
+      });
+
+      function registerRoute(route) {
+        const { path: basepath } = $base;
+        let { path } = route;
+
+        // We store the original path in the _path property so we can reuse
+        // it when the basepath changes. The only thing that matters is that
+        // the route reference is intact, so mutation is fine.
+        route._path = path;
+        route.path = combinePaths(basepath, path);
+
+        if (typeof window === "undefined") {
+          // In SSR we should set the activeRoute immediately if it is a match.
+          // If there are more Routes being registered after a match is found,
+          // we just skip them.
+          if (hasActiveRoute) {
+            return;
+          }
+
+          const matchingRoute = match(route, $location.pathname);
+          if (matchingRoute) {
+            activeRoute.set(matchingRoute);
+            hasActiveRoute = true;
+          }
+        } else {
+          routes.update(rs => {
+            rs.push(route);
+            return rs;
+          });
+        }
+      }
+
+      function unregisterRoute(route) {
+        routes.update(rs => {
+          const index = rs.indexOf(route);
+          rs.splice(index, 1);
+          return rs;
+        });
+      }
+
+      if (!locationContext) {
+        // The topmost Router in the tree is responsible for updating
+        // the location store and supplying it through context.
+        onMount(() => {
+          const unlisten = globalHistory.listen(history => {
+            location.set(history.location);
+          });
+
+          return unlisten;
+        });
+
+        setContext(LOCATION, location);
+      }
+
+      setContext(ROUTER, {
+        activeRoute,
+        base,
+        routerBase,
+        registerRoute,
+        unregisterRoute
+      });
+
+    	const writable_props = ['basepath', 'url'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Router> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+
+    	$$self.$set = $$props => {
+    		if ('basepath' in $$props) $$invalidate('basepath', basepath = $$props.basepath);
+    		if ('url' in $$props) $$invalidate('url', url = $$props.url);
+    		if ('$$scope' in $$props) $$invalidate('$$scope', $$scope = $$props.$$scope);
+    	};
+
+    	$$self.$$.update = ($$dirty = { $base: 1, $routes: 1, $location: 1 }) => {
+    		if ($$dirty.$base) { {
+            const { path: basepath } = $base;
+            routes.update(rs => {
+              rs.forEach(r => (r.path = combinePaths(basepath, r._path)));
+              return rs;
+            });
+          } }
+    		if ($$dirty.$routes || $$dirty.$location) { {
+            const bestMatch = pick($routes, $location.pathname);
+            activeRoute.set(bestMatch);
+          } }
+    	};
+
+    	return {
+    		basepath,
+    		url,
+    		routes,
+    		location,
+    		base,
+    		$$slots,
+    		$$scope
+    	};
+    }
+
+    class Router extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance, create_fragment, safe_not_equal, ["basepath", "url"]);
+    	}
+
+    	get basepath() {
+    		throw new Error("<Router>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set basepath(value) {
+    		throw new Error("<Router>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get url() {
+    		throw new Error("<Router>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set url(value) {
+    		throw new Error("<Router>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\svelte-routing\src\Route.svelte generated by Svelte v3.5.1 */
+
+    // (39:0) {#if $activeRoute !== null && $activeRoute.route === route}
+    function create_if_block(ctx) {
+    	var current_block_type_index, if_block, if_block_anchor, current;
+
+    	var if_block_creators = [
+    		create_if_block_1,
+    		create_else_block
+    	];
+
+    	var if_blocks = [];
+
+    	function select_block_type(ctx) {
+    		if (ctx.component !== null) return 0;
+    		return 1;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(changed, ctx);
+    			} else {
+    				group_outros();
+    				on_outro(() => {
+    					if_blocks[previous_block_index].d(1);
+    					if_blocks[previous_block_index] = null;
+    				});
+    				if_block.o(1);
+    				check_outros();
+
+    				if_block = if_blocks[current_block_type_index];
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				}
+    				if_block.i(1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (42:2) {:else}
+    function create_else_block(ctx) {
+    	var current;
+
+    	const default_slot_1 = ctx.$$slots.default;
+    	const default_slot = create_slot(default_slot_1, ctx, null);
+
+    	return {
+    		c: function create() {
+    			if (default_slot) default_slot.c();
+    		},
+
+    		l: function claim(nodes) {
+    			if (default_slot) default_slot.l(nodes);
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (default_slot) {
+    				default_slot.m(target, anchor);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (default_slot && default_slot.p && changed.$$scope) {
+    				default_slot.p(get_slot_changes(default_slot_1, ctx, changed, null), get_slot_context(default_slot_1, ctx, null));
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (default_slot && default_slot.i) default_slot.i(local);
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (default_slot && default_slot.o) default_slot.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    // (40:2) {#if component !== null}
+    function create_if_block_1(ctx) {
+    	var switch_instance_anchor, current;
+
+    	var switch_instance_spread_levels = [
+    		ctx.routeParams,
+    		ctx.routeProps
+    	];
+
+    	var switch_value = ctx.component;
+
+    	function switch_props(ctx) {
+    		let switch_instance_props = {};
+    		for (var i = 0; i < switch_instance_spread_levels.length; i += 1) {
+    			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+    		}
+    		return {
+    			props: switch_instance_props,
+    			$$inline: true
+    		};
+    	}
+
+    	if (switch_value) {
+    		var switch_instance = new switch_value(switch_props());
+    	}
+
+    	return {
+    		c: function create() {
+    			if (switch_instance) switch_instance.$$.fragment.c();
+    			switch_instance_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (switch_instance) {
+    				mount_component(switch_instance, target, anchor);
+    			}
+
+    			insert(target, switch_instance_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var switch_instance_changes = (changed.routeParams || changed.routeProps) ? get_spread_update(switch_instance_spread_levels, [
+    				(changed.routeParams) && ctx.routeParams,
+    				(changed.routeProps) && ctx.routeProps
+    			]) : {};
+
+    			if (switch_value !== (switch_value = ctx.component)) {
+    				if (switch_instance) {
+    					group_outros();
+    					const old_component = switch_instance;
+    					on_outro(() => {
+    						old_component.$destroy();
+    					});
+    					old_component.$$.fragment.o(1);
+    					check_outros();
+    				}
+
+    				if (switch_value) {
+    					switch_instance = new switch_value(switch_props());
+
+    					switch_instance.$$.fragment.c();
+    					switch_instance.$$.fragment.i(1);
+    					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+    				} else {
+    					switch_instance = null;
+    				}
+    			}
+
+    			else if (switch_value) {
+    				switch_instance.$set(switch_instance_changes);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (switch_instance) switch_instance.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (switch_instance) switch_instance.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(switch_instance_anchor);
+    			}
+
+    			if (switch_instance) switch_instance.$destroy(detaching);
+    		}
+    	};
+    }
+
+    function create_fragment$1(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.$activeRoute !== null && ctx.$activeRoute.route === ctx.route) && create_if_block(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.$activeRoute !== null && ctx.$activeRoute.route === ctx.route) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$1($$self, $$props, $$invalidate) {
+    	let $activeRoute;
+
+    	
+
+      let { path = "", component = null } = $$props;
+
+      const { registerRoute, unregisterRoute, activeRoute } = getContext(ROUTER); validate_store(activeRoute, 'activeRoute'); subscribe($$self, activeRoute, $$value => { $activeRoute = $$value; $$invalidate('$activeRoute', $activeRoute); });
+
+      const route = {
+        path,
+        // If no path prop is given, this Route will act as the default Route
+        // that is rendered if no other Route in the Router is a match.
+        default: path === ""
+      };
+      let routeParams = {};
+      let routeProps = {};
+
+      registerRoute(route);
+
+      // There is no need to unregister Routes in SSR since it will all be
+      // thrown away anyway.
+      if (typeof window !== "undefined") {
+        onDestroy(() => {
+          unregisterRoute(route);
+        });
+      }
+
+    	let { $$slots = {}, $$scope } = $$props;
+
+    	$$self.$set = $$new_props => {
+    		$$invalidate('$$props', $$props = assign(assign({}, $$props), $$new_props));
+    		if ('path' in $$props) $$invalidate('path', path = $$props.path);
+    		if ('component' in $$props) $$invalidate('component', component = $$props.component);
+    		if ('$$scope' in $$new_props) $$invalidate('$$scope', $$scope = $$new_props.$$scope);
+    	};
+
+    	$$self.$$.update = ($$dirty = { $activeRoute: 1, $$props: 1 }) => {
+    		if ($$dirty.$activeRoute) { if ($activeRoute && $activeRoute.route === route) {
+            $$invalidate('routeParams', routeParams = $activeRoute.params);
+          } }
+    		{
+            const { path, component, ...rest } = $$props;
+            $$invalidate('routeProps', routeProps = rest);
+          }
+    	};
+
+    	return {
+    		path,
+    		component,
+    		activeRoute,
+    		route,
+    		routeParams,
+    		routeProps,
+    		$activeRoute,
+    		$$props: $$props = exclude_internal_props($$props),
+    		$$slots,
+    		$$scope
+    	};
+    }
+
+    class Route extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, ["path", "component"]);
+    	}
+
+    	get path() {
+    		throw new Error("<Route>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set path(value) {
+    		throw new Error("<Route>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get component() {
+    		throw new Error("<Route>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set component(value) {
+    		throw new Error("<Route>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* node_modules\svelte-routing\src\Link.svelte generated by Svelte v3.5.1 */
+
+    const file = "node_modules\\svelte-routing\\src\\Link.svelte";
+
+    function create_fragment$2(ctx) {
+    	var a, current, dispose;
+
+    	const default_slot_1 = ctx.$$slots.default;
+    	const default_slot = create_slot(default_slot_1, ctx, null);
+
+    	var a_levels = [
+    		{ href: ctx.href },
+    		{ "aria-current": ctx.ariaCurrent },
+    		ctx.props
+    	];
+
+    	var a_data = {};
+    	for (var i = 0; i < a_levels.length; i += 1) {
+    		a_data = assign(a_data, a_levels[i]);
+    	}
+
+    	return {
+    		c: function create() {
+    			a = element("a");
+
+    			if (default_slot) default_slot.c();
+
+    			set_attributes(a, a_data);
+    			add_location(a, file, 40, 0, 1249);
+    			dispose = listen(a, "click", ctx.onClick);
+    		},
+
+    		l: function claim(nodes) {
+    			if (default_slot) default_slot.l(a_nodes);
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, a, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(a, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (default_slot && default_slot.p && changed.$$scope) {
+    				default_slot.p(get_slot_changes(default_slot_1, ctx, changed, null), get_slot_context(default_slot_1, ctx, null));
+    			}
+
+    			set_attributes(a, get_spread_update(a_levels, [
+    				(changed.href) && { href: ctx.href },
+    				(changed.ariaCurrent) && { "aria-current": ctx.ariaCurrent },
+    				(changed.props) && ctx.props
+    			]));
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (default_slot && default_slot.i) default_slot.i(local);
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (default_slot && default_slot.o) default_slot.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(a);
+    			}
+
+    			if (default_slot) default_slot.d(detaching);
+    			dispose();
+    		}
+    	};
+    }
+
+    function instance$2($$self, $$props, $$invalidate) {
+    	let $base, $location;
+
+    	
+
+      let { to = "#", replace = false, state = {}, getProps = () => ({}) } = $$props;
+
+      const { base } = getContext(ROUTER); validate_store(base, 'base'); subscribe($$self, base, $$value => { $base = $$value; $$invalidate('$base', $base); });
+      const location = getContext(LOCATION); validate_store(location, 'location'); subscribe($$self, location, $$value => { $location = $$value; $$invalidate('$location', $location); });
+      const dispatch = createEventDispatcher();
+
+      let href, isPartiallyCurrent, isCurrent, props;
+
+      function onClick(event) {
+        dispatch("click", event);
+
+        if (shouldNavigate(event)) {
+          event.preventDefault();
+          // Don't push another entry to the history stack when the user
+          // clicks on a Link to the page they are currently on.
+          const shouldReplace = $location.pathname === href || replace;
+          navigate(href, { state, replace: shouldReplace });
+        }
+      }
+
+    	const writable_props = ['to', 'replace', 'state', 'getProps'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Link> was created with unknown prop '${key}'`);
+    	});
+
+    	let { $$slots = {}, $$scope } = $$props;
+
+    	$$self.$set = $$props => {
+    		if ('to' in $$props) $$invalidate('to', to = $$props.to);
+    		if ('replace' in $$props) $$invalidate('replace', replace = $$props.replace);
+    		if ('state' in $$props) $$invalidate('state', state = $$props.state);
+    		if ('getProps' in $$props) $$invalidate('getProps', getProps = $$props.getProps);
+    		if ('$$scope' in $$props) $$invalidate('$$scope', $$scope = $$props.$$scope);
+    	};
+
+    	let ariaCurrent;
+
+    	$$self.$$.update = ($$dirty = { to: 1, $base: 1, $location: 1, href: 1, isCurrent: 1, getProps: 1, isPartiallyCurrent: 1 }) => {
+    		if ($$dirty.to || $$dirty.$base) { $$invalidate('href', href = to === "/" ? $base.uri : resolve(to, $base.uri)); }
+    		if ($$dirty.$location || $$dirty.href) { $$invalidate('isPartiallyCurrent', isPartiallyCurrent = startsWith($location.pathname, href)); }
+    		if ($$dirty.href || $$dirty.$location) { $$invalidate('isCurrent', isCurrent = href === $location.pathname); }
+    		if ($$dirty.isCurrent) { $$invalidate('ariaCurrent', ariaCurrent = isCurrent ? "page" : undefined); }
+    		if ($$dirty.getProps || $$dirty.$location || $$dirty.href || $$dirty.isPartiallyCurrent || $$dirty.isCurrent) { $$invalidate('props', props = getProps({
+            location: $location,
+            href,
+            isPartiallyCurrent,
+            isCurrent
+          })); }
+    	};
+
+    	return {
+    		to,
+    		replace,
+    		state,
+    		getProps,
+    		base,
+    		location,
+    		href,
+    		props,
+    		onClick,
+    		ariaCurrent,
+    		$$slots,
+    		$$scope
+    	};
+    }
+
+    class Link extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, ["to", "replace", "state", "getProps"]);
+    	}
+
+    	get to() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set to(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get replace() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set replace(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get state() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set state(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getProps() {
+    		throw new Error("<Link>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getProps(value) {
+    		throw new Error("<Link>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    var bind = function bind(fn, thisArg) {
+      return function wrap() {
+        var args = new Array(arguments.length);
+        for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i];
+        }
+        return fn.apply(thisArg, args);
+      };
+    };
+
+    /*!
+     * Determine if an object is a Buffer
+     *
+     * @author   Feross Aboukhadijeh <https://feross.org>
+     * @license  MIT
+     */
+
+    var isBuffer = function isBuffer (obj) {
+      return obj != null && obj.constructor != null &&
+        typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+    };
+
+    /*global toString:true*/
+
+    // utils is a library of generic helper functions non-specific to axios
+
+    var toString = Object.prototype.toString;
+
+    /**
+     * Determine if a value is an Array
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is an Array, otherwise false
+     */
+    function isArray(val) {
+      return toString.call(val) === '[object Array]';
+    }
+
+    /**
+     * Determine if a value is an ArrayBuffer
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+     */
+    function isArrayBuffer(val) {
+      return toString.call(val) === '[object ArrayBuffer]';
+    }
+
+    /**
+     * Determine if a value is a FormData
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is an FormData, otherwise false
+     */
+    function isFormData(val) {
+      return (typeof FormData !== 'undefined') && (val instanceof FormData);
+    }
+
+    /**
+     * Determine if a value is a view on an ArrayBuffer
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+     */
+    function isArrayBufferView(val) {
+      var result;
+      if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+        result = ArrayBuffer.isView(val);
+      } else {
+        result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+      }
+      return result;
+    }
+
+    /**
+     * Determine if a value is a String
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a String, otherwise false
+     */
+    function isString(val) {
+      return typeof val === 'string';
+    }
+
+    /**
+     * Determine if a value is a Number
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a Number, otherwise false
+     */
+    function isNumber(val) {
+      return typeof val === 'number';
+    }
+
+    /**
+     * Determine if a value is undefined
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if the value is undefined, otherwise false
+     */
+    function isUndefined(val) {
+      return typeof val === 'undefined';
+    }
+
+    /**
+     * Determine if a value is an Object
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is an Object, otherwise false
+     */
+    function isObject(val) {
+      return val !== null && typeof val === 'object';
+    }
+
+    /**
+     * Determine if a value is a Date
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a Date, otherwise false
+     */
+    function isDate(val) {
+      return toString.call(val) === '[object Date]';
+    }
+
+    /**
+     * Determine if a value is a File
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a File, otherwise false
+     */
+    function isFile(val) {
+      return toString.call(val) === '[object File]';
+    }
+
+    /**
+     * Determine if a value is a Blob
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a Blob, otherwise false
+     */
+    function isBlob(val) {
+      return toString.call(val) === '[object Blob]';
+    }
+
+    /**
+     * Determine if a value is a Function
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a Function, otherwise false
+     */
+    function isFunction(val) {
+      return toString.call(val) === '[object Function]';
+    }
+
+    /**
+     * Determine if a value is a Stream
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a Stream, otherwise false
+     */
+    function isStream(val) {
+      return isObject(val) && isFunction(val.pipe);
+    }
+
+    /**
+     * Determine if a value is a URLSearchParams object
+     *
+     * @param {Object} val The value to test
+     * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+     */
+    function isURLSearchParams(val) {
+      return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+    }
+
+    /**
+     * Trim excess whitespace off the beginning and end of a string
+     *
+     * @param {String} str The String to trim
+     * @returns {String} The String freed of excess whitespace
+     */
+    function trim(str) {
+      return str.replace(/^\s*/, '').replace(/\s*$/, '');
+    }
+
+    /**
+     * Determine if we're running in a standard browser environment
+     *
+     * This allows axios to run in a web worker, and react-native.
+     * Both environments support XMLHttpRequest, but not fully standard globals.
+     *
+     * web workers:
+     *  typeof window -> undefined
+     *  typeof document -> undefined
+     *
+     * react-native:
+     *  navigator.product -> 'ReactNative'
+     * nativescript
+     *  navigator.product -> 'NativeScript' or 'NS'
+     */
+    function isStandardBrowserEnv() {
+      if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
+                                               navigator.product === 'NativeScript' ||
+                                               navigator.product === 'NS')) {
+        return false;
+      }
+      return (
+        typeof window !== 'undefined' &&
+        typeof document !== 'undefined'
+      );
+    }
+
+    /**
+     * Iterate over an Array or an Object invoking a function for each item.
+     *
+     * If `obj` is an Array callback will be called passing
+     * the value, index, and complete array for each item.
+     *
+     * If 'obj' is an Object callback will be called passing
+     * the value, key, and complete object for each property.
+     *
+     * @param {Object|Array} obj The object to iterate
+     * @param {Function} fn The callback to invoke for each item
+     */
+    function forEach(obj, fn) {
+      // Don't bother if no value provided
+      if (obj === null || typeof obj === 'undefined') {
+        return;
+      }
+
+      // Force an array if not already something iterable
+      if (typeof obj !== 'object') {
+        /*eslint no-param-reassign:0*/
+        obj = [obj];
+      }
+
+      if (isArray(obj)) {
+        // Iterate over array values
+        for (var i = 0, l = obj.length; i < l; i++) {
+          fn.call(null, obj[i], i, obj);
+        }
+      } else {
+        // Iterate over object keys
+        for (var key in obj) {
+          if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            fn.call(null, obj[key], key, obj);
+          }
+        }
+      }
+    }
+
+    /**
+     * Accepts varargs expecting each argument to be an object, then
+     * immutably merges the properties of each object and returns result.
+     *
+     * When multiple objects contain the same key the later object in
+     * the arguments list will take precedence.
+     *
+     * Example:
+     *
+     * ```js
+     * var result = merge({foo: 123}, {foo: 456});
+     * console.log(result.foo); // outputs 456
+     * ```
+     *
+     * @param {Object} obj1 Object to merge
+     * @returns {Object} Result of all merge properties
+     */
+    function merge(/* obj1, obj2, obj3, ... */) {
+      var result = {};
+      function assignValue(val, key) {
+        if (typeof result[key] === 'object' && typeof val === 'object') {
+          result[key] = merge(result[key], val);
+        } else {
+          result[key] = val;
+        }
+      }
+
+      for (var i = 0, l = arguments.length; i < l; i++) {
+        forEach(arguments[i], assignValue);
+      }
+      return result;
+    }
+
+    /**
+     * Function equal to merge with the difference being that no reference
+     * to original objects is kept.
+     *
+     * @see merge
+     * @param {Object} obj1 Object to merge
+     * @returns {Object} Result of all merge properties
+     */
+    function deepMerge(/* obj1, obj2, obj3, ... */) {
+      var result = {};
+      function assignValue(val, key) {
+        if (typeof result[key] === 'object' && typeof val === 'object') {
+          result[key] = deepMerge(result[key], val);
+        } else if (typeof val === 'object') {
+          result[key] = deepMerge({}, val);
+        } else {
+          result[key] = val;
+        }
+      }
+
+      for (var i = 0, l = arguments.length; i < l; i++) {
+        forEach(arguments[i], assignValue);
+      }
+      return result;
+    }
+
+    /**
+     * Extends object a by mutably adding to it the properties of object b.
+     *
+     * @param {Object} a The object to be extended
+     * @param {Object} b The object to copy properties from
+     * @param {Object} thisArg The object to bind function to
+     * @return {Object} The resulting value of object a
+     */
+    function extend(a, b, thisArg) {
+      forEach(b, function assignValue(val, key) {
+        if (thisArg && typeof val === 'function') {
+          a[key] = bind(val, thisArg);
+        } else {
+          a[key] = val;
+        }
+      });
+      return a;
+    }
+
+    var utils = {
+      isArray: isArray,
+      isArrayBuffer: isArrayBuffer,
+      isBuffer: isBuffer,
+      isFormData: isFormData,
+      isArrayBufferView: isArrayBufferView,
+      isString: isString,
+      isNumber: isNumber,
+      isObject: isObject,
+      isUndefined: isUndefined,
+      isDate: isDate,
+      isFile: isFile,
+      isBlob: isBlob,
+      isFunction: isFunction,
+      isStream: isStream,
+      isURLSearchParams: isURLSearchParams,
+      isStandardBrowserEnv: isStandardBrowserEnv,
+      forEach: forEach,
+      merge: merge,
+      deepMerge: deepMerge,
+      extend: extend,
+      trim: trim
+    };
+
+    function encode(val) {
+      return encodeURIComponent(val).
+        replace(/%40/gi, '@').
+        replace(/%3A/gi, ':').
+        replace(/%24/g, '$').
+        replace(/%2C/gi, ',').
+        replace(/%20/g, '+').
+        replace(/%5B/gi, '[').
+        replace(/%5D/gi, ']');
+    }
+
+    /**
+     * Build a URL by appending params to the end
+     *
+     * @param {string} url The base of the url (e.g., http://www.google.com)
+     * @param {object} [params] The params to be appended
+     * @returns {string} The formatted url
+     */
+    var buildURL = function buildURL(url, params, paramsSerializer) {
+      /*eslint no-param-reassign:0*/
+      if (!params) {
+        return url;
+      }
+
+      var serializedParams;
+      if (paramsSerializer) {
+        serializedParams = paramsSerializer(params);
+      } else if (utils.isURLSearchParams(params)) {
+        serializedParams = params.toString();
+      } else {
+        var parts = [];
+
+        utils.forEach(params, function serialize(val, key) {
+          if (val === null || typeof val === 'undefined') {
+            return;
+          }
+
+          if (utils.isArray(val)) {
+            key = key + '[]';
+          } else {
+            val = [val];
+          }
+
+          utils.forEach(val, function parseValue(v) {
+            if (utils.isDate(v)) {
+              v = v.toISOString();
+            } else if (utils.isObject(v)) {
+              v = JSON.stringify(v);
+            }
+            parts.push(encode(key) + '=' + encode(v));
+          });
+        });
+
+        serializedParams = parts.join('&');
+      }
+
+      if (serializedParams) {
+        var hashmarkIndex = url.indexOf('#');
+        if (hashmarkIndex !== -1) {
+          url = url.slice(0, hashmarkIndex);
+        }
+
+        url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+      }
+
+      return url;
+    };
+
+    function InterceptorManager() {
+      this.handlers = [];
+    }
+
+    /**
+     * Add a new interceptor to the stack
+     *
+     * @param {Function} fulfilled The function to handle `then` for a `Promise`
+     * @param {Function} rejected The function to handle `reject` for a `Promise`
+     *
+     * @return {Number} An ID used to remove interceptor later
+     */
+    InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+      this.handlers.push({
+        fulfilled: fulfilled,
+        rejected: rejected
+      });
+      return this.handlers.length - 1;
+    };
+
+    /**
+     * Remove an interceptor from the stack
+     *
+     * @param {Number} id The ID that was returned by `use`
+     */
+    InterceptorManager.prototype.eject = function eject(id) {
+      if (this.handlers[id]) {
+        this.handlers[id] = null;
+      }
+    };
+
+    /**
+     * Iterate over all the registered interceptors
+     *
+     * This method is particularly useful for skipping over any
+     * interceptors that may have become `null` calling `eject`.
+     *
+     * @param {Function} fn The function to call for each interceptor
+     */
+    InterceptorManager.prototype.forEach = function forEach(fn) {
+      utils.forEach(this.handlers, function forEachHandler(h) {
+        if (h !== null) {
+          fn(h);
+        }
+      });
+    };
+
+    var InterceptorManager_1 = InterceptorManager;
+
+    /**
+     * Transform the data for a request or a response
+     *
+     * @param {Object|String} data The data to be transformed
+     * @param {Array} headers The headers for the request or response
+     * @param {Array|Function} fns A single function or Array of functions
+     * @returns {*} The resulting transformed data
+     */
+    var transformData = function transformData(data, headers, fns) {
+      /*eslint no-param-reassign:0*/
+      utils.forEach(fns, function transform(fn) {
+        data = fn(data, headers);
+      });
+
+      return data;
+    };
+
+    var isCancel = function isCancel(value) {
+      return !!(value && value.__CANCEL__);
+    };
+
+    var normalizeHeaderName = function normalizeHeaderName(headers, normalizedName) {
+      utils.forEach(headers, function processHeader(value, name) {
+        if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+          headers[normalizedName] = value;
+          delete headers[name];
+        }
+      });
+    };
+
+    /**
+     * Update an Error with the specified config, error code, and response.
+     *
+     * @param {Error} error The error to update.
+     * @param {Object} config The config.
+     * @param {string} [code] The error code (for example, 'ECONNABORTED').
+     * @param {Object} [request] The request.
+     * @param {Object} [response] The response.
+     * @returns {Error} The error.
+     */
+    var enhanceError = function enhanceError(error, config, code, request, response) {
+      error.config = config;
+      if (code) {
+        error.code = code;
+      }
+
+      error.request = request;
+      error.response = response;
+      error.isAxiosError = true;
+
+      error.toJSON = function() {
+        return {
+          // Standard
+          message: this.message,
+          name: this.name,
+          // Microsoft
+          description: this.description,
+          number: this.number,
+          // Mozilla
+          fileName: this.fileName,
+          lineNumber: this.lineNumber,
+          columnNumber: this.columnNumber,
+          stack: this.stack,
+          // Axios
+          config: this.config,
+          code: this.code
+        };
+      };
+      return error;
+    };
+
+    /**
+     * Create an Error with the specified message, config, error code, request and response.
+     *
+     * @param {string} message The error message.
+     * @param {Object} config The config.
+     * @param {string} [code] The error code (for example, 'ECONNABORTED').
+     * @param {Object} [request] The request.
+     * @param {Object} [response] The response.
+     * @returns {Error} The created error.
+     */
+    var createError = function createError(message, config, code, request, response) {
+      var error = new Error(message);
+      return enhanceError(error, config, code, request, response);
+    };
+
+    /**
+     * Resolve or reject a Promise based on response status.
+     *
+     * @param {Function} resolve A function that resolves the promise.
+     * @param {Function} reject A function that rejects the promise.
+     * @param {object} response The response.
+     */
+    var settle = function settle(resolve, reject, response) {
+      var validateStatus = response.config.validateStatus;
+      if (!validateStatus || validateStatus(response.status)) {
+        resolve(response);
+      } else {
+        reject(createError(
+          'Request failed with status code ' + response.status,
+          response.config,
+          null,
+          response.request,
+          response
+        ));
+      }
+    };
+
+    // Headers whose duplicates are ignored by node
+    // c.f. https://nodejs.org/api/http.html#http_message_headers
+    var ignoreDuplicateOf = [
+      'age', 'authorization', 'content-length', 'content-type', 'etag',
+      'expires', 'from', 'host', 'if-modified-since', 'if-unmodified-since',
+      'last-modified', 'location', 'max-forwards', 'proxy-authorization',
+      'referer', 'retry-after', 'user-agent'
+    ];
+
+    /**
+     * Parse headers into an object
+     *
+     * ```
+     * Date: Wed, 27 Aug 2014 08:58:49 GMT
+     * Content-Type: application/json
+     * Connection: keep-alive
+     * Transfer-Encoding: chunked
+     * ```
+     *
+     * @param {String} headers Headers needing to be parsed
+     * @returns {Object} Headers parsed into an object
+     */
+    var parseHeaders = function parseHeaders(headers) {
+      var parsed = {};
+      var key;
+      var val;
+      var i;
+
+      if (!headers) { return parsed; }
+
+      utils.forEach(headers.split('\n'), function parser(line) {
+        i = line.indexOf(':');
+        key = utils.trim(line.substr(0, i)).toLowerCase();
+        val = utils.trim(line.substr(i + 1));
+
+        if (key) {
+          if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
+            return;
+          }
+          if (key === 'set-cookie') {
+            parsed[key] = (parsed[key] ? parsed[key] : []).concat([val]);
+          } else {
+            parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+          }
+        }
+      });
+
+      return parsed;
+    };
+
+    var isURLSameOrigin = (
+      utils.isStandardBrowserEnv() ?
+
+      // Standard browser envs have full support of the APIs needed to test
+      // whether the request URL is of the same origin as current location.
+        (function standardBrowserEnv() {
+          var msie = /(msie|trident)/i.test(navigator.userAgent);
+          var urlParsingNode = document.createElement('a');
+          var originURL;
+
+          /**
+        * Parse a URL to discover it's components
+        *
+        * @param {String} url The URL to be parsed
+        * @returns {Object}
+        */
+          function resolveURL(url) {
+            var href = url;
+
+            if (msie) {
+            // IE needs attribute set twice to normalize properties
+              urlParsingNode.setAttribute('href', href);
+              href = urlParsingNode.href;
+            }
+
+            urlParsingNode.setAttribute('href', href);
+
+            // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+            return {
+              href: urlParsingNode.href,
+              protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+              host: urlParsingNode.host,
+              search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+              hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+              hostname: urlParsingNode.hostname,
+              port: urlParsingNode.port,
+              pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+                urlParsingNode.pathname :
+                '/' + urlParsingNode.pathname
+            };
+          }
+
+          originURL = resolveURL(window.location.href);
+
+          /**
+        * Determine if a URL shares the same origin as the current location
+        *
+        * @param {String} requestURL The URL to test
+        * @returns {boolean} True if URL shares the same origin, otherwise false
+        */
+          return function isURLSameOrigin(requestURL) {
+            var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+            return (parsed.protocol === originURL.protocol &&
+                parsed.host === originURL.host);
+          };
+        })() :
+
+      // Non standard browser envs (web workers, react-native) lack needed support.
+        (function nonStandardBrowserEnv() {
+          return function isURLSameOrigin() {
+            return true;
+          };
+        })()
+    );
+
+    var cookies = (
+      utils.isStandardBrowserEnv() ?
+
+      // Standard browser envs support document.cookie
+        (function standardBrowserEnv() {
+          return {
+            write: function write(name, value, expires, path, domain, secure) {
+              var cookie = [];
+              cookie.push(name + '=' + encodeURIComponent(value));
+
+              if (utils.isNumber(expires)) {
+                cookie.push('expires=' + new Date(expires).toGMTString());
+              }
+
+              if (utils.isString(path)) {
+                cookie.push('path=' + path);
+              }
+
+              if (utils.isString(domain)) {
+                cookie.push('domain=' + domain);
+              }
+
+              if (secure === true) {
+                cookie.push('secure');
+              }
+
+              document.cookie = cookie.join('; ');
+            },
+
+            read: function read(name) {
+              var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+              return (match ? decodeURIComponent(match[3]) : null);
+            },
+
+            remove: function remove(name) {
+              this.write(name, '', Date.now() - 86400000);
+            }
+          };
+        })() :
+
+      // Non standard browser env (web workers, react-native) lack needed support.
+        (function nonStandardBrowserEnv() {
+          return {
+            write: function write() {},
+            read: function read() { return null; },
+            remove: function remove() {}
+          };
+        })()
+    );
+
+    var xhr = function xhrAdapter(config) {
+      return new Promise(function dispatchXhrRequest(resolve, reject) {
+        var requestData = config.data;
+        var requestHeaders = config.headers;
+
+        if (utils.isFormData(requestData)) {
+          delete requestHeaders['Content-Type']; // Let the browser set it
+        }
+
+        var request = new XMLHttpRequest();
+
+        // HTTP basic authentication
+        if (config.auth) {
+          var username = config.auth.username || '';
+          var password = config.auth.password || '';
+          requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+        }
+
+        request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+
+        // Set the request timeout in MS
+        request.timeout = config.timeout;
+
+        // Listen for ready state
+        request.onreadystatechange = function handleLoad() {
+          if (!request || request.readyState !== 4) {
+            return;
+          }
+
+          // The request errored out and we didn't get a response, this will be
+          // handled by onerror instead
+          // With one exception: request that using file: protocol, most browsers
+          // will return status as 0 even though it's a successful request
+          if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+            return;
+          }
+
+          // Prepare the response
+          var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+          var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+          var response = {
+            data: responseData,
+            status: request.status,
+            statusText: request.statusText,
+            headers: responseHeaders,
+            config: config,
+            request: request
+          };
+
+          settle(resolve, reject, response);
+
+          // Clean up request
+          request = null;
+        };
+
+        // Handle browser request cancellation (as opposed to a manual cancellation)
+        request.onabort = function handleAbort() {
+          if (!request) {
+            return;
+          }
+
+          reject(createError('Request aborted', config, 'ECONNABORTED', request));
+
+          // Clean up request
+          request = null;
+        };
+
+        // Handle low level network errors
+        request.onerror = function handleError() {
+          // Real errors are hidden from us by the browser
+          // onerror should only fire if it's a network error
+          reject(createError('Network Error', config, null, request));
+
+          // Clean up request
+          request = null;
+        };
+
+        // Handle timeout
+        request.ontimeout = function handleTimeout() {
+          reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED',
+            request));
+
+          // Clean up request
+          request = null;
+        };
+
+        // Add xsrf header
+        // This is only done if running in a standard browser environment.
+        // Specifically not if we're in a web worker, or react-native.
+        if (utils.isStandardBrowserEnv()) {
+          var cookies$1 = cookies;
+
+          // Add xsrf header
+          var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+            cookies$1.read(config.xsrfCookieName) :
+            undefined;
+
+          if (xsrfValue) {
+            requestHeaders[config.xsrfHeaderName] = xsrfValue;
+          }
+        }
+
+        // Add headers to the request
+        if ('setRequestHeader' in request) {
+          utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+            if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+              // Remove Content-Type if data is undefined
+              delete requestHeaders[key];
+            } else {
+              // Otherwise add header to the request
+              request.setRequestHeader(key, val);
+            }
+          });
+        }
+
+        // Add withCredentials to request if needed
+        if (config.withCredentials) {
+          request.withCredentials = true;
+        }
+
+        // Add responseType to request if needed
+        if (config.responseType) {
+          try {
+            request.responseType = config.responseType;
+          } catch (e) {
+            // Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+            // But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+            if (config.responseType !== 'json') {
+              throw e;
+            }
+          }
+        }
+
+        // Handle progress if needed
+        if (typeof config.onDownloadProgress === 'function') {
+          request.addEventListener('progress', config.onDownloadProgress);
+        }
+
+        // Not all browsers support upload events
+        if (typeof config.onUploadProgress === 'function' && request.upload) {
+          request.upload.addEventListener('progress', config.onUploadProgress);
+        }
+
+        if (config.cancelToken) {
+          // Handle cancellation
+          config.cancelToken.promise.then(function onCanceled(cancel) {
+            if (!request) {
+              return;
+            }
+
+            request.abort();
+            reject(cancel);
+            // Clean up request
+            request = null;
+          });
+        }
+
+        if (requestData === undefined) {
+          requestData = null;
+        }
+
+        // Send the request
+        request.send(requestData);
+      });
+    };
+
+    var DEFAULT_CONTENT_TYPE = {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    };
+
+    function setContentTypeIfUnset(headers, value) {
+      if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+        headers['Content-Type'] = value;
+      }
+    }
+
+    function getDefaultAdapter() {
+      var adapter;
+      // Only Node.JS has a process variable that is of [[Class]] process
+      if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
+        // For node use HTTP adapter
+        adapter = xhr;
+      } else if (typeof XMLHttpRequest !== 'undefined') {
+        // For browsers use XHR adapter
+        adapter = xhr;
+      }
+      return adapter;
+    }
+
+    var defaults = {
+      adapter: getDefaultAdapter(),
+
+      transformRequest: [function transformRequest(data, headers) {
+        normalizeHeaderName(headers, 'Accept');
+        normalizeHeaderName(headers, 'Content-Type');
+        if (utils.isFormData(data) ||
+          utils.isArrayBuffer(data) ||
+          utils.isBuffer(data) ||
+          utils.isStream(data) ||
+          utils.isFile(data) ||
+          utils.isBlob(data)
+        ) {
+          return data;
+        }
+        if (utils.isArrayBufferView(data)) {
+          return data.buffer;
+        }
+        if (utils.isURLSearchParams(data)) {
+          setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+          return data.toString();
+        }
+        if (utils.isObject(data)) {
+          setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+          return JSON.stringify(data);
+        }
+        return data;
+      }],
+
+      transformResponse: [function transformResponse(data) {
+        /*eslint no-param-reassign:0*/
+        if (typeof data === 'string') {
+          try {
+            data = JSON.parse(data);
+          } catch (e) { /* Ignore */ }
+        }
+        return data;
+      }],
+
+      /**
+       * A timeout in milliseconds to abort a request. If set to 0 (default) a
+       * timeout is not created.
+       */
+      timeout: 0,
+
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+
+      maxContentLength: -1,
+
+      validateStatus: function validateStatus(status) {
+        return status >= 200 && status < 300;
+      }
+    };
+
+    defaults.headers = {
+      common: {
+        'Accept': 'application/json, text/plain, */*'
+      }
+    };
+
+    utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+      defaults.headers[method] = {};
+    });
+
+    utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+      defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+    });
+
+    var defaults_1 = defaults;
+
+    /**
+     * Determines whether the specified URL is absolute
+     *
+     * @param {string} url The URL to test
+     * @returns {boolean} True if the specified URL is absolute, otherwise false
+     */
+    var isAbsoluteURL = function isAbsoluteURL(url) {
+      // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+      // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+      // by any combination of letters, digits, plus, period, or hyphen.
+      return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+    };
+
+    /**
+     * Creates a new URL by combining the specified URLs
+     *
+     * @param {string} baseURL The base URL
+     * @param {string} relativeURL The relative URL
+     * @returns {string} The combined URL
+     */
+    var combineURLs = function combineURLs(baseURL, relativeURL) {
+      return relativeURL
+        ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
+        : baseURL;
+    };
+
+    /**
+     * Throws a `Cancel` if cancellation has been requested.
+     */
+    function throwIfCancellationRequested(config) {
+      if (config.cancelToken) {
+        config.cancelToken.throwIfRequested();
+      }
+    }
+
+    /**
+     * Dispatch a request to the server using the configured adapter.
+     *
+     * @param {object} config The config that is to be used for the request
+     * @returns {Promise} The Promise to be fulfilled
+     */
+    var dispatchRequest = function dispatchRequest(config) {
+      throwIfCancellationRequested(config);
+
+      // Support baseURL config
+      if (config.baseURL && !isAbsoluteURL(config.url)) {
+        config.url = combineURLs(config.baseURL, config.url);
+      }
+
+      // Ensure headers exist
+      config.headers = config.headers || {};
+
+      // Transform request data
+      config.data = transformData(
+        config.data,
+        config.headers,
+        config.transformRequest
+      );
+
+      // Flatten headers
+      config.headers = utils.merge(
+        config.headers.common || {},
+        config.headers[config.method] || {},
+        config.headers || {}
+      );
+
+      utils.forEach(
+        ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+        function cleanHeaderConfig(method) {
+          delete config.headers[method];
+        }
+      );
+
+      var adapter = config.adapter || defaults_1.adapter;
+
+      return adapter(config).then(function onAdapterResolution(response) {
+        throwIfCancellationRequested(config);
+
+        // Transform response data
+        response.data = transformData(
+          response.data,
+          response.headers,
+          config.transformResponse
+        );
+
+        return response;
+      }, function onAdapterRejection(reason) {
+        if (!isCancel(reason)) {
+          throwIfCancellationRequested(config);
+
+          // Transform response data
+          if (reason && reason.response) {
+            reason.response.data = transformData(
+              reason.response.data,
+              reason.response.headers,
+              config.transformResponse
+            );
+          }
+        }
+
+        return Promise.reject(reason);
+      });
+    };
+
+    /**
+     * Config-specific merge-function which creates a new config-object
+     * by merging two configuration objects together.
+     *
+     * @param {Object} config1
+     * @param {Object} config2
+     * @returns {Object} New object resulting from merging config2 to config1
+     */
+    var mergeConfig = function mergeConfig(config1, config2) {
+      // eslint-disable-next-line no-param-reassign
+      config2 = config2 || {};
+      var config = {};
+
+      utils.forEach(['url', 'method', 'params', 'data'], function valueFromConfig2(prop) {
+        if (typeof config2[prop] !== 'undefined') {
+          config[prop] = config2[prop];
+        }
+      });
+
+      utils.forEach(['headers', 'auth', 'proxy'], function mergeDeepProperties(prop) {
+        if (utils.isObject(config2[prop])) {
+          config[prop] = utils.deepMerge(config1[prop], config2[prop]);
+        } else if (typeof config2[prop] !== 'undefined') {
+          config[prop] = config2[prop];
+        } else if (utils.isObject(config1[prop])) {
+          config[prop] = utils.deepMerge(config1[prop]);
+        } else if (typeof config1[prop] !== 'undefined') {
+          config[prop] = config1[prop];
+        }
+      });
+
+      utils.forEach([
+        'baseURL', 'transformRequest', 'transformResponse', 'paramsSerializer',
+        'timeout', 'withCredentials', 'adapter', 'responseType', 'xsrfCookieName',
+        'xsrfHeaderName', 'onUploadProgress', 'onDownloadProgress', 'maxContentLength',
+        'validateStatus', 'maxRedirects', 'httpAgent', 'httpsAgent', 'cancelToken',
+        'socketPath'
+      ], function defaultToConfig2(prop) {
+        if (typeof config2[prop] !== 'undefined') {
+          config[prop] = config2[prop];
+        } else if (typeof config1[prop] !== 'undefined') {
+          config[prop] = config1[prop];
+        }
+      });
+
+      return config;
+    };
+
+    /**
+     * Create a new instance of Axios
+     *
+     * @param {Object} instanceConfig The default config for the instance
+     */
+    function Axios(instanceConfig) {
+      this.defaults = instanceConfig;
+      this.interceptors = {
+        request: new InterceptorManager_1(),
+        response: new InterceptorManager_1()
+      };
+    }
+
+    /**
+     * Dispatch a request
+     *
+     * @param {Object} config The config specific for this request (merged with this.defaults)
+     */
+    Axios.prototype.request = function request(config) {
+      /*eslint no-param-reassign:0*/
+      // Allow for axios('example/url'[, config]) a la fetch API
+      if (typeof config === 'string') {
+        config = arguments[1] || {};
+        config.url = arguments[0];
+      } else {
+        config = config || {};
+      }
+
+      config = mergeConfig(this.defaults, config);
+      config.method = config.method ? config.method.toLowerCase() : 'get';
+
+      // Hook up interceptors middleware
+      var chain = [dispatchRequest, undefined];
+      var promise = Promise.resolve(config);
+
+      this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+        chain.unshift(interceptor.fulfilled, interceptor.rejected);
+      });
+
+      this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+        chain.push(interceptor.fulfilled, interceptor.rejected);
+      });
+
+      while (chain.length) {
+        promise = promise.then(chain.shift(), chain.shift());
+      }
+
+      return promise;
+    };
+
+    Axios.prototype.getUri = function getUri(config) {
+      config = mergeConfig(this.defaults, config);
+      return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+    };
+
+    // Provide aliases for supported request methods
+    utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
+      /*eslint func-names:0*/
+      Axios.prototype[method] = function(url, config) {
+        return this.request(utils.merge(config || {}, {
+          method: method,
+          url: url
+        }));
+      };
+    });
+
+    utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+      /*eslint func-names:0*/
+      Axios.prototype[method] = function(url, data, config) {
+        return this.request(utils.merge(config || {}, {
+          method: method,
+          url: url,
+          data: data
+        }));
+      };
+    });
+
+    var Axios_1 = Axios;
+
+    /**
+     * A `Cancel` is an object that is thrown when an operation is canceled.
+     *
+     * @class
+     * @param {string=} message The message.
+     */
+    function Cancel(message) {
+      this.message = message;
+    }
+
+    Cancel.prototype.toString = function toString() {
+      return 'Cancel' + (this.message ? ': ' + this.message : '');
+    };
+
+    Cancel.prototype.__CANCEL__ = true;
+
+    var Cancel_1 = Cancel;
+
+    /**
+     * A `CancelToken` is an object that can be used to request cancellation of an operation.
+     *
+     * @class
+     * @param {Function} executor The executor function.
+     */
+    function CancelToken(executor) {
+      if (typeof executor !== 'function') {
+        throw new TypeError('executor must be a function.');
+      }
+
+      var resolvePromise;
+      this.promise = new Promise(function promiseExecutor(resolve) {
+        resolvePromise = resolve;
+      });
+
+      var token = this;
+      executor(function cancel(message) {
+        if (token.reason) {
+          // Cancellation has already been requested
+          return;
+        }
+
+        token.reason = new Cancel_1(message);
+        resolvePromise(token.reason);
+      });
+    }
+
+    /**
+     * Throws a `Cancel` if cancellation has been requested.
+     */
+    CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+      if (this.reason) {
+        throw this.reason;
+      }
+    };
+
+    /**
+     * Returns an object that contains a new `CancelToken` and a function that, when called,
+     * cancels the `CancelToken`.
+     */
+    CancelToken.source = function source() {
+      var cancel;
+      var token = new CancelToken(function executor(c) {
+        cancel = c;
+      });
+      return {
+        token: token,
+        cancel: cancel
+      };
+    };
+
+    var CancelToken_1 = CancelToken;
+
+    /**
+     * Syntactic sugar for invoking a function and expanding an array for arguments.
+     *
+     * Common use case would be to use `Function.prototype.apply`.
+     *
+     *  ```js
+     *  function f(x, y, z) {}
+     *  var args = [1, 2, 3];
+     *  f.apply(null, args);
+     *  ```
+     *
+     * With `spread` this example can be re-written.
+     *
+     *  ```js
+     *  spread(function(x, y, z) {})([1, 2, 3]);
+     *  ```
+     *
+     * @param {Function} callback
+     * @returns {Function}
+     */
+    var spread = function spread(callback) {
+      return function wrap(arr) {
+        return callback.apply(null, arr);
+      };
+    };
+
+    /**
+     * Create an instance of Axios
+     *
+     * @param {Object} defaultConfig The default config for the instance
+     * @return {Axios} A new instance of Axios
+     */
+    function createInstance(defaultConfig) {
+      var context = new Axios_1(defaultConfig);
+      var instance = bind(Axios_1.prototype.request, context);
+
+      // Copy axios.prototype to instance
+      utils.extend(instance, Axios_1.prototype, context);
+
+      // Copy context to instance
+      utils.extend(instance, context);
+
+      return instance;
+    }
+
+    // Create the default instance to be exported
+    var axios = createInstance(defaults_1);
+
+    // Expose Axios class to allow class inheritance
+    axios.Axios = Axios_1;
+
+    // Factory for creating new instances
+    axios.create = function create(instanceConfig) {
+      return createInstance(mergeConfig(axios.defaults, instanceConfig));
+    };
+
+    // Expose Cancel & CancelToken
+    axios.Cancel = Cancel_1;
+    axios.CancelToken = CancelToken_1;
+    axios.isCancel = isCancel;
+
+    // Expose all/spread
+    axios.all = function all(promises) {
+      return Promise.all(promises);
+    };
+    axios.spread = spread;
+
+    var axios_1 = axios;
+
+    // Allow use of default import syntax in TypeScript
+    var default_1 = axios;
+    axios_1.default = default_1;
+
+    var axios$1 = axios_1;
+
+    /* src\components\Header.svelte generated by Svelte v3.5.1 */
+
+    const file$1 = "src\\components\\Header.svelte";
+
+    // (14:2) <Link class="navbar-brand" to="/backoffice/projects">
+    function create_default_slot(ctx) {
+    	var img;
+
+    	return {
+    		c: function create() {
+    			img = element("img");
+    			img.className = "h-50px d-none d-sm-block";
+    			img.src = "./../public/imgs/esl.png";
+    			img.alt = "Logo ESL";
+    			add_location(img, file$1, 13, 55, 331);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, img, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(img);
+    			}
+    		}
+    	};
+    }
+
+    // (18:3) {:else}
+    function create_else_block$1(ctx) {
+    	var li, span, i, t;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			i = element("i");
+    			t = text(" Login");
+    			i.className = "fas fa-user";
+    			add_location(i, file$1, 18, 125, 791);
+    			span.className = "nav-link text-nowrap cursor-pointer";
+    			span.dataset.toggle = "modal";
+    			span.dataset.target = "#login-modal";
+    			add_location(span, file$1, 18, 28, 694);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 18, 7, 673);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    			append(span, i);
+    			append(span, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+    		}
+    	};
+    }
+
+    // (16:6) {#if is_logged_in}
+    function create_if_block$1(ctx) {
+    	var li, span, i, t, dispose;
+
+    	return {
+    		c: function create() {
+    			li = element("li");
+    			span = element("span");
+    			i = element("i");
+    			t = text(" Logout");
+    			i.className = "fas fa-user";
+    			add_location(i, file$1, 16, 107, 606);
+    			span.className = "nav-link text-nowrap cursor-pointer";
+    			add_location(span, file$1, 16, 28, 527);
+    			li.className = "nav-item";
+    			add_location(li, file$1, 16, 7, 506);
+    			dispose = listen(span, "click", ctx.handleLogoutClick);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, li, anchor);
+    			append(li, span);
+    			append(span, i);
+    			append(span, t);
+    		},
+
+    		p: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(li);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    function create_fragment$3(ctx) {
+    	var header, nav, t, ul, current;
+
+    	var link = new Link({
+    		props: {
+    		class: "navbar-brand",
+    		to: "/backoffice/projects",
+    		$$slots: { default: [create_default_slot] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	function select_block_type(ctx) {
+    		if (ctx.is_logged_in) return create_if_block$1;
+    		return create_else_block$1;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			header = element("header");
+    			nav = element("nav");
+    			link.$$.fragment.c();
+    			t = space();
+    			ul = element("ul");
+    			if_block.c();
+    			ul.className = "navbar-nav mr-2 ml-auto flex-row";
+    			add_location(ul, file$1, 14, 2, 426);
+    			nav.className = "navbar navbar-expand-xl navbar-dark bg-darker";
+    			add_location(nav, file$1, 12, 1, 215);
+    			header.className = "sticky-top";
+    			add_location(header, file$1, 11, 0, 185);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, header, anchor);
+    			append(header, nav);
+    			mount_component(link, nav, null);
+    			append(nav, t);
+    			append(nav, ul);
+    			if_block.m(ul, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var link_changes = {};
+    			if (changed.$$scope) link_changes.$$scope = { changed, ctx };
+    			link.$set(link_changes);
+
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(ul, null);
+    				}
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(header);
+    			}
+
+    			link.$destroy();
+
+    			if_block.d();
+    		}
+    	};
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { is_logged_in, logout } = $$props;
+
+        function handleLogoutClick() {
+            logout();
+        }
+
+    	const writable_props = ['is_logged_in', 'logout'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Header> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('logout' in $$props) $$invalidate('logout', logout = $$props.logout);
+    	};
+
+    	return { is_logged_in, logout, handleLogoutClick };
+    }
+
+    class Header extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, ["is_logged_in", "logout"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Header> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.logout === undefined && !('logout' in props)) {
+    			console.warn("<Header> was created without expected prop 'logout'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Header>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get logout() {
+    		throw new Error("<Header>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set logout(value) {
+    		throw new Error("<Header>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\LoginModal.svelte generated by Svelte v3.5.1 */
+
+    const file$2 = "src\\components\\LoginModal.svelte";
+
+    function create_fragment$4(ctx) {
+    	var div13, div12, div11, div0, h5, t1, button0, span, t3, div9, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, input1, t9, div10, button1, dispose;
+
+    	return {
+    		c: function create() {
+    			div13 = element("div");
+    			div12 = element("div");
+    			div11 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Login";
+    			t1 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t3 = space();
+    			div9 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div1.textContent = "Username";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div5.textContent = "Password";
+    			t8 = space();
+    			input1 = element("input");
+    			t9 = space();
+    			div10 = element("div");
+    			button1 = element("button");
+    			button1.textContent = "Login";
+    			h5.className = "modal-title";
+    			add_location(h5, file$2, 16, 38, 425);
+    			add_location(span, file$2, 17, 73, 534);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$2, 17, 16, 477);
+    			div0.className = "modal-header";
+    			add_location(div0, file$2, 16, 12, 399);
+    			div1.className = "input-group-text";
+    			add_location(div1, file$2, 23, 28, 793);
+    			div2.className = "input-group-prepend";
+    			add_location(div2, file$2, 22, 24, 730);
+    			input0.className = "form-control";
+    			attr(input0, "type", "text");
+    			input0.placeholder = "Username";
+    			input0.name = "username";
+    			add_location(input0, file$2, 25, 24, 895);
+    			div3.className = "input-group";
+    			add_location(div3, file$2, 21, 20, 679);
+    			div4.className = "form-group";
+    			add_location(div4, file$2, 20, 16, 633);
+    			div5.className = "input-group-text";
+    			add_location(div5, file$2, 30, 28, 1240);
+    			div6.className = "input-group-prepend";
+    			add_location(div6, file$2, 29, 24, 1177);
+    			input1.className = "form-control";
+    			attr(input1, "type", "password");
+    			input1.placeholder = "Password";
+    			input1.name = "password";
+    			add_location(input1, file$2, 32, 24, 1342);
+    			div7.className = "input-group";
+    			add_location(div7, file$2, 28, 20, 1126);
+    			div8.className = "form-group mb-0";
+    			add_location(div8, file$2, 27, 16, 1075);
+    			div9.className = "modal-body";
+    			add_location(div9, file$2, 19, 12, 591);
+    			button1.className = "btn btn-primary mr-auto w-25";
+    			add_location(button1, file$2, 36, 16, 1586);
+    			div10.className = "modal-footer";
+    			add_location(div10, file$2, 35, 12, 1542);
+    			div11.className = "modal-content";
+    			add_location(div11, file$2, 15, 8, 358);
+    			div12.className = "modal-dialog";
+    			attr(div12, "role", "document");
+    			add_location(div12, file$2, 14, 4, 306);
+    			div13.className = "modal fade";
+    			div13.id = "login-modal";
+    			div13.tabIndex = "-1";
+    			attr(div13, "role", "dialog");
+    			add_location(div13, file$2, 13, 0, 231);
+
+    			dispose = [
+    				listen(input0, "change", ctx.change_handler),
+    				listen(input1, "change", ctx.change_handler_1),
+    				listen(button1, "click", ctx.handleLoginClick)
+    			];
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div13, anchor);
+    			append(div13, div12);
+    			append(div12, div11);
+    			append(div11, div0);
+    			append(div0, h5);
+    			append(div0, t1);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div11, t3);
+    			append(div11, div9);
+    			append(div9, div4);
+    			append(div4, div3);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div3, t5);
+    			append(div3, input0);
+    			append(div9, t6);
+    			append(div9, div8);
+    			append(div8, div7);
+    			append(div7, div6);
+    			append(div6, div5);
+    			append(div7, t8);
+    			append(div7, input1);
+    			append(div11, t9);
+    			append(div11, div10);
+    			append(div10, button1);
+    		},
+
+    		p: noop,
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div13);
+    			}
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance$4($$self, $$props, $$invalidate) {
+    	let { login } = $$props;
+
+        let username = "";
+        let password= "";
+
+        function handleLoginClick(event) {
+            login(username, password);
+
+            window.$("#login-modal").modal("hide");
+        }
+
+    	const writable_props = ['login'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<LoginModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler(event) {
+    		const $$result = username = event.target.value;
+    		$$invalidate('username', username);
+    		return $$result;
+    	}
+
+    	function change_handler_1(event) {
+    		const $$result = password = event.target.value;
+    		$$invalidate('password', password);
+    		return $$result;
+    	}
+
+    	$$self.$set = $$props => {
+    		if ('login' in $$props) $$invalidate('login', login = $$props.login);
+    	};
+
+    	return {
+    		login,
+    		username,
+    		password,
+    		handleLoginClick,
+    		change_handler,
+    		change_handler_1
+    	};
+    }
+
+    class LoginModal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$4, create_fragment$4, safe_not_equal, ["login"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.login === undefined && !('login' in props)) {
+    			console.warn("<LoginModal> was created without expected prop 'login'");
+    		}
+    	}
+
+    	get login() {
+    		throw new Error("<LoginModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set login(value) {
+    		throw new Error("<LoginModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\BasicTable.svelte generated by Svelte v3.5.1 */
+
+    const file$3 = "src\\components\\BasicTable.svelte";
+
+    function get_each_context_2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.action = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context_1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.header = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.row = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.header = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (71:16) {#each table_headers as header, i}
+    function create_each_block_3(ctx) {
+    	var th, t_value = ctx.header.columnName, t, th_class_value;
+
+    	return {
+    		c: function create() {
+    			th = element("th");
+    			t = text(t_value);
+    			th.scope = "col";
+    			th.className = th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : '') + " svelte-r8msfx";
+    			add_location(th, file$3, 71, 20, 2128);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, th, anchor);
+    			append(th, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.table_headers) && t_value !== (t_value = ctx.header.columnName)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.table_headers) && th_class_value !== (th_class_value = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px " + (ctx.header.actions ? ' text-center' : '') + " svelte-r8msfx")) {
+    				th.className = th_class_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(th);
+    			}
+    		}
+    	};
+    }
+
+    // (94:28) {:else}
+    function create_else_block$2(ctx) {
+    	var td, t_value = ctx.row[ctx.header.key], t, td_class_value;
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+    			t = text(t_value);
+    			td.className = td_class_value = ctx.header.wrap ? 'wrap' : '';
+    			add_location(td, file$3, 94, 32, 3594);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+    			append(td, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.data || changed.table_headers) && t_value !== (t_value = ctx.row[ctx.header.key])) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.table_headers) && td_class_value !== (td_class_value = ctx.header.wrap ? 'wrap' : '')) {
+    				td.className = td_class_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+    		}
+    	};
+    }
+
+    // (88:28) {#if header.toggler}
+    function create_if_block_1$1(ctx) {
+    	var td, dispose;
+
+    	var if_block = (ctx.row[ctx.header.key] === 'true') && create_if_block_2();
+
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+    			if (if_block) if_block.c();
+    			td.className = "toggler cursor-pointer text-center svelte-r8msfx";
+    			add_location(td, file$3, 88, 32, 3219);
+    			dispose = listen(td, "click", click_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+    			if (if_block) if_block.m(td, null);
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if (ctx.row[ctx.header.key] === 'true') {
+    				if (!if_block) {
+    					if_block = create_if_block_2();
+    					if_block.c();
+    					if_block.m(td, null);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+
+    			if (if_block) if_block.d();
+    			dispose();
+    		}
+    	};
+    }
+
+    // (81:24) {#if header.actions}
+    function create_if_block$2(ctx) {
+    	var td, current;
+
+    	var each_value_2 = ctx.header.actions;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value_2.length; i += 1) {
+    		each_blocks[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			td = element("td");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			td.className = "text-center vertical-align-middle";
+    			add_location(td, file$3, 81, 28, 2752);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, td, anchor);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(td, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.table_headers || changed.data) {
+    				each_value_2 = ctx.header.actions;
+
+    				for (var i = 0; i < each_value_2.length; i += 1) {
+    					const child_ctx = get_each_context_2(ctx, each_value_2, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						each_blocks[i].i(1);
+    					} else {
+    						each_blocks[i] = create_each_block_2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].i(1);
+    						each_blocks[i].m(td, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i = 0; i < each_value_2.length; i += 1) each_blocks[i].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(td);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    // (90:32) {#if row[header.key] === 'true'}
+    function create_if_block_2(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-check";
+    			add_location(i, file$3, 90, 36, 3417);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (84:32) <Link to={`${action.link}${row[action.query_field]}`}>
+    function create_default_slot$1(ctx) {
+    	var i, i_class_value;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = i_class_value = "" + (`fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`) + " svelte-r8msfx";
+    			add_location(i, file$3, 83, 86, 2948);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.table_headers) && i_class_value !== (i_class_value = "" + (`fas ${ctx.action.icon} fa-fw cursor-pointer mr-1 text-light`) + " svelte-r8msfx")) {
+    				i.className = i_class_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (83:28) {#each header.actions as action}
+    function create_each_block_2(ctx) {
+    	var current;
+
+    	var link = new Link({
+    		props: {
+    		to: `${ctx.action.link}${ctx.row[ctx.action.query_field]}`,
+    		$$slots: { default: [create_default_slot$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			link.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(link, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var link_changes = {};
+    			if (changed.table_headers || changed.data) link_changes.to = `${ctx.action.link}${ctx.row[ctx.action.query_field]}`;
+    			if (changed.$$scope || changed.table_headers) link_changes.$$scope = { changed, ctx };
+    			link.$set(link_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			link.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (80:20) {#each table_headers as header, i}
+    function create_each_block_1(ctx) {
+    	var current_block_type_index, if_block, if_block_anchor, current;
+
+    	var if_block_creators = [
+    		create_if_block$2,
+    		create_if_block_1$1,
+    		create_else_block$2
+    	];
+
+    	var if_blocks = [];
+
+    	function select_block_type(ctx) {
+    		if (ctx.header.actions) return 0;
+    		if (ctx.header.toggler) return 1;
+    		return 2;
+    	}
+
+    	current_block_type_index = select_block_type(ctx);
+    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if_blocks[current_block_type_index].m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var previous_block_index = current_block_type_index;
+    			current_block_type_index = select_block_type(ctx);
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(changed, ctx);
+    			} else {
+    				group_outros();
+    				on_outro(() => {
+    					if_blocks[previous_block_index].d(1);
+    					if_blocks[previous_block_index] = null;
+    				});
+    				if_block.o(1);
+    				check_outros();
+
+    				if_block = if_blocks[current_block_type_index];
+    				if (!if_block) {
+    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    					if_block.c();
+    				}
+    				if_block.i(1);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if_blocks[current_block_type_index].d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (77:12) {#each data as row, i}
+    function create_each_block(ctx) {
+    	var tr, t, tr_class_value, current, dispose;
+
+    	var each_value_1 = ctx.table_headers;
+
+    	var each_blocks = [];
+
+    	for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
+    		each_blocks[i_1] = create_each_block_1(get_each_context_1(ctx, each_value_1, i_1));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	function click_handler_1(...args) {
+    		return ctx.click_handler_1(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].c();
+    			}
+
+    			t = space();
+    			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.row[ctx.selection_field]) === -1 ? 'table-row' : 'table-row bg-secondary';
+    			add_location(tr, file$3, 77, 16, 2430);
+    			dispose = listen(tr, "click", click_handler_1);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].m(tr, null);
+    			}
+
+    			append(tr, t);
+    			current = true;
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if (changed.table_headers || changed.data) {
+    				each_value_1 = ctx.table_headers;
+
+    				for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) {
+    					const child_ctx = get_each_context_1(ctx, each_value_1, i_1);
+
+    					if (each_blocks[i_1]) {
+    						each_blocks[i_1].p(changed, child_ctx);
+    						each_blocks[i_1].i(1);
+    					} else {
+    						each_blocks[i_1] = create_each_block_1(child_ctx);
+    						each_blocks[i_1].c();
+    						each_blocks[i_1].i(1);
+    						each_blocks[i_1].m(tr, t);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 1, 1);
+    				check_outros();
+    			}
+
+    			if ((!current || changed.selectedRows || changed.data || changed.selection_field) && tr_class_value !== (tr_class_value = ctx.selectedRows.indexOf(ctx.row[ctx.selection_field]) === -1 ? 'table-row' : 'table-row bg-secondary')) {
+    				tr.className = tr_class_value;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i_1 = 0; i_1 < each_value_1.length; i_1 += 1) each_blocks[i_1].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i_1 = 0; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			dispose();
+    		}
+    	};
+    }
+
+    function create_fragment$5(ctx) {
+    	var div, table_1, thead, tr, t, tbody, current;
+
+    	var each_value_3 = ctx.table_headers;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_3.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
+    	}
+
+    	var each_value = ctx.data;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table_1 = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t = space();
+    			tbody = element("tbody");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			tr.className = "table-headers";
+    			add_location(tr, file$3, 69, 12, 2028);
+    			add_location(thead, file$3, 68, 8, 2007);
+    			add_location(tbody, file$3, 75, 8, 2369);
+    			table_1.className = "table table-dark table-bordered table-scrollable table-hover nowrap m-0";
+    			add_location(table_1, file$3, 67, 4, 1910);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$3, 66, 0, 1854);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table_1);
+    			append(table_1, thead);
+    			append(thead, tr);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(tr, null);
+    			}
+
+    			append(table_1, t);
+    			append(table_1, tbody);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.table_headers) {
+    				each_value_3 = ctx.table_headers;
+
+    				for (var i = 0; i < each_value_3.length; i += 1) {
+    					const child_ctx = get_each_context_3(ctx, each_value_3, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_3(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(tr, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_3.length;
+    			}
+
+    			if (changed.selectedRows || changed.data || changed.selection_field || changed.table_headers) {
+    				each_value = ctx.data;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						each_blocks[i].i(1);
+    					} else {
+    						each_blocks[i] = create_each_block(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].i(1);
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i = 0; i < each_value.length; i += 1) each_blocks[i].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$5($$self, $$props, $$invalidate) {
+    	
+
+        let { getToken, table, table_headers, data, toggleRowSelect, selectedRows, selection_field, toggle_fields, onToggle } = $$props;
+
+        function handleToggleClick(row){
+            if (row.ID !== null){
+            	console.log("Hey");
+                axios$1.delete(`/api/delete/${table}`, {
+                    data: {
+                        rows: [row.ID]
+                    },
+                    headers: {
+                        Authorization: getToken()
+                    }
+                }).then(res => {
+                    onToggle();
+                }).catch(err =>{
+                    console.log(err.response);
+                });
+            } else {
+            	console.log("Bye");
+            	let data = {ID: null};
+            	console.log(toggle_fields);
+            	for(let i = 0; i < toggle_fields.length; i++) {
+            		console.log(toggle_fields[i].field);
+            	    data[toggle_fields[i].field] = row[toggle_fields[i].field];
+            	}
+            	console.log(data);
+
+                axios$1.post(`/api/insert/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+                    console.log(`Successfully added relation`);
+                    onToggle();
+                }).catch(err => {
+                    console.log(err.response);
+                });
+            }
+            console.log(row);
+        }
+
+        function handleRowClick(event, id) {
+        	if (!event.target.classList.contains("toggler") && !event.target.parentElement.classList.contains("toggler")) {
+                toggleRowSelect(id);
+        	}
+        	// event.currentTarget.classList.toggle("bg-secondary");
+        }
+
+    	const writable_props = ['getToken', 'table', 'table_headers', 'data', 'toggleRowSelect', 'selectedRows', 'selection_field', 'toggle_fields', 'onToggle'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicTable> was created with unknown prop '${key}'`);
+    	});
+
+    	function click_handler({ row }, event) {handleToggleClick(row);}
+
+    	function click_handler_1({ row }, event) {handleRowClick(event, row[selection_field]);}
+
+    	$$self.$set = $$props => {
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('table' in $$props) $$invalidate('table', table = $$props.table);
+    		if ('table_headers' in $$props) $$invalidate('table_headers', table_headers = $$props.table_headers);
+    		if ('data' in $$props) $$invalidate('data', data = $$props.data);
+    		if ('toggleRowSelect' in $$props) $$invalidate('toggleRowSelect', toggleRowSelect = $$props.toggleRowSelect);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    		if ('selection_field' in $$props) $$invalidate('selection_field', selection_field = $$props.selection_field);
+    		if ('toggle_fields' in $$props) $$invalidate('toggle_fields', toggle_fields = $$props.toggle_fields);
+    		if ('onToggle' in $$props) $$invalidate('onToggle', onToggle = $$props.onToggle);
+    	};
+
+    	return {
+    		getToken,
+    		table,
+    		table_headers,
+    		data,
+    		toggleRowSelect,
+    		selectedRows,
+    		selection_field,
+    		toggle_fields,
+    		onToggle,
+    		handleToggleClick,
+    		handleRowClick,
+    		click_handler,
+    		click_handler_1
+    	};
+    }
+
+    class BasicTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, ["getToken", "table", "table_headers", "data", "toggleRowSelect", "selectedRows", "selection_field", "toggle_fields", "onToggle"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.table === undefined && !('table' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'table'");
+    		}
+    		if (ctx.table_headers === undefined && !('table_headers' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'table_headers'");
+    		}
+    		if (ctx.data === undefined && !('data' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'data'");
+    		}
+    		if (ctx.toggleRowSelect === undefined && !('toggleRowSelect' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'toggleRowSelect'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'selectedRows'");
+    		}
+    		if (ctx.selection_field === undefined && !('selection_field' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'selection_field'");
+    		}
+    		if (ctx.toggle_fields === undefined && !('toggle_fields' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'toggle_fields'");
+    		}
+    		if (ctx.onToggle === undefined && !('onToggle' in props)) {
+    			console.warn("<BasicTable> was created without expected prop 'onToggle'");
+    		}
+    	}
+
+    	get getToken() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table_headers() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table_headers(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get data() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set data(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggleRowSelect() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggleRowSelect(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selection_field() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selection_field(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggle_fields() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggle_fields(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onToggle() {
+    		throw new Error("<BasicTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onToggle(value) {
+    		throw new Error("<BasicTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\BasicModal.svelte generated by Svelte v3.5.1 */
+
+    const file$4 = "src\\components\\BasicModal.svelte";
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.option = list[i];
+    	return child_ctx;
+    }
+
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.field = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (115:32) {:else}
+    function create_else_block_1(ctx) {
+    	var input, input_type_value, input_value_value, input_placeholder_value, dispose;
+
+    	function change_handler_2(...args) {
+    		return ctx.change_handler_2(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			input = element("input");
+    			input.className = "form-control";
+    			attr(input, "type", input_type_value = ctx.field.type);
+    			input.value = input_value_value = ctx.field.value;
+    			input.placeholder = input_placeholder_value = ctx.field.placeholder;
+    			add_location(input, file$4, 115, 36, 4085);
+    			dispose = listen(input, "change", change_handler_2);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, input, anchor);
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.fields) && input_type_value !== (input_type_value = ctx.field.type)) {
+    				attr(input, "type", input_type_value);
+    			}
+
+    			if ((changed.fields) && input_value_value !== (input_value_value = ctx.field.value)) {
+    				input.value = input_value_value;
+    			}
+
+    			if ((changed.fields) && input_placeholder_value !== (input_placeholder_value = ctx.field.placeholder)) {
+    				input.placeholder = input_placeholder_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(input);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (113:32) {#if field.type === "textarea"}
+    function create_if_block_3(ctx) {
+    	var textarea, textarea_placeholder_value, textarea_value_value, dispose;
+
+    	function change_handler_1(...args) {
+    		return ctx.change_handler_1(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			textarea = element("textarea");
+    			textarea.className = "form-control";
+    			textarea.placeholder = textarea_placeholder_value = ctx.field.placeholder;
+    			textarea.value = textarea_value_value = ctx.field.value;
+    			add_location(textarea, file$4, 113, 36, 3861);
+    			dispose = listen(textarea, "change", change_handler_1);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, textarea, anchor);
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((changed.fields) && textarea_placeholder_value !== (textarea_placeholder_value = ctx.field.placeholder)) {
+    				textarea.placeholder = textarea_placeholder_value;
+    			}
+
+    			if ((changed.fields) && textarea_value_value !== (textarea_value_value = ctx.field.value)) {
+    				textarea.value = textarea_value_value;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(textarea);
+    			}
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (99:28) {#if field.type === "select"}
+    function create_if_block$3(ctx) {
+    	var select, if_block_anchor, dispose;
+
+    	var if_block = (ctx.field.value === "") && create_if_block_2$1();
+
+    	var each_value_1 = ctx.field.options;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+    	}
+
+    	function change_handler(...args) {
+    		return ctx.change_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			select = element("select");
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			select.className = "form-control";
+    			add_location(select, file$4, 99, 32, 2870);
+    			dispose = listen(select, "change", change_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, select, anchor);
+    			if (if_block) if_block.m(select, null);
+    			append(select, if_block_anchor);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select, null);
+    			}
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if (ctx.field.value === "") {
+    				if (!if_block) {
+    					if_block = create_if_block_2$1();
+    					if_block.c();
+    					if_block.m(select, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (changed.fields) {
+    				each_value_1 = ctx.field.options;
+
+    				for (var i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block_1$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value_1.length;
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(select);
+    			}
+
+    			if (if_block) if_block.d();
+
+    			destroy_each(each_blocks, detaching);
+
+    			dispose();
+    		}
+    	};
+    }
+
+    // (101:36) {#if field.value === ""}
+    function create_if_block_2$1(ctx) {
+    	var option;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			option.textContent = "Choose an option";
+    			option.className = "d-none";
+    			option.__value = "null";
+    			option.value = option.__value;
+    			option.selected = true;
+    			option.disabled = true;
+    			add_location(option, file$4, 101, 40, 3061);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, option, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (107:40) {:else}
+    function create_else_block$3(ctx) {
+    	var option, t_value = ctx.option.display, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.option.value;
+    			option.value = option.__value;
+    			add_location(option, file$4, 107, 44, 3532);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.fields) && t_value !== (t_value = ctx.option.display)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.fields) && option_value_value !== (option_value_value = ctx.option.value)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (105:40) {#if field.value === option.value}
+    function create_if_block_1$2(ctx) {
+    	var option, t_value = ctx.option.display, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.option.value;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$4, 105, 44, 3374);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.fields) && t_value !== (t_value = ctx.option.display)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.fields) && option_value_value !== (option_value_value = ctx.option.value)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (104:36) {#each field.options as option}
+    function create_each_block_1$1(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type_1(ctx) {
+    		if (ctx.field.value === ctx.option.value) return create_if_block_1$2;
+    		return create_else_block$3;
+    	}
+
+    	var current_block_type = select_block_type_1(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target, anchor) {
+    			if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (93:16) {#each fields.fields as field, i}
+    function create_each_block$1(ctx) {
+    	var div3, div2, div1, div0, t0_value = ctx.field.display, t0, t1;
+
+    	function select_block_type(ctx) {
+    		if (ctx.field.type === "select") return create_if_block$3;
+    		if (ctx.field.type === "textarea") return create_if_block_3;
+    		return create_else_block_1;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			if_block.c();
+    			div0.className = "input-group-text w-100";
+    			add_location(div0, file$4, 96, 32, 2684);
+    			div1.className = "input-group-prepend w-25";
+    			add_location(div1, file$4, 95, 28, 2612);
+    			div2.className = "input-group";
+    			add_location(div2, file$4, 94, 24, 2557);
+    			div3.className = "form-group";
+    			add_location(div3, file$4, 93, 20, 2507);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div3, anchor);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div1, div0);
+    			append(div0, t0);
+    			append(div2, t1);
+    			if_block.m(div2, null);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.fields) && t0_value !== (t0_value = ctx.field.display)) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(div2, null);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div3);
+    			}
+
+    			if_block.d();
+    		}
+    	};
+    }
+
+    function create_fragment$6(ctx) {
+    	var div5, div4, div3, div0, h5, t0_value = ctx.mode === "add" ? "Add" : "Edit", t0, t1, t2, t3, button0, span, t5, div1, t6, div2, button1, t7_value = ctx.mode === "add" ? "Add" : "Edit", t7, button1_class_value, button1_id_value, div5_id_value, dispose;
+
+    	var each_value = ctx.fields.fields;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div5 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			t2 = text(ctx.table_title);
+    			t3 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t5 = space();
+    			div1 = element("div");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t6 = space();
+    			div2 = element("div");
+    			button1 = element("button");
+    			t7 = text(t7_value);
+    			h5.className = "modal-title";
+    			add_location(h5, file$4, 88, 16, 2202);
+    			add_location(span, file$4, 89, 73, 2353);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$4, 89, 16, 2296);
+    			div0.className = "modal-header";
+    			add_location(div0, file$4, 87, 12, 2158);
+    			div1.className = "modal-body";
+    			add_location(div1, file$4, 91, 12, 2410);
+    			button1.className = button1_class_value = "btn " + (ctx.mode === 'add' ? 'btn-success' : 'btn-info') + " w-100";
+    			button1.id = button1_id_value = `modal-${ctx.mode}-btn`;
+    			add_location(button1, file$4, 123, 16, 4480);
+    			div2.className = "modal-footer";
+    			add_location(div2, file$4, 122, 12, 4436);
+    			div3.className = "modal-content";
+    			add_location(div3, file$4, 86, 8, 2117);
+    			div4.className = "modal-dialog";
+    			attr(div4, "role", "document");
+    			add_location(div4, file$4, 85, 4, 2065);
+    			div5.className = "modal fade";
+    			div5.id = div5_id_value = `${ctx.mode}-modal`;
+    			div5.tabIndex = "-1";
+    			add_location(div5, file$4, 84, 0, 2000);
+    			dispose = listen(button1, "click", ctx.handleSubmit);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div5, anchor);
+    			append(div5, div4);
+    			append(div4, div3);
+    			append(div3, div0);
+    			append(div0, h5);
+    			append(h5, t0);
+    			append(h5, t1);
+    			append(h5, t2);
+    			append(div0, t3);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div3, t5);
+    			append(div3, div1);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(div1, null);
+    			}
+
+    			append(div3, t6);
+    			append(div3, div2);
+    			append(div2, button1);
+    			append(button1, t7);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.mode) && t0_value !== (t0_value = ctx.mode === "add" ? "Add" : "Edit")) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if (changed.table_title) {
+    				set_data(t2, ctx.table_title);
+    			}
+
+    			if (changed.fields) {
+    				each_value = ctx.fields.fields;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if ((changed.mode) && t7_value !== (t7_value = ctx.mode === "add" ? "Add" : "Edit")) {
+    				set_data(t7, t7_value);
+    			}
+
+    			if ((changed.mode) && button1_class_value !== (button1_class_value = "btn " + (ctx.mode === 'add' ? 'btn-success' : 'btn-info') + " w-100")) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((changed.mode) && button1_id_value !== (button1_id_value = `modal-${ctx.mode}-btn`)) {
+    				button1.id = button1_id_value;
+    			}
+
+    			if ((changed.mode) && div5_id_value !== (div5_id_value = `${ctx.mode}-modal`)) {
+    				div5.id = div5_id_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div5);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+
+    			dispose();
+    		}
+    	};
+    }
+
+    function instance$6($$self, $$props, $$invalidate) {
+    	
+
+        let { getToken, table, table_title, fields, isOpen, setIsOpen, onAdd, onEdit, mode } = $$props;
+
+        beforeUpdate(() => {
+        	$$invalidate('fields', fields);
+
+        	console.log("Hey before");
+        });
+
+        function add() {
+            console.log(`Attempting to add ${table}`);
+
+            let data = {ID: null};
+            for(let i = 0; i < fields.fields.length; i++) {
+                data[fields.fields[i].field] = fields.fields[i].value;
+            }
+            console.log(data);
+
+            axios$1.post(`/api/insert/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log(`Successfully added ${table_title}`);
+            	onAdd();
+            	close();
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function edit() {
+            console.log(`Attempting to add ${table}`);
+
+            let data = {ID: fields.ID};
+            for (let i = 0; i < fields.fields.length; i++) {
+                data[fields.fields[i].field] = fields.fields[i].value;
+            }
+            console.log(data);
+
+            axios$1.put(`/api/edit/${table}`, data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log(`Successfully edited ${table_title}`);
+            	onEdit();
+            	close();
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function handleSubmit(event) {
+            if (mode === "add") {
+            	add();
+            } else if(mode === "edit") {
+            	edit();
+            }
+        }
+
+        function close(){
+        	setIsOpen(false);
+            window.$(`#${mode}-modal`).modal('hide');
+        }
+
+        function open(){
+        	setIsOpen(true);
+            window.$(`#${mode}-modal`).modal('show');
+        }
+
+    	const writable_props = ['getToken', 'table', 'table_title', 'fields', 'isOpen', 'setIsOpen', 'onAdd', 'onEdit', 'mode'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<BasicModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
+    	function change_handler_1({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
+    	function change_handler_2({ field }, event) {field.value = event.target.value; $$invalidate('field', field);}
+
+    	$$self.$set = $$props => {
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('table' in $$props) $$invalidate('table', table = $$props.table);
+    		if ('table_title' in $$props) $$invalidate('table_title', table_title = $$props.table_title);
+    		if ('fields' in $$props) $$invalidate('fields', fields = $$props.fields);
+    		if ('isOpen' in $$props) $$invalidate('isOpen', isOpen = $$props.isOpen);
+    		if ('setIsOpen' in $$props) $$invalidate('setIsOpen', setIsOpen = $$props.setIsOpen);
+    		if ('onAdd' in $$props) $$invalidate('onAdd', onAdd = $$props.onAdd);
+    		if ('onEdit' in $$props) $$invalidate('onEdit', onEdit = $$props.onEdit);
+    		if ('mode' in $$props) $$invalidate('mode', mode = $$props.mode);
+    	};
+
+    	$$self.$$.update = ($$dirty = { isOpen: 1, setIsOpen: 1 }) => {
+    		if ($$dirty.isOpen || $$dirty.setIsOpen) { if (isOpen) {
+                    open();
+                    setIsOpen(false);
+                } }
+    	};
+
+    	return {
+    		getToken,
+    		table,
+    		table_title,
+    		fields,
+    		isOpen,
+    		setIsOpen,
+    		onAdd,
+    		onEdit,
+    		mode,
+    		handleSubmit,
+    		change_handler,
+    		change_handler_1,
+    		change_handler_2
+    	};
+    }
+
+    class BasicModal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$6, create_fragment$6, safe_not_equal, ["getToken", "table", "table_title", "fields", "isOpen", "setIsOpen", "onAdd", "onEdit", "mode"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.table === undefined && !('table' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'table'");
+    		}
+    		if (ctx.table_title === undefined && !('table_title' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'table_title'");
+    		}
+    		if (ctx.fields === undefined && !('fields' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'fields'");
+    		}
+    		if (ctx.isOpen === undefined && !('isOpen' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'isOpen'");
+    		}
+    		if (ctx.setIsOpen === undefined && !('setIsOpen' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'setIsOpen'");
+    		}
+    		if (ctx.onAdd === undefined && !('onAdd' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'onAdd'");
+    		}
+    		if (ctx.onEdit === undefined && !('onEdit' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'onEdit'");
+    		}
+    		if (ctx.mode === undefined && !('mode' in props)) {
+    			console.warn("<BasicModal> was created without expected prop 'mode'");
+    		}
+    	}
+
+    	get getToken() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get table_title() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set table_title(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get fields() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set fields(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setIsOpen() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set setIsOpen(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onAdd() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onAdd(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get onEdit() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set onEdit(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get mode() {
+    		throw new Error("<BasicModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mode(value) {
+    		throw new Error("<BasicModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\countries\Countries.svelte generated by Svelte v3.5.1 */
+
+    const file$5 = "src\\components\\countries\\Countries.svelte";
+
+    // (135:0) {#if is_logged_in}
+    function create_if_block$4(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "countries",
+    		table_title: "Countries",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getCountries
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "countries",
+    		table_title: "Countries",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getCountries
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		table_headers: ctx.table_headers,
+    		data: ctx.countries,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Countries";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$5, 139, 35, 4272);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$5, 139, 8, 4245);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$5, 141, 16, 4410);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$5, 142, 16, 4511);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$5, 143, 16, 4696);
+    			add_location(span1, file$5, 140, 12, 4386);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$5, 138, 8, 4150);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$5, 137, 4, 4031);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getCountries) basicmodal0_changes.onAdd = ctx.getCountries;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getCountries) basicmodal1_changes.onEdit = ctx.getCountries;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.countries) basictable_changes.data = ctx.countries;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$7(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$4(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$4(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$7($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let countries = [];
+        let table_headers = [
+            {columnName: '#', key: "ID"},
+            {columnName: "Country", key: "country"}
+        ];
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+            fields: [{
+        		field: "country",
+        		type: "text",
+        		display: "Country",
+        		placeholder: "eg. Portugal",
+        		value: ""
+            }]
+        };
+
+        let edit_modal_fields = {
+        	ID: null,
+            fields: [{
+        		field: "country",
+        		type: "text",
+        		display: "Country",
+        		placeholder: "eg. Portugal",
+        		value: ""
+            }]
+        };
+
+        // axios.defaults.withCredentials = true;
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/countries", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res =>{
+                    	$$invalidate('confirm_del', confirm_del = false);
+                        getCountries();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function getCountries() {
+        	console.log("Trying to fetch countries");
+            axios$1.get("/api/get/countries", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('countries', countries = res.data);
+                console.log(res.data);
+            });
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		for (let i = 0; i < countries.length; i++) {
+                    if (countries[i].ID === selectedRows[0]) {
+                        edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+                            edit_modal_fields.fields[j].value = countries[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                        }
+                    }
+                }
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Countries> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getCountries();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		countries,
+    		table_headers,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		getCountries,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Countries extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$7, create_fragment$7, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Countries> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Countries> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Countries>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Countries>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Countries>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Countries>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\projects\ProjectsTable.svelte generated by Svelte v3.5.1 */
+
+    const file$6 = "src\\components\\projects\\ProjectsTable.svelte";
+
+    function get_each_context$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.project = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (64:24) <Link to={`/backoffice/project_partners/${project.ID}`}>
+    function create_default_slot_1(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-school fa-fw cursor-pointer mr-1 text-light";
+    			add_location(i, file$6, 63, 80, 2923);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (65:24) <Link to={`/backoffice/mobilities/${project.ID}`}>
+    function create_default_slot$2(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-plane fa-fw cursor-pointer ml-1 text-light";
+    			add_location(i, file$6, 64, 74, 3072);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (51:12) {#each projects as project, i}
+    function create_each_block$2(ctx) {
+    	var tr, td0, t0_value = ctx.project.ID, t0, t1, td1, t2_value = ctx.project.projectCode, t2, t3, td2, t4_value = ctx.project.name, t4, t5, td3, input, input_name_value, input_id_value, t6, label, img, img_src_value, img_id_value, label_for_value, t7, td4, t8, t9, tr_class_value, current, dispose;
+
+    	function change_handler(...args) {
+    		return ctx.change_handler(ctx, ...args);
+    	}
+
+    	var link0 = new Link({
+    		props: {
+    		to: `/backoffice/project_partners/${ctx.project.ID}`,
+    		$$slots: { default: [create_default_slot_1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link1 = new Link({
+    		props: {
+    		to: `/backoffice/mobilities/${ctx.project.ID}`,
+    		$$slots: { default: [create_default_slot$2] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			input = element("input");
+    			t6 = space();
+    			label = element("label");
+    			img = element("img");
+    			t7 = space();
+    			td4 = element("td");
+    			link0.$$.fragment.c();
+    			t8 = space();
+    			link1.$$.fragment.c();
+    			t9 = space();
+    			add_location(td0, file$6, 53, 20, 2111);
+    			add_location(td1, file$6, 54, 20, 2154);
+    			add_location(td2, file$6, 55, 20, 2206);
+    			attr(input, "type", "file");
+    			input.className = "d-none";
+    			input.name = input_name_value = ctx.project.ID;
+    			input.id = input_id_value = `image-input-${ctx.project.ID}`;
+    			add_location(input, file$6, 57, 24, 2301);
+    			img.src = img_src_value = `/public/imgs/projects/${ctx.project.ID}.png`;
+    			img.id = img_id_value = `image-${ctx.project.ID}`;
+    			img.height = "50";
+    			img.alt = "Project Logo";
+    			add_location(img, file$6, 59, 28, 2599);
+    			label.htmlFor = label_for_value = `image-input-${ctx.project.ID}`;
+    			label.className = "project-logo cursor-pointer m-0 svelte-126gmv9";
+    			add_location(label, file$6, 58, 24, 2488);
+    			td3.className = "text-center";
+    			add_location(td3, file$6, 56, 20, 2251);
+    			td4.className = "text-center vertical-align-middle";
+    			add_location(td4, file$6, 62, 20, 2795);
+    			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.project.ID) === -1 ? 'table-row' : 'table-row bg-secondary';
+    			add_location(tr, file$6, 51, 16, 1919);
+
+    			dispose = [
+    				listen(input, "change", change_handler),
+    				listen(tr, "click", click_handler)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+    			append(tr, td0);
+    			append(td0, t0);
+    			append(tr, t1);
+    			append(tr, td1);
+    			append(td1, t2);
+    			append(tr, t3);
+    			append(tr, td2);
+    			append(td2, t4);
+    			append(tr, t5);
+    			append(tr, td3);
+    			append(td3, input);
+    			append(td3, t6);
+    			append(td3, label);
+    			append(label, img);
+    			append(tr, t7);
+    			append(tr, td4);
+    			mount_component(link0, td4, null);
+    			append(td4, t8);
+    			mount_component(link1, td4, null);
+    			append(tr, t9);
+    			current = true;
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((!current || changed.projects) && t0_value !== (t0_value = ctx.project.ID)) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if ((!current || changed.projects) && t2_value !== (t2_value = ctx.project.projectCode)) {
+    				set_data(t2, t2_value);
+    			}
+
+    			if ((!current || changed.projects) && t4_value !== (t4_value = ctx.project.name)) {
+    				set_data(t4, t4_value);
+    			}
+
+    			if ((!current || changed.projects) && input_name_value !== (input_name_value = ctx.project.ID)) {
+    				input.name = input_name_value;
+    			}
+
+    			if ((!current || changed.projects) && input_id_value !== (input_id_value = `image-input-${ctx.project.ID}`)) {
+    				input.id = input_id_value;
+    			}
+
+    			if ((!current || changed.projects) && img_src_value !== (img_src_value = `/public/imgs/projects/${ctx.project.ID}.png`)) {
+    				img.src = img_src_value;
+    			}
+
+    			if ((!current || changed.projects) && img_id_value !== (img_id_value = `image-${ctx.project.ID}`)) {
+    				img.id = img_id_value;
+    			}
+
+    			if ((!current || changed.projects) && label_for_value !== (label_for_value = `image-input-${ctx.project.ID}`)) {
+    				label.htmlFor = label_for_value;
+    			}
+
+    			var link0_changes = {};
+    			if (changed.projects) link0_changes.to = `/backoffice/project_partners/${ctx.project.ID}`;
+    			if (changed.$$scope) link0_changes.$$scope = { changed, ctx };
+    			link0.$set(link0_changes);
+
+    			var link1_changes = {};
+    			if (changed.projects) link1_changes.to = `/backoffice/mobilities/${ctx.project.ID}`;
+    			if (changed.$$scope) link1_changes.$$scope = { changed, ctx };
+    			link1.$set(link1_changes);
+
+    			if ((!current || changed.selectedRows || changed.projects) && tr_class_value !== (tr_class_value = ctx.selectedRows.indexOf(ctx.project.ID) === -1 ? 'table-row' : 'table-row bg-secondary')) {
+    				tr.className = tr_class_value;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link0.$$.fragment.i(local);
+
+    			link1.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link0.$$.fragment.o(local);
+    			link1.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			link0.$destroy();
+
+    			link1.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$8(ctx) {
+    	var div, table, thead, tr, th0, t1, th1, t3, th2, t5, th3, i, t6, th4, t8, tbody, current;
+
+    	var each_value = ctx.projects;
+
+    	var each_blocks = [];
+
+    	for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) {
+    		each_blocks[i_1] = create_each_block$2(get_each_context$2(ctx, each_value, i_1));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "#";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Project Code";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Name";
+    			t5 = space();
+    			th3 = element("th");
+    			i = element("i");
+    			t6 = space();
+    			th4 = element("th");
+    			th4.textContent = "Actions";
+    			t8 = space();
+    			tbody = element("tbody");
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].c();
+    			}
+    			th0.scope = "col";
+    			th0.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th0, file$6, 42, 16, 1093);
+    			th1.scope = "col";
+    			th1.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th1, file$6, 43, 16, 1223);
+    			th2.scope = "col";
+    			th2.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px";
+    			add_location(th2, file$6, 44, 16, 1364);
+    			i.className = "fas fa-images fa-fw";
+    			add_location(i, file$6, 45, 134, 1615);
+    			th3.scope = "col";
+    			th3.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center";
+    			add_location(th3, file$6, 45, 16, 1497);
+    			th4.scope = "col";
+    			th4.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-y-dark-1px text-center";
+    			add_location(th4, file$6, 46, 16, 1673);
+    			tr.className = "table-headers";
+    			add_location(tr, file$6, 41, 12, 1049);
+    			add_location(thead, file$6, 40, 8, 1028);
+    			add_location(tbody, file$6, 49, 8, 1850);
+    			table.className = "table table-dark table-bordered table-hover nowrap m-0";
+    			add_location(table, file$6, 39, 4, 948);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$6, 38, 0, 892);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table);
+    			append(table, thead);
+    			append(thead, tr);
+    			append(tr, th0);
+    			append(tr, t1);
+    			append(tr, th1);
+    			append(tr, t3);
+    			append(tr, th2);
+    			append(tr, t5);
+    			append(tr, th3);
+    			append(th3, i);
+    			append(tr, t6);
+    			append(tr, th4);
+    			append(table, t8);
+    			append(table, tbody);
+
+    			for (var i_1 = 0; i_1 < each_blocks.length; i_1 += 1) {
+    				each_blocks[i_1].m(tbody, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.selectedRows || changed.projects) {
+    				each_value = ctx.projects;
+
+    				for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i_1);
+
+    					if (each_blocks[i_1]) {
+    						each_blocks[i_1].p(changed, child_ctx);
+    						each_blocks[i_1].i(1);
+    					} else {
+    						each_blocks[i_1] = create_each_block$2(child_ctx);
+    						each_blocks[i_1].c();
+    						each_blocks[i_1].i(1);
+    						each_blocks[i_1].m(tbody, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i_1 = 0; i_1 < each_value.length; i_1 += 1) each_blocks[i_1].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i_1 = 0; i_1 < each_blocks.length; i_1 += 1) outro_block(i_1, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$8($$self, $$props, $$invalidate) {
+    	let { projects, toggleRowSelect, selectedRows, updateImage } = $$props;
+
+        function handleRowClick(event, id) {
+            toggleRowSelect(id);
+        }
+
+        function handleImageChange(file, id) {
+            updateImage(file, id).then(res => {
+            	let image_el = document.querySelector(`#image-${id}`);
+            	image_el.setAttribute("src", image_el.getAttribute("src") + "?time="+ new Date().getTime());
+            });
+        }
+
+    	const writable_props = ['projects', 'toggleRowSelect', 'selectedRows', 'updateImage'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<ProjectsTable> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler({ project }, event) {
+    		return handleImageChange(event.target.files[0], project.ID);
+    	}
+
+    	function click_handler({ project }, event) {handleRowClick(event, project.ID);}
+
+    	$$self.$set = $$props => {
+    		if ('projects' in $$props) $$invalidate('projects', projects = $$props.projects);
+    		if ('toggleRowSelect' in $$props) $$invalidate('toggleRowSelect', toggleRowSelect = $$props.toggleRowSelect);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    		if ('updateImage' in $$props) $$invalidate('updateImage', updateImage = $$props.updateImage);
+    	};
+
+    	return {
+    		projects,
+    		toggleRowSelect,
+    		selectedRows,
+    		updateImage,
+    		handleRowClick,
+    		handleImageChange,
+    		change_handler,
+    		click_handler
+    	};
+    }
+
+    class ProjectsTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$8, create_fragment$8, safe_not_equal, ["projects", "toggleRowSelect", "selectedRows", "updateImage"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.projects === undefined && !('projects' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'projects'");
+    		}
+    		if (ctx.toggleRowSelect === undefined && !('toggleRowSelect' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'toggleRowSelect'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'selectedRows'");
+    		}
+    		if (ctx.updateImage === undefined && !('updateImage' in props)) {
+    			console.warn("<ProjectsTable> was created without expected prop 'updateImage'");
+    		}
+    	}
+
+    	get projects() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set projects(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggleRowSelect() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggleRowSelect(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get updateImage() {
+    		throw new Error("<ProjectsTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set updateImage(value) {
+    		throw new Error("<ProjectsTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\projects\Projects.svelte generated by Svelte v3.5.1 */
+
+    const file$7 = "src\\components\\projects\\Projects.svelte";
+
+    // (173:0) {#if is_logged_in}
+    function create_if_block$5(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "projects",
+    		table_title: "Projects",
+    		fields: ctx.add_modal_fields,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getProjects
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "projects",
+    		table_title: "Projects",
+    		fields: ctx.edit_modal_fields,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getProjects
+    	},
+    		$$inline: true
+    	});
+
+    	var projectstable = new ProjectsTable({
+    		props: {
+    		projects: ctx.projects,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows,
+    		updateImage: ctx.updateImage
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Projects";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			projectstable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$7, 177, 35, 5284);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$7, 177, 8, 5257);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$7, 179, 16, 5421);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$7, 180, 16, 5522);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$7, 181, 16, 5709);
+    			add_location(span1, file$7, 178, 12, 5397);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$7, 176, 8, 5162);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$7, 175, 4, 5043);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(projectstable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getProjects) basicmodal0_changes.onAdd = ctx.getProjects;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getProjects) basicmodal1_changes.onEdit = ctx.getProjects;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var projectstable_changes = {};
+    			if (changed.projects) projectstable_changes.projects = ctx.projects;
+    			if (changed.toggleRowSelect) projectstable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) projectstable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.updateImage) projectstable_changes.updateImage = ctx.updateImage;
+    			projectstable.$set(projectstable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			projectstable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			projectstable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			projectstable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$9(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$5(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$5(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$9($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken } = $$props;
+
+        let projects = [];
+        let selectedRows = [];
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+        		field: "projectCode",
+        		type: "text",
+        		display: "Project Code",
+        		placeholder: "eg. KA+ 123456798",
+        		value: ""
+        	}, {
+        		field: "name",
+        		type: "text",
+        		display: "Name",
+        		placeholder: "eg. Trails2Education",
+        		value: ""
+        	}, {
+        		field: "description",
+        		type: "textarea",
+        		display: "Description",
+        		placeholder: "eg. This is a project description",
+        		value: ""
+        	}]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+        		field: "projectCode",
+        		type: "text",
+        		display: "Project Code",
+        		placeholder: "eg. KA+ 123456798",
+        		value: ""
+        	}, {
+        		field: "name",
+        		type: "text",
+        		display: "Name",
+        		placeholder: "eg. Trails2Education",
+        		value: ""
+        	}, {
+        		field: "description",
+        		type: "textarea",
+        		display: "Description",
+        		placeholder: "eg. This is a project description",
+        		value: ""
+        	}]
+        };
+
+        function getProjects() {
+        	console.log("Trying to fetch projects");
+            axios$1.get("/api/gettable.php?table=projects", {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('projects', projects = res.data);
+            });
+        }
+
+        function updateImage(image, id) {
+        	let form_data = new FormData();
+        	form_data.append(`${id}`, image);
+        	form_data.append("ID", id);
+
+        	return axios$1.put("/api/edit/project_logo", form_data, {headers: {Authorization: getToken()}}).then(function(res) {
+                console.log("Hello");
+                return res;
+        	}).catch(err => {
+        		console.log(err.response);
+        		return err;
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/projects", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                        $$invalidate('confirm_del', confirm_del = false);
+                        getProjects();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function setIsAddModalOpen(value){
+        	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+        	    add_modal_fields.fields[i].value = ""; $$invalidate('add_modal_fields', add_modal_fields);
+        	}
+
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < projects.length; i++) {
+                    if (projects[i].ID === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		            edit_modal_fields.fields[j].value = projects[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Projects> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getProjects();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		projects,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getProjects,
+    		updateImage,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Projects extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, ["is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Projects> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Projects> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Projects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Projects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Projects>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Projects>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\MobilitiesTable.svelte generated by Svelte v3.5.1 */
+
+    const file$8 = "src\\components\\mobilities\\MobilitiesTable.svelte";
+
+    function get_each_context$3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.mobility = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (36:24) <Link to={`/backoffice/mobility_teachers/${mobility.ID}`}>
+    function create_default_slot_1$1(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-chalkboard-teacher fa-fw cursor-pointer mr-1 text-light";
+    			i.title = "Teachers";
+    			add_location(i, file$8, 35, 82, 1982);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (37:24) <Link to={`/backoffice/mobility_students/${mobility.ID}`}>
+    function create_default_slot$3(ctx) {
+    	var i;
+
+    	return {
+    		c: function create() {
+    			i = element("i");
+    			i.className = "fas fa-user-graduate fa-fw cursor-pointer ml-1 text-light";
+    			i.title = "Students";
+    			add_location(i, file$8, 36, 82, 2165);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, i, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(i);
+    			}
+    		}
+    	};
+    }
+
+    // (27:12) {#each mobilities as mobility, i}
+    function create_each_block$3(ctx) {
+    	var tr, td0, t0_value = ctx.mobility.ID, t0, t1, td1, t2_value = ctx.mobility.origin, t2, t3, td2, t4_value = ctx.mobility.target, t4, t5, td3, t6_value = ctx.mobility.departureDate.slice(0, -14), t6, t7, td4, t8_value = ctx.mobility.arrivalDate.slice(0, -14), t8, t9, td5, t10, t11, tr_class_value, current, dispose;
+
+    	var link0 = new Link({
+    		props: {
+    		to: `/backoffice/mobility_teachers/${ctx.mobility.ID}`,
+    		$$slots: { default: [create_default_slot_1$1] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	var link1 = new Link({
+    		props: {
+    		to: `/backoffice/mobility_students/${ctx.mobility.ID}`,
+    		$$slots: { default: [create_default_slot$3] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	function click_handler(...args) {
+    		return ctx.click_handler(ctx, ...args);
+    	}
+
+    	return {
+    		c: function create() {
+    			tr = element("tr");
+    			td0 = element("td");
+    			t0 = text(t0_value);
+    			t1 = space();
+    			td1 = element("td");
+    			t2 = text(t2_value);
+    			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			td4 = element("td");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			td5 = element("td");
+    			link0.$$.fragment.c();
+    			t10 = space();
+    			link1.$$.fragment.c();
+    			t11 = space();
+    			add_location(td0, file$8, 29, 20, 1576);
+    			add_location(td1, file$8, 30, 20, 1620);
+    			add_location(td2, file$8, 31, 20, 1668);
+    			add_location(td3, file$8, 32, 20, 1716);
+    			add_location(td4, file$8, 33, 20, 1785);
+    			td5.className = "text-center vertical-align-middle";
+    			add_location(td5, file$8, 34, 20, 1852);
+    			tr.className = tr_class_value = ctx.selectedRows.indexOf(ctx.mobility.ID) === -1 ? 'table-row' : 'table-row bg-secondary';
+    			add_location(tr, file$8, 27, 16, 1382);
+    			dispose = listen(tr, "click", click_handler);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, tr, anchor);
+    			append(tr, td0);
+    			append(td0, t0);
+    			append(tr, t1);
+    			append(tr, td1);
+    			append(td1, t2);
+    			append(tr, t3);
+    			append(tr, td2);
+    			append(td2, t4);
+    			append(tr, t5);
+    			append(tr, td3);
+    			append(td3, t6);
+    			append(tr, t7);
+    			append(tr, td4);
+    			append(td4, t8);
+    			append(tr, t9);
+    			append(tr, td5);
+    			mount_component(link0, td5, null);
+    			append(td5, t10);
+    			mount_component(link1, td5, null);
+    			append(tr, t11);
+    			current = true;
+    		},
+
+    		p: function update(changed, new_ctx) {
+    			ctx = new_ctx;
+    			if ((!current || changed.mobilities) && t0_value !== (t0_value = ctx.mobility.ID)) {
+    				set_data(t0, t0_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t2_value !== (t2_value = ctx.mobility.origin)) {
+    				set_data(t2, t2_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t4_value !== (t4_value = ctx.mobility.target)) {
+    				set_data(t4, t4_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t6_value !== (t6_value = ctx.mobility.departureDate.slice(0, -14))) {
+    				set_data(t6, t6_value);
+    			}
+
+    			if ((!current || changed.mobilities) && t8_value !== (t8_value = ctx.mobility.arrivalDate.slice(0, -14))) {
+    				set_data(t8, t8_value);
+    			}
+
+    			var link0_changes = {};
+    			if (changed.mobilities) link0_changes.to = `/backoffice/mobility_teachers/${ctx.mobility.ID}`;
+    			if (changed.$$scope) link0_changes.$$scope = { changed, ctx };
+    			link0.$set(link0_changes);
+
+    			var link1_changes = {};
+    			if (changed.mobilities) link1_changes.to = `/backoffice/mobility_students/${ctx.mobility.ID}`;
+    			if (changed.$$scope) link1_changes.$$scope = { changed, ctx };
+    			link1.$set(link1_changes);
+
+    			if ((!current || changed.selectedRows || changed.mobilities) && tr_class_value !== (tr_class_value = ctx.selectedRows.indexOf(ctx.mobility.ID) === -1 ? 'table-row' : 'table-row bg-secondary')) {
+    				tr.className = tr_class_value;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			link0.$$.fragment.i(local);
+
+    			link1.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			link0.$$.fragment.o(local);
+    			link1.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(tr);
+    			}
+
+    			link0.$destroy();
+
+    			link1.$destroy();
+
+    			dispose();
+    		}
+    	};
+    }
+
+    function create_fragment$a(ctx) {
+    	var div, table, thead, tr, th0, t1, th1, t3, th2, t5, th3, t7, th4, t9, th5, t11, tbody, current;
+
+    	var each_value = ctx.mobilities;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
+    	}
+
+    	function outro_block(i, detaching, local) {
+    		if (each_blocks[i]) {
+    			if (detaching) {
+    				on_outro(() => {
+    					each_blocks[i].d(detaching);
+    					each_blocks[i] = null;
+    				});
+    			}
+
+    			each_blocks[i].o(local);
+    		}
+    	}
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			table = element("table");
+    			thead = element("thead");
+    			tr = element("tr");
+    			th0 = element("th");
+    			th0.textContent = "#";
+    			t1 = space();
+    			th1 = element("th");
+    			th1.textContent = "Origin";
+    			t3 = space();
+    			th2 = element("th");
+    			th2.textContent = "Destination";
+    			t5 = space();
+    			th3 = element("th");
+    			th3.textContent = "Departure";
+    			t7 = space();
+    			th4 = element("th");
+    			th4.textContent = "Arrival";
+    			t9 = space();
+    			th5 = element("th");
+    			th5.textContent = "Actions";
+    			t11 = space();
+    			tbody = element("tbody");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+    			th0.scope = "col";
+    			th0.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
+    			add_location(th0, file$8, 17, 16, 442);
+    			th1.scope = "col";
+    			th1.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
+    			add_location(th1, file$8, 18, 16, 570);
+    			th2.scope = "col";
+    			th2.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px";
+    			add_location(th2, file$8, 19, 16, 703);
+    			th3.scope = "col";
+    			th3.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
+    			add_location(th3, file$8, 20, 16, 841);
+    			th4.scope = "col";
+    			th4.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
+    			add_location(th4, file$8, 21, 16, 989);
+    			th5.scope = "col";
+    			th5.className = "position-sticky border-bottom-0 border-top-0 top-0px bg-darkest shadow-dark-1px text-center";
+    			add_location(th5, file$8, 22, 16, 1135);
+    			tr.className = "table-headers";
+    			add_location(tr, file$8, 16, 12, 398);
+    			add_location(thead, file$8, 15, 8, 377);
+    			add_location(tbody, file$8, 25, 8, 1310);
+    			table.className = "table table-dark table-bordered table-hover nowrap m-0";
+    			add_location(table, file$8, 14, 4, 297);
+    			div.className = "table-responsive rounded dark-scroll";
+    			add_location(div, file$8, 13, 0, 241);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, table);
+    			append(table, thead);
+    			append(thead, tr);
+    			append(tr, th0);
+    			append(tr, t1);
+    			append(tr, th1);
+    			append(tr, t3);
+    			append(tr, th2);
+    			append(tr, t5);
+    			append(tr, th3);
+    			append(tr, t7);
+    			append(tr, th4);
+    			append(tr, t9);
+    			append(tr, th5);
+    			append(table, t11);
+    			append(table, tbody);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(tbody, null);
+    			}
+
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.selectedRows || changed.mobilities) {
+    				each_value = ctx.mobilities;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$3(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    						each_blocks[i].i(1);
+    					} else {
+    						each_blocks[i] = create_each_block$3(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].i(1);
+    						each_blocks[i].m(tbody, null);
+    					}
+    				}
+
+    				group_outros();
+    				for (; i < each_blocks.length; i += 1) outro_block(i, 1, 1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			for (var i = 0; i < each_value.length; i += 1) each_blocks[i].i();
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			each_blocks = each_blocks.filter(Boolean);
+    			for (let i = 0; i < each_blocks.length; i += 1) outro_block(i, 0, 0);
+
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+    }
+
+    function instance$a($$self, $$props, $$invalidate) {
+    	let { mobilities, toggleRowSelect, selectedRows } = $$props;
+
+        function handleRowClick(event, id) {
+            toggleRowSelect(id);
+        }
+
+    	const writable_props = ['mobilities', 'toggleRowSelect', 'selectedRows'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobilitiesTable> was created with unknown prop '${key}'`);
+    	});
+
+    	function click_handler({ mobility }, event) {handleRowClick(event, mobility.ID);}
+
+    	$$self.$set = $$props => {
+    		if ('mobilities' in $$props) $$invalidate('mobilities', mobilities = $$props.mobilities);
+    		if ('toggleRowSelect' in $$props) $$invalidate('toggleRowSelect', toggleRowSelect = $$props.toggleRowSelect);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    	};
+
+    	return {
+    		mobilities,
+    		toggleRowSelect,
+    		selectedRows,
+    		handleRowClick,
+    		click_handler
+    	};
+    }
+
+    class MobilitiesTable extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$a, create_fragment$a, safe_not_equal, ["mobilities", "toggleRowSelect", "selectedRows"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.mobilities === undefined && !('mobilities' in props)) {
+    			console.warn("<MobilitiesTable> was created without expected prop 'mobilities'");
+    		}
+    		if (ctx.toggleRowSelect === undefined && !('toggleRowSelect' in props)) {
+    			console.warn("<MobilitiesTable> was created without expected prop 'toggleRowSelect'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<MobilitiesTable> was created without expected prop 'selectedRows'");
+    		}
+    	}
+
+    	get mobilities() {
+    		throw new Error("<MobilitiesTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mobilities(value) {
+    		throw new Error("<MobilitiesTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get toggleRowSelect() {
+    		throw new Error("<MobilitiesTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set toggleRowSelect(value) {
+    		throw new Error("<MobilitiesTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<MobilitiesTable>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<MobilitiesTable>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\AddMobilityModal.svelte generated by Svelte v3.5.1 */
+
+    const file$9 = "src\\components\\mobilities\\AddMobilityModal.svelte";
+
+    function get_each_context$4(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$2(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (107:28) {#if originPartner === 0}
+    function create_if_block_3$1(ctx) {
+    	var option;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			option.textContent = "Select Partner";
+    			option.__value = "0";
+    			option.value = option.__value;
+    			option.disabled = true;
+    			option.selected = true;
+    			option.className = "d-none";
+    			add_location(option, file$9, 107, 32, 3511);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (113:32) {:else}
+    function create_else_block_1$1(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$9, 113, 36, 3924);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (111:32) {#if originPartner === partner.ID}
+    function create_if_block_2$2(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$9, 111, 36, 3786);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (110:28) {#each partners as partner, i}
+    function create_each_block_1$2(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type(ctx) {
+    		if (ctx.originPartner === ctx.partner.ID) return create_if_block_2$2;
+    		return create_else_block_1$1;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			if_block.m(target_1, anchor);
+    			insert(target_1, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (134:28) {#if originPartner === 0}
+    function create_if_block_1$3(ctx) {
+    	var option;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			option.textContent = "Select Partner";
+    			option.__value = "0";
+    			option.value = option.__value;
+    			option.disabled = true;
+    			option.selected = true;
+    			option.className = "d-none";
+    			add_location(option, file$9, 134, 32, 5096);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (140:32) {:else}
+    function create_else_block$4(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$9, 140, 36, 5509);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (138:32) {#if targetPartner === partner.ID}
+    function create_if_block$6(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$9, 138, 36, 5371);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (137:28) {#each partners as partner, i}
+    function create_each_block$4(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type_1(ctx) {
+    		if (ctx.targetPartner === ctx.partner.ID) return create_if_block$6;
+    		return create_else_block$4;
+    	}
+
+    	var current_block_type = select_block_type_1(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			if_block.m(target_1, anchor);
+    			insert(target_1, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function create_fragment$b(ctx) {
+    	var div29, div28, div27, div0, h5, t1, button0, span, t3, div25, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, select0, if_block0_anchor, t9, div12, div11, div10, div9, t11, input1, t12, div16, div15, div14, div13, t14, select1, if_block1_anchor, t15, div20, div19, div18, div17, t17, input2, t18, div24, div23, div22, div21, t20, input3, div24_class_value, t21, div26, button1, dispose;
+
+    	var if_block0 = (ctx.originPartner === 0) && create_if_block_3$1();
+
+    	var each_value_1 = ctx.partners;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i));
+    	}
+
+    	var if_block1 = (ctx.originPartner === 0) && create_if_block_1$3();
+
+    	var each_value = ctx.partners;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div29 = element("div");
+    			div28 = element("div");
+    			div27 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Add Mobility";
+    			t1 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t3 = space();
+    			div25 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div1.textContent = "Origin";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div5.textContent = "Origin Partner";
+    			t8 = space();
+    			select0 = element("select");
+    			if (if_block0) if_block0.c();
+    			if_block0_anchor = empty();
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t9 = space();
+    			div12 = element("div");
+    			div11 = element("div");
+    			div10 = element("div");
+    			div9 = element("div");
+    			div9.textContent = "Target";
+    			t11 = space();
+    			input1 = element("input");
+    			t12 = space();
+    			div16 = element("div");
+    			div15 = element("div");
+    			div14 = element("div");
+    			div13 = element("div");
+    			div13.textContent = "Target Partner";
+    			t14 = space();
+    			select1 = element("select");
+    			if (if_block1) if_block1.c();
+    			if_block1_anchor = empty();
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t15 = space();
+    			div20 = element("div");
+    			div19 = element("div");
+    			div18 = element("div");
+    			div17 = element("div");
+    			div17.textContent = "Departure";
+    			t17 = space();
+    			input2 = element("input");
+    			t18 = space();
+    			div24 = element("div");
+    			div23 = element("div");
+    			div22 = element("div");
+    			div21 = element("div");
+    			div21.textContent = "Arrival";
+    			t20 = space();
+    			input3 = element("input");
+    			t21 = space();
+    			div26 = element("div");
+    			button1 = element("button");
+    			button1.textContent = "Add";
+    			h5.className = "modal-title";
+    			add_location(h5, file$9, 88, 16, 2355);
+    			add_location(span, file$9, 89, 73, 2471);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$9, 89, 16, 2414);
+    			div0.className = "modal-header";
+    			add_location(div0, file$9, 87, 12, 2311);
+    			div1.className = "input-group-text w-100";
+    			add_location(div1, file$9, 95, 28, 2735);
+    			div2.className = "input-group-prepend w-25";
+    			add_location(div2, file$9, 94, 24, 2667);
+    			input0.className = "form-control";
+    			attr(input0, "type", "text");
+    			input0.value = ctx.origin;
+    			input0.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input0, file$9, 97, 24, 2841);
+    			div3.className = "input-group";
+    			add_location(div3, file$9, 93, 20, 2616);
+    			div4.className = "form-group";
+    			add_location(div4, file$9, 92, 16, 2570);
+    			div5.className = "input-group-text w-100";
+    			add_location(div5, file$9, 103, 28, 3221);
+    			div6.className = "input-group-prepend w-25";
+    			add_location(div6, file$9, 102, 24, 3153);
+    			select0.className = "form-control";
+    			add_location(select0, file$9, 105, 24, 3335);
+    			div7.className = "input-group";
+    			add_location(div7, file$9, 101, 20, 3102);
+    			div8.className = "form-group";
+    			add_location(div8, file$9, 100, 16, 3056);
+    			div9.className = "input-group-text w-100";
+    			add_location(div9, file$9, 122, 28, 4320);
+    			div10.className = "input-group-prepend w-25";
+    			add_location(div10, file$9, 121, 24, 4252);
+    			input1.className = "form-control";
+    			attr(input1, "type", "text");
+    			input1.value = ctx.target;
+    			input1.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input1, file$9, 124, 24, 4426);
+    			div11.className = "input-group";
+    			add_location(div11, file$9, 120, 20, 4201);
+    			div12.className = "form-group";
+    			add_location(div12, file$9, 119, 16, 4155);
+    			div13.className = "input-group-text w-100";
+    			add_location(div13, file$9, 130, 28, 4806);
+    			div14.className = "input-group-prepend w-25";
+    			add_location(div14, file$9, 129, 24, 4738);
+    			select1.className = "form-control";
+    			add_location(select1, file$9, 132, 24, 4920);
+    			div15.className = "input-group";
+    			add_location(div15, file$9, 128, 20, 4687);
+    			div16.className = "form-group";
+    			add_location(div16, file$9, 127, 16, 4641);
+    			div17.className = "input-group-text w-100";
+    			add_location(div17, file$9, 149, 28, 5905);
+    			div18.className = "input-group-prepend w-25";
+    			add_location(div18, file$9, 148, 24, 5837);
+    			attr(input2, "type", "date");
+    			input2.className = "form-control";
+    			input2.value = ctx.departureDate;
+    			add_location(input2, file$9, 151, 24, 6014);
+    			div19.className = "input-group";
+    			add_location(div19, file$9, 147, 20, 5786);
+    			div20.className = "form-group";
+    			add_location(div20, file$9, 146, 16, 5740);
+    			div21.className = "input-group-text w-100";
+    			add_location(div21, file$9, 157, 28, 6411);
+    			div22.className = "input-group-prepend w-25";
+    			add_location(div22, file$9, 156, 24, 6343);
+    			attr(input3, "type", "date");
+    			input3.className = "form-control";
+    			input3.value = ctx.arrivalDate;
+    			add_location(input3, file$9, 159, 24, 6518);
+    			div23.className = "input-group";
+    			add_location(div23, file$9, 155, 20, 6292);
+    			div24.className = div24_class_value = `form-group ${ctx.projectID != null ? 'mb-0' : ''}`;
+    			add_location(div24, file$9, 154, 16, 6207);
+    			div25.className = "modal-body";
+    			add_location(div25, file$9, 91, 12, 2528);
+    			button1.className = "btn btn-success w-100";
+    			button1.id = "modal-add-btn";
+    			add_location(button1, file$9, 164, 16, 6767);
+    			div26.className = "modal-footer";
+    			add_location(div26, file$9, 163, 12, 6723);
+    			div27.className = "modal-content";
+    			add_location(div27, file$9, 86, 8, 2270);
+    			div28.className = "modal-dialog";
+    			attr(div28, "role", "document");
+    			add_location(div28, file$9, 85, 4, 2218);
+    			div29.className = "modal fade";
+    			div29.id = "add-modal";
+    			div29.tabIndex = "-1";
+    			add_location(div29, file$9, 84, 0, 2159);
+
+    			dispose = [
+    				listen(input0, "change", ctx.change_handler),
+    				listen(select0, "change", ctx.change_handler_1),
+    				listen(input1, "change", ctx.change_handler_2),
+    				listen(select1, "change", ctx.change_handler_3),
+    				listen(input2, "change", ctx.change_handler_4),
+    				listen(input3, "change", ctx.change_handler_5),
+    				listen(button1, "click", ctx.addMobility)
+    			];
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, div29, anchor);
+    			append(div29, div28);
+    			append(div28, div27);
+    			append(div27, div0);
+    			append(div0, h5);
+    			append(div0, t1);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div27, t3);
+    			append(div27, div25);
+    			append(div25, div4);
+    			append(div4, div3);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div3, t5);
+    			append(div3, input0);
+    			append(div25, t6);
+    			append(div25, div8);
+    			append(div8, div7);
+    			append(div7, div6);
+    			append(div6, div5);
+    			append(div7, t8);
+    			append(div7, select0);
+    			if (if_block0) if_block0.m(select0, null);
+    			append(select0, if_block0_anchor);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select0, null);
+    			}
+
+    			append(div25, t9);
+    			append(div25, div12);
+    			append(div12, div11);
+    			append(div11, div10);
+    			append(div10, div9);
+    			append(div11, t11);
+    			append(div11, input1);
+    			append(div25, t12);
+    			append(div25, div16);
+    			append(div16, div15);
+    			append(div15, div14);
+    			append(div14, div13);
+    			append(div15, t14);
+    			append(div15, select1);
+    			if (if_block1) if_block1.m(select1, null);
+    			append(select1, if_block1_anchor);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select1, null);
+    			}
+
+    			append(div25, t15);
+    			append(div25, div20);
+    			append(div20, div19);
+    			append(div19, div18);
+    			append(div18, div17);
+    			append(div19, t17);
+    			append(div19, input2);
+    			append(div25, t18);
+    			append(div25, div24);
+    			append(div24, div23);
+    			append(div23, div22);
+    			append(div22, div21);
+    			append(div23, t20);
+    			append(div23, input3);
+    			append(div27, t21);
+    			append(div27, div26);
+    			append(div26, button1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.origin) {
+    				input0.value = ctx.origin;
+    			}
+
+    			if (ctx.originPartner === 0) {
+    				if (!if_block0) {
+    					if_block0 = create_if_block_3$1();
+    					if_block0.c();
+    					if_block0.m(select0, if_block0_anchor);
+    				}
+    			} else if (if_block0) {
+    				if_block0.d(1);
+    				if_block0 = null;
+    			}
+
+    			if (changed.originPartner || changed.partners) {
+    				each_value_1 = ctx.partners;
+
+    				for (var i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$2(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$2(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (changed.target) {
+    				input1.value = ctx.target;
+    			}
+
+    			if (ctx.originPartner === 0) {
+    				if (!if_block1) {
+    					if_block1 = create_if_block_1$3();
+    					if_block1.c();
+    					if_block1.m(select1, if_block1_anchor);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+
+    			if (changed.targetPartner || changed.partners) {
+    				each_value = ctx.partners;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$4(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if (changed.departureDate) {
+    				input2.value = ctx.departureDate;
+    			}
+
+    			if (changed.arrivalDate) {
+    				input3.value = ctx.arrivalDate;
+    			}
+
+    			if ((changed.projectID) && div24_class_value !== (div24_class_value = `form-group ${ctx.projectID != null ? 'mb-0' : ''}`)) {
+    				div24.className = div24_class_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div29);
+    			}
+
+    			if (if_block0) if_block0.d();
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			if (if_block1) if_block1.d();
+
+    			destroy_each(each_blocks, detaching);
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance$b($$self, $$props, $$invalidate) {
+    	let { getMobilities, partners, getToken, projectID, isOpen, setIsOpen } = $$props;
+
+        let projects = [];
+
+        let origin = "";
+        let originPartner = 0;
+        let target = "";
+        let targetPartner = 0;
+        let departureDate = "";
+        let arrivalDate = "";
+        let project = 0;
+
+        function addMobility() {
+            console.log("Attempting to add mobility");
+            let data = {
+                ID: null,
+                origin: origin,
+                IDOriginPartner: originPartner,
+                target: target,
+                IDTargetPartner: targetPartner,
+                departureDate: departureDate,
+                arrivalDate: arrivalDate,
+                IDProject: projectID != null ? projectID : project
+            };
+            console.log(data);
+
+            axios$1.post("/api/insert/mobilities", data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log("Successfully added mobility");
+                getMobilities();
+            }).catch(err => {
+            	console.log(err.response);
+            });
+        }
+
+        function getProjects() {
+            console.log("Attempting to fetch projects");
+            axios$1.get("/api/get/projects", {headers: {Authorization: getToken()}}).then(res => {
+                projects = res.data;
+                console.log("Successfully fetched projects");
+            }).catch(err => {
+                console.log("There was an error fetching the projects");
+                console.log(err.response);
+            });
+        }
+
+        function open(){
+            $$invalidate('origin', origin = "");
+            $$invalidate('originPartner', originPartner = 0);
+            $$invalidate('target', target = "");
+            $$invalidate('targetPartner', targetPartner = 0);
+            $$invalidate('departureDate', departureDate = "");
+            $$invalidate('arrivalDate', arrivalDate = "");
+            project = 0;
+
+        	setIsOpen(true);
+            window.$("#add-modal").modal('show');
+        }
+
+        console.log(projectID);
+
+    	const writable_props = ['getMobilities', 'partners', 'getToken', 'projectID', 'isOpen', 'setIsOpen'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<AddMobilityModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler(event) {
+    		const $$result = origin = event.target.value;
+    		$$invalidate('origin', origin);
+    		return $$result;
+    	}
+
+    	function change_handler_1(event) {
+    		const $$result = originPartner = event.target.value;
+    		$$invalidate('originPartner', originPartner);
+    		return $$result;
+    	}
+
+    	function change_handler_2(event) {
+    		const $$result = target = event.target.value;
+    		$$invalidate('target', target);
+    		return $$result;
+    	}
+
+    	function change_handler_3(event) {
+    		const $$result = targetPartner = event.target.value;
+    		$$invalidate('targetPartner', targetPartner);
+    		return $$result;
+    	}
+
+    	function change_handler_4(event) {
+    		const $$result = departureDate = event.target.value;
+    		$$invalidate('departureDate', departureDate);
+    		return $$result;
+    	}
+
+    	function change_handler_5(event) {
+    		const $$result = arrivalDate = event.target.value;
+    		$$invalidate('arrivalDate', arrivalDate);
+    		return $$result;
+    	}
+
+    	$$self.$set = $$props => {
+    		if ('getMobilities' in $$props) $$invalidate('getMobilities', getMobilities = $$props.getMobilities);
+    		if ('partners' in $$props) $$invalidate('partners', partners = $$props.partners);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('projectID' in $$props) $$invalidate('projectID', projectID = $$props.projectID);
+    		if ('isOpen' in $$props) $$invalidate('isOpen', isOpen = $$props.isOpen);
+    		if ('setIsOpen' in $$props) $$invalidate('setIsOpen', setIsOpen = $$props.setIsOpen);
+    	};
+
+    	$$self.$$.update = ($$dirty = { isOpen: 1, projectID: 1, setIsOpen: 1 }) => {
+    		if ($$dirty.isOpen || $$dirty.projectID || $$dirty.setIsOpen) { if (isOpen) {
+                    if (projectID == null){
+                        getProjects();
+                    }
+            
+                    open();
+                    setIsOpen(false);
+                } }
+    	};
+
+    	return {
+    		getMobilities,
+    		partners,
+    		getToken,
+    		projectID,
+    		isOpen,
+    		setIsOpen,
+    		origin,
+    		originPartner,
+    		target,
+    		targetPartner,
+    		departureDate,
+    		arrivalDate,
+    		addMobility,
+    		change_handler,
+    		change_handler_1,
+    		change_handler_2,
+    		change_handler_3,
+    		change_handler_4,
+    		change_handler_5
+    	};
+    }
+
+    class AddMobilityModal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$b, create_fragment$b, safe_not_equal, ["getMobilities", "partners", "getToken", "projectID", "isOpen", "setIsOpen"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getMobilities === undefined && !('getMobilities' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'getMobilities'");
+    		}
+    		if (ctx.partners === undefined && !('partners' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'partners'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.projectID === undefined && !('projectID' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'projectID'");
+    		}
+    		if (ctx.isOpen === undefined && !('isOpen' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'isOpen'");
+    		}
+    		if (ctx.setIsOpen === undefined && !('setIsOpen' in props)) {
+    			console.warn("<AddMobilityModal> was created without expected prop 'setIsOpen'");
+    		}
+    	}
+
+    	get getMobilities() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getMobilities(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get partners() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set partners(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get projectID() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set projectID(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setIsOpen() {
+    		throw new Error("<AddMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set setIsOpen(value) {
+    		throw new Error("<AddMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\EditMobilityModal.svelte generated by Svelte v3.5.1 */
+
+    const file$a = "src\\components\\mobilities\\EditMobilityModal.svelte";
+
+    function get_each_context$5(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$3(ctx, list, i) {
+    	const child_ctx = Object.create(ctx);
+    	child_ctx.partner = list[i];
+    	child_ctx.i = i;
+    	return child_ctx;
+    }
+
+    // (106:36) {:else}
+    function create_else_block_1$2(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$a, 106, 40, 3758);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (104:36) {#if partner.ID === originPartner}
+    function create_if_block_1$4(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$a, 104, 40, 3612);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (103:32) {#each partners as partner, i}
+    function create_each_block_1$3(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type(ctx) {
+    		if (ctx.partner.ID === ctx.originPartner) return create_if_block_1$4;
+    		return create_else_block_1$2;
+    	}
+
+    	var current_block_type = select_block_type(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			if_block.m(target_1, anchor);
+    			insert(target_1, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    // (130:36) {:else}
+    function create_else_block$5(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			add_location(option, file$a, 130, 40, 5239);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (128:36) {#if partner.ID === targetPartner}
+    function create_if_block$7(ctx) {
+    	var option, t_value = ctx.partner.name, t, option_value_value;
+
+    	return {
+    		c: function create() {
+    			option = element("option");
+    			t = text(t_value);
+    			option.__value = option_value_value = ctx.partner.ID;
+    			option.value = option.__value;
+    			option.selected = true;
+    			add_location(option, file$a, 128, 40, 5093);
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, option, anchor);
+    			append(option, t);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if ((changed.partners) && t_value !== (t_value = ctx.partner.name)) {
+    				set_data(t, t_value);
+    			}
+
+    			if ((changed.partners) && option_value_value !== (option_value_value = ctx.partner.ID)) {
+    				option.__value = option_value_value;
+    			}
+
+    			option.value = option.__value;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(option);
+    			}
+    		}
+    	};
+    }
+
+    // (127:32) {#each partners as partner, i}
+    function create_each_block$5(ctx) {
+    	var if_block_anchor;
+
+    	function select_block_type_1(ctx) {
+    		if (ctx.partner.ID === ctx.targetPartner) return create_if_block$7;
+    		return create_else_block$5;
+    	}
+
+    	var current_block_type = select_block_type_1(ctx);
+    	var if_block = current_block_type(ctx);
+
+    	return {
+    		c: function create() {
+    			if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			if_block.m(target_1, anchor);
+    			insert(target_1, if_block_anchor, anchor);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (current_block_type === (current_block_type = select_block_type_1(ctx)) && if_block) {
+    				if_block.p(changed, ctx);
+    			} else {
+    				if_block.d(1);
+    				if_block = current_block_type(ctx);
+    				if (if_block) {
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			}
+    		},
+
+    		d: function destroy(detaching) {
+    			if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function create_fragment$c(ctx) {
+    	var div30, div29, div28, div0, h5, t1, button0, span, t3, div26, div25, div4, div3, div2, div1, t5, input0, t6, div8, div7, div6, div5, t8, select0, t9, div12, div11, div10, div9, t11, input1, t12, div16, div15, div14, div13, t14, select1, t15, div20, div19, div18, div17, t17, input2, input2_value_value, t18, div24, div23, div22, div21, t20, input3, input3_value_value, t21, div27, button1, dispose;
+
+    	var each_value_1 = ctx.partners;
+
+    	var each_blocks_1 = [];
+
+    	for (var i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks_1[i] = create_each_block_1$3(get_each_context_1$3(ctx, each_value_1, i));
+    	}
+
+    	var each_value = ctx.partners;
+
+    	var each_blocks = [];
+
+    	for (var i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
+    	}
+
+    	return {
+    		c: function create() {
+    			div30 = element("div");
+    			div29 = element("div");
+    			div28 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "Edit Project";
+    			t1 = space();
+    			button0 = element("button");
+    			span = element("span");
+    			span.textContent = "x";
+    			t3 = space();
+    			div26 = element("div");
+    			div25 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			div2 = element("div");
+    			div1 = element("div");
+    			div1.textContent = "Origin";
+    			t5 = space();
+    			input0 = element("input");
+    			t6 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div5 = element("div");
+    			div5.textContent = "Origin Partner";
+    			t8 = space();
+    			select0 = element("select");
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].c();
+    			}
+
+    			t9 = space();
+    			div12 = element("div");
+    			div11 = element("div");
+    			div10 = element("div");
+    			div9 = element("div");
+    			div9.textContent = "Target";
+    			t11 = space();
+    			input1 = element("input");
+    			t12 = space();
+    			div16 = element("div");
+    			div15 = element("div");
+    			div14 = element("div");
+    			div13 = element("div");
+    			div13.textContent = "Target Partner";
+    			t14 = space();
+    			select1 = element("select");
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t15 = space();
+    			div20 = element("div");
+    			div19 = element("div");
+    			div18 = element("div");
+    			div17 = element("div");
+    			div17.textContent = "Departure";
+    			t17 = space();
+    			input2 = element("input");
+    			t18 = space();
+    			div24 = element("div");
+    			div23 = element("div");
+    			div22 = element("div");
+    			div21 = element("div");
+    			div21.textContent = "Arrival";
+    			t20 = space();
+    			input3 = element("input");
+    			t21 = space();
+    			div27 = element("div");
+    			button1 = element("button");
+    			button1.textContent = "Edit";
+    			h5.className = "modal-title";
+    			add_location(h5, file$a, 83, 16, 2271);
+    			add_location(span, file$a, 84, 73, 2387);
+    			button0.className = "close";
+    			button0.type = "button";
+    			button0.dataset.dismiss = "modal";
+    			add_location(button0, file$a, 84, 16, 2330);
+    			div0.className = "modal-header";
+    			add_location(div0, file$a, 82, 12, 2227);
+    			div1.className = "input-group-text w-100";
+    			add_location(div1, file$a, 91, 32, 2709);
+    			div2.className = "input-group-prepend w-25";
+    			add_location(div2, file$a, 90, 28, 2637);
+    			input0.className = "form-control";
+    			attr(input0, "type", "text");
+    			input0.value = ctx.origin;
+    			input0.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input0, file$a, 93, 28, 2823);
+    			div3.className = "input-group";
+    			add_location(div3, file$a, 89, 24, 2582);
+    			div4.className = "form-group";
+    			add_location(div4, file$a, 88, 20, 2532);
+    			div5.className = "input-group-text w-100";
+    			add_location(div5, file$a, 99, 32, 3225);
+    			div6.className = "input-group-prepend w-25";
+    			add_location(div6, file$a, 98, 28, 3153);
+    			select0.className = "form-control";
+    			add_location(select0, file$a, 101, 28, 3347);
+    			div7.className = "input-group";
+    			add_location(div7, file$a, 97, 24, 3098);
+    			div8.className = "form-group";
+    			add_location(div8, file$a, 96, 20, 3048);
+    			div9.className = "input-group-text w-100";
+    			add_location(div9, file$a, 115, 32, 4190);
+    			div10.className = "input-group-prepend w-25";
+    			add_location(div10, file$a, 114, 28, 4118);
+    			input1.className = "form-control";
+    			attr(input1, "type", "text");
+    			input1.value = ctx.target;
+    			input1.placeholder = "eg. Sweden, Stockholm";
+    			add_location(input1, file$a, 117, 28, 4304);
+    			div11.className = "input-group";
+    			add_location(div11, file$a, 113, 24, 4063);
+    			div12.className = "form-group";
+    			add_location(div12, file$a, 112, 20, 4013);
+    			div13.className = "input-group-text w-100";
+    			add_location(div13, file$a, 123, 32, 4706);
+    			div14.className = "input-group-prepend w-25";
+    			add_location(div14, file$a, 122, 28, 4634);
+    			select1.className = "form-control";
+    			add_location(select1, file$a, 125, 28, 4828);
+    			div15.className = "input-group";
+    			add_location(div15, file$a, 121, 24, 4579);
+    			div16.className = "form-group";
+    			add_location(div16, file$a, 120, 20, 4529);
+    			div17.className = "input-group-text w-100";
+    			add_location(div17, file$a, 139, 32, 5671);
+    			div18.className = "input-group-prepend w-25";
+    			add_location(div18, file$a, 138, 28, 5599);
+    			attr(input2, "type", "date");
+    			input2.value = input2_value_value = ctx.departureDate.slice(0, -14);
+    			input2.className = "form-control";
+    			add_location(input2, file$a, 141, 28, 5788);
+    			div19.className = "input-group";
+    			add_location(div19, file$a, 137, 24, 5544);
+    			div20.className = "form-group";
+    			add_location(div20, file$a, 136, 20, 5494);
+    			div21.className = "input-group-text w-100";
+    			add_location(div21, file$a, 147, 32, 6189);
+    			div22.className = "input-group-prepend w-25";
+    			add_location(div22, file$a, 146, 28, 6117);
+    			attr(input3, "type", "date");
+    			input3.value = input3_value_value = ctx.arrivalDate.slice(0, -14);
+    			input3.className = "form-control";
+    			add_location(input3, file$a, 149, 28, 6304);
+    			div23.className = "input-group";
+    			add_location(div23, file$a, 145, 24, 6062);
+    			div24.className = "form-group mb-0";
+    			add_location(div24, file$a, 144, 20, 6007);
+    			div25.className = "modal-body";
+    			add_location(div25, file$a, 87, 16, 2486);
+    			div26.className = "modal-body";
+    			add_location(div26, file$a, 86, 12, 2444);
+    			button1.className = "btn btn-info w-100";
+    			add_location(button1, file$a, 155, 16, 6599);
+    			div27.className = "modal-footer";
+    			add_location(div27, file$a, 154, 12, 6555);
+    			div28.className = "modal-content";
+    			add_location(div28, file$a, 81, 8, 2186);
+    			div29.className = "modal-dialog";
+    			attr(div29, "role", "document");
+    			add_location(div29, file$a, 80, 4, 2134);
+    			div30.className = "modal fade";
+    			div30.id = "edit-modal";
+    			div30.tabIndex = "-1";
+    			add_location(div30, file$a, 79, 0, 2074);
+
+    			dispose = [
+    				listen(input0, "change", ctx.change_handler),
+    				listen(select0, "change", ctx.change_handler_1),
+    				listen(input1, "change", ctx.change_handler_2),
+    				listen(select1, "change", ctx.change_handler_3),
+    				listen(input2, "change", ctx.change_handler_4),
+    				listen(input3, "change", ctx.change_handler_5),
+    				listen(button1, "click", ctx.editMobility)
+    			];
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target_1, anchor) {
+    			insert(target_1, div30, anchor);
+    			append(div30, div29);
+    			append(div29, div28);
+    			append(div28, div0);
+    			append(div0, h5);
+    			append(div0, t1);
+    			append(div0, button0);
+    			append(button0, span);
+    			append(div28, t3);
+    			append(div28, div26);
+    			append(div26, div25);
+    			append(div25, div4);
+    			append(div4, div3);
+    			append(div3, div2);
+    			append(div2, div1);
+    			append(div3, t5);
+    			append(div3, input0);
+    			append(div25, t6);
+    			append(div25, div8);
+    			append(div8, div7);
+    			append(div7, div6);
+    			append(div6, div5);
+    			append(div7, t8);
+    			append(div7, select0);
+
+    			for (var i = 0; i < each_blocks_1.length; i += 1) {
+    				each_blocks_1[i].m(select0, null);
+    			}
+
+    			append(div25, t9);
+    			append(div25, div12);
+    			append(div12, div11);
+    			append(div11, div10);
+    			append(div10, div9);
+    			append(div11, t11);
+    			append(div11, input1);
+    			append(div25, t12);
+    			append(div25, div16);
+    			append(div16, div15);
+    			append(div15, div14);
+    			append(div14, div13);
+    			append(div15, t14);
+    			append(div15, select1);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(select1, null);
+    			}
+
+    			append(div25, t15);
+    			append(div25, div20);
+    			append(div20, div19);
+    			append(div19, div18);
+    			append(div18, div17);
+    			append(div19, t17);
+    			append(div19, input2);
+    			append(div25, t18);
+    			append(div25, div24);
+    			append(div24, div23);
+    			append(div23, div22);
+    			append(div22, div21);
+    			append(div23, t20);
+    			append(div23, input3);
+    			append(div28, t21);
+    			append(div28, div27);
+    			append(div27, button1);
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (changed.origin) {
+    				input0.value = ctx.origin;
+    			}
+
+    			if (changed.partners || changed.originPartner) {
+    				each_value_1 = ctx.partners;
+
+    				for (var i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$3(ctx, each_value_1, i);
+
+    					if (each_blocks_1[i]) {
+    						each_blocks_1[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks_1[i] = create_each_block_1$3(child_ctx);
+    						each_blocks_1[i].c();
+    						each_blocks_1[i].m(select0, null);
+    					}
+    				}
+
+    				for (; i < each_blocks_1.length; i += 1) {
+    					each_blocks_1[i].d(1);
+    				}
+    				each_blocks_1.length = each_value_1.length;
+    			}
+
+    			if (changed.target) {
+    				input1.value = ctx.target;
+    			}
+
+    			if (changed.partners || changed.targetPartner) {
+    				each_value = ctx.partners;
+
+    				for (var i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$5(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(changed, child_ctx);
+    					} else {
+    						each_blocks[i] = create_each_block$5(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(select1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if ((changed.departureDate) && input2_value_value !== (input2_value_value = ctx.departureDate.slice(0, -14))) {
+    				input2.value = input2_value_value;
+    			}
+
+    			if ((changed.arrivalDate) && input3_value_value !== (input3_value_value = ctx.arrivalDate.slice(0, -14))) {
+    				input3.value = input3_value_value;
+    			}
+    		},
+
+    		i: noop,
+    		o: noop,
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div30);
+    			}
+
+    			destroy_each(each_blocks_1, detaching);
+
+    			destroy_each(each_blocks, detaching);
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function instance$c($$self, $$props, $$invalidate) {
+    	let { getMobilities, getToken, mobilities, partners, selectedRows, isOpen, setIsOpen } = $$props;
+
+        let id = 0;
+        let origin = "";
+        let originPartner = 0;
+        let target = "";
+        let targetPartner = 0;
+        let departureDate = "";
+        let arrivalDate = "";
+        
+        function editMobility() {
+        	let data = {
+        		ID: id,
+        		origin: origin,
+        		IDOriginPartner: originPartner,
+        		target: target,
+        		IDTargetPartner: targetPartner,
+        		departureDate: departureDate,
+        		arrivalDate: arrivalDate
+        	};
+        	console.log(data);
+
+
+        	console.log("Trying to edit mobilities");
+            axios$1.put("/api/edit/mobilities", data, {headers: {Authorization: getToken()}}).then(res => {
+            	console.log("Successfully edited mobility");
+
+            	getMobilities();
+            	close();
+            }).catch(err => {
+            	console.log("There was an error editing the project");
+            });
+        }
+
+        function close(){
+        	setIsOpen(false);
+            window.$("#edit-modal").modal('hide');
+        }
+
+        function open(){
+        	setIsOpen(true);
+            window.$("#edit-modal").modal('show');
+        }
+
+    	const writable_props = ['getMobilities', 'getToken', 'mobilities', 'partners', 'selectedRows', 'isOpen', 'setIsOpen'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<EditMobilityModal> was created with unknown prop '${key}'`);
+    	});
+
+    	function change_handler(event) {
+    		const $$result = origin = event.target.value;
+    		$$invalidate('origin', origin), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_1(event) {
+    		const $$result = originPartner = event.target.value;
+    		$$invalidate('originPartner', originPartner), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_2(event) {
+    		const $$result = target = event.target.value;
+    		$$invalidate('target', target), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_3(event) {
+    		const $$result = targetPartner = event.target.value;
+    		$$invalidate('targetPartner', targetPartner), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_4(event) {
+    		const $$result = departureDate = event.target.value;
+    		$$invalidate('departureDate', departureDate), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('arrivalDate', arrivalDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	function change_handler_5(event) {
+    		const $$result = arrivalDate = event.target.value;
+    		$$invalidate('arrivalDate', arrivalDate), $$invalidate('isOpen', isOpen), $$invalidate('mobilities', mobilities), $$invalidate('selectedRows', selectedRows), $$invalidate('departureDate', departureDate), $$invalidate('setIsOpen', setIsOpen);
+    		return $$result;
+    	}
+
+    	$$self.$set = $$props => {
+    		if ('getMobilities' in $$props) $$invalidate('getMobilities', getMobilities = $$props.getMobilities);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('mobilities' in $$props) $$invalidate('mobilities', mobilities = $$props.mobilities);
+    		if ('partners' in $$props) $$invalidate('partners', partners = $$props.partners);
+    		if ('selectedRows' in $$props) $$invalidate('selectedRows', selectedRows = $$props.selectedRows);
+    		if ('isOpen' in $$props) $$invalidate('isOpen', isOpen = $$props.isOpen);
+    		if ('setIsOpen' in $$props) $$invalidate('setIsOpen', setIsOpen = $$props.setIsOpen);
+    	};
+
+    	$$self.$$.update = ($$dirty = { isOpen: 1, mobilities: 1, selectedRows: 1, departureDate: 1, arrivalDate: 1, setIsOpen: 1 }) => {
+    		if ($$dirty.isOpen || $$dirty.mobilities || $$dirty.selectedRows || $$dirty.departureDate || $$dirty.arrivalDate || $$dirty.setIsOpen) { if (isOpen) {
+                	open();
+            
+                	console.log(mobilities);
+                	console.log(selectedRows);
+            
+                	for(let i = 0; i < mobilities.length; i++) {
+                	    if(mobilities[i].ID === selectedRows[0]){
+                            id = selectedRows[0];
+                            $$invalidate('origin', origin = mobilities[i].origin);
+                            $$invalidate('originPartner', originPartner = mobilities[i].IDOriginPartner);
+                            $$invalidate('target', target = mobilities[i].target);
+                            $$invalidate('targetPartner', targetPartner = mobilities[i].IDTargetPartner);
+                            $$invalidate('departureDate', departureDate = mobilities[i].departureDate);
+                            $$invalidate('arrivalDate', arrivalDate = mobilities[i].arrivalDate);
+                            console.log("Hey");
+                            console.log(departureDate);
+                            console.log(arrivalDate);
+                	    }
+                	}
+            
+                	setIsOpen(false);
+                } }
+    	};
+
+    	return {
+    		getMobilities,
+    		getToken,
+    		mobilities,
+    		partners,
+    		selectedRows,
+    		isOpen,
+    		setIsOpen,
+    		origin,
+    		originPartner,
+    		target,
+    		targetPartner,
+    		departureDate,
+    		arrivalDate,
+    		editMobility,
+    		change_handler,
+    		change_handler_1,
+    		change_handler_2,
+    		change_handler_3,
+    		change_handler_4,
+    		change_handler_5
+    	};
+    }
+
+    class EditMobilityModal extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$c, create_fragment$c, safe_not_equal, ["getMobilities", "getToken", "mobilities", "partners", "selectedRows", "isOpen", "setIsOpen"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.getMobilities === undefined && !('getMobilities' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'getMobilities'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.mobilities === undefined && !('mobilities' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'mobilities'");
+    		}
+    		if (ctx.partners === undefined && !('partners' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'partners'");
+    		}
+    		if (ctx.selectedRows === undefined && !('selectedRows' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'selectedRows'");
+    		}
+    		if (ctx.isOpen === undefined && !('isOpen' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'isOpen'");
+    		}
+    		if (ctx.setIsOpen === undefined && !('setIsOpen' in props)) {
+    			console.warn("<EditMobilityModal> was created without expected prop 'setIsOpen'");
+    		}
+    	}
+
+    	get getMobilities() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getMobilities(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get mobilities() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set mobilities(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get partners() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set partners(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get selectedRows() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set selectedRows(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get isOpen() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set isOpen(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get setIsOpen() {
+    		throw new Error("<EditMobilityModal>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set setIsOpen(value) {
+    		throw new Error("<EditMobilityModal>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobilities\Mobilities.svelte generated by Svelte v3.5.1 */
+
+    const file$b = "src\\components\\mobilities\\Mobilities.svelte";
+
+    // (123:0) {#if is_logged_in}
+    function create_if_block$8(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, span1, button0, t5, button1, t6, button1_class_value, t7, button2, t8_value = ctx.confirm_del ? "Are you sure?" : "Delete", t8, button2_class_value, t9, current, dispose;
+
+    	var addmobilitymodal = new AddMobilityModal({
+    		props: {
+    		getMobilities: ctx.getMobilities,
+    		partners: ctx.partners,
+    		getToken: ctx.getToken,
+    		projectID: ctx.id,
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen
+    	},
+    		$$inline: true
+    	});
+
+    	var editmobilitymodal = new EditMobilityModal({
+    		props: {
+    		getMobilities: ctx.getMobilities,
+    		mobilities: ctx.mobilities,
+    		partners: ctx.partners,
+    		getToken: ctx.getToken,
+    		selectedRows: ctx.selectedRows,
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen
+    	},
+    		$$inline: true
+    	});
+
+    	var mobilitiestable = new MobilitiesTable({
+    		props: {
+    		mobilities: ctx.mobilities,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selectedRows: ctx.selectedRows
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			addmobilitymodal.$$.fragment.c();
+    			t0 = space();
+    			editmobilitymodal.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Mobilities";
+    			t3 = space();
+    			span1 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t5 = space();
+    			button1 = element("button");
+    			t6 = text("Edit");
+    			t7 = space();
+    			button2 = element("button");
+    			t8 = text(t8_value);
+    			t9 = space();
+    			mobilitiestable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$b, 127, 35, 4109);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$b, 127, 8, 4082);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$b, 129, 16, 4248);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$b, 130, 16, 4349);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$b, 131, 16, 4534);
+    			add_location(span1, file$b, 128, 12, 4224);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$b, 126, 8, 3987);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$b, 125, 4, 3868);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(addmobilitymodal, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(editmobilitymodal, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, span1);
+    			append(span1, button0);
+    			append(span1, t5);
+    			append(span1, button1);
+    			append(button1, t6);
+    			append(span1, t7);
+    			append(span1, button2);
+    			append(button2, t8);
+    			append(div0, t9);
+    			mount_component(mobilitiestable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var addmobilitymodal_changes = {};
+    			if (changed.getMobilities) addmobilitymodal_changes.getMobilities = ctx.getMobilities;
+    			if (changed.partners) addmobilitymodal_changes.partners = ctx.partners;
+    			if (changed.getToken) addmobilitymodal_changes.getToken = ctx.getToken;
+    			if (changed.id) addmobilitymodal_changes.projectID = ctx.id;
+    			if (changed.isAddModalOpen) addmobilitymodal_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) addmobilitymodal_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			addmobilitymodal.$set(addmobilitymodal_changes);
+
+    			var editmobilitymodal_changes = {};
+    			if (changed.getMobilities) editmobilitymodal_changes.getMobilities = ctx.getMobilities;
+    			if (changed.mobilities) editmobilitymodal_changes.mobilities = ctx.mobilities;
+    			if (changed.partners) editmobilitymodal_changes.partners = ctx.partners;
+    			if (changed.getToken) editmobilitymodal_changes.getToken = ctx.getToken;
+    			if (changed.selectedRows) editmobilitymodal_changes.selectedRows = ctx.selectedRows;
+    			if (changed.isEditModalOpen) editmobilitymodal_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) editmobilitymodal_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			editmobilitymodal.$set(editmobilitymodal_changes);
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t8_value !== (t8_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t8, t8_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var mobilitiestable_changes = {};
+    			if (changed.mobilities) mobilitiestable_changes.mobilities = ctx.mobilities;
+    			if (changed.toggleRowSelect) mobilitiestable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selectedRows) mobilitiestable_changes.selectedRows = ctx.selectedRows;
+    			mobilitiestable.$set(mobilitiestable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			addmobilitymodal.$$.fragment.i(local);
+
+    			editmobilitymodal.$$.fragment.i(local);
+
+    			mobilitiestable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			addmobilitymodal.$$.fragment.o(local);
+    			editmobilitymodal.$$.fragment.o(local);
+    			mobilitiestable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			addmobilitymodal.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			editmobilitymodal.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			mobilitiestable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$d(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$8(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$8(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    function instance$d($$self, $$props, $$invalidate) {
+    	
+
+        let { id, is_logged_in, getToken } = $$props;
+
+        let mobilities = [];
+        let partners = [];
+        let selectedRows = [];
+
+        let confirm_del = false;
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null){
+                if(table.contains(event.target)){
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if (!confirm_del) {
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    } else if(selectedRows.length > 0) {
+                    axios$1.delete("/api/delete/mobilities", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                        $$invalidate('confirm_del', confirm_del = false);
+                        $$invalidate('selectedRows', selectedRows = []);
+                        getMobilities();
+                    }).catch(err => {
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function getMobilities() {
+        	console.log("Attempting to fetch mobilities");
+            axios$1.get(`/api/get/mobilities${id != null ? `?IDProject=${id}` : ""}`, {headers: {Authorization: getToken()}}).then(function(res) {
+            	$$invalidate('mobilities', mobilities = res.data);
+            	console.log("Mobilities fetched successfully");
+            }).catch(err => {
+            	console.log("There was an error fetching the mobilities");
+            	console.log(err.response);
+            });
+        }
+
+        function getPartners() {
+        	console.log("Attempting to fetch partners");
+        	axios$1.get("/api/get/partners", {headers: {Authorization: getToken()}}).then(res => {
+        		$$invalidate('partners', partners = res.data);
+        		console.log("Successfully fetched partners");
+        	}).catch(err => {
+        		console.log("There was an error fetching the partners");
+        		console.log(err.response);
+        	});
+        }
+
+        function handleAddButtonClick(){
+        	if (partners.length === 0) {
+                getPartners();
+            }
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                if (partners.length === 0) {
+                    getPartners();
+                }
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+    	const writable_props = ['id', 'is_logged_in', 'getToken'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<Mobilities> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if (is_logged_in) {
+                	getMobilities();
+                } }
+    	};
+
+    	return {
+    		id,
+    		is_logged_in,
+    		getToken,
+    		mobilities,
+    		partners,
+    		selectedRows,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		handleDeleteClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		getMobilities,
+    		handleAddButtonClick,
+    		handleEditButtonClick
+    	};
+    }
+
+    class Mobilities extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$d, create_fragment$d, safe_not_equal, ["id", "is_logged_in", "getToken"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<Mobilities> was created without expected prop 'id'");
+    		}
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<Mobilities> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<Mobilities> was created without expected prop 'getToken'");
+    		}
+    	}
+
+    	get id() {
+    		throw new Error("<Mobilities>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<Mobilities>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<Mobilities>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<Mobilities>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<Mobilities>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<Mobilities>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobility_students\MobilityStudents.svelte generated by Svelte v3.5.1 */
+
+    const file$c = "src\\components\\mobility_students\\MobilityStudents.svelte";
+
+    // (231:0) {#if is_logged_in}
+    function create_if_block$9(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "students",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Students",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getMobilityStudents
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "students",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Students",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getMobilityStudents
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "mobilities_students",
+    		table_headers: ctx.table_headers,
+    		data: ctx.mobility_students,
+    		toggle_fields: ctx.toggle_fields,
+    		onToggle: ctx.getMobilityStudents,
+    		selectedRows: ctx.selectedRows,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selection_field: selection_field
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Mobility Students";
+    			t3 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t4 = text(ctx.mobility);
+    			t5 = space();
+    			span2 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t7 = space();
+    			button1 = element("button");
+    			t8 = text("Edit");
+    			t9 = space();
+    			button2 = element("button");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$c, 235, 39, 7251);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$c, 235, 12, 7224);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$c, 236, 39, 7400);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$c, 236, 12, 7373);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$c, 238, 16, 7539);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$c, 239, 16, 7640);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$c, 240, 16, 7825);
+    			add_location(span2, file$c, 237, 12, 7515);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$c, 234, 8, 7125);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$c, 233, 4, 7006);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t4);
+    			append(div0, t5);
+    			append(div0, span2);
+    			append(span2, button0);
+    			append(span2, t7);
+    			append(span2, button1);
+    			append(button1, t8);
+    			append(span2, t9);
+    			append(span2, button2);
+    			append(button2, t10);
+    			append(div0, t11);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getMobilityStudents) basicmodal0_changes.onAdd = ctx.getMobilityStudents;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getMobilityStudents) basicmodal1_changes.onEdit = ctx.getMobilityStudents;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if (!current || changed.mobility) {
+    				set_data(t4, ctx.mobility);
+    			}
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t10_value !== (t10_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t10, t10_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.getToken) basictable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.mobility_students) basictable_changes.data = ctx.mobility_students;
+    			if (changed.toggle_fields) basictable_changes.toggle_fields = ctx.toggle_fields;
+    			if (changed.getMobilityStudents) basictable_changes.onToggle = ctx.getMobilityStudents;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$e(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$9(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$9(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field = "IDStudent";
+
+    function instance$e($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let selectedRows = [];
+
+        let mobility_students = [];
+        let genders = [
+        	{
+        		display: "Male",
+        		value: "Male",
+        	},
+        	{
+        		display: "Female",
+        		value: "Female",
+        	}
+        ];
+
+        let mobility = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isParticipating", toggler: true},
+            {columnName: "Name", key: "name"},
+            {columnName: "Student #", key: "studentNumber"},
+            {columnName: "Age", key: "age"},
+            {columnName: "Gender", key: "gender"},
+            {columnName: "Email", key: "email"},
+        ];
+        let toggle_fields = [
+        	{field: "IDMobility"},
+        	{field: "IDStudent"}
+        ];
+
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+        		field: "studentNumber",
+        	    type: "text",
+        	    display: "Student #",
+        	    placeholder: "eg. a701617004",
+        	    value: ""
+            }, {
+        	    field: "name",
+        	    type: "text",
+        	    display: "Name",
+        	    placeholder: "eg. Vasco Raminhos",
+        	    value: ""
+            }, {
+        	    field: "birthday",
+        	    type: "date",
+        	    display: "Birthday",
+        	    placeholder: "",
+        	    value: ""
+            }, {
+        	    field: "gender",
+        	    type: "select",
+        	    display: "Gender",
+        	    placeholder: "Choose a gender",
+        	    value: "",
+        	    options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. student.email@gmail.com",
+                value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+        		field: "studentNumber",
+        	    type: "text",
+        	    display: "Student #",
+        	    placeholder: "eg. a701617004",
+        	    value: ""
+            }, {
+        	    field: "name",
+        	    type: "text",
+        	    display: "Name",
+        	    placeholder: "eg. Vasco Raminhos",
+        	    value: ""
+            }, {
+        	    field: "birthday",
+        	    type: "date",
+        	    display: "Birthday",
+        	    placeholder: "",
+        	    value: ""
+            }, {
+        	    field: "gender",
+        	    type: "select",
+        	    display: "Gender",
+        	    placeholder: "Choose a gender",
+        	    value: "",
+        	    options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. student.email@gmail.com",
+                value: ""
+            }]
+        };
+
+        function getMobilityStudents(){
+        	axios$1.get(`/api/get/mobility_students?IDMobility=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('mobility_students', mobility_students = res.data);
+        		for(let i = 0; i < mobility_students.length; i++) {
+                    let age = new Date(new Date() - new Date(mobility_students[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    mobility_students[i].age = age; $$invalidate('mobility_students', mobility_students);
+                    console.log(age);
+                }
+        		$$invalidate('mobility', mobility = res.data[0].mobility);
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+        	    add_modal_fields.fields[i].value = ""; $$invalidate('add_modal_fields', add_modal_fields);
+        	}
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < mobility_students.length; i++) {
+                    if (mobility_students[i][selection_field] === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = mobility_students[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(mobility_students[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = mobility_students[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/students", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                    	$$invalidate('selectedRows', selectedRows = []);
+                        getMobilityStudents();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobilityStudents> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getMobilityStudents();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		selectedRows,
+    		mobility_students,
+    		mobility,
+    		table_headers,
+    		toggle_fields,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getMobilityStudents,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick,
+    		handleDeleteClick
+    	};
+    }
+
+    class MobilityStudents extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$e, create_fragment$e, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<MobilityStudents> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<MobilityStudents> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<MobilityStudents> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<MobilityStudents>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<MobilityStudents>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<MobilityStudents>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<MobilityStudents>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<MobilityStudents>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<MobilityStudents>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\mobility_teachers\MobilityTeachers.svelte generated by Svelte v3.5.1 */
+
+    const file$d = "src\\components\\mobility_teachers\\MobilityTeachers.svelte";
+
+    // (231:0) {#if is_logged_in}
+    function create_if_block$a(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "teachers",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Teachers",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getMobilityTeachers
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "teachers",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Teachers",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getMobilityTeachers
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "mobilities_teachers",
+    		table_headers: ctx.table_headers,
+    		data: ctx.mobility_teachers,
+    		toggle_fields: ctx.toggle_fields,
+    		onToggle: ctx.getMobilityTeachers,
+    		selectedRows: ctx.selectedRows,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selection_field: selection_field$1
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Mobility Teachers";
+    			t3 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t4 = text(ctx.mobility);
+    			t5 = space();
+    			span2 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t7 = space();
+    			button1 = element("button");
+    			t8 = text("Edit");
+    			t9 = space();
+    			button2 = element("button");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$d, 235, 39, 7418);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$d, 235, 12, 7391);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$d, 236, 39, 7567);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$d, 236, 12, 7540);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$d, 238, 16, 7706);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$d, 239, 16, 7807);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$d, 240, 16, 7992);
+    			add_location(span2, file$d, 237, 12, 7682);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$d, 234, 8, 7292);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$d, 233, 4, 7173);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t4);
+    			append(div0, t5);
+    			append(div0, span2);
+    			append(span2, button0);
+    			append(span2, t7);
+    			append(span2, button1);
+    			append(button1, t8);
+    			append(span2, t9);
+    			append(span2, button2);
+    			append(button2, t10);
+    			append(div0, t11);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getMobilityTeachers) basicmodal0_changes.onAdd = ctx.getMobilityTeachers;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getMobilityTeachers) basicmodal1_changes.onEdit = ctx.getMobilityTeachers;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if (!current || changed.mobility) {
+    				set_data(t4, ctx.mobility);
+    			}
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t10_value !== (t10_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t10, t10_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.getToken) basictable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.mobility_teachers) basictable_changes.data = ctx.mobility_teachers;
+    			if (changed.toggle_fields) basictable_changes.toggle_fields = ctx.toggle_fields;
+    			if (changed.getMobilityTeachers) basictable_changes.onToggle = ctx.getMobilityTeachers;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$1;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$f(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$a(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$a(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field$1 = "IDTeacher";
+
+    function instance$f($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let selectedRows = [];
+
+        let mobility_teachers = [];
+        let genders = [
+            {
+                display: "Male",
+                value: "Male",
+            },
+            {
+                display: "Female",
+                value: "Female",
+            }
+        ];
+
+        let mobility = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isParticipating", toggler: true},
+            {columnName: "Name", key: "name"},
+            {columnName: "Teacher #", key: "teacherNumber"},
+            {columnName: 'Age', key: "age"},
+            {columnName: 'Gender', key: "gender"},
+            {columnName: 'Email', key: "email"}
+        ];
+        let toggle_fields = [
+        	{field: "IDMobility"},
+        	{field: "IDTeacher"}
+        ];
+
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+                field: "teacherNumber",
+                type: "text",
+                display: "Teacher #",
+                placeholder: "eg. p701617004",
+                value: ""
+            }, {
+                field: "name",
+                type: "text",
+                display: "Name",
+                placeholder: "eg. Duarte Duarte",
+                value: ""
+            }, {
+                field: "birthday",
+                type: "date",
+                display: "Birthday",
+                placeholder: "",
+                value: ""
+            }, {
+                field: "gender",
+                type: "select",
+                display: "Gender",
+                placeholder: "Choose a gender",
+                value: "",
+                options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. teacher.email@gmail.com",
+                value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+                field: "teacherNumber",
+                type: "text",
+                display: "Teacher #",
+                placeholder: "eg. p701617004",
+                value: ""
+            }, {
+                field: "name",
+                type: "text",
+                display: "Name",
+                placeholder: "eg. Duarte Duarte",
+                value: ""
+            }, {
+                field: "birthday",
+                type: "date",
+                display: "Birthday",
+                placeholder: "",
+                value: ""
+            }, {
+                field: "gender",
+                type: "select",
+                display: "Gender",
+                placeholder: "Choose a gender",
+                value: "",
+                options: genders
+            }, {
+                field: "email",
+                type: "email",
+                display: "Email",
+                placeholder: "eg. teacher.email@gmail.com",
+                value: ""
+            }]
+        };
+
+        function getMobilityTeachers(){
+        	axios$1.get(`/api/get/mobility_teachers?IDMobility=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('mobility_teachers', mobility_teachers = res.data);
+        		$$invalidate('mobility', mobility = res.data[0].mobility);
+        		for(let i = 0; i < mobility_teachers.length; i++) {
+                    let age = new Date(new Date() - new Date(mobility_teachers[i].birthday)).getFullYear() - 1970;
+                    if(isNaN(age)){
+                        age = 0;
+                    }
+                    mobility_teachers[i].age = age; $$invalidate('mobility_teachers', mobility_teachers);
+                    console.log(age);
+                }
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+        	    add_modal_fields.fields[i].value = ""; $$invalidate('add_modal_fields', add_modal_fields);
+        	}
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+                for (let i = 0; i < mobility_teachers.length; i++) {
+                    if (mobility_teachers[i][selection_field$1] === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = mobility_teachers[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(mobility_teachers[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = mobility_teachers[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/teachers", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                    	$$invalidate('selectedRows', selectedRows = []);
+                        getMobilityTeachers();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<MobilityTeachers> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getMobilityTeachers();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		selectedRows,
+    		mobility_teachers,
+    		mobility,
+    		table_headers,
+    		toggle_fields,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getMobilityTeachers,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick,
+    		handleDeleteClick
+    	};
+    }
+
+    class MobilityTeachers extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$f, create_fragment$f, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<MobilityTeachers> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<MobilityTeachers> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<MobilityTeachers> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<MobilityTeachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<MobilityTeachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<MobilityTeachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<MobilityTeachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<MobilityTeachers>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<MobilityTeachers>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\components\project_partners\ProjectPartners.svelte generated by Svelte v3.5.1 */
+
+    const file$e = "src\\components\\project_partners\\ProjectPartners.svelte";
+
+    // (208:0) {#if is_logged_in}
+    function create_if_block$b(ctx) {
+    	var t0, t1, div1, div0, h2, span0, t3, h3, span1, t4, t5, span2, button0, t7, button1, t8, button1_class_value, t9, button2, t10_value = ctx.confirm_del ? "Are you sure?" : "Delete", t10, button2_class_value, t11, current, dispose;
+
+    	var basicmodal0 = new BasicModal({
+    		props: {
+    		mode: "add",
+    		getToken: ctx.getToken,
+    		table: "partners",
+    		fields: ctx.add_modal_fields,
+    		table_title: "Partners",
+    		isOpen: ctx.isAddModalOpen,
+    		setIsOpen: ctx.setIsAddModalOpen,
+    		onAdd: ctx.getProjectPartners
+    	},
+    		$$inline: true
+    	});
+
+    	var basicmodal1 = new BasicModal({
+    		props: {
+    		mode: "edit",
+    		getToken: ctx.getToken,
+    		table: "partners",
+    		fields: ctx.edit_modal_fields,
+    		table_title: "Partners",
+    		isOpen: ctx.isEditModalOpen,
+    		setIsOpen: ctx.setIsEditModalOpen,
+    		onEdit: ctx.getProjectPartners
+    	},
+    		$$inline: true
+    	});
+
+    	var basictable = new BasicTable({
+    		props: {
+    		getToken: ctx.getToken,
+    		table: "partners_projects",
+    		table_headers: ctx.table_headers,
+    		data: ctx.project_partners,
+    		toggle_fields: ctx.toggle_fields,
+    		onToggle: ctx.getProjectPartners,
+    		selectedRows: ctx.selectedRows,
+    		toggleRowSelect: ctx.toggleRowSelect,
+    		selection_field: selection_field$2
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			basicmodal0.$$.fragment.c();
+    			t0 = space();
+    			basicmodal1.$$.fragment.c();
+    			t1 = space();
+    			div1 = element("div");
+    			div0 = element("div");
+    			h2 = element("h2");
+    			span0 = element("span");
+    			span0.textContent = "Project Partners";
+    			t3 = space();
+    			h3 = element("h3");
+    			span1 = element("span");
+    			t4 = text(ctx.project_name);
+    			t5 = space();
+    			span2 = element("span");
+    			button0 = element("button");
+    			button0.textContent = "Add +";
+    			t7 = space();
+    			button1 = element("button");
+    			t8 = text("Edit");
+    			t9 = space();
+    			button2 = element("button");
+    			t10 = text(t10_value);
+    			t11 = space();
+    			basictable.$$.fragment.c();
+    			span0.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span0, file$e, 212, 39, 6821);
+    			h2.className = "mb-3 text-dark";
+    			add_location(h2, file$e, 212, 12, 6794);
+    			span1.className = "border-bottom-3px border-top-3px border-dark px-2 d-inline-block";
+    			add_location(span1, file$e, 213, 39, 6969);
+    			h3.className = "mb-3 text-dark";
+    			add_location(h3, file$e, 213, 12, 6942);
+    			button0.className = "btn btn-success mb-2";
+    			add_location(button0, file$e, 215, 16, 7112);
+    			button1.className = button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2';
+    			button1.id = "edit-btn";
+    			add_location(button1, file$e, 216, 16, 7213);
+    			button2.className = button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`;
+    			button2.id = "delete-btn";
+    			add_location(button2, file$e, 217, 16, 7398);
+    			add_location(span2, file$e, 214, 12, 7088);
+    			div0.className = "container rounded p-4 bg-light shadow h-max-100 d-flex flex-flow-column";
+    			add_location(div0, file$e, 211, 8, 6695);
+    			div1.className = "p-5 position-absolute bottom-0px top-76px left-0px right-0px";
+    			add_location(div1, file$e, 210, 4, 6574);
+
+    			dispose = [
+    				listen(button0, "click", ctx.handleAddButtonClick),
+    				listen(button1, "click", ctx.handleEditButtonClick),
+    				listen(button2, "click", ctx.handleDeleteClick),
+    				listen(div1, "click", ctx.handleOutsideTableClick)
+    			];
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(basicmodal0, target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(basicmodal1, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div1, anchor);
+    			append(div1, div0);
+    			append(div0, h2);
+    			append(h2, span0);
+    			append(div0, t3);
+    			append(div0, h3);
+    			append(h3, span1);
+    			append(span1, t4);
+    			append(div0, t5);
+    			append(div0, span2);
+    			append(span2, button0);
+    			append(span2, t7);
+    			append(span2, button1);
+    			append(button1, t8);
+    			append(span2, t9);
+    			append(span2, button2);
+    			append(button2, t10);
+    			append(div0, t11);
+    			mount_component(basictable, div0, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var basicmodal0_changes = {};
+    			if (changed.getToken) basicmodal0_changes.getToken = ctx.getToken;
+    			if (changed.add_modal_fields) basicmodal0_changes.fields = ctx.add_modal_fields;
+    			if (changed.isAddModalOpen) basicmodal0_changes.isOpen = ctx.isAddModalOpen;
+    			if (changed.setIsAddModalOpen) basicmodal0_changes.setIsOpen = ctx.setIsAddModalOpen;
+    			if (changed.getProjectPartners) basicmodal0_changes.onAdd = ctx.getProjectPartners;
+    			basicmodal0.$set(basicmodal0_changes);
+
+    			var basicmodal1_changes = {};
+    			if (changed.getToken) basicmodal1_changes.getToken = ctx.getToken;
+    			if (changed.edit_modal_fields) basicmodal1_changes.fields = ctx.edit_modal_fields;
+    			if (changed.isEditModalOpen) basicmodal1_changes.isOpen = ctx.isEditModalOpen;
+    			if (changed.setIsEditModalOpen) basicmodal1_changes.setIsOpen = ctx.setIsEditModalOpen;
+    			if (changed.getProjectPartners) basicmodal1_changes.onEdit = ctx.getProjectPartners;
+    			basicmodal1.$set(basicmodal1_changes);
+
+    			if (!current || changed.project_name) {
+    				set_data(t4, ctx.project_name);
+    			}
+
+    			if ((!current || changed.selectedRows) && button1_class_value !== (button1_class_value = ctx.selectedRows.length !== 1 ? 'btn btn-info mb-2 mx-2 disabled' : 'btn btn-info mb-2 mx-2')) {
+    				button1.className = button1_class_value;
+    			}
+
+    			if ((!current || changed.confirm_del) && t10_value !== (t10_value = ctx.confirm_del ? "Are you sure?" : "Delete")) {
+    				set_data(t10, t10_value);
+    			}
+
+    			if ((!current || changed.selectedRows) && button2_class_value !== (button2_class_value = `btn btn-danger mb-2 ${ctx.selectedRows.length >= 1 ? '' : 'disabled'}`)) {
+    				button2.className = button2_class_value;
+    			}
+
+    			var basictable_changes = {};
+    			if (changed.getToken) basictable_changes.getToken = ctx.getToken;
+    			if (changed.table_headers) basictable_changes.table_headers = ctx.table_headers;
+    			if (changed.project_partners) basictable_changes.data = ctx.project_partners;
+    			if (changed.toggle_fields) basictable_changes.toggle_fields = ctx.toggle_fields;
+    			if (changed.getProjectPartners) basictable_changes.onToggle = ctx.getProjectPartners;
+    			if (changed.selectedRows) basictable_changes.selectedRows = ctx.selectedRows;
+    			if (changed.toggleRowSelect) basictable_changes.toggleRowSelect = ctx.toggleRowSelect;
+    			if (changed.selection_field) basictable_changes.selection_field = selection_field$2;
+    			basictable.$set(basictable_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			basicmodal0.$$.fragment.i(local);
+
+    			basicmodal1.$$.fragment.i(local);
+
+    			basictable.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			basicmodal0.$$.fragment.o(local);
+    			basicmodal1.$$.fragment.o(local);
+    			basictable.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			basicmodal0.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			basicmodal1.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div1);
+    			}
+
+    			basictable.$destroy();
+
+    			run_all(dispose);
+    		}
+    	};
+    }
+
+    function create_fragment$g(ctx) {
+    	var if_block_anchor, current;
+
+    	var if_block = (ctx.is_logged_in) && create_if_block$b(ctx);
+
+    	return {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (ctx.is_logged_in) {
+    				if (if_block) {
+    					if_block.p(changed, ctx);
+    					if_block.i(1);
+    				} else {
+    					if_block = create_if_block$b(ctx);
+    					if_block.c();
+    					if_block.i(1);
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block.d(1);
+    					if_block = null;
+    				});
+
+    				if_block.o(1);
+    				check_outros();
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block) if_block.i();
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block) if_block.o();
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+
+    			if (detaching) {
+    				detach(if_block_anchor);
+    			}
+    		}
+    	};
+    }
+
+    let selection_field$2 = "IDPartner";
+
+    function instance$g($$self, $$props, $$invalidate) {
+    	
+
+        let { is_logged_in, getToken, id } = $$props;
+
+        let selectedRows = [];
+
+        let project_partners = [];
+        let countries = [];
+        let project_name = "";
+
+        let table_headers = [
+            {columnName: ' ', key: "isPartner", toggler: true},
+            {columnName: 'Name', key: "name"},
+            {columnName: "Country", key: "country"},
+        ];
+        let toggle_fields = [
+        	{field: "IDPartner"},
+        	{field: "IDProject"}
+        ];
+
+
+        let confirm_del = false;
+
+        let isAddModalOpen = false;
+        let isEditModalOpen = false;
+
+        let add_modal_fields = {
+        	fields: [{
+            	field: "name",
+            	type: "text",
+            	display: "Name",
+            	placeholder: "eg. Escola Secundária de Loulé",
+            	value: ""
+            }, {
+            	field: "IDCountry",
+            	type: "select",
+            	display: "Country",
+            	placeholder: "Choose a country",
+            	value: "",
+            	options: countries
+            }, {
+            	field: "description",
+            	type: "textarea",
+            	display: "Description",
+            	placeholder: "eg. This is a school based in...",
+            	value: ""
+            }]
+        };
+        let edit_modal_fields = {
+        	ID: null,
+        	fields: [{
+            	field: "name",
+            	type: "text",
+            	display: "Name",
+            	placeholder: "eg. Escola Secundária de Loulé",
+            	value: ""
+            }, {
+            	field: "IDCountry",
+            	type: "select",
+            	display: "Country",
+            	placeholder: "Choose a country",
+            	value: "",
+            	options: countries
+            }, {
+            	field: "description",
+            	type: "textarea",
+            	display: "Description",
+            	placeholder: "eg. This is a school based in...",
+            	value: ""
+            }]
+        };
+
+        function getProjectPartners(){
+        	axios$1.get(`/api/get/project_partners?IDProject=${id}`, {headers: {Authorization: getToken()}}).then(function(res) {
+        		$$invalidate('project_partners', project_partners = res.data);
+        		$$invalidate('project_name', project_name = res.data[0].projectName);
+        		console.log(res.data);
+        	}).catch(err => {
+        		console.log(err.response);
+        	});
+        }
+
+        function getCountries() {
+        	console.log("Attempting to fetch countries");
+        	axios$1.get("/api/get/countries", {headers: {Authorization: getToken()}}).then(res => {
+        		for(let i = 0; i < res.data.length; i++) {
+        		    countries.push({value: res.data[i].ID, display: res.data[i].country, original: res.data[i]});
+        		}
+        		$$invalidate('add_modal_fields', add_modal_fields);
+        		$$invalidate('edit_modal_fields', edit_modal_fields);
+        		console.log("Successfully fetched countries");
+        	}).catch(err => {
+        		console.log("There was an error fetching the countries");
+        		console.log(err.response);
+        	});
+        }
+
+        function toggleRowSelect(id) {
+        	let index = selectedRows.indexOf(id);
+        	if(index === -1){
+                $$invalidate('selectedRows', selectedRows = [...selectedRows, id]);
+        	}else {
+                selectedRows.splice(index, 1);
+                $$invalidate('selectedRows', selectedRows);
+        	}
+
+        	console.log(selectedRows);
+        }
+
+        function handleOutsideTableClick(event) {
+            if (event.target.tagName.toLowerCase() === "button"){
+                return;
+            }
+            let table = event.currentTarget.querySelector("table");
+            if(table != null ){
+                if(table.contains(event.target)){
+                    console.log("Hello there General Kenobi");
+                    return;
+                }
+            }
+
+            $$invalidate('confirm_del', confirm_del = false);
+            $$invalidate('selectedRows', selectedRows = []);
+        }
+
+        function setIsAddModalOpen(value){
+        	$$invalidate('isAddModalOpen', isAddModalOpen = value);
+        }
+
+        function setIsEditModalOpen(value){
+        	$$invalidate('isEditModalOpen', isEditModalOpen = value);
+        }
+
+        function handleAddButtonClick(){
+        	if (countries.length === 0) {
+                getCountries();
+            }
+        	for(let i = 0; i < add_modal_fields.fields.length; i++) {
+        	    add_modal_fields.fields[i].value = ""; $$invalidate('add_modal_fields', add_modal_fields);
+        	}
+
+            setIsAddModalOpen(true);
+        }
+
+        function handleEditButtonClick(){
+        	if(selectedRows.length === 1){
+        		if (countries.length === 0) {
+        			getCountries();
+        		}
+
+                for (let i = 0; i < project_partners.length; i++) {
+                    if (project_partners[i][selection_field$2] === selectedRows[0]) {
+                    	edit_modal_fields.ID = selectedRows[0]; $$invalidate('edit_modal_fields', edit_modal_fields);
+        		        for (let j = 0; j < edit_modal_fields.fields.length; j++) {
+        		        	if (edit_modal_fields.fields[j].type === "date") {
+                                edit_modal_fields.fields[j].value = project_partners[i][edit_modal_fields.fields[j].field].slice(0, -14); $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(project_partners[i][edit_modal_fields.fields[j].field]);
+        		        	} else {
+                                edit_modal_fields.fields[j].value = project_partners[i][edit_modal_fields.fields[j].field]; $$invalidate('edit_modal_fields', edit_modal_fields);
+                                console.log(edit_modal_fields.fields[j].value);
+        		        	}
+        			    }
+        			}
+        		}
+
+        		setIsEditModalOpen(true);
+        	}
+        }
+
+        function handleDeleteClick(event) {
+        	let del_btn_el = event.currentTarget;
+        	if(!del_btn_el.classList.contains("disabled")){
+        	    if(!confirm_del){
+                   $$invalidate('confirm_del', confirm_del = true);
+        	    }else if(selectedRows.length > 0){
+                    axios$1.delete("/api/delete/partners", {
+                        data: {
+                            rows: selectedRows
+                        },
+                        headers: {
+                            Authorization: getToken()
+                        }
+                    }).then(res => {
+                    	$$invalidate('confirm_del', confirm_del = false);
+                    	$$invalidate('selectedRows', selectedRows = []);
+                        getProjectPartners();
+                    }).catch(err =>{
+                        console.log(err.response);
+                    });
+                }
+        	}
+        }
+
+    	const writable_props = ['is_logged_in', 'getToken', 'id'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<ProjectPartners> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('is_logged_in' in $$props) $$invalidate('is_logged_in', is_logged_in = $$props.is_logged_in);
+    		if ('getToken' in $$props) $$invalidate('getToken', getToken = $$props.getToken);
+    		if ('id' in $$props) $$invalidate('id', id = $$props.id);
+    	};
+
+    	$$self.$$.update = ($$dirty = { is_logged_in: 1 }) => {
+    		if ($$dirty.is_logged_in) { if(is_logged_in){
+                	getProjectPartners();
+                } }
+    	};
+
+    	return {
+    		is_logged_in,
+    		getToken,
+    		id,
+    		selectedRows,
+    		project_partners,
+    		project_name,
+    		table_headers,
+    		toggle_fields,
+    		confirm_del,
+    		isAddModalOpen,
+    		isEditModalOpen,
+    		add_modal_fields,
+    		edit_modal_fields,
+    		getProjectPartners,
+    		toggleRowSelect,
+    		handleOutsideTableClick,
+    		setIsAddModalOpen,
+    		setIsEditModalOpen,
+    		handleAddButtonClick,
+    		handleEditButtonClick,
+    		handleDeleteClick
+    	};
+    }
+
+    class ProjectPartners extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$g, create_fragment$g, safe_not_equal, ["is_logged_in", "getToken", "id"]);
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+    		if (ctx.is_logged_in === undefined && !('is_logged_in' in props)) {
+    			console.warn("<ProjectPartners> was created without expected prop 'is_logged_in'");
+    		}
+    		if (ctx.getToken === undefined && !('getToken' in props)) {
+    			console.warn("<ProjectPartners> was created without expected prop 'getToken'");
+    		}
+    		if (ctx.id === undefined && !('id' in props)) {
+    			console.warn("<ProjectPartners> was created without expected prop 'id'");
+    		}
+    	}
+
+    	get is_logged_in() {
+    		throw new Error("<ProjectPartners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set is_logged_in(value) {
+    		throw new Error("<ProjectPartners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get getToken() {
+    		throw new Error("<ProjectPartners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set getToken(value) {
+    		throw new Error("<ProjectPartners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get id() {
+    		throw new Error("<ProjectPartners>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set id(value) {
+    		throw new Error("<ProjectPartners>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    /* src\App.svelte generated by Svelte v3.5.1 */
+
+    const file$f = "src\\App.svelte";
+
+    // (69:8) {#if !is_logged_in}
+    function create_if_block_1$5(ctx) {
+    	var current;
+
+    	var loginmodal = new LoginModal({
+    		props: { login: ctx.login },
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			loginmodal.$$.fragment.c();
+    		},
+
+    		m: function mount(target, anchor) {
+    			mount_component(loginmodal, target, anchor);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var loginmodal_changes = {};
+    			if (changed.login) loginmodal_changes.login = ctx.login;
+    			loginmodal.$set(loginmodal_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			loginmodal.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			loginmodal.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			loginmodal.$destroy(detaching);
+    		}
+    	};
+    }
+
+    // (81:12) {#if !is_logged_in}
+    function create_if_block$c(ctx) {
+    	var div, h3;
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			h3 = element("h3");
+    			h3.textContent = "You must login with your account to do anything in the backoffice";
+    			h3.className = "m-5 p-3 text-center bg-danger rounded shadow-lg d-inline-block";
+    			add_location(h3, file$f, 82, 20, 3321);
+    			div.className = "container p-5 d-flex justify-content-center";
+    			add_location(div, file$f, 81, 16, 3242);
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			append(div, h3);
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+    		}
+    	};
+    }
+
+    // (68:4) <Router url="{url}">
+    function create_default_slot$4(ctx) {
+    	var t0, t1, div, t2, t3, t4, t5, t6, t7, t8, current;
+
+    	var if_block0 = (!ctx.is_logged_in) && create_if_block_1$5(ctx);
+
+    	var header = new Header({
+    		props: {
+    		is_logged_in: ctx.is_logged_in,
+    		logout: ctx.logout
+    	},
+    		$$inline: true
+    	});
+
+    	var route0 = new Route({
+    		props: {
+    		path: "/backoffice",
+    		component: Projects,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route1 = new Route({
+    		props: {
+    		path: "/backoffice/projects",
+    		component: Projects,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route2 = new Route({
+    		props: {
+    		path: "/backoffice/project_partners/:id",
+    		component: ProjectPartners,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route3 = new Route({
+    		props: {
+    		path: "/backoffice/mobilities/:id",
+    		component: Mobilities,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route4 = new Route({
+    		props: {
+    		path: "/backoffice/mobility_students/:id",
+    		component: MobilityStudents,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route5 = new Route({
+    		props: {
+    		path: "/backoffice/mobility_teachers/:id",
+    		component: MobilityTeachers,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var route6 = new Route({
+    		props: {
+    		path: "/backoffice/countries",
+    		component: Countries,
+    		is_logged_in: ctx.is_logged_in,
+    		getToken: getToken
+    	},
+    		$$inline: true
+    	});
+
+    	var if_block1 = (!ctx.is_logged_in) && create_if_block$c();
+
+    	return {
+    		c: function create() {
+    			if (if_block0) if_block0.c();
+    			t0 = space();
+    			header.$$.fragment.c();
+    			t1 = space();
+    			div = element("div");
+    			route0.$$.fragment.c();
+    			t2 = space();
+    			route1.$$.fragment.c();
+    			t3 = space();
+    			route2.$$.fragment.c();
+    			t4 = space();
+    			route3.$$.fragment.c();
+    			t5 = space();
+    			route4.$$.fragment.c();
+    			t6 = space();
+    			route5.$$.fragment.c();
+    			t7 = space();
+    			route6.$$.fragment.c();
+    			t8 = space();
+    			if (if_block1) if_block1.c();
+    			add_location(div, file$f, 72, 8, 2270);
+    		},
+
+    		m: function mount(target, anchor) {
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert(target, t0, anchor);
+    			mount_component(header, target, anchor);
+    			insert(target, t1, anchor);
+    			insert(target, div, anchor);
+    			mount_component(route0, div, null);
+    			append(div, t2);
+    			mount_component(route1, div, null);
+    			append(div, t3);
+    			mount_component(route2, div, null);
+    			append(div, t4);
+    			mount_component(route3, div, null);
+    			append(div, t5);
+    			mount_component(route4, div, null);
+    			append(div, t6);
+    			mount_component(route5, div, null);
+    			append(div, t7);
+    			mount_component(route6, div, null);
+    			append(div, t8);
+    			if (if_block1) if_block1.m(div, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			if (!ctx.is_logged_in) {
+    				if (if_block0) {
+    					if_block0.p(changed, ctx);
+    					if_block0.i(1);
+    				} else {
+    					if_block0 = create_if_block_1$5(ctx);
+    					if_block0.c();
+    					if_block0.i(1);
+    					if_block0.m(t0.parentNode, t0);
+    				}
+    			} else if (if_block0) {
+    				group_outros();
+    				on_outro(() => {
+    					if_block0.d(1);
+    					if_block0 = null;
+    				});
+
+    				if_block0.o(1);
+    				check_outros();
+    			}
+
+    			var header_changes = {};
+    			if (changed.is_logged_in) header_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.logout) header_changes.logout = ctx.logout;
+    			header.$set(header_changes);
+
+    			var route0_changes = {};
+    			if (changed.Projects) route0_changes.component = Projects;
+    			if (changed.is_logged_in) route0_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route0_changes.getToken = getToken;
+    			route0.$set(route0_changes);
+
+    			var route1_changes = {};
+    			if (changed.Projects) route1_changes.component = Projects;
+    			if (changed.is_logged_in) route1_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route1_changes.getToken = getToken;
+    			route1.$set(route1_changes);
+
+    			var route2_changes = {};
+    			if (changed.ProjectPartners) route2_changes.component = ProjectPartners;
+    			if (changed.is_logged_in) route2_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route2_changes.getToken = getToken;
+    			route2.$set(route2_changes);
+
+    			var route3_changes = {};
+    			if (changed.Mobilities) route3_changes.component = Mobilities;
+    			if (changed.is_logged_in) route3_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route3_changes.getToken = getToken;
+    			route3.$set(route3_changes);
+
+    			var route4_changes = {};
+    			if (changed.MobilityStudents) route4_changes.component = MobilityStudents;
+    			if (changed.is_logged_in) route4_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route4_changes.getToken = getToken;
+    			route4.$set(route4_changes);
+
+    			var route5_changes = {};
+    			if (changed.MobilityTeachers) route5_changes.component = MobilityTeachers;
+    			if (changed.is_logged_in) route5_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route5_changes.getToken = getToken;
+    			route5.$set(route5_changes);
+
+    			var route6_changes = {};
+    			if (changed.Countries) route6_changes.component = Countries;
+    			if (changed.is_logged_in) route6_changes.is_logged_in = ctx.is_logged_in;
+    			if (changed.getToken) route6_changes.getToken = getToken;
+    			route6.$set(route6_changes);
+
+    			if (!ctx.is_logged_in) {
+    				if (!if_block1) {
+    					if_block1 = create_if_block$c();
+    					if_block1.c();
+    					if_block1.m(div, null);
+    				}
+    			} else if (if_block1) {
+    				if_block1.d(1);
+    				if_block1 = null;
+    			}
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			if (if_block0) if_block0.i();
+
+    			header.$$.fragment.i(local);
+
+    			route0.$$.fragment.i(local);
+
+    			route1.$$.fragment.i(local);
+
+    			route2.$$.fragment.i(local);
+
+    			route3.$$.fragment.i(local);
+
+    			route4.$$.fragment.i(local);
+
+    			route5.$$.fragment.i(local);
+
+    			route6.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			if (if_block0) if_block0.o();
+    			header.$$.fragment.o(local);
+    			route0.$$.fragment.o(local);
+    			route1.$$.fragment.o(local);
+    			route2.$$.fragment.o(local);
+    			route3.$$.fragment.o(local);
+    			route4.$$.fragment.o(local);
+    			route5.$$.fragment.o(local);
+    			route6.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (if_block0) if_block0.d(detaching);
+
+    			if (detaching) {
+    				detach(t0);
+    			}
+
+    			header.$destroy(detaching);
+
+    			if (detaching) {
+    				detach(t1);
+    				detach(div);
+    			}
+
+    			route0.$destroy();
+
+    			route1.$destroy();
+
+    			route2.$destroy();
+
+    			route3.$destroy();
+
+    			route4.$destroy();
+
+    			route5.$destroy();
+
+    			route6.$destroy();
+
+    			if (if_block1) if_block1.d();
+    		}
+    	};
+    }
+
+    function create_fragment$h(ctx) {
+    	var div, current;
+
+    	var router = new Router({
+    		props: {
+    		url: ctx.url,
+    		$$slots: { default: [create_default_slot$4] },
+    		$$scope: { ctx }
+    	},
+    		$$inline: true
+    	});
+
+    	return {
+    		c: function create() {
+    			div = element("div");
+    			router.$$.fragment.c();
+    			add_location(div, file$f, 66, 0, 2079);
+    		},
+
+    		l: function claim(nodes) {
+    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
+    		},
+
+    		m: function mount(target, anchor) {
+    			insert(target, div, anchor);
+    			mount_component(router, div, null);
+    			current = true;
+    		},
+
+    		p: function update(changed, ctx) {
+    			var router_changes = {};
+    			if (changed.url) router_changes.url = ctx.url;
+    			if (changed.$$scope || changed.is_logged_in) router_changes.$$scope = { changed, ctx };
+    			router.$set(router_changes);
+    		},
+
+    		i: function intro(local) {
+    			if (current) return;
+    			router.$$.fragment.i(local);
+
+    			current = true;
+    		},
+
+    		o: function outro(local) {
+    			router.$$.fragment.o(local);
+    			current = false;
+    		},
+
+    		d: function destroy(detaching) {
+    			if (detaching) {
+    				detach(div);
+    			}
+
+    			router.$destroy();
+    		}
+    	};
+    }
+
+    function getToken() {
+    	    return localStorage.getItem("api-auth-token");
+    	}
+
+    function instance$h($$self, $$props, $$invalidate) {
+    	
+
+    	let { url = "" } = $$props;
+
+    	let is_logged_in = false;
+
+    	function login(username, password) {
+    		console.log("Trying to log in");
+            axios$1.post("/api/login.php", {username: username, password: password}).then(res => {
+            	// localStorage.setItem("api-auth-token", res.data.token);
+            	$$invalidate('is_logged_in', is_logged_in = true);
+            	console.log(res.data);
+            }).catch(err => {
+            	console.log(err.response.data);
+            });
+    	}
+
+    	function logout() {
+            axios$1.get("/api/logout.php", {headers: {Authorization: getToken()}}).then(res => {
+                console.log(res.data);
+                $$invalidate('is_logged_in', is_logged_in = false);
+            }).catch(err => {
+                console.log(err.response.data);
+            });
+
+            // removeToken();
+            // is_logged_in = false;
+    	}
+
+    	function checkLogin() {
+    	    axios$1.get("/api/logincheck.php", {headers: {Authorization: getToken()}}).then(res => {
+                console.log(res.data);
+                $$invalidate('is_logged_in', is_logged_in = true);
+            }).catch(err => {
+            	$$invalidate('is_logged_in', is_logged_in = false);
+                console.log(err.response.data);
+            });
+    	}
+
+    	checkLogin();
+
+    	const writable_props = ['url'];
+    	Object.keys($$props).forEach(key => {
+    		if (!writable_props.includes(key) && !key.startsWith('$$')) console.warn(`<App> was created with unknown prop '${key}'`);
+    	});
+
+    	$$self.$set = $$props => {
+    		if ('url' in $$props) $$invalidate('url', url = $$props.url);
+    	};
+
+    	return { url, is_logged_in, login, logout };
+    }
+
+    class App extends SvelteComponentDev {
+    	constructor(options) {
+    		super(options);
+    		init(this, options, instance$h, create_fragment$h, safe_not_equal, ["url"]);
+    	}
+
+    	get url() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set url(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+    }
+
+    var app = new App({
+    	target: document.body
+    });
+
+    return app;
+
+}());
 //# sourceMappingURL=bundle.js.map

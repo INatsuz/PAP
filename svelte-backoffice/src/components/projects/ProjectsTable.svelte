@@ -57,7 +57,7 @@
                     <td class="text-center">
                         <input type="file" class="d-none" name={project.ID} id={`image-input-${project.ID}`} on:change="{event => handleImageChange(event.target.files[0], project.ID)}">
                         <label for={`image-input-${project.ID}`} class="project-logo cursor-pointer m-0">
-                            <img src={`/imgs/projects/${project.ID}.png`} id="{`image-${project.ID}`}" height="50" alt="Project Logo">
+                            <img src={`/public/imgs/projects/${project.ID}.png`} id="{`image-${project.ID}`}" height="50" alt="Project Logo">
                         </label>
                     </td>
                     <td class="text-center vertical-align-middle">

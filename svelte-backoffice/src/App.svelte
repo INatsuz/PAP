@@ -17,8 +17,8 @@
 
 	function login(username, password) {
 		console.log("Trying to log in");
-        axios.post("/api/login", {username: username, password: password}).then(res => {
-        	localStorage.setItem("api-auth-token", res.data.token);
+        axios.post("/api/login.php", {username: username, password: password}).then(res => {
+        	// localStorage.setItem("api-auth-token", res.data.token);
         	is_logged_in = true;
         	console.log(res.data);
         }).catch(err => {
@@ -27,12 +27,20 @@
 	}
 
 	function logout() {
-        removeToken();
-        is_logged_in = false;
+        axios.get("/api/logout.php", {headers: {Authorization: getToken()}}).then(res => {
+            console.log(res.data);
+            is_logged_in = false;
+        }).catch(err => {
+            console.log(err.response.data);
+        });
+
+        // removeToken();
+        // is_logged_in = false;
 	}
 
 	function checkLogin() {
-	    axios.get("/api/logincheck", {headers: {Authorization: getToken()}}).then(res => {
+	    axios.get("/api/logincheck.php", {headers: {Authorization: getToken()}}).then(res => {
+            console.log(res.data);
             is_logged_in = true;
         }).catch(err => {
         	is_logged_in = false;

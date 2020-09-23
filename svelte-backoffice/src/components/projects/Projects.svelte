@@ -60,7 +60,7 @@
 
     function getProjects() {
     	console.log("Trying to fetch projects");
-        axios.get("/api/get/projects", {headers: {Authorization: getToken()}}).then(function(res) {
+        axios.get("/api/gettable.php?table=projects", {headers: {Authorization: getToken()}}).then(function(res) {
         	projects = res.data;
         });
     }
